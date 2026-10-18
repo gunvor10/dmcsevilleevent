@@ -38,6 +38,9 @@
 ## extra
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/extra/flamenco-workshop-plaza-de-espana.webp
 
+## fan-painting
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/fan-painting/fan-painting-seville-team-with-painted-fans.webp
+
 ## food
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/food/food-seville-jamon-iberico.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/food/food-seville-terrace-dinner.webp
@@ -103,7 +106,6 @@
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/treasure-hunt-seville-clue-easel.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/treasure-hunt-seville-group-street.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/treasure-hunt-seville-team-solving-clue.webp
-- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/treasure-hunt-seville-team-with-fans-el-salvador.webp
 
 ## treasure-hunt/characters
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/characters/character-anibal-gonzalez.webp
