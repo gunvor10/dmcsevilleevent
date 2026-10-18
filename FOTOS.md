@@ -23,6 +23,7 @@
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/camino-del-rocio/camino-del-rocio-decorated-carriages.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/camino-del-rocio/camino-del-rocio-donana-marshes-at-sunrise.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/camino-del-rocio/camino-del-rocio-gunvor-at-the-ermita.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/camino-del-rocio/camino-del-rocio-hero-wagons-in-the-pines.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/camino-del-rocio/camino-del-rocio-long-table-in-the-pines.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/camino-del-rocio/camino-del-rocio-lunch-in-the-pine-forest.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/camino-del-rocio/camino-del-rocio-picnic-stop.webp
