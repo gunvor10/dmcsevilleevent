@@ -1,0 +1,81 @@
+# dmcsevilleevent.com – static site built from Claude Design (deployed from GitHub gunvor10/dmcsevilleevent)
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# 1. one hop to https://www.
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{HTTP_HOST} ^(?:www\.)?(dmcsevilleevent\.com)$ [NC]
+RewriteRule ^ https://www.%1%{REQUEST_URI} [R=301,L,NE]
+
+# 2. files that are not pages
+RewriteRule ^(README|FOTOS)\.md$ - [R=404,L]
+RewriteRule ^tools/ - [R=404,L]
+RewriteRule ^\.git - [R=404,L]
+
+# 3. trailing slash on page URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}/index.html -f
+RewriteRule ^(.*)$ /$1/ [R=301,L]
+
+# 4. old WordPress site -> new pages (checked 19 Oct 2026 against the old sitemaps, 157 URLs)
+RewriteRule ^about-page-2/?$ /about/ [R=301,L]
+RewriteRule ^testimonial/?$ /about/ [R=301,L]
+RewriteRule ^author/ /about/ [R=301,L]
+RewriteRule ^(get-in-touch-with-dmc-seville-event|enquiry-thank-you-page(-2)?|thank-you(-2)?)/?$ /contact/ [R=301,L]
+RewriteRule ^(activities-2|blog-sevilla-private-guide|seville-incentive-inspiration|top-5-destinations-adventure-travel|all-tours|tours-list|trip-search-result|trip-types(-2)?|trip|portfolio)/?$ /inspiration/ [R=301,L]
+RewriteRule ^category/team-building/?$ /trip/team-building-seville/ [R=301,L]
+RewriteRule ^category/mice/?$ / [R=301,L]
+RewriteRule ^category/ /inspiration/ [R=301,L]
+RewriteRule ^tag/(tapas|restaurants)/?$ /15-best-tapas-bars-in-seville/ [R=301,L]
+RewriteRule ^tag/ /inspiration/ [R=301,L]
+RewriteRule ^trip-tag/mice/?$ / [R=301,L]
+RewriteRule ^trip-tag/group/?$ /group-travel-to-seville/ [R=301,L]
+RewriteRule ^trip-tag/ /inspiration/ [R=301,L]
+RewriteRule ^trip-types/mice/?$ / [R=301,L]
+RewriteRule ^(day-trips-from-seville|trip-types/day-trips-from-seville)/?$ /trip/tailor-made-trips-seville/ [R=301,L]
+RewriteRule ^destinations/sevilla/?$ /incentive-trip-sevilla/ [R=301,L]
+RewriteRule ^destinations/cadiz/?$ /dmc-cadiz/ [R=301,L]
+RewriteRule ^destinations/cordoba/?$ /dmc-cordoba/ [R=301,L]
+RewriteRule ^destinations/costa-de-la-luz/?$ /dmc-huelva/ [R=301,L]
+RewriteRule ^destinations/ronda/?$ /dmc-malaga/ [R=301,L]
+RewriteRule ^destinations/?$ /incentive-trip-sevilla/ [R=301,L]
+RewriteRule ^seville-travel-destinations/?$ /incentive-trip-sevilla/ [R=301,L]
+RewriteRule ^mice-event-services-seville/?$ / [R=301,L]
+RewriteRule ^travellers-information(-2)?/?$ /dmc-seville-event-travel-guarantee/ [R=301,L]
+RewriteRule ^trip/(arenals-hidden-history-boat-cruise|culinary-guadalquivir-river-cruise)/?$ /river-cruise-experiences-seville/ [R=301,L]
+RewriteRule ^trip/private-day-trip-to-cordoba-from-seville/?$ /dmc-cordoba/ [R=301,L]
+RewriteRule ^trip/(private-day-trip-to-jerez-y-cadiz-from-seville|private-white-villages-day-tour)/?$ /dmc-cadiz/ [R=301,L]
+RewriteRule ^trip/private-tour-and-sightseeing-seville/?$ /trip/tailor-made-trips-seville/ [R=301,L]
+RewriteRule ^trip/sevilla-historical-walking-tour-with-tastings/?$ /food-experiences-seville/ [R=301,L]
+RewriteRule ^trip/tapas-dinner-flamenco-show/?$ /flamenco-experiences-seville/ [R=301,L]
+RewriteRule ^(privacy-policy(-2)?|terms-and-conditions(-2)?)/?$ /contact/ [R=301,L]
+RewriteRule ^(home-[0-9]+|how-it-work|sample-page|members|dashboard|events?|case|gva_template|product|product-category|product-tag|category-portfolio|shop(-2)?|cart(-2)?|checkout(-[0-9])?|my-account(-[0-9])?|wishlist(-2)?|wp-travel-engine-[a-z0-9-]+|feed)(/.*)?$ / [R=301,L]
+RewriteRule ^(wp-login\.php|wp-admin/?.*|xmlrpc\.php|wp-json/?.*)$ - [G,L]
+
+# 5. Design file names -> clean URLs
+RewriteRule ^Home\.dc\.html$ / [R=301,L]
+</IfModule>
+
+# Design component files are needed by the page script but are not pages
+<FilesMatch "\.dc\.html$">
+  Header set X-Robots-Tag "noindex"
+</FilesMatch>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml text/plain application/xml
+</IfModule>
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
