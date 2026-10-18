@@ -12,6 +12,20 @@
 ## best-time
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/best-time/best-time-seville-sunflowers-june.webp
 
+## camino-del-rocio
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/camino-del-rocio/camino-del-rocio-carriage-crossing-the-water.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/camino-del-rocio/camino-del-rocio-carriages-in-a-row.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/camino-del-rocio/camino-del-rocio-carriages-on-the-sand-track.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/camino-del-rocio/camino-del-rocio-decorated-carriages.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/camino-del-rocio/camino-del-rocio-donana-marshes-at-sunrise.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/camino-del-rocio/camino-del-rocio-gunvor-at-the-ermita.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/camino-del-rocio/camino-del-rocio-long-table-in-the-pines.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/camino-del-rocio/camino-del-rocio-lunch-in-the-pine-forest.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/camino-del-rocio/camino-del-rocio-picnic-stop.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/camino-del-rocio/camino-del-rocio-tamborileros-procession.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/camino-del-rocio/camino-del-rocio-village-reflected-in-the-marshes.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/camino-del-rocio/camino-del-rocio-virgen-del-rocio-altar.webp
+
 ## ceramic-workshop
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/ceramic-workshop/ceramic-workshop-seville-painted-tile.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/ceramic-workshop/ceramic-workshop-seville-painting-together.webp
