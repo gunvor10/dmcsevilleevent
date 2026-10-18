@@ -51,6 +51,8 @@
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/kayak/kayak-seville-paddling-together.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/kayak/kayak-seville-paddling-towards-triana.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/kayak/kayak-seville-raft-building.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/kayak/kayak-seville-river-torre-sevilla-wide.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/kayak/kayak-seville-safety-briefing-on-pontoon.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/kayak/kayak-seville-setting-off-towards-triana-bridge.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/kayak/kayak-seville-single-kayak.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/kayak/kayak-seville-teams-paddling-guadalquivir.webp
