@@ -51,7 +51,10 @@
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/kayak/kayak-seville-paddling-together.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/kayak/kayak-seville-paddling-towards-triana.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/kayak/kayak-seville-raft-building.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/kayak/kayak-seville-setting-off-towards-triana-bridge.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/kayak/kayak-seville-single-kayak.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/kayak/kayak-seville-teams-paddling-guadalquivir.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/kayak/kayak-team-building-group-from-above.webp
 
 ## movie-making
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/movie-making/movie-making-seville-action-scene-clapperboard.webp
