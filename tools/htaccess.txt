@@ -7,11 +7,10 @@ ErrorDocument 404 /404.html
 RewriteEngine On
 RewriteBase /
 
-# 1. one hop to https://www.
-RewriteCond %{HTTPS} off [OR]
-RewriteCond %{HTTP_HOST} !^www\. [NC]
-RewriteCond %{HTTP_HOST} ^(?:www\.)?(dmcsevilleevent\.com)$ [NC]
-RewriteRule ^ https://www.%1%{REQUEST_URI} [R=301,L,NE]
+# 1. https (www / non-www is decided by Plesk: Hosting Settings -> Preferred domain.
+#    Do not add a www rule here as well: two opposite rules make an endless redirect loop.)
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L,NE]
 
 # 2. files that are not pages
 RewriteRule ^(README|FOTOS)\.md$ - [R=404,L]

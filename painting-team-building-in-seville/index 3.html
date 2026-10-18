@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><base href="/"/><style>
+    .sc-placeholder{background:color-mix(in srgb,currentColor 8%,transparent);
+      border:1px solid color-mix(in srgb,currentColor 50%,transparent);
+      border-radius:2px;box-sizing:border-box;overflow:hidden}
+    @keyframes sc-shine{0%{background-position:100% 50%}100%{background-position:0% 50%}}
+    html.sc-dc-streaming .sc-placeholder,
+    html.sc-dc-streaming .sc-interp.sc-missing{position:relative;
+      background:color-mix(in srgb,currentColor 5%,transparent);
+      border-color:transparent}
+    html.sc-dc-streaming .sc-placeholder::before,
+    html.sc-dc-streaming .sc-interp.sc-missing::before{content:'';
+      position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg,rgba(217,119,87,0) 25%,rgba(247,225,211,.95) 37%,rgba(217,119,87,0) 63%);
+      background-size:400% 100%;animation:sc-shine 1.4s ease infinite}
+    html.sc-dc-streaming .sc-placeholder:nth-child(n+9 of .sc-placeholder)::before,
+    html.sc-dc-streaming .sc-interp.sc-missing:nth-child(n+9 of .sc-interp.sc-missing)::before{animation:none;
+      background:color-mix(in srgb,currentColor 8%,transparent)}
+    .sc-placeholder-error{padding:4px 8px;font:11px/1.4 ui-monospace,monospace;
+      color:color-mix(in srgb,currentColor 70%,transparent);word-break:break-word}
+    .sc-interp.sc-missing{display:inline-block;width:2em;height:1em;overflow:hidden;
+      vertical-align:text-bottom;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
+      border-radius:2px;box-sizing:border-box;color:transparent;
+      user-select:none}
+    .sc-interp.sc-unresolved{font-family:ui-monospace,monospace;font-size:.85em;
+      color:color-mix(in srgb,currentColor 50%,transparent);
+      background:color-mix(in srgb,currentColor 10%,transparent);border-radius:3px;
+      padding:0 3px}
+    .sc-host.sc-has-error{position:relative}
+    .sc-logic-error{position:absolute;top:8px;left:8px;z-index:2147483647;max-width:60ch;
+      padding:6px 10px;background:#b00020;color:#fff;font:12px/1.4 ui-monospace,monospace;
+      border-radius:4px;white-space:pre-wrap;pointer-events:none}
+    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts — keep both
+       in sync until dc-runtime regains a build step. */
+    @media print {
+      @page { margin: 0.5cm; }
+      figure, table { break-inside: avoid; }
+      #dc-root, #dc-root > .sc-host { height: auto; }
+      *, *::before, *::after {
+        print-color-adjust: exact; -webkit-print-color-adjust: exact;
+        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+        animation-delay: -99s !important; animation-duration: .001s !important;
+        animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+        animation-play-state: running !important; transition-duration: 0s !important;
+      }
+    }
+  </style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.dmcsevilleevent.com/"},{"@type":"ListItem","position":2,"name":"Inspiration","item":"https://www.dmcsevilleevent.com/inspiration/"},{"@type":"ListItem","position":3,"name":"Painting Team Building in Seville","item":"https://www.dmcsevilleevent.com/painting-team-building-in-seville/"}]},{"@type":"BlogPosting","headline":"Painting Team Building in Seville","description":"Painting team building in Seville: recreate a masterpiece, paint Andalusian ceramics, portrait challenges and paint & sip. By DMC Seville Event.","image":"https://www.dmcsevilleevent.com/uploads/painting-team-building-spain.webp","inLanguage":"en","datePublished":"2026-10-18","dateModified":"2026-10-18","mainEntityOfPage":"https://www.dmcsevilleevent.com/painting-team-building-in-seville/","author":{"@type":"Person","@id":"https://www.dmcsevilleevent.com/about/#gunvor","name":"Gunvor Guttormsen","url":"https://www.dmcsevilleevent.com/about/"},"publisher":{"@type":"Organization","@id":"https://www.dmcsevilleevent.com/#organization","name":"DMC Seville Event","logo":{"@type":"ImageObject","url":"https://www.dmcsevilleevent.com/assets/dmc-logo-cropped.webp"}}}]}</script>
+<style>x-dc{display:none!important}</style>
+<style></style><style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><title>Painting Team Building in Seville | DMC Seville Event</title><meta content="Painting team building in Seville: recreate a masterpiece, paint Andalusian ceramics, portrait challenges and paint &amp; sip. By DMC Seville Event." name="description"/><link href="https://www.dmcsevilleevent.com/painting-team-building-in-seville/" rel="canonical"/><meta content="article" property="og:type"/><meta content="DMC Seville Event" property="og:site_name"/><meta content="en_GB" property="og:locale"/><meta content="Painting Team Building in Seville | DMC Seville Event" property="og:title"/><meta content="Painting team building in Seville: recreate a masterpiece, paint Andalusian ceramics, portrait challenges and paint &amp; sip. By DMC Seville Event." property="og:description"/><meta content="https://www.dmcsevilleevent.com/painting-team-building-in-seville/" property="og:url"/><meta content="https://www.dmcsevilleevent.com/uploads/painting-team-building-spain.webp" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><link data-dc-tpl="12" href="https://fonts.googleapis.com" rel="preconnect"/><link data-dc-tpl="13" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;family=Varela+Round&amp;display=swap" rel="stylesheet"/><style data-dc-tpl="15">body{margin:0;}a{color:#ff5d1a;text-decoration:none;}a:hover{color:#0d3d40;}*{box-sizing:border-box;}summary::-webkit-details-marker{display:none;}details[open] summary .plus{transform:rotate(45deg);}</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do participants need painting experience?","acceptedAnswer":{"@type":"Answer","text":"No. Every session is guided by a local artist, and the activities are designed so that no one needs to be an expert. It’s about creativity and connection, not talent."}},{"@type":"Question","name":"Where do the painting activities take place?","acceptedAnswer":{"@type":"Answer","text":"We use patios, artist studios, rooftop terraces and ceramic workshops in Triana. We can also bring the activity to your hotel or event venue."}},{"@type":"Question","name":"How large can the group be?","acceptedAnswer":{"@type":"Answer","text":"Painting activities work for small teams of around 8 up to large groups of 150. The collaborative “Paint Like a Master” format works especially well for big groups."}},{"@type":"Question","name":"Can guests take their artwork home?","acceptedAnswer":{"@type":"Answer","text":"Yes. Individual canvases, fans and portraits can be taken home the same day. Ceramic pieces need to be fired and are delivered to your hotel or sent on afterwards. A collaborative masterpiece can be delivered to your office."}},{"@type":"Question","name":"Can painting be combined with food and wine?","acceptedAnswer":{"@type":"Answer","text":"Yes. Paint & Sip includes local wine and light tapas, and any other format can be followed by a tapas lunch or dinner."}}]}</script><style data-dc-tpl="3">a{text-decoration:none;}*{box-sizing:border-box;}</style><style data-dc-tpl="3">a{text-decoration:none;color:#cfe3e4;}a:hover{color:#ff5d1a;}</style><style>x-dc{display:none!important}</style><meta content="H0RdhqivH3abdaZlze3v44QQ5XISVadKqWreEA0e7PA" name="google-site-verification"/>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+var c=null;try{c=localStorage.getItem('dmc-consent');}catch(e){}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:c==='yes'?'granted':'denied'});
+gtag('js',new Date());gtag('config','G-EN4YBPBV42');
+</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EN4YBPBV42"></script></head>
+<body>
+<div id="dc-static"><div class="sc-host" data-sc-name="Activity-Painting"><div data-dc-tpl="16" style="font-family: Montserrat, sans-serif; color: rgb(31, 45, 51); background: rgb(255, 253, 251);">
+<div class="sc-host" data-dc-tpl="17" data-sc-name="SiteHeader"><div data-dc-tpl="4" style="font-family: Montserrat, sans-serif; position: relative; z-index: 50;">
+<div data-dc-tpl="5" style="position: fixed; top: 0px; left: 0px; height: 3px; background: rgb(255, 93, 26); width: 0%; z-index: 200;"></div>
+<div data-dc-tpl="6" style='background: rgb(21, 202, 210); color: rgb(255, 255, 255); font-family: "Varela Round", sans-serif; font-size: 13px; padding: 8px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;'>
+<div data-dc-tpl="7" style="display: flex; gap: 20px; flex-wrap: wrap;">
+<span data-dc-tpl="8">+34 637 87 87 68</span>
+<span data-dc-tpl="9">events@dmcsevilleevent.com</span>
+</div>
+<div data-dc-tpl="10" style="display: flex; gap: 14px;">
+<a data-dc-tpl="11" href="https://www.facebook.com/Sevillaprivateguidegunvor/" style="color: rgb(255, 255, 255);">Facebook</a>
+<a data-dc-tpl="12" href="https://www.instagram.com/sevillaprivateguide_gunvor/" style="color: rgb(255, 255, 255);">Instagram</a>
+<a data-dc-tpl="13" href="https://www.linkedin.com/in/gunvor-guttormsen-ba05a728/" style="color: rgb(255, 255, 255);">LinkedIn</a>
+</div>
+</div>
+<header data-dc-tpl="14" style="display: flex; align-items: center; justify-content: space-between; padding: 16px 32px; background: rgb(255, 255, 255); flex-wrap: wrap; gap: 16px; box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 0px;">
+<a data-dc-tpl="15" href="/"><img alt="DMC Seville Event" data-dc-tpl="16" fetchpriority="high" src="/assets/dmc-logo-cropped.webp" style="height: 64px; width: auto; object-fit: contain;"/></a>
+<nav data-dc-tpl="17" style='display: flex; gap: 28px; flex-wrap: wrap; font-family: "Varela Round", sans-serif; font-size: 15px; font-weight: 400; align-items: center;'>
+<div data-dc-tpl="18" style="position: relative;">
+<button data-dc-tpl="19" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>MICE</button>
+</div>
+<div data-dc-tpl="32" style="position: relative;">
+<button data-dc-tpl="33" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>GROUPS</button>
+</div>
+<div data-dc-tpl="40" style="position: relative;">
+<button data-dc-tpl="41" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>DESTINATIONS</button>
+</div>
+<div data-dc-tpl="52" style="position: relative;">
+<button data-dc-tpl="53" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>GET IN TOUCH</button>
+</div>
+<a data-dc-tpl="59" href="/inspiration/" style="color: rgb(31, 45, 51);">INSPIRATION / BLOG</a>
+</nav>
+</header></div></div>
+<section data-dc-tpl="18" data-screen-label="Hero" style="position: relative; min-height: clamp(440px, 78svh, 760px); display: flex; align-items: flex-end; overflow: hidden;">
+<img alt="Team painting Murillo's Immaculate Conception in a Seville courtyard" decoding="async" loading="lazy" src="/fotos/painting/painting-workshop-seville-murillo-immaculate.webp" style="position: absolute; inset: 0px; width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/>
+<div data-dc-tpl="20" style="position: absolute; inset: 0px; background: linear-gradient(to top, rgba(13, 61, 64, 0.88) 0%, rgba(13, 61, 64, 0.35) 55%, rgba(13, 61, 64, 0.1) 100%); pointer-events: none;"></div>
+<div data-dc-tpl="21" style="position: relative; z-index: 2; width: 100%; max-width: 1200px; margin: 0px auto; padding: 120px 32px 0px; color: rgb(255, 255, 255);">
+<div data-dc-tpl="22" style='display: flex; gap: 10px; align-items: center; font-family: "Varela Round", sans-serif; font-size: 13px; letter-spacing: 1.5px; margin-bottom: 18px;'>
+<a data-dc-tpl="23" href="/inspiration/" style="color: rgb(255, 255, 255);">INSPIRATION</a><span data-dc-tpl="24" style="color: rgb(21, 202, 210);">/</span><span data-dc-tpl="25" style="color: rgb(21, 202, 210);">TEAM BUILDING</span>
+</div>
+<h1 data-dc-tpl="26" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(34px, 5.2vw, 62px); line-height: 1.05; margin: 0px 0px 18px; max-width: 860px; text-transform: uppercase; letter-spacing: 1px; text-wrap: balance;">Painting Team Building in Seville</h1>
+<p data-dc-tpl="27" style="font-weight: 300; font-size: clamp(17px, 1.8vw, 20px); line-height: 1.6; max-width: 640px; margin: 0px 0px 40px;">Team building with a splash of color: creativity, fun and Andalusian flair.</p>
+<div data-dc-tpl="28" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); border-top: 1px solid rgba(255, 255, 255, 0.3);">
+<div data-dc-tpl="29" style="padding: 20px 20px 26px 0px;">
+<div data-dc-tpl="30" style='font-family: "Varela Round", sans-serif; font-size: 12px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 6px;'>DURATION</div>
+<div data-dc-tpl="31" style="font-weight: 600; font-size: 16px;">1.5 – 3 hours</div>
+</div>
+<div data-dc-tpl="32" style="padding: 20px 20px 26px 0px;">
+<div data-dc-tpl="33" style='font-family: "Varela Round", sans-serif; font-size: 12px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 6px;'>GROUP SIZE</div>
+<div data-dc-tpl="34" style="font-weight: 600; font-size: 16px;">8 – 150 guests</div>
+</div>
+<div data-dc-tpl="35" style="padding: 20px 20px 26px 0px;">
+<div data-dc-tpl="36" style='font-family: "Varela Round", sans-serif; font-size: 12px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 6px;'>IDEAL FOR</div>
+<div data-dc-tpl="37" style="font-weight: 600; font-size: 16px;">Team building, retreats, incentives</div>
+</div>
+<div data-dc-tpl="38" style="padding: 20px 20px 26px 0px;">
+<div data-dc-tpl="39" style='font-family: "Varela Round", sans-serif; font-size: 12px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 6px;'>EXPERIENCE</div>
+<div data-dc-tpl="40" style="font-weight: 600; font-size: 16px;">None needed</div>
+</div>
+</div>
+</div>
+</section>
+<section data-dc-tpl="41" data-screen-label="Intro" style="max-width: 1200px; margin: 0px auto; padding: 72px 32px 0px; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start;">
+<div data-dc-tpl="42" style="flex: 1 1 440px; min-width: 0px; max-width: 720px;">
+<div data-dc-tpl="43" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>THE EXPERIENCE</div>
+<h2 data-dc-tpl="44" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(24px, 3vw, 34px); line-height: 1.2; color: rgb(21, 202, 210); margin: 0px 0px 22px; text-wrap: balance;">Painting &amp; Creativity: Team Building with a Splash of Color in Seville</h2>
+<p data-dc-tpl="45" style="font-weight: 400; font-size: 19px; line-height: 1.7; color: rgb(31, 45, 51); margin: 0px 0px 20px;">Seville isn’t just flamenco, tapas, and history. It’s also a city that inspires creativity—and what better way to bring a team together than through art?</p>
+<p data-dc-tpl="46" style="font-weight: 300; font-size: 16.5px; line-height: 1.85; color: rgb(61, 74, 80); margin: 0px;">Here we explore several painting-based team building options that mix creativity, fun, and Andalusian flair. Whether you’re a company looking to strengthen bonds or a group of friends on a special trip, painting together offers an authentic and joyful way to connect.</p>
+</div>
+<aside data-dc-tpl="47" style="flex: 0 1 340px; width: 100%; position: sticky; top: 24px; background: rgb(13, 61, 64); color: rgb(255, 255, 255); border-radius: 6px; padding: 30px 28px; min-width: 0px; margin: 0px auto;">
+<div data-dc-tpl="48" style='font-family: "Varela Round", sans-serif; font-size: 12px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 8px;'>REQUEST A PROPOSAL</div>
+<div data-dc-tpl="49" style="font-weight: 700; font-size: 20px; line-height: 1.3; margin-bottom: 22px;"><span class="sc-interp">Paint Like a Master</span></div>
+<div data-dc-tpl="50" style="font-size: 13px; font-weight: 500; margin-bottom: 10px; color: rgb(207, 227, 228);">Number of guests</div>
+<div data-dc-tpl="51" style="display: flex; align-items: center; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 3px; margin-bottom: 22px;">
+<button aria-label="Fewer guests" class="scp0" data-dc-tpl="52" style="width: 48px; height: 46px; background: transparent; border: 0px; color: rgb(255, 255, 255); font-size: 20px; cursor: pointer;" type="button">−</button>
+<div data-dc-tpl="53" style="flex: 1 1 0%; text-align: center; font-weight: 700; font-size: 17px;"><span class="sc-interp">24</span></div>
+<button aria-label="More guests" class="scp0" data-dc-tpl="54" style="width: 48px; height: 46px; background: transparent; border: 0px; color: rgb(255, 255, 255); font-size: 20px; cursor: pointer;" type="button">+</button>
+</div>
+<div data-dc-tpl="55" style="font-size: 13px; font-weight: 500; margin-bottom: 10px; color: rgb(207, 227, 228);">Where in your programme?</div>
+<div data-dc-tpl="56" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 26px;">
+<button data-dc-tpl="58" style="cursor: pointer; padding: 10px 6px; border-radius: 2px; font-family: Montserrat, sans-serif; font-size: 12.5px; font-weight: 500; line-height: 1.3; border: 1px solid rgba(255, 255, 255, 0.3); background: transparent; color: rgb(255, 255, 255);" type="button"><span class="sc-interp">Between meetings</span></button>
+<button data-dc-tpl="58" style="cursor: pointer; padding: 10px 6px; border-radius: 2px; font-family: Montserrat, sans-serif; font-size: 12.5px; font-weight: 500; line-height: 1.3; border: 1px solid rgba(255, 255, 255, 0.3); background: transparent; color: rgb(255, 255, 255);" type="button"><span class="sc-interp">Team building</span></button>
+<button data-dc-tpl="58" style="cursor: pointer; padding: 10px 6px; border-radius: 2px; font-family: Montserrat, sans-serif; font-size: 12.5px; font-weight: 500; line-height: 1.3; border: 1px solid rgba(255, 255, 255, 0.3); background: transparent; color: rgb(255, 255, 255);" type="button"><span class="sc-interp">Evening event</span></button>
+<button data-dc-tpl="58" style="cursor: pointer; padding: 10px 6px; border-radius: 2px; font-family: Montserrat, sans-serif; font-size: 12.5px; font-weight: 500; line-height: 1.3; border: 1px solid rgba(255, 255, 255, 0.3); background: transparent; color: rgb(255, 255, 255);" type="button"><span class="sc-interp">Farewell activity</span></button>
+</div>
+<a class="scp1" data-dc-tpl="59" href="/contact/?activity=Paint+Like+a+Master&amp;guests=24" style='display: block; text-align: center; background: rgb(255, 93, 26); color: rgb(255, 255, 255); font-family: "Varela Round", sans-serif; font-weight: 600; padding: 15px 20px; border-radius: 2px; font-size: 15px;'>Get My Proposal</a>
+<p data-dc-tpl="60" style="font-size: 13px; line-height: 1.6; color: rgb(207, 227, 228); margin: 14px 0px 0px; text-align: center;">Personal reply within 24 hours. No commitment.</p>
+</aside>
+</section>
+<section data-dc-tpl="61" data-screen-label="Quote" style="max-width: 900px; margin: 0px auto; padding: 88px 32px 0px; text-align: center;">
+<div data-dc-tpl="62" style="font-family: Georgia, serif; color: rgb(255, 93, 26); font-size: 48px; line-height: 1; margin-bottom: 8px;">“</div>
+<p data-dc-tpl="63" style="font-weight: 500; font-style: italic; font-size: clamp(19px, 2.4vw, 24px); line-height: 1.5; color: rgb(255, 93, 26); margin: 0px;">When we paint together — we blend personalities, stories, and shared laughter.</p>
+</section>
+<section data-dc-tpl="64" data-screen-label="Formats" style="background: rgb(234, 246, 246); margin-top: 88px; padding: 80px 32px;">
+<div data-dc-tpl="65" style="max-width: 1200px; margin: 0px auto;">
+<div data-dc-tpl="66" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 36px;">
+<div data-dc-tpl="67">
+<div data-dc-tpl="68" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>CHOOSE YOUR ACTIVITY</div>
+<h2 data-dc-tpl="69" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(24px, 3vw, 34px); margin: 0px;">Six ways to paint together in Seville</h2>
+</div>
+<p data-dc-tpl="70" style="font-weight: 300; font-size: 15px; line-height: 1.6; color: rgb(61, 74, 80); margin: 0px; max-width: 360px;">Select an activity to add it to your proposal request. Every format can be adapted to your group.</p>
+</div>
+<div data-dc-tpl="71" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 22px;">
+<button data-dc-tpl="73" style="color-scheme: unset; forced-color-adjust: unset; math-depth: unset; position: unset; position-anchor: unset; text-size-adjust: unset; appearance: unset; color: unset; font-feature-settings: unset; font-kerning: unset; font-language-override: unset; font-optical-sizing: unset; font-palette: unset; font-size: unset; font-size-adjust: unset; font-stretch: unset; font-style: unset; font-synthesis: unset; font-variant: unset; font-variation-settings: unset; font-weight: unset; position-area: unset; text-orientation: unset; text-rendering: unset; text-spacing-trim: unset; -webkit-font-smoothing: unset; -webkit-locale: unset; -webkit-text-orientation: unset; -webkit-writing-mode: unset; writing-mode: unset; zoom: unset; accent-color: unset; place-content: unset; place-items: unset; place-self: unset; alignment-baseline: unset; anchor-name: unset; anchor-scope: unset; animation-composition: unset; animation: unset; animation-trigger: unset; app-region: unset; aspect-ratio: unset; backdrop-filter: unset; backface-visibility: unset; background-blend-mode: unset; baseline-shift: unset; baseline-source: unset; block-size: unset; border-block: unset; border-collapse: unset; border-end-end-radius: unset; border-end-start-radius: unset; border-inline: unset; border-shape: unset; border-start-end-radius: unset; border-start-start-radius: unset; inset: unset; box-decoration-break: unset; break-after: unset; break-before: unset; break-inside: unset; buffered-rendering: unset; caption-side: unset; caret-animation: unset; caret-color: unset; caret-shape: unset; clear: unset; clip: unset; clip-path: unset; clip-rule: unset; color-interpolation: unset; color-interpolation-filters: unset; color-rendering: unset; columns: unset; column-fill: unset; gap: unset; rule-break: unset; rule: unset; rule-inset: unset; rule-visibility-items: unset; column-span: unset; contain: unset; contain-intrinsic-block-size: unset; contain-intrinsic-size: unset; contain-intrinsic-inline-size: unset; container: unset; content: unset; content-visibility: unset; corner-shape: unset; corner-block-end-shape: unset; corner-block-start-shape: unset; counter-increment: unset; counter-reset: unset; counter-set: unset; cx: unset; cy: unset; d: unset; dominant-baseline: unset; dynamic-range-limit: unset; empty-cells: unset; field-sizing: unset; fill: unset; fill-opacity: unset; fill-rule: unset; filter: unset; flex: unset; flex-line-count: unset; flex-wrap: unset; float: unset; flood-color: unset; flood-opacity: unset; frame-sizing: unset; grid: unset; grid-area: unset; height: unset; hyphenate-character: unset; hyphenate-limit-chars: unset; hyphens: unset; image-orientation: unset; image-rendering: unset; initial-letter: unset; inline-size: unset; inset-block: unset; inset-inline: unset; interactivity: unset; interest-delay: unset; interpolate-size: unset; isolation: unset; letter-spacing: unset; lighting-color: unset; line-break: unset; line-height: unset; list-style: unset; margin-block: unset; margin: unset; margin-inline: unset; margin-trim: unset; marker: unset; mask: unset; mask-type: unset; math-shift: unset; math-style: unset; max-block-size: unset; max-height: unset; max-inline-size: unset; max-width: unset; min-block-size: unset; min-height: unset; min-inline-size: unset; min-width: unset; mix-blend-mode: unset; object-fit: unset; object-position: unset; object-view-box: unset; offset: unset; opacity: unset; order: unset; orphans: unset; outline: unset; outline-offset: unset; overflow-anchor: unset; overflow-block: unset; overflow-clip-margin: unset; overflow-inline: unset; overflow-wrap: unset; overlay: unset; overscroll-behavior-block: unset; overscroll-behavior-inline: unset; overscroll-behavior: unset; padding-block: unset; padding: unset; padding-inline: unset; page: unset; page-margin-safety: unset; page-orientation: unset; paint-order: unset; perspective: unset; perspective-origin: unset; pointer-events: unset; position-try: unset; position-visibility: unset; print-color-adjust: unset; quotes: unset; r: unset; reading-flow: unset; reading-order: unset; resize: unset; rotate: unset; ruby-align: unset; ruby-overhang: unset; ruby-position: unset; rule-overlap: unset; rx: unset; ry: unset; scale: unset; scroll-axis-lock: unset; scroll-behavior: unset; scroll-initial-target: unset; scroll-margin-block: unset; scroll-margin: unset; scroll-margin-inline: unset; scroll-marker-group: unset; scroll-padding-block: unset; scroll-padding: unset; scroll-padding-inline: unset; scroll-snap-align: unset; scroll-snap-stop: unset; scroll-snap-type: unset; scroll-target-group: unset; scroll-timeline: unset; scrollbar-color: unset; scrollbar-gutter: unset; scrollbar-width: unset; shape-image-threshold: unset; shape-margin: unset; shape-outside: unset; shape-rendering: unset; size: unset; speak: unset; stop-color: unset; stop-opacity: unset; stroke: unset; stroke-dasharray: unset; stroke-dashoffset: unset; stroke-linecap: unset; stroke-linejoin: unset; stroke-miterlimit: unset; stroke-opacity: unset; stroke-width: unset; tab-size: unset; table-layout: unset; text-align-last: unset; text-anchor: unset; text-autospace: unset; text-box: unset; text-combine-upright: unset; text-decoration: unset; text-decoration-skip-ink: unset; text-decoration-skip-spaces: unset; text-emphasis: unset; text-emphasis-position: unset; text-fit: unset; text-indent: unset; text-justify: unset; text-overflow: unset; text-shadow: unset; text-transform: unset; text-underline-offset: unset; text-underline-position: unset; text-wrap: unset; timeline-scope: unset; timeline-trigger: unset; touch-action: unset; transform: unset; transform-box: unset; transform-origin: unset; transform-style: unset; translate: unset; trigger-scope: unset; user-select: unset; vector-effect: unset; vertical-align: unset; view-timeline: unset; view-transition-class: unset; view-transition-group: unset; view-transition-name: unset; view-transition-scope: unset; visibility: unset; border-spacing: unset; -webkit-box-align: unset; -webkit-box-decoration-break: unset; -webkit-box-direction: unset; -webkit-box-flex: unset; -webkit-box-ordinal-group: unset; -webkit-box-orient: unset; -webkit-box-pack: unset; -webkit-box-reflect: unset; -webkit-line-break: unset; -webkit-line-clamp: unset; -webkit-mask-box-image: unset; -webkit-rtl-ordering: unset; -webkit-ruby-position: unset; -webkit-tap-highlight-color: unset; -webkit-text-combine: unset; -webkit-text-decorations-in-effect: unset; -webkit-text-fill-color: unset; -webkit-text-security: unset; -webkit-text-stroke: unset; -webkit-user-drag: unset; white-space-collapse: unset; widows: unset; width: unset; will-change: unset; window-drag: unset; word-break: unset; word-spacing: unset; x: unset; y: unset; z-index: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; text-align: left; font-family: Montserrat, sans-serif; border: 2px solid rgb(255, 93, 26); box-shadow: rgba(255, 93, 26, 0.18) 0px 10px 28px; transition: border-color 0.2s, box-shadow 0.2s;" type="button">
+<div data-dc-tpl="74" style="position: relative; height: 210px; overflow: hidden;">
+<img alt="Paint Like a Master" decoding="async" loading="lazy" src="/fotos/painting/painting-workshop-seville-murillo-immaculate.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/>
+<span data-dc-tpl="76" style='position: absolute; top: 14px; left: 14px; background: rgb(255, 255, 255); color: rgb(13, 61, 64); font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; padding: 5px 10px; border-radius: 2px;'><span class="sc-interp">MOST BOOKED</span></span>
+</div>
+<div data-dc-tpl="77" style="padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1 1 0%;">
+<div data-dc-tpl="78" style="font-weight: 800; font-size: 18px; line-height: 1.3; color: rgb(31, 45, 51);"><span class="sc-interp">Paint Like a Master</span></div>
+<div data-dc-tpl="79" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80);"><span class="sc-interp">In a shaded Sevillian patio, the group reinterprets a masterpiece by Velázquez, Picasso, or Sorolla. Each participant paints a part of the whole, symbolizing unity and teamwork.</span></div>
+<div data-dc-tpl="80" style="display: flex; flex-direction: column; gap: 6px;">
+<div data-dc-tpl="81" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; color: rgb(21, 202, 210);'><span class="sc-interp">PERFECT FOR</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Corporate retreats</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Art-loving groups</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Anyone looking to connect through collaboration</span></div>
+</div>
+<div data-dc-tpl="85" style="display: flex; gap: 18px; flex-wrap: wrap; margin-top: auto; padding-top: 14px; border-top: 1px solid rgb(227, 236, 236); font-size: 13px; font-weight: 600; color: rgb(13, 61, 64);">
+<span data-dc-tpl="86"><span class="sc-interp">2 – 3 h</span></span><span data-dc-tpl="87"><span class="sc-interp">10 – 150 guests</span></span>
+</div>
+<div data-dc-tpl="88" style='font-family: "Varela Round", sans-serif; font-size: 13px; font-weight: 600; margin-top: 6px; color: rgb(255, 93, 26);'><span class="sc-interp">✓ Added to your request</span></div>
+</div>
+</button>
+<button data-dc-tpl="73" style="color-scheme: unset; forced-color-adjust: unset; math-depth: unset; position: unset; position-anchor: unset; text-size-adjust: unset; appearance: unset; color: unset; font-feature-settings: unset; font-kerning: unset; font-language-override: unset; font-optical-sizing: unset; font-palette: unset; font-size: unset; font-size-adjust: unset; font-stretch: unset; font-style: unset; font-synthesis: unset; font-variant: unset; font-variation-settings: unset; font-weight: unset; position-area: unset; text-orientation: unset; text-rendering: unset; text-spacing-trim: unset; -webkit-font-smoothing: unset; -webkit-locale: unset; -webkit-text-orientation: unset; -webkit-writing-mode: unset; writing-mode: unset; zoom: unset; accent-color: unset; place-content: unset; place-items: unset; place-self: unset; alignment-baseline: unset; anchor-name: unset; anchor-scope: unset; animation-composition: unset; animation: unset; animation-trigger: unset; app-region: unset; aspect-ratio: unset; backdrop-filter: unset; backface-visibility: unset; background-blend-mode: unset; baseline-shift: unset; baseline-source: unset; block-size: unset; border-block: unset; border-collapse: unset; border-end-end-radius: unset; border-end-start-radius: unset; border-inline: unset; border-shape: unset; border-start-end-radius: unset; border-start-start-radius: unset; inset: unset; box-decoration-break: unset; break-after: unset; break-before: unset; break-inside: unset; buffered-rendering: unset; caption-side: unset; caret-animation: unset; caret-color: unset; caret-shape: unset; clear: unset; clip: unset; clip-path: unset; clip-rule: unset; color-interpolation: unset; color-interpolation-filters: unset; color-rendering: unset; columns: unset; column-fill: unset; gap: unset; rule-break: unset; rule: unset; rule-inset: unset; rule-visibility-items: unset; column-span: unset; contain: unset; contain-intrinsic-block-size: unset; contain-intrinsic-size: unset; contain-intrinsic-inline-size: unset; container: unset; content: unset; content-visibility: unset; corner-shape: unset; corner-block-end-shape: unset; corner-block-start-shape: unset; counter-increment: unset; counter-reset: unset; counter-set: unset; cx: unset; cy: unset; d: unset; dominant-baseline: unset; dynamic-range-limit: unset; empty-cells: unset; field-sizing: unset; fill: unset; fill-opacity: unset; fill-rule: unset; filter: unset; flex: unset; flex-line-count: unset; flex-wrap: unset; float: unset; flood-color: unset; flood-opacity: unset; frame-sizing: unset; grid: unset; grid-area: unset; height: unset; hyphenate-character: unset; hyphenate-limit-chars: unset; hyphens: unset; image-orientation: unset; image-rendering: unset; initial-letter: unset; inline-size: unset; inset-block: unset; inset-inline: unset; interactivity: unset; interest-delay: unset; interpolate-size: unset; isolation: unset; letter-spacing: unset; lighting-color: unset; line-break: unset; line-height: unset; list-style: unset; margin-block: unset; margin: unset; margin-inline: unset; margin-trim: unset; marker: unset; mask: unset; mask-type: unset; math-shift: unset; math-style: unset; max-block-size: unset; max-height: unset; max-inline-size: unset; max-width: unset; min-block-size: unset; min-height: unset; min-inline-size: unset; min-width: unset; mix-blend-mode: unset; object-fit: unset; object-position: unset; object-view-box: unset; offset: unset; opacity: unset; order: unset; orphans: unset; outline: unset; outline-offset: unset; overflow-anchor: unset; overflow-block: unset; overflow-clip-margin: unset; overflow-inline: unset; overflow-wrap: unset; overlay: unset; overscroll-behavior-block: unset; overscroll-behavior-inline: unset; overscroll-behavior: unset; padding-block: unset; padding: unset; padding-inline: unset; page: unset; page-margin-safety: unset; page-orientation: unset; paint-order: unset; perspective: unset; perspective-origin: unset; pointer-events: unset; position-try: unset; position-visibility: unset; print-color-adjust: unset; quotes: unset; r: unset; reading-flow: unset; reading-order: unset; resize: unset; rotate: unset; ruby-align: unset; ruby-overhang: unset; ruby-position: unset; rule-overlap: unset; rx: unset; ry: unset; scale: unset; scroll-axis-lock: unset; scroll-behavior: unset; scroll-initial-target: unset; scroll-margin-block: unset; scroll-margin: unset; scroll-margin-inline: unset; scroll-marker-group: unset; scroll-padding-block: unset; scroll-padding: unset; scroll-padding-inline: unset; scroll-snap-align: unset; scroll-snap-stop: unset; scroll-snap-type: unset; scroll-target-group: unset; scroll-timeline: unset; scrollbar-color: unset; scrollbar-gutter: unset; scrollbar-width: unset; shape-image-threshold: unset; shape-margin: unset; shape-outside: unset; shape-rendering: unset; size: unset; speak: unset; stop-color: unset; stop-opacity: unset; stroke: unset; stroke-dasharray: unset; stroke-dashoffset: unset; stroke-linecap: unset; stroke-linejoin: unset; stroke-miterlimit: unset; stroke-opacity: unset; stroke-width: unset; tab-size: unset; table-layout: unset; text-align-last: unset; text-anchor: unset; text-autospace: unset; text-box: unset; text-combine-upright: unset; text-decoration: unset; text-decoration-skip-ink: unset; text-decoration-skip-spaces: unset; text-emphasis: unset; text-emphasis-position: unset; text-fit: unset; text-indent: unset; text-justify: unset; text-overflow: unset; text-shadow: unset; text-transform: unset; text-underline-offset: unset; text-underline-position: unset; text-wrap: unset; timeline-scope: unset; timeline-trigger: unset; touch-action: unset; transform: unset; transform-box: unset; transform-origin: unset; transform-style: unset; translate: unset; trigger-scope: unset; user-select: unset; vector-effect: unset; vertical-align: unset; view-timeline: unset; view-transition-class: unset; view-transition-group: unset; view-transition-name: unset; view-transition-scope: unset; visibility: unset; border-spacing: unset; -webkit-box-align: unset; -webkit-box-decoration-break: unset; -webkit-box-direction: unset; -webkit-box-flex: unset; -webkit-box-ordinal-group: unset; -webkit-box-orient: unset; -webkit-box-pack: unset; -webkit-box-reflect: unset; -webkit-line-break: unset; -webkit-line-clamp: unset; -webkit-mask-box-image: unset; -webkit-rtl-ordering: unset; -webkit-ruby-position: unset; -webkit-tap-highlight-color: unset; -webkit-text-combine: unset; -webkit-text-decorations-in-effect: unset; -webkit-text-fill-color: unset; -webkit-text-security: unset; -webkit-text-stroke: unset; -webkit-user-drag: unset; white-space-collapse: unset; widows: unset; width: unset; will-change: unset; window-drag: unset; word-break: unset; word-spacing: unset; x: unset; y: unset; z-index: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; text-align: left; font-family: Montserrat, sans-serif; border: 2px solid transparent; box-shadow: rgba(13, 61, 64, 0.06) 0px 2px 10px; transition: border-color 0.2s, box-shadow 0.2s;" type="button">
+<div data-dc-tpl="74" style="position: relative; height: 210px; overflow: hidden;">
+<img alt="Paint Andalusian Ceramics" decoding="async" loading="lazy" src="/fotos/ceramic-workshop/ceramic-workshop-seville-team-at-table.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/>
+<span data-dc-tpl="76" style='position: absolute; top: 14px; left: 14px; background: rgb(255, 255, 255); color: rgb(13, 61, 64); font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; padding: 5px 10px; border-radius: 2px;'><span class="sc-interp">HERITAGE</span></span>
+</div>
+<div data-dc-tpl="77" style="padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1 1 0%;">
+<div data-dc-tpl="78" style="font-weight: 800; font-size: 18px; line-height: 1.3; color: rgb(31, 45, 51);"><span class="sc-interp">Paint Andalusian Ceramics</span></div>
+<div data-dc-tpl="79" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80);"><span class="sc-interp">A guided session painting azulejos with local motifs and traditional Triana techniques. The finished tiles or plates can be fired and sent back home.</span></div>
+<div data-dc-tpl="80" style="display: flex; flex-direction: column; gap: 6px;">
+<div data-dc-tpl="81" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; color: rgb(21, 202, 210);'><span class="sc-interp">IDEAL FOR</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Cultural immersion seekers</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Small to medium-sized groups</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Anyone who wants a meaningful souvenir</span></div>
+</div>
+<div data-dc-tpl="85" style="display: flex; gap: 18px; flex-wrap: wrap; margin-top: auto; padding-top: 14px; border-top: 1px solid rgb(227, 236, 236); font-size: 13px; font-weight: 600; color: rgb(13, 61, 64);">
+<span data-dc-tpl="86"><span class="sc-interp">1.5 – 2 h</span></span><span data-dc-tpl="87"><span class="sc-interp">8 – 80 guests</span></span>
+</div>
+<div data-dc-tpl="88" style='font-family: "Varela Round", sans-serif; font-size: 13px; font-weight: 600; margin-top: 6px; color: rgb(13, 61, 64);'><span class="sc-interp">+ Select this activity</span></div>
+</div>
+</button>
+<button data-dc-tpl="73" style="color-scheme: unset; forced-color-adjust: unset; math-depth: unset; position: unset; position-anchor: unset; text-size-adjust: unset; appearance: unset; color: unset; font-feature-settings: unset; font-kerning: unset; font-language-override: unset; font-optical-sizing: unset; font-palette: unset; font-size: unset; font-size-adjust: unset; font-stretch: unset; font-style: unset; font-synthesis: unset; font-variant: unset; font-variation-settings: unset; font-weight: unset; position-area: unset; text-orientation: unset; text-rendering: unset; text-spacing-trim: unset; -webkit-font-smoothing: unset; -webkit-locale: unset; -webkit-text-orientation: unset; -webkit-writing-mode: unset; writing-mode: unset; zoom: unset; accent-color: unset; place-content: unset; place-items: unset; place-self: unset; alignment-baseline: unset; anchor-name: unset; anchor-scope: unset; animation-composition: unset; animation: unset; animation-trigger: unset; app-region: unset; aspect-ratio: unset; backdrop-filter: unset; backface-visibility: unset; background-blend-mode: unset; baseline-shift: unset; baseline-source: unset; block-size: unset; border-block: unset; border-collapse: unset; border-end-end-radius: unset; border-end-start-radius: unset; border-inline: unset; border-shape: unset; border-start-end-radius: unset; border-start-start-radius: unset; inset: unset; box-decoration-break: unset; break-after: unset; break-before: unset; break-inside: unset; buffered-rendering: unset; caption-side: unset; caret-animation: unset; caret-color: unset; caret-shape: unset; clear: unset; clip: unset; clip-path: unset; clip-rule: unset; color-interpolation: unset; color-interpolation-filters: unset; color-rendering: unset; columns: unset; column-fill: unset; gap: unset; rule-break: unset; rule: unset; rule-inset: unset; rule-visibility-items: unset; column-span: unset; contain: unset; contain-intrinsic-block-size: unset; contain-intrinsic-size: unset; contain-intrinsic-inline-size: unset; container: unset; content: unset; content-visibility: unset; corner-shape: unset; corner-block-end-shape: unset; corner-block-start-shape: unset; counter-increment: unset; counter-reset: unset; counter-set: unset; cx: unset; cy: unset; d: unset; dominant-baseline: unset; dynamic-range-limit: unset; empty-cells: unset; field-sizing: unset; fill: unset; fill-opacity: unset; fill-rule: unset; filter: unset; flex: unset; flex-line-count: unset; flex-wrap: unset; float: unset; flood-color: unset; flood-opacity: unset; frame-sizing: unset; grid: unset; grid-area: unset; height: unset; hyphenate-character: unset; hyphenate-limit-chars: unset; hyphens: unset; image-orientation: unset; image-rendering: unset; initial-letter: unset; inline-size: unset; inset-block: unset; inset-inline: unset; interactivity: unset; interest-delay: unset; interpolate-size: unset; isolation: unset; letter-spacing: unset; lighting-color: unset; line-break: unset; line-height: unset; list-style: unset; margin-block: unset; margin: unset; margin-inline: unset; margin-trim: unset; marker: unset; mask: unset; mask-type: unset; math-shift: unset; math-style: unset; max-block-size: unset; max-height: unset; max-inline-size: unset; max-width: unset; min-block-size: unset; min-height: unset; min-inline-size: unset; min-width: unset; mix-blend-mode: unset; object-fit: unset; object-position: unset; object-view-box: unset; offset: unset; opacity: unset; order: unset; orphans: unset; outline: unset; outline-offset: unset; overflow-anchor: unset; overflow-block: unset; overflow-clip-margin: unset; overflow-inline: unset; overflow-wrap: unset; overlay: unset; overscroll-behavior-block: unset; overscroll-behavior-inline: unset; overscroll-behavior: unset; padding-block: unset; padding: unset; padding-inline: unset; page: unset; page-margin-safety: unset; page-orientation: unset; paint-order: unset; perspective: unset; perspective-origin: unset; pointer-events: unset; position-try: unset; position-visibility: unset; print-color-adjust: unset; quotes: unset; r: unset; reading-flow: unset; reading-order: unset; resize: unset; rotate: unset; ruby-align: unset; ruby-overhang: unset; ruby-position: unset; rule-overlap: unset; rx: unset; ry: unset; scale: unset; scroll-axis-lock: unset; scroll-behavior: unset; scroll-initial-target: unset; scroll-margin-block: unset; scroll-margin: unset; scroll-margin-inline: unset; scroll-marker-group: unset; scroll-padding-block: unset; scroll-padding: unset; scroll-padding-inline: unset; scroll-snap-align: unset; scroll-snap-stop: unset; scroll-snap-type: unset; scroll-target-group: unset; scroll-timeline: unset; scrollbar-color: unset; scrollbar-gutter: unset; scrollbar-width: unset; shape-image-threshold: unset; shape-margin: unset; shape-outside: unset; shape-rendering: unset; size: unset; speak: unset; stop-color: unset; stop-opacity: unset; stroke: unset; stroke-dasharray: unset; stroke-dashoffset: unset; stroke-linecap: unset; stroke-linejoin: unset; stroke-miterlimit: unset; stroke-opacity: unset; stroke-width: unset; tab-size: unset; table-layout: unset; text-align-last: unset; text-anchor: unset; text-autospace: unset; text-box: unset; text-combine-upright: unset; text-decoration: unset; text-decoration-skip-ink: unset; text-decoration-skip-spaces: unset; text-emphasis: unset; text-emphasis-position: unset; text-fit: unset; text-indent: unset; text-justify: unset; text-overflow: unset; text-shadow: unset; text-transform: unset; text-underline-offset: unset; text-underline-position: unset; text-wrap: unset; timeline-scope: unset; timeline-trigger: unset; touch-action: unset; transform: unset; transform-box: unset; transform-origin: unset; transform-style: unset; translate: unset; trigger-scope: unset; user-select: unset; vector-effect: unset; vertical-align: unset; view-timeline: unset; view-transition-class: unset; view-transition-group: unset; view-transition-name: unset; view-transition-scope: unset; visibility: unset; border-spacing: unset; -webkit-box-align: unset; -webkit-box-decoration-break: unset; -webkit-box-direction: unset; -webkit-box-flex: unset; -webkit-box-ordinal-group: unset; -webkit-box-orient: unset; -webkit-box-pack: unset; -webkit-box-reflect: unset; -webkit-line-break: unset; -webkit-line-clamp: unset; -webkit-mask-box-image: unset; -webkit-rtl-ordering: unset; -webkit-ruby-position: unset; -webkit-tap-highlight-color: unset; -webkit-text-combine: unset; -webkit-text-decorations-in-effect: unset; -webkit-text-fill-color: unset; -webkit-text-security: unset; -webkit-text-stroke: unset; -webkit-user-drag: unset; white-space-collapse: unset; widows: unset; width: unset; will-change: unset; window-drag: unset; word-break: unset; word-spacing: unset; x: unset; y: unset; z-index: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; text-align: left; font-family: Montserrat, sans-serif; border: 2px solid transparent; box-shadow: rgba(13, 61, 64, 0.06) 0px 2px 10px; transition: border-color 0.2s, box-shadow 0.2s;" type="button">
+<div data-dc-tpl="74" style="position: relative; height: 210px; overflow: hidden;">
+<img alt="Paint Your Teammate" decoding="async" loading="lazy" src="/fotos/painting/painting-workshop-seville-finished-paintings.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/>
+<span data-dc-tpl="76" style='position: absolute; top: 14px; left: 14px; background: rgb(255, 255, 255); color: rgb(13, 61, 64); font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; padding: 5px 10px; border-radius: 2px;'><span class="sc-interp">ICEBREAKER</span></span>
+</div>
+<div data-dc-tpl="77" style="padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1 1 0%;">
+<div data-dc-tpl="78" style="font-weight: 800; font-size: 18px; line-height: 1.3; color: rgb(31, 45, 51);"><span class="sc-interp">Paint Your Teammate</span></div>
+<div data-dc-tpl="79" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80);"><span class="sc-interp">Team members are paired up and challenged to create expressive portraits of one another. It’s not about talent—it’s about perspective, trust, and connection.</span></div>
+<div data-dc-tpl="80" style="display: flex; flex-direction: column; gap: 6px;">
+<div data-dc-tpl="81" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; color: rgb(21, 202, 210);'><span class="sc-interp">WHY IT WORKS</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Breaks the ice</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Sparks laughter</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Encourages playful risk-taking</span></div>
+</div>
+<div data-dc-tpl="85" style="display: flex; gap: 18px; flex-wrap: wrap; margin-top: auto; padding-top: 14px; border-top: 1px solid rgb(227, 236, 236); font-size: 13px; font-weight: 600; color: rgb(13, 61, 64);">
+<span data-dc-tpl="86"><span class="sc-interp">1.5 h</span></span><span data-dc-tpl="87"><span class="sc-interp">8 – 100 guests</span></span>
+</div>
+<div data-dc-tpl="88" style='font-family: "Varela Round", sans-serif; font-size: 13px; font-weight: 600; margin-top: 6px; color: rgb(13, 61, 64);'><span class="sc-interp">+ Select this activity</span></div>
+</div>
+</button>
+<button data-dc-tpl="73" style="color-scheme: unset; forced-color-adjust: unset; math-depth: unset; position: unset; position-anchor: unset; text-size-adjust: unset; appearance: unset; color: unset; font-feature-settings: unset; font-kerning: unset; font-language-override: unset; font-optical-sizing: unset; font-palette: unset; font-size: unset; font-size-adjust: unset; font-stretch: unset; font-style: unset; font-synthesis: unset; font-variant: unset; font-variation-settings: unset; font-weight: unset; position-area: unset; text-orientation: unset; text-rendering: unset; text-spacing-trim: unset; -webkit-font-smoothing: unset; -webkit-locale: unset; -webkit-text-orientation: unset; -webkit-writing-mode: unset; writing-mode: unset; zoom: unset; accent-color: unset; place-content: unset; place-items: unset; place-self: unset; alignment-baseline: unset; anchor-name: unset; anchor-scope: unset; animation-composition: unset; animation: unset; animation-trigger: unset; app-region: unset; aspect-ratio: unset; backdrop-filter: unset; backface-visibility: unset; background-blend-mode: unset; baseline-shift: unset; baseline-source: unset; block-size: unset; border-block: unset; border-collapse: unset; border-end-end-radius: unset; border-end-start-radius: unset; border-inline: unset; border-shape: unset; border-start-end-radius: unset; border-start-start-radius: unset; inset: unset; box-decoration-break: unset; break-after: unset; break-before: unset; break-inside: unset; buffered-rendering: unset; caption-side: unset; caret-animation: unset; caret-color: unset; caret-shape: unset; clear: unset; clip: unset; clip-path: unset; clip-rule: unset; color-interpolation: unset; color-interpolation-filters: unset; color-rendering: unset; columns: unset; column-fill: unset; gap: unset; rule-break: unset; rule: unset; rule-inset: unset; rule-visibility-items: unset; column-span: unset; contain: unset; contain-intrinsic-block-size: unset; contain-intrinsic-size: unset; contain-intrinsic-inline-size: unset; container: unset; content: unset; content-visibility: unset; corner-shape: unset; corner-block-end-shape: unset; corner-block-start-shape: unset; counter-increment: unset; counter-reset: unset; counter-set: unset; cx: unset; cy: unset; d: unset; dominant-baseline: unset; dynamic-range-limit: unset; empty-cells: unset; field-sizing: unset; fill: unset; fill-opacity: unset; fill-rule: unset; filter: unset; flex: unset; flex-line-count: unset; flex-wrap: unset; float: unset; flood-color: unset; flood-opacity: unset; frame-sizing: unset; grid: unset; grid-area: unset; height: unset; hyphenate-character: unset; hyphenate-limit-chars: unset; hyphens: unset; image-orientation: unset; image-rendering: unset; initial-letter: unset; inline-size: unset; inset-block: unset; inset-inline: unset; interactivity: unset; interest-delay: unset; interpolate-size: unset; isolation: unset; letter-spacing: unset; lighting-color: unset; line-break: unset; line-height: unset; list-style: unset; margin-block: unset; margin: unset; margin-inline: unset; margin-trim: unset; marker: unset; mask: unset; mask-type: unset; math-shift: unset; math-style: unset; max-block-size: unset; max-height: unset; max-inline-size: unset; max-width: unset; min-block-size: unset; min-height: unset; min-inline-size: unset; min-width: unset; mix-blend-mode: unset; object-fit: unset; object-position: unset; object-view-box: unset; offset: unset; opacity: unset; order: unset; orphans: unset; outline: unset; outline-offset: unset; overflow-anchor: unset; overflow-block: unset; overflow-clip-margin: unset; overflow-inline: unset; overflow-wrap: unset; overlay: unset; overscroll-behavior-block: unset; overscroll-behavior-inline: unset; overscroll-behavior: unset; padding-block: unset; padding: unset; padding-inline: unset; page: unset; page-margin-safety: unset; page-orientation: unset; paint-order: unset; perspective: unset; perspective-origin: unset; pointer-events: unset; position-try: unset; position-visibility: unset; print-color-adjust: unset; quotes: unset; r: unset; reading-flow: unset; reading-order: unset; resize: unset; rotate: unset; ruby-align: unset; ruby-overhang: unset; ruby-position: unset; rule-overlap: unset; rx: unset; ry: unset; scale: unset; scroll-axis-lock: unset; scroll-behavior: unset; scroll-initial-target: unset; scroll-margin-block: unset; scroll-margin: unset; scroll-margin-inline: unset; scroll-marker-group: unset; scroll-padding-block: unset; scroll-padding: unset; scroll-padding-inline: unset; scroll-snap-align: unset; scroll-snap-stop: unset; scroll-snap-type: unset; scroll-target-group: unset; scroll-timeline: unset; scrollbar-color: unset; scrollbar-gutter: unset; scrollbar-width: unset; shape-image-threshold: unset; shape-margin: unset; shape-outside: unset; shape-rendering: unset; size: unset; speak: unset; stop-color: unset; stop-opacity: unset; stroke: unset; stroke-dasharray: unset; stroke-dashoffset: unset; stroke-linecap: unset; stroke-linejoin: unset; stroke-miterlimit: unset; stroke-opacity: unset; stroke-width: unset; tab-size: unset; table-layout: unset; text-align-last: unset; text-anchor: unset; text-autospace: unset; text-box: unset; text-combine-upright: unset; text-decoration: unset; text-decoration-skip-ink: unset; text-decoration-skip-spaces: unset; text-emphasis: unset; text-emphasis-position: unset; text-fit: unset; text-indent: unset; text-justify: unset; text-overflow: unset; text-shadow: unset; text-transform: unset; text-underline-offset: unset; text-underline-position: unset; text-wrap: unset; timeline-scope: unset; timeline-trigger: unset; touch-action: unset; transform: unset; transform-box: unset; transform-origin: unset; transform-style: unset; translate: unset; trigger-scope: unset; user-select: unset; vector-effect: unset; vertical-align: unset; view-timeline: unset; view-transition-class: unset; view-transition-group: unset; view-transition-name: unset; view-transition-scope: unset; visibility: unset; border-spacing: unset; -webkit-box-align: unset; -webkit-box-decoration-break: unset; -webkit-box-direction: unset; -webkit-box-flex: unset; -webkit-box-ordinal-group: unset; -webkit-box-orient: unset; -webkit-box-pack: unset; -webkit-box-reflect: unset; -webkit-line-break: unset; -webkit-line-clamp: unset; -webkit-mask-box-image: unset; -webkit-rtl-ordering: unset; -webkit-ruby-position: unset; -webkit-tap-highlight-color: unset; -webkit-text-combine: unset; -webkit-text-decorations-in-effect: unset; -webkit-text-fill-color: unset; -webkit-text-security: unset; -webkit-text-stroke: unset; -webkit-user-drag: unset; white-space-collapse: unset; widows: unset; width: unset; will-change: unset; window-drag: unset; word-break: unset; word-spacing: unset; x: unset; y: unset; z-index: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; text-align: left; font-family: Montserrat, sans-serif; border: 2px solid transparent; box-shadow: rgba(13, 61, 64, 0.06) 0px 2px 10px; transition: border-color 0.2s, box-shadow 0.2s;" type="button">
+<div data-dc-tpl="74" style="position: relative; height: 210px; overflow: hidden;">
+<img alt="Paint &amp; Sip" decoding="async" loading="lazy" src="/fotos/wine-and-sip/wine-and-sip-seville-neon-painting-group.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/>
+<span data-dc-tpl="76" style='position: absolute; top: 14px; left: 14px; background: rgb(255, 255, 255); color: rgb(13, 61, 64); font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; padding: 5px 10px; border-radius: 2px;'><span class="sc-interp">EVENINGS</span></span>
+</div>
+<div data-dc-tpl="77" style="padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1 1 0%;">
+<div data-dc-tpl="78" style="font-weight: 800; font-size: 18px; line-height: 1.3; color: rgb(31, 45, 51);"><span class="sc-interp">Paint &amp; Sip</span></div>
+<div data-dc-tpl="79" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80);"><span class="sc-interp">Local wine, light tapas, and guided painting in a casual, social setting. Think café vibes meets creativity.</span></div>
+<div data-dc-tpl="80" style="display: flex; flex-direction: column; gap: 6px;">
+<div data-dc-tpl="81" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; color: rgb(21, 202, 210);'><span class="sc-interp">IDEAL FOR</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Relaxed, informal groups</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Evening events</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">A more intimate creative experience</span></div>
+</div>
+<div data-dc-tpl="85" style="display: flex; gap: 18px; flex-wrap: wrap; margin-top: auto; padding-top: 14px; border-top: 1px solid rgb(227, 236, 236); font-size: 13px; font-weight: 600; color: rgb(13, 61, 64);">
+<span data-dc-tpl="86"><span class="sc-interp">2 h</span></span><span data-dc-tpl="87"><span class="sc-interp">8 – 60 guests</span></span>
+</div>
+<div data-dc-tpl="88" style='font-family: "Varela Round", sans-serif; font-size: 13px; font-weight: 600; margin-top: 6px; color: rgb(13, 61, 64);'><span class="sc-interp">+ Select this activity</span></div>
+</div>
+</button>
+<button data-dc-tpl="73" style="color-scheme: unset; forced-color-adjust: unset; math-depth: unset; position: unset; position-anchor: unset; text-size-adjust: unset; appearance: unset; color: unset; font-feature-settings: unset; font-kerning: unset; font-language-override: unset; font-optical-sizing: unset; font-palette: unset; font-size: unset; font-size-adjust: unset; font-stretch: unset; font-style: unset; font-synthesis: unset; font-variant: unset; font-variation-settings: unset; font-weight: unset; position-area: unset; text-orientation: unset; text-rendering: unset; text-spacing-trim: unset; -webkit-font-smoothing: unset; -webkit-locale: unset; -webkit-text-orientation: unset; -webkit-writing-mode: unset; writing-mode: unset; zoom: unset; accent-color: unset; place-content: unset; place-items: unset; place-self: unset; alignment-baseline: unset; anchor-name: unset; anchor-scope: unset; animation-composition: unset; animation: unset; animation-trigger: unset; app-region: unset; aspect-ratio: unset; backdrop-filter: unset; backface-visibility: unset; background-blend-mode: unset; baseline-shift: unset; baseline-source: unset; block-size: unset; border-block: unset; border-collapse: unset; border-end-end-radius: unset; border-end-start-radius: unset; border-inline: unset; border-shape: unset; border-start-end-radius: unset; border-start-start-radius: unset; inset: unset; box-decoration-break: unset; break-after: unset; break-before: unset; break-inside: unset; buffered-rendering: unset; caption-side: unset; caret-animation: unset; caret-color: unset; caret-shape: unset; clear: unset; clip: unset; clip-path: unset; clip-rule: unset; color-interpolation: unset; color-interpolation-filters: unset; color-rendering: unset; columns: unset; column-fill: unset; gap: unset; rule-break: unset; rule: unset; rule-inset: unset; rule-visibility-items: unset; column-span: unset; contain: unset; contain-intrinsic-block-size: unset; contain-intrinsic-size: unset; contain-intrinsic-inline-size: unset; container: unset; content: unset; content-visibility: unset; corner-shape: unset; corner-block-end-shape: unset; corner-block-start-shape: unset; counter-increment: unset; counter-reset: unset; counter-set: unset; cx: unset; cy: unset; d: unset; dominant-baseline: unset; dynamic-range-limit: unset; empty-cells: unset; field-sizing: unset; fill: unset; fill-opacity: unset; fill-rule: unset; filter: unset; flex: unset; flex-line-count: unset; flex-wrap: unset; float: unset; flood-color: unset; flood-opacity: unset; frame-sizing: unset; grid: unset; grid-area: unset; height: unset; hyphenate-character: unset; hyphenate-limit-chars: unset; hyphens: unset; image-orientation: unset; image-rendering: unset; initial-letter: unset; inline-size: unset; inset-block: unset; inset-inline: unset; interactivity: unset; interest-delay: unset; interpolate-size: unset; isolation: unset; letter-spacing: unset; lighting-color: unset; line-break: unset; line-height: unset; list-style: unset; margin-block: unset; margin: unset; margin-inline: unset; margin-trim: unset; marker: unset; mask: unset; mask-type: unset; math-shift: unset; math-style: unset; max-block-size: unset; max-height: unset; max-inline-size: unset; max-width: unset; min-block-size: unset; min-height: unset; min-inline-size: unset; min-width: unset; mix-blend-mode: unset; object-fit: unset; object-position: unset; object-view-box: unset; offset: unset; opacity: unset; order: unset; orphans: unset; outline: unset; outline-offset: unset; overflow-anchor: unset; overflow-block: unset; overflow-clip-margin: unset; overflow-inline: unset; overflow-wrap: unset; overlay: unset; overscroll-behavior-block: unset; overscroll-behavior-inline: unset; overscroll-behavior: unset; padding-block: unset; padding: unset; padding-inline: unset; page: unset; page-margin-safety: unset; page-orientation: unset; paint-order: unset; perspective: unset; perspective-origin: unset; pointer-events: unset; position-try: unset; position-visibility: unset; print-color-adjust: unset; quotes: unset; r: unset; reading-flow: unset; reading-order: unset; resize: unset; rotate: unset; ruby-align: unset; ruby-overhang: unset; ruby-position: unset; rule-overlap: unset; rx: unset; ry: unset; scale: unset; scroll-axis-lock: unset; scroll-behavior: unset; scroll-initial-target: unset; scroll-margin-block: unset; scroll-margin: unset; scroll-margin-inline: unset; scroll-marker-group: unset; scroll-padding-block: unset; scroll-padding: unset; scroll-padding-inline: unset; scroll-snap-align: unset; scroll-snap-stop: unset; scroll-snap-type: unset; scroll-target-group: unset; scroll-timeline: unset; scrollbar-color: unset; scrollbar-gutter: unset; scrollbar-width: unset; shape-image-threshold: unset; shape-margin: unset; shape-outside: unset; shape-rendering: unset; size: unset; speak: unset; stop-color: unset; stop-opacity: unset; stroke: unset; stroke-dasharray: unset; stroke-dashoffset: unset; stroke-linecap: unset; stroke-linejoin: unset; stroke-miterlimit: unset; stroke-opacity: unset; stroke-width: unset; tab-size: unset; table-layout: unset; text-align-last: unset; text-anchor: unset; text-autospace: unset; text-box: unset; text-combine-upright: unset; text-decoration: unset; text-decoration-skip-ink: unset; text-decoration-skip-spaces: unset; text-emphasis: unset; text-emphasis-position: unset; text-fit: unset; text-indent: unset; text-justify: unset; text-overflow: unset; text-shadow: unset; text-transform: unset; text-underline-offset: unset; text-underline-position: unset; text-wrap: unset; timeline-scope: unset; timeline-trigger: unset; touch-action: unset; transform: unset; transform-box: unset; transform-origin: unset; transform-style: unset; translate: unset; trigger-scope: unset; user-select: unset; vector-effect: unset; vertical-align: unset; view-timeline: unset; view-transition-class: unset; view-transition-group: unset; view-transition-name: unset; view-transition-scope: unset; visibility: unset; border-spacing: unset; -webkit-box-align: unset; -webkit-box-decoration-break: unset; -webkit-box-direction: unset; -webkit-box-flex: unset; -webkit-box-ordinal-group: unset; -webkit-box-orient: unset; -webkit-box-pack: unset; -webkit-box-reflect: unset; -webkit-line-break: unset; -webkit-line-clamp: unset; -webkit-mask-box-image: unset; -webkit-rtl-ordering: unset; -webkit-ruby-position: unset; -webkit-tap-highlight-color: unset; -webkit-text-combine: unset; -webkit-text-decorations-in-effect: unset; -webkit-text-fill-color: unset; -webkit-text-security: unset; -webkit-text-stroke: unset; -webkit-user-drag: unset; white-space-collapse: unset; widows: unset; width: unset; will-change: unset; window-drag: unset; word-break: unset; word-spacing: unset; x: unset; y: unset; z-index: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; text-align: left; font-family: Montserrat, sans-serif; border: 2px solid transparent; box-shadow: rgba(13, 61, 64, 0.06) 0px 2px 10px; transition: border-color 0.2s, box-shadow 0.2s;" type="button">
+<div data-dc-tpl="74" style="position: relative; height: 210px; overflow: hidden;">
+<img alt="Rooftop Sunset Painting" decoding="async" loading="lazy" src="/fotos/rooftop/rooftop-seville-group-sunset.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/>
+<span data-dc-tpl="76" style='position: absolute; top: 14px; left: 14px; background: rgb(255, 255, 255); color: rgb(13, 61, 64); font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; padding: 5px 10px; border-radius: 2px;'><span class="sc-interp">NEW</span></span>
+</div>
+<div data-dc-tpl="77" style="padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1 1 0%;">
+<div data-dc-tpl="78" style="font-weight: 800; font-size: 18px; line-height: 1.3; color: rgb(31, 45, 51);"><span class="sc-interp">Rooftop Sunset Painting</span></div>
+<div data-dc-tpl="79" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80);"><span class="sc-interp">Paint the Seville skyline from a rooftop terrace as the sun goes down, with the Giralda as your model and a drink in hand.</span></div>
+<div data-dc-tpl="80" style="display: flex; flex-direction: column; gap: 6px;">
+<div data-dc-tpl="81" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; color: rgb(21, 202, 210);'><span class="sc-interp">IDEAL FOR</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Incentive groups</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Welcome or farewell evenings</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Groups who love a view</span></div>
+</div>
+<div data-dc-tpl="85" style="display: flex; gap: 18px; flex-wrap: wrap; margin-top: auto; padding-top: 14px; border-top: 1px solid rgb(227, 236, 236); font-size: 13px; font-weight: 600; color: rgb(13, 61, 64);">
+<span data-dc-tpl="86"><span class="sc-interp">2 h</span></span><span data-dc-tpl="87"><span class="sc-interp">10 – 50 guests</span></span>
+</div>
+<div data-dc-tpl="88" style='font-family: "Varela Round", sans-serif; font-size: 13px; font-weight: 600; margin-top: 6px; color: rgb(13, 61, 64);'><span class="sc-interp">+ Select this activity</span></div>
+</div>
+</button>
+<button data-dc-tpl="73" style="color-scheme: unset; forced-color-adjust: unset; math-depth: unset; position: unset; position-anchor: unset; text-size-adjust: unset; appearance: unset; color: unset; font-feature-settings: unset; font-kerning: unset; font-language-override: unset; font-optical-sizing: unset; font-palette: unset; font-size: unset; font-size-adjust: unset; font-stretch: unset; font-style: unset; font-synthesis: unset; font-variant: unset; font-variation-settings: unset; font-weight: unset; position-area: unset; text-orientation: unset; text-rendering: unset; text-spacing-trim: unset; -webkit-font-smoothing: unset; -webkit-locale: unset; -webkit-text-orientation: unset; -webkit-writing-mode: unset; writing-mode: unset; zoom: unset; accent-color: unset; place-content: unset; place-items: unset; place-self: unset; alignment-baseline: unset; anchor-name: unset; anchor-scope: unset; animation-composition: unset; animation: unset; animation-trigger: unset; app-region: unset; aspect-ratio: unset; backdrop-filter: unset; backface-visibility: unset; background-blend-mode: unset; baseline-shift: unset; baseline-source: unset; block-size: unset; border-block: unset; border-collapse: unset; border-end-end-radius: unset; border-end-start-radius: unset; border-inline: unset; border-shape: unset; border-start-end-radius: unset; border-start-start-radius: unset; inset: unset; box-decoration-break: unset; break-after: unset; break-before: unset; break-inside: unset; buffered-rendering: unset; caption-side: unset; caret-animation: unset; caret-color: unset; caret-shape: unset; clear: unset; clip: unset; clip-path: unset; clip-rule: unset; color-interpolation: unset; color-interpolation-filters: unset; color-rendering: unset; columns: unset; column-fill: unset; gap: unset; rule-break: unset; rule: unset; rule-inset: unset; rule-visibility-items: unset; column-span: unset; contain: unset; contain-intrinsic-block-size: unset; contain-intrinsic-size: unset; contain-intrinsic-inline-size: unset; container: unset; content: unset; content-visibility: unset; corner-shape: unset; corner-block-end-shape: unset; corner-block-start-shape: unset; counter-increment: unset; counter-reset: unset; counter-set: unset; cx: unset; cy: unset; d: unset; dominant-baseline: unset; dynamic-range-limit: unset; empty-cells: unset; field-sizing: unset; fill: unset; fill-opacity: unset; fill-rule: unset; filter: unset; flex: unset; flex-line-count: unset; flex-wrap: unset; float: unset; flood-color: unset; flood-opacity: unset; frame-sizing: unset; grid: unset; grid-area: unset; height: unset; hyphenate-character: unset; hyphenate-limit-chars: unset; hyphens: unset; image-orientation: unset; image-rendering: unset; initial-letter: unset; inline-size: unset; inset-block: unset; inset-inline: unset; interactivity: unset; interest-delay: unset; interpolate-size: unset; isolation: unset; letter-spacing: unset; lighting-color: unset; line-break: unset; line-height: unset; list-style: unset; margin-block: unset; margin: unset; margin-inline: unset; margin-trim: unset; marker: unset; mask: unset; mask-type: unset; math-shift: unset; math-style: unset; max-block-size: unset; max-height: unset; max-inline-size: unset; max-width: unset; min-block-size: unset; min-height: unset; min-inline-size: unset; min-width: unset; mix-blend-mode: unset; object-fit: unset; object-position: unset; object-view-box: unset; offset: unset; opacity: unset; order: unset; orphans: unset; outline: unset; outline-offset: unset; overflow-anchor: unset; overflow-block: unset; overflow-clip-margin: unset; overflow-inline: unset; overflow-wrap: unset; overlay: unset; overscroll-behavior-block: unset; overscroll-behavior-inline: unset; overscroll-behavior: unset; padding-block: unset; padding: unset; padding-inline: unset; page: unset; page-margin-safety: unset; page-orientation: unset; paint-order: unset; perspective: unset; perspective-origin: unset; pointer-events: unset; position-try: unset; position-visibility: unset; print-color-adjust: unset; quotes: unset; r: unset; reading-flow: unset; reading-order: unset; resize: unset; rotate: unset; ruby-align: unset; ruby-overhang: unset; ruby-position: unset; rule-overlap: unset; rx: unset; ry: unset; scale: unset; scroll-axis-lock: unset; scroll-behavior: unset; scroll-initial-target: unset; scroll-margin-block: unset; scroll-margin: unset; scroll-margin-inline: unset; scroll-marker-group: unset; scroll-padding-block: unset; scroll-padding: unset; scroll-padding-inline: unset; scroll-snap-align: unset; scroll-snap-stop: unset; scroll-snap-type: unset; scroll-target-group: unset; scroll-timeline: unset; scrollbar-color: unset; scrollbar-gutter: unset; scrollbar-width: unset; shape-image-threshold: unset; shape-margin: unset; shape-outside: unset; shape-rendering: unset; size: unset; speak: unset; stop-color: unset; stop-opacity: unset; stroke: unset; stroke-dasharray: unset; stroke-dashoffset: unset; stroke-linecap: unset; stroke-linejoin: unset; stroke-miterlimit: unset; stroke-opacity: unset; stroke-width: unset; tab-size: unset; table-layout: unset; text-align-last: unset; text-anchor: unset; text-autospace: unset; text-box: unset; text-combine-upright: unset; text-decoration: unset; text-decoration-skip-ink: unset; text-decoration-skip-spaces: unset; text-emphasis: unset; text-emphasis-position: unset; text-fit: unset; text-indent: unset; text-justify: unset; text-overflow: unset; text-shadow: unset; text-transform: unset; text-underline-offset: unset; text-underline-position: unset; text-wrap: unset; timeline-scope: unset; timeline-trigger: unset; touch-action: unset; transform: unset; transform-box: unset; transform-origin: unset; transform-style: unset; translate: unset; trigger-scope: unset; user-select: unset; vector-effect: unset; vertical-align: unset; view-timeline: unset; view-transition-class: unset; view-transition-group: unset; view-transition-name: unset; view-transition-scope: unset; visibility: unset; border-spacing: unset; -webkit-box-align: unset; -webkit-box-decoration-break: unset; -webkit-box-direction: unset; -webkit-box-flex: unset; -webkit-box-ordinal-group: unset; -webkit-box-orient: unset; -webkit-box-pack: unset; -webkit-box-reflect: unset; -webkit-line-break: unset; -webkit-line-clamp: unset; -webkit-mask-box-image: unset; -webkit-rtl-ordering: unset; -webkit-ruby-position: unset; -webkit-tap-highlight-color: unset; -webkit-text-combine: unset; -webkit-text-decorations-in-effect: unset; -webkit-text-fill-color: unset; -webkit-text-security: unset; -webkit-text-stroke: unset; -webkit-user-drag: unset; white-space-collapse: unset; widows: unset; width: unset; will-change: unset; window-drag: unset; word-break: unset; word-spacing: unset; x: unset; y: unset; z-index: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; text-align: left; font-family: Montserrat, sans-serif; border: 2px solid transparent; box-shadow: rgba(13, 61, 64, 0.06) 0px 2px 10px; transition: border-color 0.2s, box-shadow 0.2s;" type="button">
+<div data-dc-tpl="74" style="position: relative; height: 210px; overflow: hidden;">
+<img alt="Fan Painting (Abanicos)" decoding="async" loading="lazy" src="/fotos/fan-painting/fan-painting-seville-team-with-painted-fans.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/>
+<span data-dc-tpl="76" style='position: absolute; top: 14px; left: 14px; background: rgb(255, 255, 255); color: rgb(13, 61, 64); font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; padding: 5px 10px; border-radius: 2px;'><span class="sc-interp">NEW</span></span>
+</div>
+<div data-dc-tpl="77" style="padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1 1 0%;">
+<div data-dc-tpl="78" style="font-weight: 800; font-size: 18px; line-height: 1.3; color: rgb(31, 45, 51);"><span class="sc-interp">Fan Painting (Abanicos)</span></div>
+<div data-dc-tpl="79" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80);"><span class="sc-interp">Decorate a traditional Spanish hand fan with Andalusian patterns, guided by a local artist. Light, colourful and easy to take home.</span></div>
+<div data-dc-tpl="80" style="display: flex; flex-direction: column; gap: 6px;">
+<div data-dc-tpl="81" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; color: rgb(21, 202, 210);'><span class="sc-interp">IDEAL FOR</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Cultural programmes</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Mixed groups</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">A useful souvenir for the Seville heat</span></div>
+</div>
+<div data-dc-tpl="85" style="display: flex; gap: 18px; flex-wrap: wrap; margin-top: auto; padding-top: 14px; border-top: 1px solid rgb(227, 236, 236); font-size: 13px; font-weight: 600; color: rgb(13, 61, 64);">
+<span data-dc-tpl="86"><span class="sc-interp">1.5 h</span></span><span data-dc-tpl="87"><span class="sc-interp">8 – 80 guests</span></span>
+</div>
+<div data-dc-tpl="88" style='font-family: "Varela Round", sans-serif; font-size: 13px; font-weight: 600; margin-top: 6px; color: rgb(13, 61, 64);'><span class="sc-interp">+ Select this activity</span></div>
+</div>
+</button>
+</div>
+</div>
+</section>
+<section data-dc-tpl="89" data-screen-label="Why painting" style="max-width: 1200px; margin: 0px auto; padding: 88px 32px 0px;">
+<div data-dc-tpl="90" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>WHY IT WORKS</div>
+<h2 data-dc-tpl="91" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(24px, 3vw, 34px); margin: 0px 0px 16px;">Why Painting Works for Team Building</h2>
+<p data-dc-tpl="92" style="font-weight: 300; font-size: 16.5px; line-height: 1.8; color: rgb(61, 74, 80); margin: 0px 0px 40px; max-width: 760px;">Painting together isn’t just fun—it’s powerful. Plus, it offers a change of pace from fast-paced agendas or traditional tours.</p>
+<div data-dc-tpl="93" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 32px;">
+<div data-dc-tpl="94" style="border-top: 3px solid rgb(21, 202, 210); padding-top: 20px;"><div data-dc-tpl="95" style="font-weight: 800; font-size: 19px; color: rgb(21, 202, 210);">Encourages creativity</div></div>
+<div data-dc-tpl="96" style="border-top: 3px solid rgb(21, 202, 210); padding-top: 20px;"><div data-dc-tpl="97" style="font-weight: 800; font-size: 19px; color: rgb(21, 202, 210);">Levels the playing field</div><p data-dc-tpl="98" style="font-weight: 300; font-size: 15px; line-height: 1.7; color: rgb(61, 74, 80); margin: 8px 0px 0px;">No one is an “expert”.</p></div>
+<div data-dc-tpl="99" style="border-top: 3px solid rgb(21, 202, 210); padding-top: 20px;"><div data-dc-tpl="100" style="font-weight: 800; font-size: 19px; color: rgb(21, 202, 210);">Builds trust through vulnerability</div></div>
+<div data-dc-tpl="101" style="border-top: 3px solid rgb(255, 93, 26); padding-top: 20px;"><div data-dc-tpl="102" style="font-weight: 800; font-size: 19px; color: rgb(255, 93, 26);">Sparks conversations and laughter</div></div>
+</div>
+</section>
+<section data-dc-tpl="103" data-screen-label="Gallery" style="max-width: 1200px; margin: 0px auto; padding: 88px 32px 0px;">
+<div data-dc-tpl="104" style="display: grid; grid-template-columns: repeat(4, minmax(0px, 1fr)); grid-auto-rows: 220px; gap: 14px;">
+<div data-dc-tpl="105" style="grid-area: span 2 / span 2; border-radius: 4px; overflow: hidden;"><img alt="Team painting a collaborative canvas" decoding="async" loading="lazy" src="/uploads/painting-team-building-spain.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="107" style="grid-column: span 2; border-radius: 4px; overflow: hidden;"><img alt="Outdoor painting workshop in a Seville park" decoding="async" loading="lazy" src="/fotos/painting/painting-workshop-seville-park.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="109" style="border-radius: 4px; overflow: hidden;"><img alt="Group with their neon paintings at a paint and sip in Seville" decoding="async" loading="lazy" src="/fotos/wine-and-sip/wine-and-sip-seville-neon-painting-group.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="111" style="border-radius: 4px; overflow: hidden;"><img alt="Team with their finished painting" decoding="async" loading="lazy" src="/fotos/painting/painting-workshop-seville-finished-paintings.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+</div>
+</section>
+<section data-dc-tpl="113" data-screen-label="Closing" style="max-width: 820px; margin: 0px auto; padding: 88px 32px; text-align: center;">
+<h2 data-dc-tpl="114" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(22px, 2.8vw, 30px); margin: 0px 0px 18px; color: rgb(21, 202, 210);">Inspired by Seville, Painted by You</h2>
+<p data-dc-tpl="115" style="font-weight: 300; font-size: 17px; line-height: 1.8; color: rgb(61, 74, 80); margin: 0px;">In a city that has inspired artists for centuries, painting together allows your team or group to tap into the same energy—while making memories that last far longer than the paint takes to dry.</p>
+</section>
+<section data-dc-tpl="116" data-screen-label="Combine" style="background: rgb(246, 244, 239); padding: 80px 32px;">
+<div data-dc-tpl="117" style="max-width: 1200px; margin: 0px auto;">
+<div data-dc-tpl="118" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>COMBINE IT WITH</div>
+<h2 data-dc-tpl="119" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(22px, 2.8vw, 30px); margin: 0px 0px 32px;">Build it into a complete programme</h2>
+<div data-dc-tpl="120" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 18px;">
+<a class="scp2" data-dc-tpl="121" href="/trip/team-building-seville/" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; background: rgb(255, 255, 255); border: 1px solid rgb(230, 225, 214); border-radius: 4px; padding: 24px; color: rgb(31, 45, 51);">
+<span data-dc-tpl="122"><span data-dc-tpl="123" style="display: block; font-weight: 700; font-size: 17px; margin-bottom: 4px;">Team Building</span><span data-dc-tpl="124" style="font-weight: 300; font-size: 14px; color: rgb(61, 74, 80);">More creative challenges for your team</span></span><span data-dc-tpl="125" style="color: rgb(255, 93, 26); font-size: 20px;">→</span>
+</a>
+<a class="scp2" data-dc-tpl="126" href="/trip/meetings-seville/" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; background: rgb(255, 255, 255); border: 1px solid rgb(230, 225, 214); border-radius: 4px; padding: 24px; color: rgb(31, 45, 51);">
+<span data-dc-tpl="127"><span data-dc-tpl="128" style="display: block; font-weight: 700; font-size: 17px; margin-bottom: 4px;">Meetings</span><span data-dc-tpl="129" style="font-weight: 300; font-size: 14px; color: rgb(61, 74, 80);">A creative break between sessions</span></span><span data-dc-tpl="130" style="color: rgb(255, 93, 26); font-size: 20px;">→</span>
+</a>
+<a class="scp2" data-dc-tpl="131" href="/trip/corporate-retreats-in-seville/" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; background: rgb(255, 255, 255); border: 1px solid rgb(230, 225, 214); border-radius: 4px; padding: 24px; color: rgb(31, 45, 51);">
+<span data-dc-tpl="132"><span data-dc-tpl="133" style="display: block; font-weight: 700; font-size: 17px; margin-bottom: 4px;">Corporate Retreats</span><span data-dc-tpl="134" style="font-weight: 300; font-size: 14px; color: rgb(61, 74, 80);">Time to connect, away from the office</span></span><span data-dc-tpl="135" style="color: rgb(255, 93, 26); font-size: 20px;">→</span>
+</a>
+</div>
+</div>
+</section>
+<section data-dc-tpl="136" data-screen-label="Expert" style="background: rgb(234, 246, 246); padding: 60px 32px 50px;">
+<div data-dc-tpl="137" style="max-width: 820px; margin: 0px auto; display: flex; align-items: center; gap: 40px; flex-wrap: wrap; justify-content: center;">
+<div data-dc-tpl="138" style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; flex: 0 0 auto;"><img alt="Gunvor Guttormsen in front of Macarena church, Seville" decoding="async" loading="lazy" src="/uploads/gunvor-guttormsen-macarena-church-seville.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:50%"/></div>
+<div data-dc-tpl="140" style="flex: 1 1 0%; min-width: 240px;">
+<h2 data-dc-tpl="141" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(20px, 2.6vw, 26px); margin: 0px 0px 12px;">Ready to Paint Your Seville Story?</h2>
+<p data-dc-tpl="142" style="font-weight: 300; font-size: 15.5px; line-height: 1.7; color: rgb(61, 74, 80); margin: 0px 0px 24px;">Whether you’re looking for a creative break between meetings, a hands-on cultural experience, or simply a chance to laugh and relax with your group—there’s a painting activity waiting for you here in Seville. Let us help you find the perfect brushstroke for your team.</p>
+<a class="scp3" data-dc-tpl="143" href="/contact/" style='background: rgb(255, 93, 26); color: rgb(255, 255, 255); font-family: "Varela Round", sans-serif; font-weight: 600; padding: 14px 32px; border-radius: 2px; font-size: 15px; display: inline-block;'>Contact DMC Seville Event</a>
+</div>
+</div>
+</section>
+<section data-dc-tpl="144" data-screen-label="FAQ" style="max-width: 1000px; margin: 0px auto; padding: 80px 32px 56px;">
+<div data-dc-tpl="145" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px; text-align: center;'>FAQ</div>
+<h2 data-dc-tpl="146" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(22px, 2.8vw, 30px); margin: 0px 0px 36px; text-align: center;">Painting team building: common questions</h2>
+<div data-dc-tpl="147" style="display: flex; flex-direction: column; border-top: 1px solid rgb(227, 236, 236);">
+<details data-dc-tpl="149" style="border-bottom: 1px solid rgb(227, 236, 236); padding: 22px 4px;">
+<summary data-dc-tpl="150" style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 20px; align-items: baseline; font-weight: 700; font-size: 17px; line-height: 1.4;"><span class="sc-interp">Do participants need painting experience?</span><span class="plus" data-dc-tpl="151" style="color: rgb(255, 93, 26); font-size: 24px; line-height: 1; transition: transform 0.2s; flex: 0 0 auto;">+</span></summary>
+<p data-dc-tpl="152" style="margin: 14px 0px 0px; font-weight: 300; font-size: 15.5px; line-height: 1.75; color: rgb(61, 74, 80);"><span class="sc-interp">No. Every session is guided by a local artist, and the activities are designed so that no one needs to be an expert. It’s about creativity and connection, not talent.</span></p>
+</details>
+<details data-dc-tpl="149" style="border-bottom: 1px solid rgb(227, 236, 236); padding: 22px 4px;">
+<summary data-dc-tpl="150" style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 20px; align-items: baseline; font-weight: 700; font-size: 17px; line-height: 1.4;"><span class="sc-interp">Where do the painting activities take place?</span><span class="plus" data-dc-tpl="151" style="color: rgb(255, 93, 26); font-size: 24px; line-height: 1; transition: transform 0.2s; flex: 0 0 auto;">+</span></summary>
+<p data-dc-tpl="152" style="margin: 14px 0px 0px; font-weight: 300; font-size: 15.5px; line-height: 1.75; color: rgb(61, 74, 80);"><span class="sc-interp">We use patios, artist studios, rooftop terraces and ceramic workshops in Triana. We can also bring the activity to your hotel or event venue.</span></p>
+</details>
+<details data-dc-tpl="149" style="border-bottom: 1px solid rgb(227, 236, 236); padding: 22px 4px;">
+<summary data-dc-tpl="150" style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 20px; align-items: baseline; font-weight: 700; font-size: 17px; line-height: 1.4;"><span class="sc-interp">How large can the group be?</span><span class="plus" data-dc-tpl="151" style="color: rgb(255, 93, 26); font-size: 24px; line-height: 1; transition: transform 0.2s; flex: 0 0 auto;">+</span></summary>
+<p data-dc-tpl="152" style="margin: 14px 0px 0px; font-weight: 300; font-size: 15.5px; line-height: 1.75; color: rgb(61, 74, 80);"><span class="sc-interp">Painting activities work for small teams of around 8 up to large groups of 150. The collaborative “Paint Like a Master” format works especially well for big groups.</span></p>
+</details>
+<details data-dc-tpl="149" style="border-bottom: 1px solid rgb(227, 236, 236); padding: 22px 4px;">
+<summary data-dc-tpl="150" style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 20px; align-items: baseline; font-weight: 700; font-size: 17px; line-height: 1.4;"><span class="sc-interp">Can guests take their artwork home?</span><span class="plus" data-dc-tpl="151" style="color: rgb(255, 93, 26); font-size: 24px; line-height: 1; transition: transform 0.2s; flex: 0 0 auto;">+</span></summary>
+<p data-dc-tpl="152" style="margin: 14px 0px 0px; font-weight: 300; font-size: 15.5px; line-height: 1.75; color: rgb(61, 74, 80);"><span class="sc-interp">Yes. Individual canvases, fans and portraits can be taken home the same day. Ceramic pieces need to be fired and are delivered to your hotel or sent on afterwards. A collaborative masterpiece can be delivered to your office.</span></p>
+</details>
+<details data-dc-tpl="149" style="border-bottom: 1px solid rgb(227, 236, 236); padding: 22px 4px;">
+<summary data-dc-tpl="150" style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 20px; align-items: baseline; font-weight: 700; font-size: 17px; line-height: 1.4;"><span class="sc-interp">Can painting be combined with food and wine?</span><span class="plus" data-dc-tpl="151" style="color: rgb(255, 93, 26); font-size: 24px; line-height: 1; transition: transform 0.2s; flex: 0 0 auto;">+</span></summary>
+<p data-dc-tpl="152" style="margin: 14px 0px 0px; font-weight: 300; font-size: 15.5px; line-height: 1.75; color: rgb(61, 74, 80);"><span class="sc-interp">Yes. Paint &amp; Sip includes local wine and light tapas, and any other format can be followed by a tapas lunch or dinner.</span></p>
+</details>
+</div>
+<div data-dc-tpl="153" style="display: flex; gap: 18px; align-items: center; margin-top: 48px; padding: 24px; border: 1px solid rgb(236, 231, 220); border-radius: 6px; background: rgb(255, 255, 255);">
+<div data-dc-tpl="154" style="width: 56px; height: 56px; border-radius: 50%; overflow: hidden; flex: 0 0 auto;"><img alt="Gunvor Guttormsen" decoding="async" loading="lazy" src="/uploads/gunvor-guttormsen-avatar.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:50%"/></div>
+<p data-dc-tpl="156" style="font-weight: 300; font-size: 14.5px; line-height: 1.65; color: rgb(61, 74, 80); margin: 0px;">This text is written by <strong data-dc-tpl="157" style="font-weight: 700; color: rgb(31, 45, 51);">Gunvor Guttormsen</strong>. She is the owner of DMC Seville and has worked in tourism in Seville since 1999. She is a true Seville lover and wants to share her passion and love for Seville with you.<span data-dc-tpl="158" style="display: block; margin-top: 6px; font-size: 13px; color: rgb(91, 106, 112);">Last updated: 18 October 2026</span></p>
+</div>
+</section>
+<section data-dc-tpl="159" data-screen-label="More inspiration" style="max-width: 1200px; margin: 0px auto; padding: 32px 32px 88px;">
+<div data-dc-tpl="160" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; padding-bottom: 20px; border-bottom: 1px solid rgb(227, 236, 236); margin-bottom: 32px;">
+<h2 data-dc-tpl="161" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(22px, 2.8vw, 30px); margin: 0px;">More inspiration</h2>
+<a data-dc-tpl="162" href="/inspiration/" style='font-family: "Varela Round", sans-serif; font-size: 14px; font-weight: 600;'>Return to Seville inspiration →</a>
+</div>
+<div data-dc-tpl="163" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 24px;">
+<a class="scp4" data-dc-tpl="164" href="/ceramic-workshop-in-seville/" style="display: flex; flex-direction: column; color: rgb(31, 45, 51); border-radius: 4px; overflow: hidden; background: rgb(255, 255, 255); border: 1px solid rgb(236, 231, 220);">
+<div data-dc-tpl="165" style="height: 190px;"><img alt="Ceramic workshop in Triana" decoding="async" loading="lazy" src="/fotos/ceramic-workshop/ceramic-workshop-seville-tile-painting-group.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="167" style="padding: 20px 22px 24px;"><div data-dc-tpl="168" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 8px;'>TEAM BUILDING</div><div data-dc-tpl="169" style="font-weight: 700; font-size: 17px; line-height: 1.35;">Ceramic Workshops in Seville</div></div>
+</a>
+<a class="scp4" data-dc-tpl="170" href="/movie-making-in-seville/" style="display: flex; flex-direction: column; color: rgb(31, 45, 51); border-radius: 4px; overflow: hidden; background: rgb(255, 255, 255); border: 1px solid rgb(236, 231, 220);">
+<div data-dc-tpl="171" style="height: 190px;"><img alt="Movie making team building" decoding="async" loading="lazy" src="/uploads/movie-clips-shooting-team-building-spain.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="173" style="padding: 20px 22px 24px;"><div data-dc-tpl="174" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 8px;'>TEAM BUILDING</div><div data-dc-tpl="175" style="font-weight: 700; font-size: 17px; line-height: 1.35;">Movie Making in Seville</div></div>
+</a>
+<a class="scp4" data-dc-tpl="176" href="/15-best-tapas-bars-in-seville/" style="display: flex; flex-direction: column; color: rgb(31, 45, 51); border-radius: 4px; overflow: hidden; background: rgb(255, 255, 255); border: 1px solid rgb(236, 231, 220);">
+<div data-dc-tpl="177" style="height: 190px;"><img alt="Tapas in Seville" decoding="async" loading="lazy" src="/uploads/tapas-tour-seville-22.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="179" style="padding: 20px 22px 24px;"><div data-dc-tpl="180" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 8px;'>FOOD &amp; WINE</div><div data-dc-tpl="181" style="font-weight: 700; font-size: 17px; line-height: 1.35;">15 Best Tapas Bars in Seville</div></div>
+</a>
+</div>
+</section>
+<div class="sc-host" data-dc-tpl="182" data-sc-name="SiteFooter"><footer data-dc-tpl="4" style="background: rgb(13, 61, 64); color: rgb(207, 227, 228); padding: 60px 32px 30px; font-family: Montserrat, sans-serif; border-top: 4px solid rgb(21, 202, 210);">
+<div data-dc-tpl="5" style="max-width: 1200px; margin: 0px auto 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 36px;">
+<div data-dc-tpl="6">
+<a data-dc-tpl="7" href="/" style="display: inline-flex; background: rgb(255, 255, 255); border-radius: 6px; padding: 10px 14px; margin-bottom: 16px;"><img alt="DMC Seville Event" data-dc-tpl="8" loading="lazy" src="/assets/dmc-logo-cropped.webp" style="height: 60px; width: auto; object-fit: contain; display: block;"/></a>
+<p data-dc-tpl="9" style="font-weight: 300; font-size: 13.5px; line-height: 1.6;">C/ Milano Govinda 35, 41020 Sevilla, Spain</p>
+</div>
+<div data-dc-tpl="10">
+<h4 data-dc-tpl="11" style="font-weight: 700; color: rgb(255, 255, 255); font-size: 15px; margin: 0px 0px 14px;">Services</h4>
+<div data-dc-tpl="12" style="display: flex; flex-direction: column; gap: 8px; font-size: 13.5px; font-weight: 300;">
+<a data-dc-tpl="13" href="/trip/meetings-seville/">Meetings</a>
+<a data-dc-tpl="14" href="/trip/corporate-event-venue-seville/">Venue Finding</a>
+<a data-dc-tpl="15" href="/trip/corporate-incentive-trip-seville/">Corporate Incentive</a>
+<a data-dc-tpl="16" href="/trip/team-building-seville/">Team Building</a>
+<a data-dc-tpl="17" href="/group-travel-to-seville/">Group Travel</a>
+</div>
+</div>
+<div data-dc-tpl="18">
+<h4 data-dc-tpl="19" style="font-weight: 700; color: rgb(255, 255, 255); font-size: 15px; margin: 0px 0px 14px;">DMC Destinations in Andalusia</h4>
+<div data-dc-tpl="20" style="display: flex; flex-direction: column; gap: 8px; font-size: 13.5px; font-weight: 300;">
+<a data-dc-tpl="21" href="/incentive-trip-sevilla/">Incentive Trip Sevilla</a>
+<a data-dc-tpl="22" href="/dmc-malaga/">DMC Málaga</a>
+<a data-dc-tpl="23" href="/dmc-huelva/">DMC Huelva</a>
+<a data-dc-tpl="24" href="/dmc-cadiz/">DMC Cádiz</a>
+<a data-dc-tpl="25" href="/dmc-granada/">DMC Granada</a>
+<a data-dc-tpl="26" href="/dmc-cordoba/">DMC Córdoba</a>
+<a data-dc-tpl="27" href="/dmc-almeria/">DMC Almería</a>
+<a data-dc-tpl="28" href="/dmc-jaen/">DMC Jaén</a>
+</div>
+</div>
+<div data-dc-tpl="29">
+<h4 data-dc-tpl="30" style="font-weight: 700; color: rgb(255, 255, 255); font-size: 15px; margin: 0px 0px 14px;">Contact</h4>
+<p data-dc-tpl="31" style="font-weight: 300; font-size: 13.5px; line-height: 1.8; margin: 0px 0px 12px;">+34 637 87 87 68<br data-dc-tpl="32"/>events@dmcsevilleevent.com</p>
+<a data-dc-tpl="33" href="/contact/" style="color: rgb(21, 202, 210); font-weight: 500;">Contact Now</a>
+</div>
+</div>
+<div data-dc-tpl="34" style="text-align: center; font-size: 12.5px; font-weight: 300; border-top: 1px solid rgba(207, 227, 228, 0.2); padding-top: 22px; max-width: 1200px; margin: 0px auto;">© 2026 DMC Seville Event. All Rights Reserved. · <a data-dc-tpl="35" href="/privacy-policy/" style="color: inherit;">Privacy &amp; Cookies</a> · <a data-dc-tpl="36" href="/legal-notice/" style="color: inherit;">Legal Notice</a></div></footer></div></div></div></div><template id="dc-src"><x-dc>
+<helmet>
+<title>Painting Team Building in Seville | DMC Seville Event</title>
+<meta name="description" content="Painting team building in Seville: recreate a masterpiece, paint Andalusian ceramics, portrait challenges and paint &amp; sip. By DMC Seville Event.">
+<link rel="canonical" href="https://www.dmcsevilleevent.com/painting-team-building-in-seville/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DMC Seville Event">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Painting Team Building in Seville | DMC Seville Event">
+<meta property="og:description" content="Painting team building in Seville: recreate a masterpiece, paint Andalusian ceramics, portrait challenges and paint &amp; sip. By DMC Seville Event.">
+<meta property="og:url" content="https://www.dmcsevilleevent.com/painting-team-building-in-seville/">
+<meta property="og:image" content="https://www.dmcsevilleevent.com/uploads/painting-team-building-spain.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Varela+Round&display=swap" rel="stylesheet">
+
+<style>body{margin:0;}a{color:#ff5d1a;text-decoration:none;}a:hover{color:#0d3d40;}*{box-sizing:border-box;}summary::-webkit-details-marker{display:none;}details[open] summary .plus{transform:rotate(45deg);}</style>
+</helmet>
+<div style="font-family:'Montserrat',sans-serif;color:#1f2d33;background:#fffdfb;">
+  <dc-import name="SiteHeader" hint-size="100%,120"></dc-import>
+
+  <section data-screen-label="Hero" style="position:relative;min-height:clamp(440px,78svh,760px);display:flex;align-items:flex-end;overflow:hidden;">
+    <image-slot id="activity-painting-hero" shape="rect" src="/fotos/painting/painting-workshop-seville-murillo-immaculate.webp" alt="Team painting Murillo's Immaculate Conception in a Seville courtyard" placeholder="Painting team building hero photo" style="position:absolute;inset:0;width:100%;height:100%;"></image-slot>
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,61,64,0.88) 0%,rgba(13,61,64,0.35) 55%,rgba(13,61,64,0.1) 100%);pointer-events:none;"></div>
+    <div style="position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding:120px 32px 0;color:#ffffff;">
+      <div style="display:flex;gap:10px;align-items:center;font-family:'Varela Round',sans-serif;font-size:13px;letter-spacing:1.5px;margin-bottom:18px;">
+        <a href="/inspiration/" style="color:#ffffff;">INSPIRATION</a><span style="color:#15cad2;">/</span><span style="color:#15cad2;">TEAM BUILDING</span>
+      </div>
+      <h1 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(34px,5.2vw,62px);line-height:1.05;margin:0 0 18px;max-width:860px;text-transform:uppercase;letter-spacing:1px;text-wrap:balance;">Painting Team Building in Seville</h1>
+      <p style="font-weight:300;font-size:clamp(17px,1.8vw,20px);line-height:1.6;max-width:640px;margin:0 0 40px;">Team building with a splash of color: creativity, fun and Andalusian flair.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));border-top:1px solid rgba(255,255,255,0.3);">
+        <div style="padding:20px 20px 26px 0;">
+          <div style="font-family:'Varela Round',sans-serif;font-size:12px;letter-spacing:1.5px;color:#15cad2;margin-bottom:6px;">DURATION</div>
+          <div style="font-weight:600;font-size:16px;">1.5 – 3 hours</div>
+        </div>
+        <div style="padding:20px 20px 26px 0;">
+          <div style="font-family:'Varela Round',sans-serif;font-size:12px;letter-spacing:1.5px;color:#15cad2;margin-bottom:6px;">GROUP SIZE</div>
+          <div style="font-weight:600;font-size:16px;">8 – 150 guests</div>
+        </div>
+        <div style="padding:20px 20px 26px 0;">
+          <div style="font-family:'Varela Round',sans-serif;font-size:12px;letter-spacing:1.5px;color:#15cad2;margin-bottom:6px;">IDEAL FOR</div>
+          <div style="font-weight:600;font-size:16px;">Team building, retreats, incentives</div>
+        </div>
+        <div style="padding:20px 20px 26px 0;">
+          <div style="font-family:'Varela Round',sans-serif;font-size:12px;letter-spacing:1.5px;color:#15cad2;margin-bottom:6px;">EXPERIENCE</div>
+          <div style="font-weight:600;font-size:16px;">None needed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Intro" style="max-width:1200px;margin:0 auto;padding:72px 32px 0;display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start;">
+    <div style="flex:1 1 440px;min-width:0;max-width:720px;">
+      <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">THE EXPERIENCE</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(24px,3vw,34px);line-height:1.2;color:#15cad2;margin:0 0 22px;text-wrap:balance;">Painting &amp; Creativity: Team Building with a Splash of Color in Seville</h2>
+      <p style="font-weight:400;font-size:19px;line-height:1.7;color:#1f2d33;margin:0 0 20px;">Seville isn’t just flamenco, tapas, and history. It’s also a city that inspires creativity—and what better way to bring a team together than through art?</p>
+      <p style="font-weight:300;font-size:16.5px;line-height:1.85;color:#3d4a50;margin:0;">Here we explore several painting-based team building options that mix creativity, fun, and Andalusian flair. Whether you’re a company looking to strengthen bonds or a group of friends on a special trip, painting together offers an authentic and joyful way to connect.</p>
+    </div>
+    <aside style="flex:0 1 340px;width:100%;position:sticky;top:24px;background:#0d3d40;color:#ffffff;border-radius:6px;padding:30px 28px;min-width:0;margin:0 auto;">
+      <div style="font-family:'Varela Round',sans-serif;font-size:12px;letter-spacing:1.5px;color:#15cad2;margin-bottom:8px;">REQUEST A PROPOSAL</div>
+      <div style="font-weight:700;font-size:20px;line-height:1.3;margin-bottom:22px;">{{ selectedName }}</div>
+      <div style="font-size:13px;font-weight:500;margin-bottom:10px;color:#cfe3e4;">Number of guests</div>
+      <div style="display:flex;align-items:center;border:1px solid rgba(255,255,255,0.3);border-radius:3px;margin-bottom:22px;">
+        <button type="button" onClick="{{ dec }}" aria-label="Fewer guests" style="width:48px;height:46px;background:transparent;border:0;color:#ffffff;font-size:20px;cursor:pointer;" style-hover="background:rgba(255,255,255,0.08);">−</button>
+        <div style="flex:1;text-align:center;font-weight:700;font-size:17px;">{{ guests }}</div>
+        <button type="button" onClick="{{ inc }}" aria-label="More guests" style="width:48px;height:46px;background:transparent;border:0;color:#ffffff;font-size:20px;cursor:pointer;" style-hover="background:rgba(255,255,255,0.08);">+</button>
+      </div>
+      <div style="font-size:13px;font-weight:500;margin-bottom:10px;color:#cfe3e4;">Where in your programme?</div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:26px;">
+        <sc-for list="{{ slotItems }}" as="s" hint-placeholder-count="4">
+          <button type="button" onClick="{{ s.pick }}" style="{{ s.style }}">{{ s.label }}</button>
+        </sc-for>
+      </div>
+      <a href="{{ enquiryHref }}" style="display:block;text-align:center;background:#ff5d1a;color:#ffffff;font-family:'Varela Round',sans-serif;font-weight:600;padding:15px 20px;border-radius:2px;font-size:15px;" style-hover="background:#ffffff;color:#0d3d40;">Get My Proposal</a>
+      <p style="font-size:13px;line-height:1.6;color:#cfe3e4;margin:14px 0 0;text-align:center;">Personal reply within 24 hours. No commitment.</p>
+    </aside>
+  </section>
+
+  <section data-screen-label="Quote" style="max-width:900px;margin:0 auto;padding:88px 32px 0;text-align:center;">
+    <div style="font-family:Georgia,serif;color:#ff5d1a;font-size:48px;line-height:1;margin-bottom:8px;">“</div>
+    <p style="font-weight:500;font-style:italic;font-size:clamp(19px,2.4vw,24px);line-height:1.5;color:#ff5d1a;margin:0;">When we paint together — we blend personalities, stories, and shared laughter.</p>
+  </section>
+
+  <section data-screen-label="Formats" style="background:#eaf6f6;margin-top:88px;padding:80px 32px;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:36px;">
+        <div>
+          <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">CHOOSE YOUR ACTIVITY</div>
+          <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(24px,3vw,34px);margin:0;">Six ways to paint together in Seville</h2>
+        </div>
+        <p style="font-weight:300;font-size:15px;line-height:1.6;color:#3d4a50;margin:0;max-width:360px;">Select an activity to add it to your proposal request. Every format can be adapted to your group.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:22px;">
+        <sc-for list="{{ formatItems }}" as="f" hint-placeholder-count="6">
+          <button type="button" onClick="{{ f.pick }}" style="{{ f.cardStyle }}">
+            <div style="position:relative;height:210px;overflow:hidden;">
+              <image-slot id="{{ f.slotId }}" shape="rect" src="{{ f.img }}" alt="{{ f.name }}" placeholder="{{ f.name }} photo" style="width:100%;height:100%;"></image-slot>
+              <span style="position:absolute;top:14px;left:14px;background:#ffffff;color:#0d3d40;font-family:'Varela Round',sans-serif;font-size:11.5px;letter-spacing:1px;padding:5px 10px;border-radius:2px;">{{ f.tag }}</span>
+            </div>
+            <div style="padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1;">
+              <div style="font-weight:800;font-size:18px;line-height:1.3;color:#1f2d33;">{{ f.name }}</div>
+              <div style="font-weight:300;font-size:14.5px;line-height:1.6;color:#3d4a50;">{{ f.text }}</div>
+              <div style="display:flex;flex-direction:column;gap:6px;">
+                <div style="font-family:'Varela Round',sans-serif;font-size:11.5px;letter-spacing:1px;color:#15cad2;">{{ f.forLabel }}</div>
+                <sc-for list="{{ f.for }}" as="x" hint-placeholder-count="3">
+                  <div style="display:flex;gap:8px;font-size:13.5px;font-weight:500;color:#1f2d33;"><span style="color:#15cad2;">•</span>{{ x }}</div>
+                </sc-for>
+              </div>
+              <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:auto;padding-top:14px;border-top:1px solid #e3ecec;font-size:13px;font-weight:600;color:#0d3d40;">
+                <span>{{ f.duration }}</span><span>{{ f.capacity }}</span>
+              </div>
+              <div style="{{ f.selStyle }}">{{ f.selLabel }}</div>
+            </div>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Why painting" style="max-width:1200px;margin:0 auto;padding:88px 32px 0;">
+    <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">WHY IT WORKS</div>
+    <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(24px,3vw,34px);margin:0 0 16px;">Why Painting Works for Team Building</h2>
+    <p style="font-weight:300;font-size:16.5px;line-height:1.8;color:#3d4a50;margin:0 0 40px;max-width:760px;">Painting together isn’t just fun—it’s powerful. Plus, it offers a change of pace from fast-paced agendas or traditional tours.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:32px;">
+      <div style="border-top:3px solid #15cad2;padding-top:20px;"><div style="font-weight:800;font-size:19px;color:#15cad2;">Encourages creativity</div></div>
+      <div style="border-top:3px solid #15cad2;padding-top:20px;"><div style="font-weight:800;font-size:19px;color:#15cad2;">Levels the playing field</div><p style="font-weight:300;font-size:15px;line-height:1.7;color:#3d4a50;margin:8px 0 0;">No one is an “expert”.</p></div>
+      <div style="border-top:3px solid #15cad2;padding-top:20px;"><div style="font-weight:800;font-size:19px;color:#15cad2;">Builds trust through vulnerability</div></div>
+      <div style="border-top:3px solid #ff5d1a;padding-top:20px;"><div style="font-weight:800;font-size:19px;color:#ff5d1a;">Sparks conversations and laughter</div></div>
+    </div>
+  </section>
+
+  <section data-screen-label="Gallery" style="max-width:1200px;margin:0 auto;padding:88px 32px 0;">
+    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:220px;gap:14px;">
+      <div style="grid-column:span 2;grid-row:span 2;border-radius:4px;overflow:hidden;"><image-slot id="activity-painting-gallery-1" shape="rect" src="/uploads/painting-team-building-spain.webp" alt="Team painting a collaborative canvas" placeholder="Collaborative canvas photo" style="width:100%;height:100%;"></image-slot></div>
+      <div style="grid-column:span 2;border-radius:4px;overflow:hidden;"><image-slot id="activity-painting-gallery-2" src="/fotos/painting/painting-workshop-seville-park.webp" shape="rect" alt="Outdoor painting workshop in a Seville park" placeholder="Painting in a patio photo" style="width:100%;height:100%;"></image-slot></div>
+      <div style="border-radius:4px;overflow:hidden;"><image-slot id="activity-painting-gallery-3" src="/fotos/wine-and-sip/wine-and-sip-seville-neon-painting-group.webp" shape="rect" alt="Group with their neon paintings at a paint and sip in Seville" placeholder="Paint &amp; sip photo" style="width:100%;height:100%;"></image-slot></div>
+      <div style="border-radius:4px;overflow:hidden;"><image-slot id="activity-painting-gallery-4" src="/fotos/painting/painting-workshop-seville-finished-paintings.webp" shape="rect" alt="Team with their finished painting" placeholder="Finished artwork photo" style="width:100%;height:100%;"></image-slot></div>
+    </div>
+  </section>
+
+  <section data-screen-label="Closing" style="max-width:820px;margin:0 auto;padding:88px 32px;text-align:center;">
+    <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,30px);margin:0 0 18px;color:#15cad2;">Inspired by Seville, Painted by You</h2>
+    <p style="font-weight:300;font-size:17px;line-height:1.8;color:#3d4a50;margin:0;">In a city that has inspired artists for centuries, painting together allows your team or group to tap into the same energy—while making memories that last far longer than the paint takes to dry.</p>
+  </section>
+
+  <section data-screen-label="Combine" style="background:#f6f4ef;padding:80px 32px;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">COMBINE IT WITH</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,30px);margin:0 0 32px;">Build it into a complete programme</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:18px;">
+        <a href="/trip/team-building-seville/" style="display:flex;justify-content:space-between;align-items:center;gap:16px;background:#ffffff;border:1px solid #e6e1d6;border-radius:4px;padding:24px;color:#1f2d33;" style-hover="border-color:#ff5d1a;color:#1f2d33;">
+          <span><span style="display:block;font-weight:700;font-size:17px;margin-bottom:4px;">Team Building</span><span style="font-weight:300;font-size:14px;color:#3d4a50;">More creative challenges for your team</span></span><span style="color:#ff5d1a;font-size:20px;">→</span>
+        </a>
+        <a href="/trip/meetings-seville/" style="display:flex;justify-content:space-between;align-items:center;gap:16px;background:#ffffff;border:1px solid #e6e1d6;border-radius:4px;padding:24px;color:#1f2d33;" style-hover="border-color:#ff5d1a;color:#1f2d33;">
+          <span><span style="display:block;font-weight:700;font-size:17px;margin-bottom:4px;">Meetings</span><span style="font-weight:300;font-size:14px;color:#3d4a50;">A creative break between sessions</span></span><span style="color:#ff5d1a;font-size:20px;">→</span>
+        </a>
+        <a href="/trip/corporate-retreats-in-seville/" style="display:flex;justify-content:space-between;align-items:center;gap:16px;background:#ffffff;border:1px solid #e6e1d6;border-radius:4px;padding:24px;color:#1f2d33;" style-hover="border-color:#ff5d1a;color:#1f2d33;">
+          <span><span style="display:block;font-weight:700;font-size:17px;margin-bottom:4px;">Corporate Retreats</span><span style="font-weight:300;font-size:14px;color:#3d4a50;">Time to connect, away from the office</span></span><span style="color:#ff5d1a;font-size:20px;">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Expert" style="background:#eaf6f6;padding:60px 32px 50px;">
+    <div style="max-width:820px;margin:0 auto;display:flex;align-items:center;gap:40px;flex-wrap:wrap;justify-content:center;">
+      <div style="width:150px;height:150px;border-radius:50%;overflow:hidden;flex:none;"><image-slot id="activity-painting-contact-photo" shape="circle" src="/uploads/gunvor-guttormsen-macarena-church-seville.webp" alt="Gunvor Guttormsen in front of Macarena church, Seville" placeholder="Team photo" style="width:100%;height:100%;"></image-slot></div>
+      <div style="flex:1;min-width:240px;">
+        <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(20px,2.6vw,26px);margin:0 0 12px;">Ready to Paint Your Seville Story?</h2>
+        <p style="font-weight:300;font-size:15.5px;line-height:1.7;color:#3d4a50;margin:0 0 24px;">Whether you’re looking for a creative break between meetings, a hands-on cultural experience, or simply a chance to laugh and relax with your group—there’s a painting activity waiting for you here in Seville. Let us help you find the perfect brushstroke for your team.</p>
+        <a href="/contact/" style="background:#ff5d1a;color:#ffffff;font-family:'Varela Round',sans-serif;font-weight:600;padding:14px 32px;border-radius:2px;font-size:15px;display:inline-block;" style-hover="background:#0d3d40;color:#ffffff;">Contact DMC Seville Event</a>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="FAQ" style="max-width:1000px;margin:0 auto;padding:80px 32px 56px;">
+    <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;text-align:center;">FAQ</div>
+    <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,30px);margin:0 0 36px;text-align:center;">Painting team building: common questions</h2>
+    <div style="display:flex;flex-direction:column;border-top:1px solid #e3ecec;">
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+        <details style="border-bottom:1px solid #e3ecec;padding:22px 4px;">
+          <summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:baseline;font-weight:700;font-size:17px;line-height:1.4;">{{ f.q }}<span class="plus" style="color:#ff5d1a;font-size:24px;line-height:1;transition:transform .2s ease;flex:none;">+</span></summary>
+          <p style="margin:14px 0 0;font-weight:300;font-size:15.5px;line-height:1.75;color:#3d4a50;">{{ f.a }}</p>
+        </details>
+      </sc-for>
+    </div>
+    <div style="display:flex;gap:18px;align-items:center;margin-top:48px;padding:24px;border:1px solid #ece7dc;border-radius:6px;background:#ffffff;">
+      <div style="width:56px;height:56px;border-radius:50%;overflow:hidden;flex:none;"><image-slot id="activity-painting-author-photo" shape="circle" src="/uploads/gunvor-guttormsen-avatar.webp" alt="Gunvor Guttormsen" placeholder="Author photo" style="width:100%;height:100%;"></image-slot></div>
+      <p style="font-weight:300;font-size:14.5px;line-height:1.65;color:#3d4a50;margin:0;">This text is written by <strong style="font-weight:700;color:#1f2d33;">Gunvor Guttormsen</strong>. She is the owner of DMC Seville and has worked in tourism in Seville since 1999. She is a true Seville lover and wants to share her passion and love for Seville with you.<span style="display:block;margin-top:6px;font-size:13px;color:#5b6a70;">Last updated: 18 October 2026</span></p>
+    </div>
+  </section>
+
+  <section data-screen-label="More inspiration" style="max-width:1200px;margin:0 auto;padding:32px 32px 88px;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;padding-bottom:20px;border-bottom:1px solid #e3ecec;margin-bottom:32px;">
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,30px);margin:0;">More inspiration</h2>
+      <a href="/inspiration/" style="font-family:'Varela Round',sans-serif;font-size:14px;font-weight:600;">Return to Seville inspiration →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:24px;">
+      <a href="/ceramic-workshop-in-seville/" style="display:flex;flex-direction:column;color:#1f2d33;border-radius:4px;overflow:hidden;background:#ffffff;border:1px solid #ece7dc;" style-hover="border-color:#15cad2;color:#1f2d33;">
+        <div style="height:190px;"><image-slot id="activity-painting-more-1" src="/fotos/ceramic-workshop/ceramic-workshop-seville-tile-painting-group.webp" shape="rect" alt="Ceramic workshop in Triana" placeholder="Related activity photo" style="width:100%;height:100%;"></image-slot></div>
+        <div style="padding:20px 22px 24px;"><div style="font-family:'Varela Round',sans-serif;font-size:11.5px;letter-spacing:1.5px;color:#15cad2;margin-bottom:8px;">TEAM BUILDING</div><div style="font-weight:700;font-size:17px;line-height:1.35;">Ceramic Workshops in Seville</div></div>
+      </a>
+      <a href="/movie-making-in-seville/" style="display:flex;flex-direction:column;color:#1f2d33;border-radius:4px;overflow:hidden;background:#ffffff;border:1px solid #ece7dc;" style-hover="border-color:#15cad2;color:#1f2d33;">
+        <div style="height:190px;"><image-slot id="activity-painting-more-2" shape="rect" src="/uploads/movie-clips-shooting-team-building-spain.webp" alt="Movie making team building" placeholder="Related activity photo" style="width:100%;height:100%;"></image-slot></div>
+        <div style="padding:20px 22px 24px;"><div style="font-family:'Varela Round',sans-serif;font-size:11.5px;letter-spacing:1.5px;color:#15cad2;margin-bottom:8px;">TEAM BUILDING</div><div style="font-weight:700;font-size:17px;line-height:1.35;">Movie Making in Seville</div></div>
+      </a>
+      <a href="/15-best-tapas-bars-in-seville/" style="display:flex;flex-direction:column;color:#1f2d33;border-radius:4px;overflow:hidden;background:#ffffff;border:1px solid #ece7dc;" style-hover="border-color:#15cad2;color:#1f2d33;">
+        <div style="height:190px;"><image-slot id="activity-painting-more-3" shape="rect" src="/uploads/tapas-tour-seville-22.webp" alt="Tapas in Seville" placeholder="Related activity photo" style="width:100%;height:100%;"></image-slot></div>
+        <div style="padding:20px 22px 24px;"><div style="font-family:'Varela Round',sans-serif;font-size:11.5px;letter-spacing:1.5px;color:#15cad2;margin-bottom:8px;">FOOD &amp; WINE</div><div style="font-weight:700;font-size:17px;line-height:1.35;">15 Best Tapas Bars in Seville</div></div>
+      </a>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,300"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sel: 0, guests: 24, slot: null };
+  formats = [
+    { name: 'Paint Like a Master', img: '/fotos/painting/painting-workshop-seville-murillo-immaculate.webp', tag: 'MOST BOOKED', forLabel: 'PERFECT FOR', for: ['Corporate retreats', 'Art-loving groups', 'Anyone looking to connect through collaboration'], text: 'In a shaded Sevillian patio, the group reinterprets a masterpiece by Velázquez, Picasso, or Sorolla. Each participant paints a part of the whole, symbolizing unity and teamwork.', duration: '2 – 3 h', capacity: '10 – 150 guests' },
+    { name: 'Paint Andalusian Ceramics', img: '/fotos/ceramic-workshop/ceramic-workshop-seville-team-at-table.webp', tag: 'HERITAGE', forLabel: 'IDEAL FOR', for: ['Cultural immersion seekers', 'Small to medium-sized groups', 'Anyone who wants a meaningful souvenir'], text: 'A guided session painting azulejos with local motifs and traditional Triana techniques. The finished tiles or plates can be fired and sent back home.', duration: '1.5 – 2 h', capacity: '8 – 80 guests' },
+    { name: 'Paint Your Teammate', img: '/fotos/painting/painting-workshop-seville-finished-paintings.webp', tag: 'ICEBREAKER', forLabel: 'WHY IT WORKS', for: ['Breaks the ice', 'Sparks laughter', 'Encourages playful risk-taking'], text: 'Team members are paired up and challenged to create expressive portraits of one another. It’s not about talent—it’s about perspective, trust, and connection.', duration: '1.5 h', capacity: '8 – 100 guests' },
+    { name: 'Paint & Sip', img: '/fotos/wine-and-sip/wine-and-sip-seville-neon-painting-group.webp', tag: 'EVENINGS', forLabel: 'IDEAL FOR', for: ['Relaxed, informal groups', 'Evening events', 'A more intimate creative experience'], text: 'Local wine, light tapas, and guided painting in a casual, social setting. Think café vibes meets creativity.', duration: '2 h', capacity: '8 – 60 guests' },
+    { name: 'Rooftop Sunset Painting', img: '/fotos/rooftop/rooftop-seville-group-sunset.webp', tag: 'NEW', forLabel: 'IDEAL FOR', for: ['Incentive groups', 'Welcome or farewell evenings', 'Groups who love a view'], text: 'Paint the Seville skyline from a rooftop terrace as the sun goes down, with the Giralda as your model and a drink in hand.', duration: '2 h', capacity: '10 – 50 guests' },
+    { name: 'Fan Painting (Abanicos)', img: '/fotos/fan-painting/fan-painting-seville-team-with-painted-fans.webp', tag: 'NEW', forLabel: 'IDEAL FOR', for: ['Cultural programmes', 'Mixed groups', 'A useful souvenir for the Seville heat'], text: 'Decorate a traditional Spanish hand fan with Andalusian patterns, guided by a local artist. Light, colourful and easy to take home.', duration: '1.5 h', capacity: '8 – 80 guests' }
+  ];
+  slots = ['Between meetings', 'Team building', 'Evening event', 'Farewell activity'];
+  faqs = [
+    { q: 'Do participants need painting experience?', a: 'No. Every session is guided by a local artist, and the activities are designed so that no one needs to be an expert. It’s about creativity and connection, not talent.' },
+    { q: 'Where do the painting activities take place?', a: 'We use patios, artist studios, rooftop terraces and ceramic workshops in Triana. We can also bring the activity to your hotel or event venue.' },
+    { q: 'How large can the group be?', a: 'Painting activities work for small teams of around 8 up to large groups of 150. The collaborative “Paint Like a Master” format works especially well for big groups.' },
+    { q: 'Can guests take their artwork home?', a: 'Yes. Individual canvases, fans and portraits can be taken home the same day. Ceramic pieces need to be fired and are delivered to your hotel or sent on afterwards. A collaborative masterpiece can be delivered to your office.' },
+    { q: 'Can painting be combined with food and wine?', a: 'Yes. Paint & Sip includes local wine and light tapas, and any other format can be followed by a tapas lunch or dinner.' }
+  ];
+  componentDidMount() {
+    const s = document.createElement('script');
+    s.type = 'application/ld+json';
+    s.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: this.faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) });
+    document.head.appendChild(s);
+  }
+  renderVals() {
+    const { sel, guests, slot } = this.state;
+    const formatItems = this.formats.map((f, i) => {
+      const on = i === sel;
+      return {
+        ...f,
+        slotId: 'activity-painting-format-' + (i + 1),
+        pick: () => this.setState({ sel: i }),
+        cardStyle: 'all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;background:#ffffff;border-radius:6px;overflow:hidden;text-align:left;font-family:Montserrat,sans-serif;border:2px solid ' + (on ? '#ff5d1a' : 'transparent') + ';box-shadow:' + (on ? '0 10px 28px rgba(255,93,26,0.18)' : '0 2px 10px rgba(13,61,64,0.06)') + ';transition:border-color .2s,box-shadow .2s;',
+        selStyle: 'font-family:Varela Round,sans-serif;font-size:13px;font-weight:600;margin-top:6px;color:' + (on ? '#ff5d1a' : '#0d3d40'),
+        selLabel: on ? '✓ Added to your request' : '+ Select this activity'
+      };
+    });
+    const slotItems = this.slots.map(l => ({
+      label: l,
+      pick: () => this.setState({ slot: slot === l ? null : l }),
+      style: 'cursor:pointer;padding:10px 6px;border-radius:2px;font-family:Montserrat,sans-serif;font-size:12.5px;font-weight:500;line-height:1.3;border:1px solid ' + (slot === l ? '#15cad2' : 'rgba(255,255,255,0.3)') + ';background:' + (slot === l ? '#15cad2' : 'transparent') + ';color:' + (slot === l ? '#0d3d40' : '#ffffff')
+    }));
+    const q = new URLSearchParams({ activity: this.formats[sel].name, guests: String(guests), ...(slot ? { moment: slot } : {}) });
+    return {
+      formatItems, slotItems, guests, faqs: this.faqs,
+      selectedName: this.formats[sel].name,
+      dec: () => this.setState(s => ({ guests: Math.max(6, s.guests - (s.guests > 50 ? 10 : 2)) })),
+      inc: () => this.setState(s => ({ guests: Math.min(200, s.guests + (s.guests >= 50 ? 10 : 2)) })),
+      enquiryHref: '/contact/?' + q.toString()
+    };
+  }
+}
+</script></template>
+<div id="dmc-consent" hidden style="position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:560px;margin:0 auto;background:#0d3d40;color:#fff;font-family:Montserrat,sans-serif;font-size:14px;line-height:1.5;padding:16px 18px;border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.25)">
+We use Google Analytics cookies to see how visitors use our website. Do you accept statistics cookies? <a href="/privacy-policy/" style="color:#15cad2;text-decoration:underline">More info</a>
+<div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap"><button type="button" data-v="yes" style="cursor:pointer;border:0;background:#15cad2;color:#0d3d40;font-weight:600;padding:8px 16px;border-radius:3px;font-family:inherit">Accept</button><button type="button" data-v="no" style="cursor:pointer;border:1px solid #fff;background:transparent;color:#fff;padding:8px 16px;border-radius:3px;font-family:inherit">Decline</button></div></div>
+<script>
+(function(){var b=document.getElementById('dmc-consent'),v=null;try{v=localStorage.getItem('dmc-consent');}catch(e){}
+if(!v)b.hidden=false;
+b.addEventListener('click',function(e){var x=e.target.getAttribute('data-v');if(!x)return;try{localStorage.setItem('dmc-consent',x);}catch(e){}
+if(x==='yes')gtag('consent','update',{analytics_storage:'granted'});b.hidden=true;});
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-cookie-settings]');if(!a)return;e.preventDefault();
+try{localStorage.removeItem('dmc-consent');}catch(x){}gtag('consent','update',{analytics_storage:'denied'});
+document.cookie.split(';').forEach(function(c){var n=c.split('=')[0].trim();if(n.indexOf('_ga')===0)document.cookie=n+'=;Max-Age=0;path=/;domain=.dmcsevilleevent.com';});b.hidden=false;});})();
+</script>
+<script>
+(function(){
+  var t=document.getElementById('dc-src'), s=document.getElementById('dc-static');
+  if(!t||!s) return;
+  function load(src,cb){var e=document.createElement('script');e.src=src;e.onload=cb;document.body.appendChild(e);}
+  function dedupe(){var seen={};document.querySelectorAll('script[type="application/ld+json"]').forEach(function(e){var k=e.textContent.trim();if(seen[k])e.remove();else seen[k]=1;});}
+  function go(){
+    s.parentNode.insertBefore(document.importNode(t.content,true), s.nextSibling);
+    var obs=new MutationObserver(function(){var r=document.getElementById('dc-root');
+      if(r&&r.firstElementChild){obs.disconnect();setTimeout(function(){s.remove();dedupe();setTimeout(dedupe,1500);},60);}});
+    obs.observe(document.body,{childList:true,subtree:true});
+    load('/image-slot.js',function(){load('/support.js');});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go();
+})();
+</script>
+
+</body></html>
