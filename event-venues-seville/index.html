@@ -57,12 +57,27 @@ var c=null;try{c=localStorage.getItem('dmc-consent');}catch(e){}
 gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:c==='yes'?'granted':'denied'});
 gtag('js',new Date());gtag('config','G-EN4YBPBV42');
 </script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EN4YBPBV42"></script></head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EN4YBPBV42"></script><style id="dmc-mobile-nav">
+@media (max-width:900px){
+  [data-nav="topbar"]{display:none!important}
+  header[data-nav="bar"]{padding:10px 18px!important;flex-wrap:nowrap!important}
+  header[data-nav="bar"] img{height:50px!important}
+  [data-nav-toggle]{display:flex!important}
+  nav[data-nav="menu"]{display:none!important;position:absolute;top:100%;left:0;right:0;z-index:60;background:#ffffff;
+    flex-direction:column!important;align-items:stretch!important;gap:0!important;padding:4px 18px 18px;
+    box-shadow:0 12px 24px rgba(0,0,0,.12);max-height:calc(100vh - 80px);overflow-y:auto}
+  html.nav-open nav[data-nav="menu"]{display:flex!important}
+  nav[data-nav="menu"]>div,nav[data-nav="menu"]>a{padding:14px 2px;border-bottom:1px solid #edf1f1;font-size:16px!important}
+  nav[data-nav="menu"]>div>button{font-size:16px!important;width:100%;text-align:left!important}
+  nav[data-nav="menu"]>div>div{position:static!important;box-shadow:none!important;min-width:0!important;
+    grid-template-columns:1fr!important;padding:6px 0 0 8px!important}
+}
+</style></head>
 <body>
 <div id="dc-static"><div class="sc-host" data-sc-name="Guide-Venues"><div data-dc-tpl="16" style="font-family: Montserrat, sans-serif; color: rgb(31, 45, 51); background: rgb(255, 253, 251);">
 <div class="sc-host" data-dc-tpl="17" data-sc-name="SiteHeader"><div data-dc-tpl="4" style="font-family: Montserrat, sans-serif; position: relative; z-index: 50;">
 <div data-dc-tpl="5" style="position: fixed; top: 0px; left: 0px; height: 3px; background: rgb(255, 93, 26); width: 0%; z-index: 200;"></div>
-<div data-dc-tpl="6" style='background: rgb(21, 202, 210); color: rgb(255, 255, 255); font-family: "Varela Round", sans-serif; font-size: 13px; padding: 8px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;'>
+<div data-dc-tpl="6" data-nav="topbar" style='background: rgb(21, 202, 210); color: rgb(255, 255, 255); font-family: "Varela Round", sans-serif; font-size: 13px; padding: 8px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;'>
 <div data-dc-tpl="7" style="display: flex; gap: 20px; flex-wrap: wrap;">
 <span data-dc-tpl="8">+34 637 87 87 68</span>
 <span data-dc-tpl="9">events@dmcsevilleevent.com</span>
@@ -73,22 +88,23 @@ gtag('js',new Date());gtag('config','G-EN4YBPBV42');
 <a data-dc-tpl="13" href="https://www.linkedin.com/in/gunvor-guttormsen-ba05a728/" style="color: rgb(255, 255, 255);">LinkedIn</a>
 </div>
 </div>
-<header data-dc-tpl="14" style="display: flex; align-items: center; justify-content: space-between; padding: 16px 32px; background: rgb(255, 255, 255); flex-wrap: wrap; gap: 16px; box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 0px;">
+<header data-dc-tpl="14" data-nav="bar" style="position: relative; display: flex; align-items: center; justify-content: space-between; padding: 16px 32px; background: rgb(255, 255, 255); flex-wrap: wrap; gap: 16px; box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 0px;">
 <a data-dc-tpl="15" href="/"><img alt="DMC Seville Event" data-dc-tpl="16" fetchpriority="high" src="/assets/dmc-logo-cropped.webp" style="height: 64px; width: auto; object-fit: contain;"/></a>
-<nav data-dc-tpl="17" style='display: flex; gap: 28px; flex-wrap: wrap; font-family: "Varela Round", sans-serif; font-size: 15px; font-weight: 400; align-items: center;'>
-<div data-dc-tpl="18" style="position: relative;">
-<button data-dc-tpl="19" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>MICE</button>
+<button aria-label="Menu" data-dc-tpl="17" data-nav-toggle="1" style="display: none; background: none; border: 0px; cursor: pointer; padding: 8px; margin-left: auto; flex-direction: column; gap: 5px;" type="button"><span data-dc-tpl="18" style="display: block; width: 26px; height: 3px; background: rgb(13, 61, 64); border-radius: 2px;"></span><span data-dc-tpl="19" style="display: block; width: 26px; height: 3px; background: rgb(13, 61, 64); border-radius: 2px;"></span><span data-dc-tpl="20" style="display: block; width: 26px; height: 3px; background: rgb(13, 61, 64); border-radius: 2px;"></span></button>
+<nav data-dc-tpl="21" data-nav="menu" style='display: flex; gap: 28px; flex-wrap: wrap; font-family: "Varela Round", sans-serif; font-size: 15px; font-weight: 400; align-items: center;'>
+<div data-dc-tpl="22" style="position: relative;">
+<button data-dc-tpl="23" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>MICE</button>
 </div>
-<div data-dc-tpl="32" style="position: relative;">
-<button data-dc-tpl="33" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>GROUPS</button>
+<div data-dc-tpl="36" style="position: relative;">
+<button data-dc-tpl="37" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>GROUPS</button>
 </div>
-<div data-dc-tpl="40" style="position: relative;">
-<button data-dc-tpl="41" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>DESTINATIONS</button>
+<div data-dc-tpl="44" style="position: relative;">
+<button data-dc-tpl="45" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>DESTINATIONS</button>
 </div>
-<div data-dc-tpl="52" style="position: relative;">
-<button data-dc-tpl="53" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>GET IN TOUCH</button>
+<div data-dc-tpl="56" style="position: relative;">
+<button data-dc-tpl="57" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>GET IN TOUCH</button>
 </div>
-<a data-dc-tpl="59" href="/inspiration/" style="color: rgb(31, 45, 51);">INSPIRATION / BLOG</a>
+<a data-dc-tpl="63" href="/inspiration/" style="color: rgb(31, 45, 51);">INSPIRATION / BLOG</a>
 </nav>
 </header></div></div>
 <section data-dc-tpl="18" data-screen-label="Hero" style="position: relative; min-height: clamp(440px, 78svh, 760px); display: flex; align-items: flex-end; overflow: hidden;">
@@ -721,6 +737,13 @@ if(x==='yes')gtag('consent','update',{analytics_storage:'granted'});b.hidden=tru
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-cookie-settings]');if(!a)return;e.preventDefault();
 try{localStorage.removeItem('dmc-consent');}catch(x){}gtag('consent','update',{analytics_storage:'denied'});
 document.cookie.split(';').forEach(function(c){var n=c.split('=')[0].trim();if(n.indexOf('_ga')===0)document.cookie=n+'=;Max-Age=0;path=/;domain=.dmcsevilleevent.com';});b.hidden=false;});})();
+</script>
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest&&e.target.closest('[data-nav-toggle]');
+  if(b){document.documentElement.classList.toggle('nav-open');return;}
+  if(e.target.closest&&e.target.closest('nav[data-nav="menu"] a'))document.documentElement.classList.remove('nav-open');
+});
 </script>
 <script>
 (function(){

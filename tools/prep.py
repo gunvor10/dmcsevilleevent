@@ -121,3 +121,11 @@ for p in text_files():
         open(p, "w", encoding="utf-8").write(t)
 print("page links rewritten:", n_links)
 json.dump(renames, open(os.path.join(SRC, "_renames.json"), "w"), indent=1)
+
+# ---- 4. mobile burger menu + menu link fixes (after links are rewritten to clean URLs) ----
+mh = {}
+exec(open(os.path.join(EXTRA, "mobile-header.py"), encoding="utf-8").read(), mh)
+hp = os.path.join(SRC, "SiteHeader.dc.html"); t = open(hp, encoding="utf-8").read()
+t2, changed = mh["apply"](t)
+if changed:
+    open(hp, "w", encoding="utf-8").write(t2); print("mobile burger menu added to header")

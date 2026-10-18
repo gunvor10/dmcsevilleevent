@@ -8,5 +8,3 @@ Static website built from Claude Design ("WEB DMC SEVILLE EVENT") and published 
 - `uploads/`, `assets/` – older photos and logos used by the pages (converted to WebP, max 1920 px).
 - `.htaccess` – https + www, 301 redirects from the old WordPress addresses, 404 page.
 - Do not edit the pages here by hand: make changes in Claude Design, download, and rebuild with Claude Code.
-
-Deploy: GitHub webhook → Plesk Git on Loading (lin160), deployed automatically to /dmcsevilleevent.com on every push to main.

@@ -11,6 +11,8 @@ SRC, SITE, PORT = sys.argv[1], sys.argv[2], sys.argv[3]
 ONLY = sys.argv[4:]
 URLS = json.load(open(os.path.join(SRC, "_urls.json")))
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+MOBILE = {}
+exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "extra", "mobile-header.py"), encoding="utf-8").read(), MOBILE)
 RUNTIME_SCRIPTS = ("react", "support.js", "image-slot.js", "babel")
 
 BOOT = """<script>
@@ -143,11 +145,12 @@ def build(name, url):
     head.insert(0, BeautifulSoup('<base href="/">', "html.parser"))
     head.append(BeautifulSoup("<style>x-dc{display:none!important}</style>", "html.parser"))
     head.append(BeautifulSoup(HEAD_EXTRA, "html.parser"))
+    head.append(BeautifulSoup(MOBILE["CSS"], "html.parser"))
     tpl = soup.new_tag("template", id="dc-src")
     root.insert_after(tpl)
     html = str(soup)
     html = html.replace('<template id="dc-src"></template>',
-                        '<template id="dc-src">' + source_blocks(page_text) + "</template>\n" + CONSENT + "\n" + BOOT
+                        '<template id="dc-src">' + source_blocks(page_text) + "</template>\n" + CONSENT + "\n" + MOBILE["JS"] + "\n" + BOOT
                         + (CONTACT_JS if url == "/contact/" else "") + (THANKS_JS if url == "/contact/thank-you/" else ""), 1)
     if not html.lstrip().lower().startswith("<!doctype"):
         html = "<!DOCTYPE html>\n" + html
