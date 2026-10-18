@@ -142,6 +142,9 @@
 ## sunset-kayak
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/sunset-kayak/sunset-kayak-seville-hero-triana-bridge.webp
 
+## tailor-made
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/tailor-made/tailor-made-seville-guitarist-in-hacienda-patio.webp
+
 ## treasure-hunt
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/treasure-hunt-seville-bullfighting-challenge.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/treasure-hunt-seville-bullring-team.webp
