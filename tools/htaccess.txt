@@ -54,7 +54,8 @@ RewriteRule ^trip/(private-day-trip-to-jerez-y-cadiz-from-seville|private-white-
 RewriteRule ^trip/private-tour-and-sightseeing-seville/?$ /trip/tailor-made-trips-seville/ [R=301,L]
 RewriteRule ^trip/sevilla-historical-walking-tour-with-tastings/?$ /food-experiences-seville/ [R=301,L]
 RewriteRule ^trip/tapas-dinner-flamenco-show/?$ /flamenco-experiences-seville/ [R=301,L]
-RewriteRule ^(privacy-policy(-2)?|terms-and-conditions(-2)?)/?$ /contact/ [R=301,L]
+RewriteRule ^privacy-policy-2/?$ /privacy-policy/ [R=301,L]
+RewriteRule ^terms-and-conditions(-2)?/?$ /legal-notice/ [R=301,L]
 RewriteRule ^(home-[0-9]+|how-it-work|sample-page|members|dashboard|events?|case|gva_template|product|product-category|product-tag|category-portfolio|shop(-2)?|cart(-2)?|checkout(-[0-9])?|my-account(-[0-9])?|wishlist(-2)?|wp-travel-engine-[a-z0-9-]+|feed)(/.*)?$ / [R=301,L]
 RewriteRule ^(wp-login\.php|wp-admin/?.*|xmlrpc\.php|wp-json/?.*)$ - [G,L]
 
