@@ -71,6 +71,7 @@
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/painting/painting-workshop-seville-team-painting.webp
 
 ## raft-construction
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/raft-construction/raft-construction-seville-teams-on-homemade-rafts.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/raft-construction/raft-construction-seville-teams-racing-guadalquivir.webp
 
 ## river-cruise
