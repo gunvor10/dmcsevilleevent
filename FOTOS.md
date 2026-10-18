@@ -41,6 +41,12 @@
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/ceramic-workshop/ceramic-workshop-seville-tile-painting-group.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/ceramic-workshop/ceramic-workshop-seville-tiles-in-progress.webp
 
+## concierge-service
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/concierge-service/concierge-service-luxury-hotel-pool.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/concierge-service/concierge-service-private-cathedral-rooftop-visit.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/concierge-service/concierge-service-private-chauffeur-mercedes-fleet.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/concierge-service/concierge-service-seville-giralda-at-sunset.webp
+
 ## cooking-experience
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/cooking-experience/cooking-experience-bodega-gongora-sherry-cellar.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/cooking-experience/cooking-experience-paella-chef.webp
