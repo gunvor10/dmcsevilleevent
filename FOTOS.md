@@ -103,6 +103,7 @@
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/treasure-hunt-seville-clue-easel.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/treasure-hunt-seville-group-street.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/treasure-hunt-seville-team-solving-clue.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/treasure-hunt-seville-team-with-fans-el-salvador.webp
 
 ## treasure-hunt/characters
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/characters/character-anibal-gonzalez.webp
