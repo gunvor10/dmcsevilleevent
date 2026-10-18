@@ -5,7 +5,15 @@ import sys, os, json, shutil, re
 
 SRC, SITE, REPO, HT = sys.argv[1:5]
 URLS = json.load(open(os.path.join(SRC, "_urls.json")))
-REFS = json.load(open(os.path.join(SRC, "_refs.json")))
+# every photo/asset path mentioned in the built pages and the Design components
+REFS = set()
+_texts = [os.path.join(r, f) for r, _, fs in os.walk(SITE) for f in fs if f == "index.html"]
+_texts += [os.path.join(SRC, c + ".dc.html") for c in ("SiteHeader", "SiteFooter", "ServicePage", "DestinationPage")]
+for _p in _texts:
+    for _m in re.finditer(r"/(fotos|uploads|assets)/[^\"'\s)>,]+", open(_p, encoding="utf-8").read()):
+        if "{{" not in _m.group(0): REFS.add(_m.group(0).split("?")[0])
+missing = [r for r in REFS if not os.path.exists(os.path.join(SRC, r.lstrip("/")))]
+if missing: raise SystemExit("missing files: " + ", ".join(sorted(missing)[:20]))
 
 # remove previously built pages (keep .git, fotos/, README.md, FOTOS.md)
 KEEP = {".git", "fotos", "tools", "README.md", "FOTOS.md"}
@@ -20,6 +28,9 @@ for url in URLS.values():
     dst = os.path.join(REPO, rel)
     os.makedirs(dst, exist_ok=True)
     shutil.copy2(os.path.join(SITE, rel, "index.html"), os.path.join(dst, "index.html"))
+
+# contact form handler
+shutil.copy2(os.path.join(REPO, "tools", "extra", "send.php"), os.path.join(REPO, "contact", "send.php"))
 
 # runtime + components + search files
 for f in ["support.js", "image-slot.js", ".image-slots.state.json", "SiteHeader.dc.html", "SiteFooter.dc.html",

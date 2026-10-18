@@ -15,6 +15,28 @@ for line in open(os.path.join(SRC, "SEO-LAUNCH-CHECKLIST.md"), encoding="utf-8")
     m = re.match(r"\|\s*([A-Za-z0-9-]+\.dc\.html)\s*\|\s*(/[^|\s]*)\s*\|", line)
     if m:
         URLS[m.group(1)] = m.group(2)
+# ---- extra pages/blocks not (yet) in Design: legal pages, thank-you page, contact form, footer links ----
+EXTRA = sys.argv[3] if len(sys.argv) > 3 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "extra")
+ns = {}
+exec(open(os.path.join(EXTRA, "legal-pages.py"), encoding="utf-8").read(), ns)
+for name, d in ns["PAGES"].items():
+    if not os.path.exists(os.path.join(SRC, name)):
+        open(os.path.join(SRC, name), "w", encoding="utf-8").write(ns["page"](name, d))
+        URLS[name] = d["url"]
+        if not d.get("noindex"):
+            sm = os.path.join(SRC, "sitemap.xml"); t = open(sm, encoding="utf-8").read()
+            if d["url"] not in t:
+                t = t.replace("</urlset>", f"  <url>\n    <loc>https://www.dmcsevilleevent.com{d['url']}</loc>\n  </url>\n</urlset>")
+                open(sm, "w", encoding="utf-8").write(t)
+cp = os.path.join(SRC, "Contact.dc.html"); t = open(cp, encoding="utf-8").read()
+if "dmc-enquiry" not in t and "<form" not in t:
+    form = open(os.path.join(EXTRA, "contact-form.html"), encoding="utf-8").read()
+    t = t.replace('  <dc-import name="SiteFooter"', form + '  <dc-import name="SiteFooter"', 1)
+    open(cp, "w", encoding="utf-8").write(t); print("contact form added")
+fp = os.path.join(SRC, "SiteFooter.dc.html"); t = open(fp, encoding="utf-8").read()
+if "/privacy-policy/" not in t:
+    t = t.replace("All Rights Reserved.", 'All Rights Reserved. · <a href="/privacy-policy/" style="color:inherit;">Privacy &amp; Cookies</a> · <a href="/legal-notice/" style="color:inherit;">Legal Notice</a>', 1)
+    open(fp, "w", encoding="utf-8").write(t); print("footer legal links added")
 json.dump(URLS, open(os.path.join(SRC, "_urls.json"), "w"), indent=1)
 print("pages in URL map:", len(URLS))
 

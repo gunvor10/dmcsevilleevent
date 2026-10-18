@@ -89,6 +89,8 @@ RewriteRule ^Guide\-Tapas\-Bars\.dc\.html$ /15-best-tapas-bars-in-seville/ [R=30
 RewriteRule ^Guide\-Venues\.dc\.html$ /event-venues-seville/ [R=301,L]
 RewriteRule ^Incentive\-Trip\-Sevilla\.dc\.html$ /incentive-trip-sevilla/ [R=301,L]
 RewriteRule ^Inspiration\.dc\.html$ /inspiration/ [R=301,L]
+RewriteRule ^Legal\-Notice\.dc\.html$ /legal-notice/ [R=301,L]
+RewriteRule ^Privacy\-Policy\.dc\.html$ /privacy-policy/ [R=301,L]
 RewriteRule ^Service\-Concierge\.dc\.html$ /trip/concierge-services-seville/ [R=301,L]
 RewriteRule ^Service\-Corporate\-Incentive\.dc\.html$ /trip/corporate-incentive-trip-seville/ [R=301,L]
 RewriteRule ^Service\-Corporate\-Retreats\.dc\.html$ /trip/corporate-retreats-in-seville/ [R=301,L]
@@ -99,6 +101,7 @@ RewriteRule ^Service\-Nordic\-DMC\-Sevilla\.dc\.html$ /nordic-dmc-sevilla/ [R=30
 RewriteRule ^Service\-Tailor\-Made\.dc\.html$ /trip/tailor-made-trips-seville/ [R=301,L]
 RewriteRule ^Service\-Team\-Building\.dc\.html$ /trip/team-building-seville/ [R=301,L]
 RewriteRule ^Service\-Venue\-Finding\.dc\.html$ /trip/corporate-event-venue-seville/ [R=301,L]
+RewriteRule ^Thank\-You\.dc\.html$ /contact/thank-you/ [R=301,L]
 RewriteRule ^Travel\-Guarantee\.dc\.html$ /dmc-seville-event-travel-guarantee/ [R=301,L]
 </IfModule>
 
