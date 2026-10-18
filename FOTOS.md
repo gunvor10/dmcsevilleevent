@@ -30,6 +30,9 @@
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/el-rocio/el-rocio-group-photo.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/el-rocio/el-rocio-horse-carriage.webp
 
+## extra
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/extra/flamenco-workshop-plaza-de-espana.webp
+
 ## food
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/food/food-seville-jamon-iberico.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/food/food-seville-terrace-dinner.webp
@@ -45,6 +48,7 @@
 ## painting
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/painting/painting-workshop-seville-easel.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/painting/painting-workshop-seville-finished-paintings.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/painting/painting-workshop-seville-murillo-immaculate.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/painting/painting-workshop-seville-palettes.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/painting/painting-workshop-seville-park.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/painting/painting-workshop-seville-team-painting.webp
