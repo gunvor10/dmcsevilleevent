@@ -105,7 +105,12 @@
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/treasure-hunt-seville-team-solving-clue.webp
 
 ## treasure-hunt/characters
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/characters/character-anibal-gonzalez.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/characters/character-carmen.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/characters/character-cervantes.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/characters/character-don-juan-tenorio.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/characters/character-san-fernando-iii.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/characters/character-velazquez.webp
 
 ## venues
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/venues/venue-seville-hacienda.webp
