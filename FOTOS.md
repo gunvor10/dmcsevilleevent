@@ -67,6 +67,14 @@
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/rooftop/rooftop-seville-group-sunset.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/rooftop/rooftop-seville-terrace-lunch.webp
 
+## san-fernando
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/san-fernando/death-of-san-fernando-painting.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/san-fernando/san-fernando-iii-full-portrait-mugica-1870.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/san-fernando/san-fernando-iii-murillo-portrait.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/san-fernando/san-fernando-iii-murillo-praying.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/san-fernando/san-fernando-procession-seville.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/san-fernando/san-fernando-statue-plaza-nueva-seville.webp
+
 ## spring
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/spring/spring-seville-feria-de-abril.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/spring/spring-seville-park-flowers.webp
@@ -77,6 +85,9 @@
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/treasure-hunt-seville-clue-easel.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/treasure-hunt-seville-group-street.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/treasure-hunt-seville-team-solving-clue.webp
+
+## treasure-hunt/characters
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/characters/character-san-fernando-iii.webp
 
 ## venues
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/venues/venue-seville-hacienda.webp
