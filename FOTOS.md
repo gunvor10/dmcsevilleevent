@@ -1,5 +1,8 @@
 # Photo list (raw links for Claude Design)
 
+## about-us
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/about-us/about-us-gunvor-with-anibal-gonzalez-statue.webp
+
 ## alcazar
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/alcazar/alcazar-seville-banos-de-maria-de-padilla.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/alcazar/alcazar-seville-gardens.webp
@@ -44,6 +47,8 @@
 
 ## donana
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/donana/donana-flamingos-in-the-marshes.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/donana/donana-horse-carriage-excursion.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/donana/donana-rocio-wagons-in-the-pine-forest.webp
 
 ## el-rocio
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/el-rocio/el-rocio-carriages-in-the-village.webp
