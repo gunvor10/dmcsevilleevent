@@ -115,3 +115,6 @@
 ## venues
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/venues/venue-seville-hacienda.webp
 
+## wine-and-sip
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/wine-and-sip/wine-and-sip-seville-neon-painting-group.webp
+
