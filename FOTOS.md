@@ -88,6 +88,9 @@
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/movie-making/movie-making-seville-flamenco-scene-filming.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/movie-making/movie-making-seville-silent-film-scene-cathedral.webp
 
+## norwegian
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/norwegian/norwegian-hero-alcazar-patio-de-las-doncellas.webp
+
 ## painting
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/painting/painting-workshop-seville-easel.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/painting/painting-workshop-seville-finished-paintings.webp
