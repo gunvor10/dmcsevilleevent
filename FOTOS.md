@@ -68,11 +68,14 @@
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/rooftop/rooftop-seville-terrace-lunch.webp
 
 ## san-fernando
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/san-fernando/death-of-san-fernando-full-painting.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/san-fernando/death-of-san-fernando-painting.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/san-fernando/san-fernando-iii-full-portrait-mugica-1870.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/san-fernando/san-fernando-iii-murillo-portrait.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/san-fernando/san-fernando-iii-murillo-praying.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/san-fernando/san-fernando-iii-portrait-pacheco.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/san-fernando/san-fernando-procession-seville.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/san-fernando/san-fernando-silver-urn-cathedral-seville.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/san-fernando/san-fernando-statue-plaza-nueva-seville.webp
 
 ## spring
