@@ -42,6 +42,7 @@
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/ceramic-workshop/ceramic-workshop-seville-tiles-in-progress.webp
 
 ## concierge-service
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/concierge-service/concierge-service-hero-seville-river-sunset.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/concierge-service/concierge-service-luxury-hotel-pool.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/concierge-service/concierge-service-private-cathedral-rooftop-visit.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/concierge-service/concierge-service-private-chauffeur-mercedes-fleet.webp
@@ -150,6 +151,9 @@
 
 ## tailor-made
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/tailor-made/tailor-made-seville-guitarist-in-hacienda-patio.webp
+
+## team-building
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/team-building/team-building-hero-sangria-workshop-by-the-sea.webp
 
 ## treasure-hunt
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/treasure-hunt-seville-bullfighting-challenge.webp
