@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><base href="/"/><style>
+    .sc-placeholder{background:color-mix(in srgb,currentColor 8%,transparent);
+      border:1px solid color-mix(in srgb,currentColor 50%,transparent);
+      border-radius:2px;box-sizing:border-box;overflow:hidden}
+    @keyframes sc-shine{0%{background-position:100% 50%}100%{background-position:0% 50%}}
+    html.sc-dc-streaming .sc-placeholder,
+    html.sc-dc-streaming .sc-interp.sc-missing{position:relative;
+      background:color-mix(in srgb,currentColor 5%,transparent);
+      border-color:transparent}
+    html.sc-dc-streaming .sc-placeholder::before,
+    html.sc-dc-streaming .sc-interp.sc-missing::before{content:'';
+      position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg,rgba(217,119,87,0) 25%,rgba(247,225,211,.95) 37%,rgba(217,119,87,0) 63%);
+      background-size:400% 100%;animation:sc-shine 1.4s ease infinite}
+    html.sc-dc-streaming .sc-placeholder:nth-child(n+9 of .sc-placeholder)::before,
+    html.sc-dc-streaming .sc-interp.sc-missing:nth-child(n+9 of .sc-interp.sc-missing)::before{animation:none;
+      background:color-mix(in srgb,currentColor 8%,transparent)}
+    .sc-placeholder-error{padding:4px 8px;font:11px/1.4 ui-monospace,monospace;
+      color:color-mix(in srgb,currentColor 70%,transparent);word-break:break-word}
+    .sc-interp.sc-missing{display:inline-block;width:2em;height:1em;overflow:hidden;
+      vertical-align:text-bottom;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
+      border-radius:2px;box-sizing:border-box;color:transparent;
+      user-select:none}
+    .sc-interp.sc-unresolved{font-family:ui-monospace,monospace;font-size:.85em;
+      color:color-mix(in srgb,currentColor 50%,transparent);
+      background:color-mix(in srgb,currentColor 10%,transparent);border-radius:3px;
+      padding:0 3px}
+    .sc-host.sc-has-error{position:relative}
+    .sc-logic-error{position:absolute;top:8px;left:8px;z-index:2147483647;max-width:60ch;
+      padding:6px 10px;background:#b00020;color:#fff;font:12px/1.4 ui-monospace,monospace;
+      border-radius:4px;white-space:pre-wrap;pointer-events:none}
+    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts — keep both
+       in sync until dc-runtime regains a build step. */
+    @media print {
+      @page { margin: 0.5cm; }
+      figure, table { break-inside: avoid; }
+      #dc-root, #dc-root > .sc-host { height: auto; }
+      *, *::before, *::after {
+        print-color-adjust: exact; -webkit-print-color-adjust: exact;
+        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+        animation-delay: -99s !important; animation-duration: .001s !important;
+        animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+        animation-play-state: running !important; transition-duration: 0s !important;
+      }
+    }
+  </style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>DMC Seville Event | Corporate MICE &amp; Incentive Travel DMC in Seville</title>
+<meta content="DMC Seville Event is a corporate Destination Management Company organising meetings, incentives, team building and events in Seville and across Andalusia." name="description"/>
+<link href="https://www.dmcsevilleevent.com/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="DMC Seville Event" property="og:site_name"/>
+<meta content="en_GB" property="og:locale"/>
+<meta content="DMC Seville Event | Corporate MICE &amp; Incentive Travel DMC in Seville" property="og:title"/>
+<meta content="DMC Seville Event is a corporate Destination Management Company organising meetings, incentives, team building and events in Seville and across Andalusia." property="og:description"/>
+<meta content="https://www.dmcsevilleevent.com/" property="og:url"/>
+<meta content="https://www.dmcsevilleevent.com/uploads/reisegaranti.webp" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TravelAgency","@id":"https://www.dmcsevilleevent.com/#organization","name":"DMC Seville Event","url":"https://www.dmcsevilleevent.com/","logo":"https://www.dmcsevilleevent.com/assets/dmc-logo-cropped.webp","telephone":"+34 637 87 87 68","email":"events@dmcsevilleevent.com","address":{"@type":"PostalAddress","streetAddress":"C/ Milano Govinda 35","postalCode":"41020","addressLocality":"Sevilla","addressCountry":"ES"},"areaServed":"Andalusia, Spain","founder":{"@id":"https://www.dmcsevilleevent.com/about/#gunvor"},"sameAs":["https://www.facebook.com/Sevillaprivateguidegunvor/","https://www.instagram.com/sevillaprivateguide_gunvor/"]},{"@type":"Person","@id":"https://www.dmcsevilleevent.com/about/#gunvor","name":"Gunvor Guttormsen","jobTitle":"Founder & Director","url":"https://www.dmcsevilleevent.com/about/","worksFor":{"@id":"https://www.dmcsevilleevent.com/#organization"},"sameAs":["https://www.linkedin.com/in/gunvor-guttormsen-ba05a728/"]},{"@type":"WebSite","@id":"https://www.dmcsevilleevent.com/#website","url":"https://www.dmcsevilleevent.com/","name":"DMC Seville Event","inLanguage":"en","publisher":{"@id":"https://www.dmcsevilleevent.com/#organization"}}]}</script>
+<style>x-dc{display:none!important}</style>
+<style></style><style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><link data-dc-tpl="1" href="https://fonts.googleapis.com" rel="preconnect"/><link data-dc-tpl="2" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;family=Varela+Round&amp;display=swap" rel="stylesheet"/><style data-dc-tpl="4">@keyframes fadeInUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}@keyframes heroSlide{0%{opacity:1;}20%{opacity:1;}25%{opacity:0;}95%{opacity:0;}100%{opacity:1;}}body{margin:0;background:#fffdfb;}a{text-decoration:none;}*{box-sizing:border-box;}</style><style data-dc-tpl="3">a{text-decoration:none;}*{box-sizing:border-box;}</style><style data-dc-tpl="3">a{text-decoration:none;color:#cfe3e4;}a:hover{color:#ff5d1a;}</style><style>x-dc{display:none!important}</style><meta content="H0RdhqivH3abdaZlze3v44QQ5XISVadKqWreEA0e7PA" name="google-site-verification"/>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+var c=null;try{c=localStorage.getItem('dmc-consent');}catch(e){}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:c==='yes'?'granted':'denied'});
+gtag('js',new Date());gtag('config','G-EN4YBPBV42');
+</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EN4YBPBV42"></script></head>
+<body>
+<div id="dc-static"><div class="sc-host" data-sc-name="Home"><div data-dc-tpl="5" style="font-family: Montserrat, sans-serif; color: rgb(31, 45, 51); overflow-x: hidden;">
+<div class="sc-host" data-dc-tpl="6" data-sc-name="SiteHeader"><div data-dc-tpl="4" style="font-family: Montserrat, sans-serif; position: relative; z-index: 50;">
+<div data-dc-tpl="5" style="position: fixed; top: 0px; left: 0px; height: 3px; background: rgb(255, 93, 26); width: 0%; z-index: 200;"></div>
+<div data-dc-tpl="6" style='background: rgb(21, 202, 210); color: rgb(255, 255, 255); font-family: "Varela Round", sans-serif; font-size: 13px; padding: 8px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;'>
+<div data-dc-tpl="7" style="display: flex; gap: 20px; flex-wrap: wrap;">
+<span data-dc-tpl="8">+34 637 87 87 68</span>
+<span data-dc-tpl="9">events@dmcsevilleevent.com</span>
+</div>
+<div data-dc-tpl="10" style="display: flex; gap: 14px;">
+<a data-dc-tpl="11" href="https://www.facebook.com/Sevillaprivateguidegunvor/" style="color: rgb(255, 255, 255);">Facebook</a>
+<a data-dc-tpl="12" href="https://www.instagram.com/sevillaprivateguide_gunvor/" style="color: rgb(255, 255, 255);">Instagram</a>
+<a data-dc-tpl="13" href="https://www.linkedin.com/in/gunvor-guttormsen-ba05a728/" style="color: rgb(255, 255, 255);">LinkedIn</a>
+</div>
+</div>
+<header data-dc-tpl="14" style="display: flex; align-items: center; justify-content: space-between; padding: 16px 32px; background: rgb(255, 255, 255); flex-wrap: wrap; gap: 16px; box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 0px;">
+<a data-dc-tpl="15" href="/"><img alt="DMC Seville Event" data-dc-tpl="16" fetchpriority="high" src="/assets/dmc-logo-cropped.webp" style="height: 64px; width: auto; object-fit: contain;"/></a>
+<nav data-dc-tpl="17" style='display: flex; gap: 28px; flex-wrap: wrap; font-family: "Varela Round", sans-serif; font-size: 15px; font-weight: 400; align-items: center;'>
+<div data-dc-tpl="18" style="position: relative;">
+<button data-dc-tpl="19" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>MICE</button>
+</div>
+<div data-dc-tpl="32" style="position: relative;">
+<button data-dc-tpl="33" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>GROUPS</button>
+</div>
+<div data-dc-tpl="40" style="position: relative;">
+<button data-dc-tpl="41" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>DESTINATIONS</button>
+</div>
+<div data-dc-tpl="52" style="position: relative;">
+<button data-dc-tpl="53" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>GET IN TOUCH</button>
+</div>
+<a data-dc-tpl="59" href="/inspiration/" style="color: rgb(31, 45, 51);">INSPIRATION / BLOG</a>
+</nav>
+</header></div></div>
+<section data-dc-tpl="7" style="position: relative; overflow: hidden; height: clamp(440px, 78svh, 760px);">
+<img alt="Seville skyline at sunset" data-dc-tpl="8" loading="lazy" src="/uploads/reisegaranti.webp" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; opacity: 1; animation: 20s ease-in-out 0s infinite normal none running heroSlide;"/>
+<img alt="Hot air balloon ride over Andalusian sunflower fields" data-dc-tpl="9" loading="lazy" src="/uploads/balloon-ride1.webp" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: 20s ease-in-out 5s infinite normal none running heroSlide;"/>
+<img alt="Skydiving activity near Seville" data-dc-tpl="10" loading="lazy" src="/uploads/skydiving-seville.webp" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: 20s ease-in-out 10s infinite normal none running heroSlide;"/>
+<img alt="Rooftop terrace event venue with Seville Cathedral view" data-dc-tpl="11" loading="lazy" src="/uploads/venue-finding-seville-3.webp" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: 20s ease-in-out 15s infinite normal none running heroSlide;"/>
+<div data-dc-tpl="12" style="position: absolute; inset: 0px; z-index: 2;">
+<div data-dc-tpl="13" style="position: absolute; inset: 0px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px; color: rgb(255, 255, 255); opacity: 1; animation: 20s ease-in-out 0s infinite normal none running heroSlide;">
+<div data-dc-tpl="14" style='font-family: "Varela Round", sans-serif; letter-spacing: 2px; font-size: 14px; color: rgb(255, 177, 153); margin-bottom: 14px;'>WELCOME TO YOUR DEDICATED DESTINATION MANAGEMENT COMPANY</div>
+<h1 data-dc-tpl="15" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(42px, 6.8vw, 78px); margin: 0px 0px 16px; max-width: 900px; line-height: 1.15; text-transform: uppercase; letter-spacing: 1px;">DMC MICE &amp; Luxury Experiences</h1>
+<p data-dc-tpl="16" style="font-family: Montserrat, sans-serif; font-weight: 300; font-size: 19px; max-width: 640px; margin: 0px 0px 28px;">Always at our disposal.</p>
+<a class="scp0" data-dc-tpl="17" href="/contact/" style='background: rgb(255, 93, 26); color: rgb(255, 255, 255); font-family: "Varela Round", sans-serif; font-weight: 600; padding: 14px 32px; border-radius: 2px; font-size: 15px; transition: transform 0.25s, box-shadow 0.25s;'>Discover More</a>
+</div>
+<div data-dc-tpl="18" style="position: absolute; inset: 0px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px; color: rgb(255, 255, 255); opacity: 0; animation: 20s ease-in-out 5s infinite normal none running heroSlide;">
+<div data-dc-tpl="19" style='font-family: "Varela Round", sans-serif; letter-spacing: 2px; font-size: 14px; color: rgb(255, 177, 153); margin-bottom: 14px;'>OUR WORK IS EXPERIENCES</div>
+<h2 data-dc-tpl="20" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(42px, 6.8vw, 78px); margin: 0px 0px 16px; max-width: 900px; line-height: 1.15; text-transform: uppercase; letter-spacing: 1px;">Meet Our Dedicated Team</h2>
+<p data-dc-tpl="21" style="font-family: Montserrat, sans-serif; font-weight: 300; font-size: 19px; max-width: 640px; margin: 0px 0px 28px;">Our team of professionals make your ideas reality.</p>
+<a class="scp0" data-dc-tpl="22" href="/contact/" style='background: rgb(255, 93, 26); color: rgb(255, 255, 255); font-family: "Varela Round", sans-serif; font-weight: 600; padding: 14px 32px; border-radius: 2px; font-size: 15px; transition: transform 0.25s, box-shadow 0.25s;'>Discover More</a>
+</div>
+<div data-dc-tpl="23" style="position: absolute; inset: 0px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px; color: rgb(255, 255, 255); opacity: 0; animation: 20s ease-in-out 10s infinite normal none running heroSlide;">
+<div data-dc-tpl="24" style='font-family: "Varela Round", sans-serif; letter-spacing: 2px; font-size: 14px; color: rgb(255, 177, 153); margin-bottom: 14px;'>ABOUT OUR COMPANY</div>
+<h2 data-dc-tpl="25" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(42px, 6.8vw, 78px); margin: 0px 0px 16px; max-width: 900px; line-height: 1.15; text-transform: uppercase; letter-spacing: 1px;">We Design Unique Events</h2>
+<p data-dc-tpl="26" style="font-family: Montserrat, sans-serif; font-weight: 300; font-size: 19px; max-width: 640px; margin: 0px 0px 28px;">True dedication and eye for details.</p>
+<a class="scp0" data-dc-tpl="27" href="/contact/" style='background: rgb(255, 93, 26); color: rgb(255, 255, 255); font-family: "Varela Round", sans-serif; font-weight: 600; padding: 14px 32px; border-radius: 2px; font-size: 15px; transition: transform 0.25s, box-shadow 0.25s;'>Discover More</a>
+</div>
+<div data-dc-tpl="28" style="position: absolute; inset: 0px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px; color: rgb(255, 255, 255); opacity: 0; animation: 20s ease-in-out 15s infinite normal none running heroSlide;">
+<div data-dc-tpl="29" style='font-family: "Varela Round", sans-serif; letter-spacing: 2px; font-size: 14px; color: rgb(255, 177, 153); margin-bottom: 14px;'>INCENTIVE TRIPS THAT MOTIVATE AND INSPIRE</div>
+<h2 data-dc-tpl="30" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(42px, 6.8vw, 78px); margin: 0px 0px 16px; max-width: 900px; line-height: 1.15; text-transform: uppercase; letter-spacing: 1px;">Engaging Incentive Trips</h2>
+<p data-dc-tpl="31" style="font-family: Montserrat, sans-serif; font-weight: 300; font-size: 19px; max-width: 640px; margin: 0px 0px 28px;">Luxury, culture, and connection.</p>
+<a class="scp0" data-dc-tpl="32" href="/contact/" style='background: rgb(255, 93, 26); color: rgb(255, 255, 255); font-family: "Varela Round", sans-serif; font-weight: 600; padding: 14px 32px; border-radius: 2px; font-size: 15px; transition: transform 0.25s, box-shadow 0.25s;'>Discover More</a>
+</div>
+</div>
+</section>
+<section data-dc-tpl="33" style="max-width: 900px; margin: 0px auto; padding: 80px 32px 40px; text-align: center;">
+<h2 data-dc-tpl="34" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 40px); margin: 0px 0px 22px; text-wrap: pretty; color: rgb(21, 202, 210);">Welcome to DMC Seville Event</h2>
+<p data-dc-tpl="35" style="font-weight: 300; font-size: 18px; line-height: 1.8; color: rgb(61, 74, 80); margin: 0px 0px 16px;">I'm your trusted creative and professional partner for luxury events, bespoke weddings, and private celebrations in Seville. As a leading Destination Management Company here, I specialize in tailor-made, high-end experiences for discerning clients from around the world.</p>
+<p data-dc-tpl="36" style="font-weight: 300; font-size: 18px; line-height: 1.8; color: rgb(61, 74, 80); margin: 0px 0px 32px;">Whether you're planning an exclusive wedding in Seville, an intimate celebration, a corporate meeting, or an incentive trip, my team and I are here to design and manage every detail from start to finish — with you, every step of the way.</p>
+<div data-dc-tpl="37" style='font-family: "Varela Round", sans-serif; font-weight: 600; letter-spacing: 1px; font-size: 22px; color: rgb(13, 61, 64);'>Professionals with passion.<br data-dc-tpl="38"/><span data-dc-tpl="39" style="color: rgb(255, 93, 26);">Perfect events.</span></div>
+</section>
+<section data-dc-tpl="40" style="max-width: 1200px; margin: 0px auto; padding: 40px 32px 80px; display: grid; grid-template-columns: minmax(0px, 1fr) minmax(0px, 1fr); gap: 56px; align-items: center;">
+<div data-dc-tpl="41">
+<div data-dc-tpl="42" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>HOW WE WORK</div>
+<h2 data-dc-tpl="43" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(26px, 3vw, 36px); margin: 0px 0px 18px; text-wrap: pretty; color: rgb(21, 202, 210);">Personalized Event Planning in Seville — Built Around Your Vision</h2>
+<p data-dc-tpl="44" style="font-weight: 300; font-size: 16px; line-height: 1.7; color: rgb(61, 74, 80); margin: 0px 0px 16px;">At DMC Seville Event, we believe exceptional events begin with truly understanding our clients. From your very first idea, we take the time to listen — ensuring every aspect of your project reflects your goals, style, and brand.</p>
+<p data-dc-tpl="45" style="font-weight: 300; font-size: 16px; line-height: 1.7; color: rgb(61, 74, 80); margin: 0px;">Whether you're planning a high-level corporate event, a meeting, or an incentive trip, we offer full-service support from concept to completion. Our expert team combines local insight with international standards, helping clients from around the world bring unforgettable experiences to life in Seville and across Spain.</p>
+</div>
+<div data-dc-tpl="46" style="width: 100%; height: 380px; border-radius: 4px; overflow: hidden; opacity: 0; animation: 0.8s ease 0s 1 normal forwards running fadeInUp;"><img alt="Corporate meeting and planning session in Seville" decoding="async" loading="lazy" src="/uploads/meetings-in-seville-1.webp" style="width: 100%; height: 100%; transition: transform 0.5s;;display:block;object-fit:cover;border-radius:4px"/></div>
+</section>
+<section data-dc-tpl="48" style="background: rgb(13, 61, 64); padding: 64px 32px; text-align: center;">
+<p data-dc-tpl="49" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(24px, 3.2vw, 38px); color: rgb(255, 255, 255); max-width: 840px; margin: 0px auto; line-height: 1.3;">“The most productive meetings happen outside the ordinary.”</p>
+</section>
+<section data-dc-tpl="50" style="max-width: 1280px; margin: 0px auto; padding: 90px 32px;">
+<div data-dc-tpl="51" style="text-align: center; margin-bottom: 44px;">
+<div data-dc-tpl="52" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>OUR SERVICE</div>
+<h2 data-dc-tpl="53" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(26px, 3vw, 36px); margin: 0px; color: rgb(21, 202, 210);">Choose Our Event Types &amp; Enjoy</h2>
+</div>
+<div data-dc-tpl="54" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px;">
+<a data-dc-tpl="55" href="/trip/meetings-seville/" style="border: 1px solid rgb(236, 231, 224); border-radius: 4px; overflow: hidden; color: rgb(31, 45, 51);">
+<div data-dc-tpl="56" style="width: 100%; height: 180px; border-radius: 0px; overflow: hidden; opacity: 0; animation: 0.8s ease 0s 1 normal forwards running fadeInUp;"><img alt="Meetings venue" decoding="async" loading="lazy" src="/uploads/venue-finding-seville-fibes-cupola.webp" style="width: 100%; height: 100%; transition: transform 0.5s;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="58" style="padding: 20px;">
+<h3 data-dc-tpl="59" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 19px; margin: 0px 0px 8px; color: rgb(21, 202, 210);">Meetings</h3>
+<p data-dc-tpl="60" style="font-weight: 300; font-size: 14.5px; color: rgb(61, 74, 80); margin: 0px; line-height: 1.6;">Make a successful meeting in Seville.</p>
+</div>
+</a>
+<a data-dc-tpl="61" href="/trip/corporate-event-venue-seville/" style="border: 1px solid rgb(236, 231, 224); border-radius: 4px; overflow: hidden; color: rgb(31, 45, 51);">
+<div data-dc-tpl="62" style="width: 100%; height: 180px; border-radius: 0px; overflow: hidden; opacity: 0; animation: 0.8s ease 0s 1 normal forwards running fadeInUp;"><img alt="Venue finding" decoding="async" loading="lazy" src="/uploads/incentive-trip-seville8.webp" style="width: 100%; height: 100%; transition: transform 0.5s;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="64" style="padding: 20px;">
+<h3 data-dc-tpl="65" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 19px; margin: 0px 0px 8px; color: rgb(21, 202, 210);">Venue Finding</h3>
+<p data-dc-tpl="66" style="font-weight: 300; font-size: 14.5px; color: rgb(61, 74, 80); margin: 0px; line-height: 1.6;">The powerful venue selection in Seville is a valuable step to create an excellent event.</p>
+</div>
+</a>
+<a data-dc-tpl="67" href="/trip/corporate-incentive-trip-seville/" style="border: 1px solid rgb(236, 231, 224); border-radius: 4px; overflow: hidden; color: rgb(31, 45, 51);">
+<div data-dc-tpl="68" style="width: 100%; height: 180px; border-radius: 0px; overflow: hidden; opacity: 0; animation: 0.8s ease 0s 1 normal forwards running fadeInUp;"><img alt="Corporate incentive" decoding="async" loading="lazy" src="/uploads/best-flamenco-seville-4.webp" style="width: 100%; height: 100%; transition: transform 0.5s;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="70" style="padding: 20px;">
+<h3 data-dc-tpl="71" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 19px; margin: 0px 0px 8px; color: rgb(21, 202, 210);">Corporate Incentive</h3>
+<p data-dc-tpl="72" style="font-weight: 300; font-size: 14.5px; color: rgb(61, 74, 80); margin: 0px; line-height: 1.6;">An incentive in Seville is a guarantee for a memorable event for teams and companies.</p>
+</div>
+</a>
+<a data-dc-tpl="73" href="/trip/team-building-seville/" style="border: 1px solid rgb(236, 231, 224); border-radius: 4px; overflow: hidden; color: rgb(31, 45, 51);">
+<div data-dc-tpl="74" style="width: 100%; height: 180px; border-radius: 0px; overflow: hidden; opacity: 0; animation: 0.8s ease 0s 1 normal forwards running fadeInUp;"><img alt="Team building" decoding="async" loading="lazy" src="/uploads/seville-teambuilding4.webp" style="width: 100%; height: 100%; transition: transform 0.5s;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="76" style="padding: 20px;">
+<h3 data-dc-tpl="77" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 19px; margin: 0px 0px 8px; color: rgb(21, 202, 210);">Team Building</h3>
+<p data-dc-tpl="78" style="font-weight: 300; font-size: 14.5px; color: rgb(61, 74, 80); margin: 0px; line-height: 1.6;">A mixture between cultural and fun team building is an exciting way to motivate.</p>
+</div>
+</a>
+</div>
+</section>
+<section data-dc-tpl="79" id="destinations" style="background: rgb(246, 244, 240); padding: 90px 32px;">
+<div data-dc-tpl="80" style="max-width: 1280px; margin: 0px auto;">
+<div data-dc-tpl="81" style="text-align: center; margin-bottom: 40px;">
+<div data-dc-tpl="82" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>DESTINATION LIST</div>
+<h2 data-dc-tpl="83" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(26px, 3vw, 36px); margin: 0px; color: rgb(21, 202, 210);">Explore Andalusia With Dedicated Services</h2>
+</div>
+<div data-dc-tpl="84" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+<a data-dc-tpl="85" href="/incentive-trip-sevilla/" style="background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; color: rgb(31, 45, 51);">
+<div data-dc-tpl="86" style="width: 100%; height: 140px; border-radius: 0px; overflow: hidden; opacity: 0; animation: 0.8s ease 0s 1 normal forwards running fadeInUp;"><img alt="Sevilla photo" decoding="async" loading="lazy" src="/uploads/mice-destination-seville.webp" style="width: 100%; height: 100%; transition: transform 0.5s;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="88" style="padding: 16px 18px; display: flex; align-items: center; gap: 10px;">
+<div data-dc-tpl="89" style="flex: 1 1 0%;"><h4 data-dc-tpl="90" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 17px; margin: 0px;">Sevilla</h4></div>
+<div data-dc-tpl="91" style='width: 46px; height: 46px; border-radius: 50%; background: rgb(21, 202, 210); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-family: "Varela Round", sans-serif; font-size: 11px; font-weight: 600; flex: 0 0 auto; text-align: center; line-height: 1.1;'>SVQ<br data-dc-tpl="92"/>10km</div>
+</div>
+</a>
+<a data-dc-tpl="93" href="/dmc-malaga/" style="background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; color: rgb(31, 45, 51);">
+<div data-dc-tpl="94" style="width: 100%; height: 140px; border-radius: 0px; overflow: hidden; opacity: 0; animation: 0.8s ease 0s 1 normal forwards running fadeInUp;"><img alt="Málaga photo" decoding="async" loading="lazy" src="/uploads/mice-destination-malaga.webp" style="width: 100%; height: 100%; transition: transform 0.5s;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="96" style="padding: 16px 18px; display: flex; align-items: center; gap: 10px;">
+<div data-dc-tpl="97" style="flex: 1 1 0%;"><h4 data-dc-tpl="98" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 17px; margin: 0px;">Málaga</h4></div>
+<div data-dc-tpl="99" style='width: 46px; height: 46px; border-radius: 50%; background: rgb(21, 202, 210); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-family: "Varela Round", sans-serif; font-size: 11px; font-weight: 600; flex: 0 0 auto; text-align: center; line-height: 1.1;'>AGP<br data-dc-tpl="100"/>8km</div>
+</div>
+</a>
+<a data-dc-tpl="101" href="/dmc-huelva/" style="background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; color: rgb(31, 45, 51);">
+<div data-dc-tpl="102" style="width: 100%; height: 140px; border-radius: 0px; overflow: hidden; opacity: 0; animation: 0.8s ease 0s 1 normal forwards running fadeInUp;"><img alt="Huelva photo" decoding="async" loading="lazy" src="/uploads/mice-destination-huelva.webp" style="width: 100%; height: 100%; transition: transform 0.5s;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="104" style="padding: 16px 18px; display: flex; align-items: center; gap: 10px;">
+<div data-dc-tpl="105" style="flex: 1 1 0%;"><h4 data-dc-tpl="106" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 17px; margin: 0px;">Huelva</h4></div>
+<div data-dc-tpl="107" style='width: 46px; height: 46px; border-radius: 50%; background: rgb(21, 202, 210); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-family: "Varela Round", sans-serif; font-size: 11px; font-weight: 600; flex: 0 0 auto; text-align: center; line-height: 1.1;'>SVQ<br data-dc-tpl="108"/>90km</div>
+</div>
+</a>
+<a data-dc-tpl="109" href="/dmc-cadiz/" style="background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; color: rgb(31, 45, 51);">
+<div data-dc-tpl="110" style="width: 100%; height: 140px; border-radius: 0px; overflow: hidden; opacity: 0; animation: 0.8s ease 0s 1 normal forwards running fadeInUp;"><img alt="Cádiz photo" decoding="async" loading="lazy" src="/uploads/mice-destination-cadiz.webp" style="width: 100%; height: 100%; transition: transform 0.5s;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="112" style="padding: 16px 18px; display: flex; align-items: center; gap: 10px;">
+<div data-dc-tpl="113" style="flex: 1 1 0%;"><h4 data-dc-tpl="114" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 17px; margin: 0px;">Cádiz</h4></div>
+<div data-dc-tpl="115" style='width: 46px; height: 46px; border-radius: 50%; background: rgb(21, 202, 210); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-family: "Varela Round", sans-serif; font-size: 11px; font-weight: 600; flex: 0 0 auto; text-align: center; line-height: 1.1;'>XRY<br data-dc-tpl="116"/>35km</div>
+</div>
+</a>
+<a data-dc-tpl="117" href="/dmc-granada/" style="background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; color: rgb(31, 45, 51);">
+<div data-dc-tpl="118" style="width: 100%; height: 140px; border-radius: 0px; overflow: hidden; opacity: 0; animation: 0.8s ease 0s 1 normal forwards running fadeInUp;"><img alt="Granada photo" decoding="async" loading="lazy" src="/uploads/mice-destination-granada.webp" style="width: 100%; height: 100%; transition: transform 0.5s;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="120" style="padding: 16px 18px; display: flex; align-items: center; gap: 10px;">
+<div data-dc-tpl="121" style="flex: 1 1 0%;"><h4 data-dc-tpl="122" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 17px; margin: 0px;">Granada</h4></div>
+<div data-dc-tpl="123" style='width: 46px; height: 46px; border-radius: 50%; background: rgb(21, 202, 210); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-family: "Varela Round", sans-serif; font-size: 11px; font-weight: 600; flex: 0 0 auto; text-align: center; line-height: 1.1;'>GRX<br data-dc-tpl="124"/>17km</div>
+</div>
+</a>
+<a data-dc-tpl="125" href="/dmc-cordoba/" style="background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; color: rgb(31, 45, 51);">
+<div data-dc-tpl="126" style="width: 100%; height: 140px; border-radius: 0px; overflow: hidden; opacity: 0; animation: 0.8s ease 0s 1 normal forwards running fadeInUp;"><img alt="Córdoba photo" decoding="async" loading="lazy" src="/uploads/mice-destination-cordoba.webp" style="width: 100%; height: 100%; transition: transform 0.5s;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="128" style="padding: 16px 18px; display: flex; align-items: center; gap: 10px;">
+<div data-dc-tpl="129" style="flex: 1 1 0%;"><h4 data-dc-tpl="130" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 17px; margin: 0px;">Córdoba</h4></div>
+<div data-dc-tpl="131" style='width: 46px; height: 46px; border-radius: 50%; background: rgb(21, 202, 210); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-family: "Varela Round", sans-serif; font-size: 11px; font-weight: 600; flex: 0 0 auto; text-align: center; line-height: 1.1;'>SVQ<br data-dc-tpl="132"/>140km</div>
+</div>
+</a>
+<a data-dc-tpl="133" href="/dmc-almeria/" style="background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; color: rgb(31, 45, 51);">
+<div data-dc-tpl="134" style="width: 100%; height: 140px; border-radius: 0px; overflow: hidden; opacity: 0; animation: 0.8s ease 0s 1 normal forwards running fadeInUp;"><img alt="Almería photo" decoding="async" loading="lazy" src="/uploads/mice-destination-almeria.webp" style="width: 100%; height: 100%; transition: transform 0.5s;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="136" style="padding: 16px 18px; display: flex; align-items: center; gap: 10px;">
+<div data-dc-tpl="137" style="flex: 1 1 0%;"><h4 data-dc-tpl="138" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 17px; margin: 0px;">Almería</h4></div>
+<div data-dc-tpl="139" style='width: 46px; height: 46px; border-radius: 50%; background: rgb(21, 202, 210); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-family: "Varela Round", sans-serif; font-size: 11px; font-weight: 600; flex: 0 0 auto; text-align: center; line-height: 1.1;'>LEI<br data-dc-tpl="140"/>9km</div>
+</div>
+</a>
+<a data-dc-tpl="141" href="/dmc-jaen/" style="background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; color: rgb(31, 45, 51);">
+<div data-dc-tpl="142" style="width: 100%; height: 140px; border-radius: 0px; overflow: hidden; opacity: 0; animation: 0.8s ease 0s 1 normal forwards running fadeInUp;"><img alt="Jaén photo" decoding="async" loading="lazy" src="/uploads/mice-destination-jaen.webp" style="width: 100%; height: 100%; transition: transform 0.5s;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="144" style="padding: 16px 18px; display: flex; align-items: center; gap: 10px;">
+<div data-dc-tpl="145" style="flex: 1 1 0%;"><h4 data-dc-tpl="146" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 17px; margin: 0px;">Jaén</h4></div>
+<div data-dc-tpl="147" style='width: 46px; height: 46px; border-radius: 50%; background: rgb(21, 202, 210); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-family: "Varela Round", sans-serif; font-size: 11px; font-weight: 600; flex: 0 0 auto; text-align: center; line-height: 1.1;'>GRX<br data-dc-tpl="148"/>93km</div>
+</div>
+</a>
+</div>
+</div>
+</section>
+<section data-dc-tpl="149" style="max-width: 1280px; margin: 0px auto; padding: 90px 32px;">
+<div data-dc-tpl="150" style="text-align: center; margin-bottom: 44px;">
+<div data-dc-tpl="151" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>GET TO KNOW DMC SEVILLE EVENT</div>
+<h2 data-dc-tpl="152" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(26px, 3vw, 36px); margin: 0px; color: rgb(21, 202, 210);">Experience Sevilla With DMC Seville Event</h2>
+</div>
+<div data-dc-tpl="153" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px;">
+<div data-dc-tpl="154"><h3 data-dc-tpl="155" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 17px; margin: 0px 0px 10px; color: rgb(255, 93, 26);">01</h3><h4 data-dc-tpl="156" style="font-weight: 700; font-size: 17px; margin: 0px 0px 8px; color: rgb(21, 202, 210);">Personalized Itineraries</h4><p data-dc-tpl="157" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80); margin: 0px;">Fully customisable event packages, whether gastronomical, relaxation, or cultural experiences.</p></div>
+<div data-dc-tpl="158"><h3 data-dc-tpl="159" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 17px; margin: 0px 0px 10px; color: rgb(255, 93, 26);">02</h3><h4 data-dc-tpl="160" style="font-weight: 700; font-size: 17px; margin: 0px 0px 8px; color: rgb(21, 202, 210);">Expert Local Experiences</h4><p data-dc-tpl="161" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80); margin: 0px;">Expert local guides passionate about sharing hidden gems, off the beaten path.</p></div>
+<div data-dc-tpl="162"><h3 data-dc-tpl="163" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 17px; margin: 0px 0px 10px; color: rgb(255, 93, 26);">03</h3><h4 data-dc-tpl="164" style="font-weight: 700; font-size: 17px; margin: 0px 0px 8px; color: rgb(21, 202, 210);">Stress-Free Preparations</h4><p data-dc-tpl="165" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80); margin: 0px;">Flights, accommodation and tours handled end-to-end. Our team is available 24/7.</p></div>
+</div>
+</section>
+<section data-dc-tpl="166" style="background: rgb(13, 61, 64); color: rgb(255, 255, 255); padding: 80px 32px;">
+<div data-dc-tpl="167" style="max-width: 1100px; margin: 0px auto;">
+<div data-dc-tpl="168" style="text-align: center; margin-bottom: 44px;">
+<div data-dc-tpl="169" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>TESTIMONIALS</div>
+<h2 data-dc-tpl="170" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(24px, 3vw, 32px); margin: 0px; color: rgb(21, 202, 210);">See What They Are Saying</h2>
+</div>
+<div data-dc-tpl="171" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px;">
+<div data-dc-tpl="172" style="background: rgb(19, 69, 72); border-radius: 6px; padding: 24px;">
+<p data-dc-tpl="173" style="font-weight: 300; font-size: 14.5px; line-height: 1.7; margin: 0px 0px 16px; color: rgb(219, 228, 230);">"We used DMC Seville Event when we had a group of 100 people for an event in Marbella. You get very professional help with everything you can think of. We will definitely use DMC Seville Event again."</p>
+<div data-dc-tpl="174" style='font-family: "Varela Round", sans-serif; font-size: 13px; color: rgb(21, 202, 210);'>AOB Travel — Sweden, January 2024</div>
+</div>
+<div data-dc-tpl="175" style="background: rgb(19, 69, 72); border-radius: 6px; padding: 24px;">
+<p data-dc-tpl="176" style="font-weight: 300; font-size: 14.5px; line-height: 1.7; margin: 0px 0px 16px; color: rgb(219, 228, 230);">"We are back in Corsica and we keep thinking of this wonderful stay in Sevilla. Thank you for all your hard work and professionalism on this event, it was perfect. Incentive trip of 100 people in Seville."</p>
+<div data-dc-tpl="177" style='font-family: "Varela Round", sans-serif; font-size: 13px; color: rgb(21, 202, 210);'>Eranova — Corsica, May 2024</div>
+</div>
+<div data-dc-tpl="178" style="background: rgb(19, 69, 72); border-radius: 6px; padding: 24px;">
+<p data-dc-tpl="179" style="font-weight: 300; font-size: 14.5px; line-height: 1.7; margin: 0px 0px 16px; color: rgb(219, 228, 230);">"Thank you again for everything: good company, professionalism, advice, and amazing work and support. We can't wait to come back to Seville with a new group."</p>
+<div data-dc-tpl="180" style='font-family: "Varela Round", sans-serif; font-size: 13px; color: rgb(21, 202, 210);'>Soir Event — Croatia, April 2024</div>
+</div>
+</div>
+</div>
+</section>
+<section data-dc-tpl="181" style="background: rgb(255, 93, 26); color: rgb(255, 255, 255); padding: 70px 32px; text-align: center;">
+<div data-dc-tpl="182" style='font-family: "Varela Round", sans-serif; font-size: 13px; letter-spacing: 1.5px; margin-bottom: 12px;'>SEVILLE SPECIAL</div>
+<h2 data-dc-tpl="183" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(26px, 3.5vw, 38px); margin: 0px 0px 18px;">Plan Your Perfect Seville Event</h2>
+<p data-dc-tpl="184" style="font-weight: 300; font-size: 16px; max-width: 560px; margin: 0px auto 28px;">Corporate incentive, family trip, or meeting — DMC Seville Event has the perfect package for you.</p>
+<a class="scp2" data-dc-tpl="185" href="/contact/" style='background: rgb(13, 61, 64); color: rgb(255, 255, 255); font-family: "Varela Round", sans-serif; font-weight: 600; padding: 14px 32px; border-radius: 2px; font-size: 15px; display: inline-block; transition: transform 0.25s, box-shadow 0.25s;'>Get In Touch</a>
+</section>
+<div class="sc-host" data-dc-tpl="186" data-sc-name="SiteFooter"><footer data-dc-tpl="4" style="background: rgb(13, 61, 64); color: rgb(207, 227, 228); padding: 60px 32px 30px; font-family: Montserrat, sans-serif; border-top: 4px solid rgb(21, 202, 210);">
+<div data-dc-tpl="5" style="max-width: 1200px; margin: 0px auto 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 36px;">
+<div data-dc-tpl="6">
+<a data-dc-tpl="7" href="/" style="display: inline-flex; background: rgb(255, 255, 255); border-radius: 6px; padding: 10px 14px; margin-bottom: 16px;"><img alt="DMC Seville Event" data-dc-tpl="8" loading="lazy" src="/assets/dmc-logo-cropped.webp" style="height: 60px; width: auto; object-fit: contain; display: block;"/></a>
+<p data-dc-tpl="9" style="font-weight: 300; font-size: 13.5px; line-height: 1.6;">C/ Milano Govinda 35, 41020 Sevilla, Spain</p>
+</div>
+<div data-dc-tpl="10">
+<h4 data-dc-tpl="11" style="font-weight: 700; color: rgb(255, 255, 255); font-size: 15px; margin: 0px 0px 14px;">Services</h4>
+<div data-dc-tpl="12" style="display: flex; flex-direction: column; gap: 8px; font-size: 13.5px; font-weight: 300;">
+<a data-dc-tpl="13" href="/trip/meetings-seville/">Meetings</a>
+<a data-dc-tpl="14" href="/trip/corporate-event-venue-seville/">Venue Finding</a>
+<a data-dc-tpl="15" href="/trip/corporate-incentive-trip-seville/">Corporate Incentive</a>
+<a data-dc-tpl="16" href="/trip/team-building-seville/">Team Building</a>
+<a data-dc-tpl="17" href="/group-travel-to-seville/">Group Travel</a>
+</div>
+</div>
+<div data-dc-tpl="18">
+<h4 data-dc-tpl="19" style="font-weight: 700; color: rgb(255, 255, 255); font-size: 15px; margin: 0px 0px 14px;">DMC Destinations in Andalusia</h4>
+<div data-dc-tpl="20" style="display: flex; flex-direction: column; gap: 8px; font-size: 13.5px; font-weight: 300;">
+<a data-dc-tpl="21" href="/incentive-trip-sevilla/">Incentive Trip Sevilla</a>
+<a data-dc-tpl="22" href="/dmc-malaga/">DMC Málaga</a>
+<a data-dc-tpl="23" href="/dmc-huelva/">DMC Huelva</a>
+<a data-dc-tpl="24" href="/dmc-cadiz/">DMC Cádiz</a>
+<a data-dc-tpl="25" href="/dmc-granada/">DMC Granada</a>
+<a data-dc-tpl="26" href="/dmc-cordoba/">DMC Córdoba</a>
+<a data-dc-tpl="27" href="/dmc-almeria/">DMC Almería</a>
+<a data-dc-tpl="28" href="/dmc-jaen/">DMC Jaén</a>
+</div>
+</div>
+<div data-dc-tpl="29">
+<h4 data-dc-tpl="30" style="font-weight: 700; color: rgb(255, 255, 255); font-size: 15px; margin: 0px 0px 14px;">Contact</h4>
+<p data-dc-tpl="31" style="font-weight: 300; font-size: 13.5px; line-height: 1.8; margin: 0px 0px 12px;">+34 637 87 87 68<br data-dc-tpl="32"/>events@dmcsevilleevent.com</p>
+<a data-dc-tpl="33" href="/contact/" style="color: rgb(21, 202, 210); font-weight: 500;">Contact Now</a>
+</div>
+</div>
+<div data-dc-tpl="34" style="text-align: center; font-size: 12.5px; font-weight: 300; border-top: 1px solid rgba(207, 227, 228, 0.2); padding-top: 22px; max-width: 1200px; margin: 0px auto;">© 2026 DMC Seville Event. All Rights Reserved.</div></footer></div></div></div></div><template id="dc-src"><x-dc>
+
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Varela+Round&display=swap" rel="stylesheet">
+
+<style>@keyframes fadeInUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}@keyframes heroSlide{0%{opacity:1;}20%{opacity:1;}25%{opacity:0;}95%{opacity:0;}100%{opacity:1;}}body{margin:0;background:#fffdfb;}a{text-decoration:none;}*{box-sizing:border-box;}</style>
+</helmet>
+<div style="font-family:'Montserrat',sans-serif;color:#1f2d33;overflow-x:hidden;">
+  <dc-import name="SiteHeader" hint-size="100%,120"></dc-import>
+
+  <section style="position:relative;overflow:hidden;height:clamp(440px,78svh,760px);">
+    <img src="/uploads/reisegaranti.webp" alt="Seville skyline at sunset" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1;animation:heroSlide 20s ease-in-out infinite;animation-delay:0s;">
+    <img src="/uploads/balloon-ride1.webp" alt="Hot air balloon ride over Andalusian sunflower fields" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:heroSlide 20s ease-in-out infinite;animation-delay:5s;">
+    <img src="/uploads/skydiving-seville.webp" alt="Skydiving activity near Seville" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:heroSlide 20s ease-in-out infinite;animation-delay:10s;">
+    <img src="/uploads/venue-finding-seville-3.webp" alt="Rooftop terrace event venue with Seville Cathedral view" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:heroSlide 20s ease-in-out infinite;animation-delay:15s;">
+        <div style="position:absolute;inset:0;z-index:2;">
+      <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;color:#ffffff;opacity:1;animation:heroSlide 20s ease-in-out infinite;animation-delay:0s;">
+        <div style="font-family:'Varela Round',sans-serif;letter-spacing:2px;font-size:14px;color:#ffb199;margin-bottom:14px;">WELCOME TO YOUR DEDICATED DESTINATION MANAGEMENT COMPANY</div>
+        <h1 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(42px,6.8vw,78px);margin:0 0 16px;max-width:900px;line-height:1.15;text-transform:uppercase;letter-spacing:1px;">DMC MICE &amp; Luxury Experiences</h1>
+        <p style="font-family:'Montserrat',sans-serif;font-weight:300;font-size:19px;max-width:640px;margin:0 0 28px;">Always at our disposal.</p>
+        <a href="/contact/" style="background:#ff5d1a;color:#ffffff;font-family:'Varela Round',sans-serif;font-weight:600;padding:14px 32px;border-radius:2px;font-size:15px;transition:transform 0.25s,box-shadow 0.25s;" style-hover="transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,0.25);">Discover More</a>
+      </div>
+      <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;color:#ffffff;opacity:0;animation:heroSlide 20s ease-in-out infinite;animation-delay:5s;">
+        <div style="font-family:'Varela Round',sans-serif;letter-spacing:2px;font-size:14px;color:#ffb199;margin-bottom:14px;">OUR WORK IS EXPERIENCES</div>
+        <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(42px,6.8vw,78px);margin:0 0 16px;max-width:900px;line-height:1.15;text-transform:uppercase;letter-spacing:1px;">Meet Our Dedicated Team</h2>
+        <p style="font-family:'Montserrat',sans-serif;font-weight:300;font-size:19px;max-width:640px;margin:0 0 28px;">Our team of professionals make your ideas reality.</p>
+        <a href="/contact/" style="background:#ff5d1a;color:#ffffff;font-family:'Varela Round',sans-serif;font-weight:600;padding:14px 32px;border-radius:2px;font-size:15px;transition:transform 0.25s,box-shadow 0.25s;" style-hover="transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,0.25);">Discover More</a>
+      </div>
+      <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;color:#ffffff;opacity:0;animation:heroSlide 20s ease-in-out infinite;animation-delay:10s;">
+        <div style="font-family:'Varela Round',sans-serif;letter-spacing:2px;font-size:14px;color:#ffb199;margin-bottom:14px;">ABOUT OUR COMPANY</div>
+        <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(42px,6.8vw,78px);margin:0 0 16px;max-width:900px;line-height:1.15;text-transform:uppercase;letter-spacing:1px;">We Design Unique Events</h2>
+        <p style="font-family:'Montserrat',sans-serif;font-weight:300;font-size:19px;max-width:640px;margin:0 0 28px;">True dedication and eye for details.</p>
+        <a href="/contact/" style="background:#ff5d1a;color:#ffffff;font-family:'Varela Round',sans-serif;font-weight:600;padding:14px 32px;border-radius:2px;font-size:15px;transition:transform 0.25s,box-shadow 0.25s;" style-hover="transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,0.25);">Discover More</a>
+      </div>
+      <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;color:#ffffff;opacity:0;animation:heroSlide 20s ease-in-out infinite;animation-delay:15s;">
+        <div style="font-family:'Varela Round',sans-serif;letter-spacing:2px;font-size:14px;color:#ffb199;margin-bottom:14px;">INCENTIVE TRIPS THAT MOTIVATE AND INSPIRE</div>
+        <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(42px,6.8vw,78px);margin:0 0 16px;max-width:900px;line-height:1.15;text-transform:uppercase;letter-spacing:1px;">Engaging Incentive Trips</h2>
+        <p style="font-family:'Montserrat',sans-serif;font-weight:300;font-size:19px;max-width:640px;margin:0 0 28px;">Luxury, culture, and connection.</p>
+        <a href="/contact/" style="background:#ff5d1a;color:#ffffff;font-family:'Varela Round',sans-serif;font-weight:600;padding:14px 32px;border-radius:2px;font-size:15px;transition:transform 0.25s,box-shadow 0.25s;" style-hover="transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,0.25);">Discover More</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:900px;margin:0 auto;padding:80px 32px 40px;text-align:center;">
+    <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(28px,3.4vw,40px);margin:0 0 22px;text-wrap:pretty;color:#15cad2;">Welcome to DMC Seville Event</h2>
+    <p style="font-weight:300;font-size:18px;line-height:1.8;color:#3d4a50;margin:0 0 16px;">I'm your trusted creative and professional partner for luxury events, bespoke weddings, and private celebrations in Seville. As a leading Destination Management Company here, I specialize in tailor-made, high-end experiences for discerning clients from around the world.</p>
+    <p style="font-weight:300;font-size:18px;line-height:1.8;color:#3d4a50;margin:0 0 32px;">Whether you're planning an exclusive wedding in Seville, an intimate celebration, a corporate meeting, or an incentive trip, my team and I are here to design and manage every detail from start to finish — with you, every step of the way.</p>
+    <div style="font-family:'Varela Round',sans-serif;font-weight:600;letter-spacing:1px;font-size:22px;color:#0d3d40;">Professionals with passion.<br><span style="color:#ff5d1a;">Perfect events.</span></div>
+  </section>
+
+  <section style="max-width:1200px;margin:0 auto;padding:40px 32px 80px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center;">
+    <div>
+      <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">HOW WE WORK</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(26px,3vw,36px);margin:0 0 18px;text-wrap:pretty;color:#15cad2;">Personalized Event Planning in Seville — Built Around Your Vision</h2>
+      <p style="font-weight:300;font-size:16px;line-height:1.7;color:#3d4a50;margin:0 0 16px;">At DMC Seville Event, we believe exceptional events begin with truly understanding our clients. From your very first idea, we take the time to listen — ensuring every aspect of your project reflects your goals, style, and brand.</p>
+      <p style="font-weight:300;font-size:16px;line-height:1.7;color:#3d4a50;margin:0;">Whether you're planning a high-level corporate event, a meeting, or an incentive trip, we offer full-service support from concept to completion. Our expert team combines local insight with international standards, helping clients from around the world bring unforgettable experiences to life in Seville and across Spain.</p>
+    </div>
+    <div style="width:100%;height:380px;border-radius:4px;overflow:hidden;opacity:0;animation:fadeInUp 0.8s ease forwards;"><image-slot id="how-we-work-img" shape="rounded" radius="4" src="/uploads/meetings-in-seville-1.webp" alt="Corporate meeting and planning session in Seville" placeholder="Team at work" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
+  </section>
+
+  <section style="background:#0d3d40;padding:64px 32px;text-align:center;">
+    <p style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(24px,3.2vw,38px);color:#ffffff;max-width:840px;margin:0 auto;line-height:1.3;">“The most productive meetings happen outside the ordinary.”</p>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:90px 32px 90px;">
+    <div style="text-align:center;margin-bottom:44px;">
+      <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">OUR SERVICE</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(26px,3vw,36px);margin:0;color:#15cad2;">Choose Our Event Types &amp; Enjoy</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px;">
+      <a href="/trip/meetings-seville/" style="border:1px solid #ece7e0;border-radius:4px;overflow:hidden;color:#1f2d33;">
+        <div style="width:100%;height:180px;border-radius:0;overflow:hidden;opacity:0;animation:fadeInUp 0.8s ease forwards;"><image-slot id="svc-meetings" shape="rect" src="/uploads/venue-finding-seville-fibes-cupola.webp" placeholder="Meetings venue" alt="Meetings venue" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
+        <div style="padding:20px;">
+          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;margin:0 0 8px;color:#15cad2;">Meetings</h3>
+          <p style="font-weight:300;font-size:14.5px;color:#3d4a50;margin:0;line-height:1.6;">Make a successful meeting in Seville.</p>
+        </div>
+      </a>
+      <a href="/trip/corporate-event-venue-seville/" style="border:1px solid #ece7e0;border-radius:4px;overflow:hidden;color:#1f2d33;">
+        <div style="width:100%;height:180px;border-radius:0;overflow:hidden;opacity:0;animation:fadeInUp 0.8s ease forwards;"><image-slot id="svc-venue" shape="rect" src="/uploads/incentive-trip-seville8.webp" placeholder="Venue finding" alt="Venue finding" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
+        <div style="padding:20px;">
+          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;margin:0 0 8px;color:#15cad2;">Venue Finding</h3>
+          <p style="font-weight:300;font-size:14.5px;color:#3d4a50;margin:0;line-height:1.6;">The powerful venue selection in Seville is a valuable step to create an excellent event.</p>
+        </div>
+      </a>
+      <a href="/trip/corporate-incentive-trip-seville/" style="border:1px solid #ece7e0;border-radius:4px;overflow:hidden;color:#1f2d33;">
+        <div style="width:100%;height:180px;border-radius:0;overflow:hidden;opacity:0;animation:fadeInUp 0.8s ease forwards;"><image-slot id="svc-incentive" shape="rect" src="/uploads/best-flamenco-seville-4.webp" placeholder="Corporate incentive" alt="Corporate incentive" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
+        <div style="padding:20px;">
+          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;margin:0 0 8px;color:#15cad2;">Corporate Incentive</h3>
+          <p style="font-weight:300;font-size:14.5px;color:#3d4a50;margin:0;line-height:1.6;">An incentive in Seville is a guarantee for a memorable event for teams and companies.</p>
+        </div>
+      </a>
+      <a href="/trip/team-building-seville/" style="border:1px solid #ece7e0;border-radius:4px;overflow:hidden;color:#1f2d33;">
+        <div style="width:100%;height:180px;border-radius:0;overflow:hidden;opacity:0;animation:fadeInUp 0.8s ease forwards;"><image-slot id="svc-teambuilding" shape="rect" src="/uploads/seville-teambuilding4.webp" placeholder="Team building" alt="Team building" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
+        <div style="padding:20px;">
+          <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;margin:0 0 8px;color:#15cad2;">Team Building</h3>
+          <p style="font-weight:300;font-size:14.5px;color:#3d4a50;margin:0;line-height:1.6;">A mixture between cultural and fun team building is an exciting way to motivate.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="destinations" style="background:#f6f4f0;padding:90px 32px;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:40px;">
+        <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">DESTINATION LIST</div>
+        <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(26px,3vw,36px);margin:0;color:#15cad2;">Explore Andalusia With Dedicated Services</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;">
+        <a href="/incentive-trip-sevilla/" style="background:#ffffff;border-radius:6px;overflow:hidden;color:#1f2d33;">
+          <div style="width:100%;height:140px;border-radius:0;overflow:hidden;opacity:0;animation:fadeInUp 0.8s ease forwards;"><image-slot id="dest-card2-sevilla" shape="rect" src="{{ destSrcSevilla }}" placeholder="Sevilla photo" alt="Sevilla photo" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
+          <div style="padding:16px 18px;display:flex;align-items:center;gap:10px;">
+            <div style="flex:1;"><h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;margin:0;">Sevilla</h4></div>
+            <div style="width:46px;height:46px;border-radius:50%;background:#15cad2;color:#ffffff;display:flex;align-items:center;justify-content:center;font-family:'Varela Round',sans-serif;font-size:11px;font-weight:600;flex:none;text-align:center;line-height:1.1;">SVQ<br>10km</div>
+          </div>
+        </a>
+        <a href="/dmc-malaga/" style="background:#ffffff;border-radius:6px;overflow:hidden;color:#1f2d33;">
+          <div style="width:100%;height:140px;border-radius:0;overflow:hidden;opacity:0;animation:fadeInUp 0.8s ease forwards;"><image-slot id="dest-card2-malaga" shape="rect" src="{{ destSrcMalaga }}" placeholder="Málaga photo" alt="Málaga photo" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
+          <div style="padding:16px 18px;display:flex;align-items:center;gap:10px;">
+            <div style="flex:1;"><h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;margin:0;">Málaga</h4></div>
+            <div style="width:46px;height:46px;border-radius:50%;background:#15cad2;color:#ffffff;display:flex;align-items:center;justify-content:center;font-family:'Varela Round',sans-serif;font-size:11px;font-weight:600;flex:none;text-align:center;line-height:1.1;">AGP<br>8km</div>
+          </div>
+        </a>
+        <a href="/dmc-huelva/" style="background:#ffffff;border-radius:6px;overflow:hidden;color:#1f2d33;">
+          <div style="width:100%;height:140px;border-radius:0;overflow:hidden;opacity:0;animation:fadeInUp 0.8s ease forwards;"><image-slot id="dest-card2-huelva" shape="rect" src="{{ destSrcHuelva }}" placeholder="Huelva photo" alt="Huelva photo" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
+          <div style="padding:16px 18px;display:flex;align-items:center;gap:10px;">
+            <div style="flex:1;"><h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;margin:0;">Huelva</h4></div>
+            <div style="width:46px;height:46px;border-radius:50%;background:#15cad2;color:#ffffff;display:flex;align-items:center;justify-content:center;font-family:'Varela Round',sans-serif;font-size:11px;font-weight:600;flex:none;text-align:center;line-height:1.1;">SVQ<br>90km</div>
+          </div>
+        </a>
+        <a href="/dmc-cadiz/" style="background:#ffffff;border-radius:6px;overflow:hidden;color:#1f2d33;">
+          <div style="width:100%;height:140px;border-radius:0;overflow:hidden;opacity:0;animation:fadeInUp 0.8s ease forwards;"><image-slot id="dest-card2-cadiz" shape="rect" src="{{ destSrcCadiz }}" placeholder="Cádiz photo" alt="Cádiz photo" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
+          <div style="padding:16px 18px;display:flex;align-items:center;gap:10px;">
+            <div style="flex:1;"><h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;margin:0;">Cádiz</h4></div>
+            <div style="width:46px;height:46px;border-radius:50%;background:#15cad2;color:#ffffff;display:flex;align-items:center;justify-content:center;font-family:'Varela Round',sans-serif;font-size:11px;font-weight:600;flex:none;text-align:center;line-height:1.1;">XRY<br>35km</div>
+          </div>
+        </a>
+        <a href="/dmc-granada/" style="background:#ffffff;border-radius:6px;overflow:hidden;color:#1f2d33;">
+          <div style="width:100%;height:140px;border-radius:0;overflow:hidden;opacity:0;animation:fadeInUp 0.8s ease forwards;"><image-slot id="dest-card2-granada" shape="rect" src="{{ destSrcGranada }}" placeholder="Granada photo" alt="Granada photo" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
+          <div style="padding:16px 18px;display:flex;align-items:center;gap:10px;">
+            <div style="flex:1;"><h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;margin:0;">Granada</h4></div>
+            <div style="width:46px;height:46px;border-radius:50%;background:#15cad2;color:#ffffff;display:flex;align-items:center;justify-content:center;font-family:'Varela Round',sans-serif;font-size:11px;font-weight:600;flex:none;text-align:center;line-height:1.1;">GRX<br>17km</div>
+          </div>
+        </a>
+        <a href="/dmc-cordoba/" style="background:#ffffff;border-radius:6px;overflow:hidden;color:#1f2d33;">
+          <div style="width:100%;height:140px;border-radius:0;overflow:hidden;opacity:0;animation:fadeInUp 0.8s ease forwards;"><image-slot id="dest-card2-cordoba" shape="rect" src="{{ destSrcCordoba }}" placeholder="Córdoba photo" alt="Córdoba photo" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
+          <div style="padding:16px 18px;display:flex;align-items:center;gap:10px;">
+            <div style="flex:1;"><h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;margin:0;">Córdoba</h4></div>
+            <div style="width:46px;height:46px;border-radius:50%;background:#15cad2;color:#ffffff;display:flex;align-items:center;justify-content:center;font-family:'Varela Round',sans-serif;font-size:11px;font-weight:600;flex:none;text-align:center;line-height:1.1;">SVQ<br>140km</div>
+          </div>
+        </a>
+        <a href="/dmc-almeria/" style="background:#ffffff;border-radius:6px;overflow:hidden;color:#1f2d33;">
+          <div style="width:100%;height:140px;border-radius:0;overflow:hidden;opacity:0;animation:fadeInUp 0.8s ease forwards;"><image-slot id="dest-card2-almeria" shape="rect" src="{{ destSrcAlmeria }}" placeholder="Almería photo" alt="Almería photo" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
+          <div style="padding:16px 18px;display:flex;align-items:center;gap:10px;">
+            <div style="flex:1;"><h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;margin:0;">Almería</h4></div>
+            <div style="width:46px;height:46px;border-radius:50%;background:#15cad2;color:#ffffff;display:flex;align-items:center;justify-content:center;font-family:'Varela Round',sans-serif;font-size:11px;font-weight:600;flex:none;text-align:center;line-height:1.1;">LEI<br>9km</div>
+          </div>
+        </a>
+        <a href="/dmc-jaen/" style="background:#ffffff;border-radius:6px;overflow:hidden;color:#1f2d33;">
+          <div style="width:100%;height:140px;border-radius:0;overflow:hidden;opacity:0;animation:fadeInUp 0.8s ease forwards;"><image-slot id="dest-card2-jaen" shape="rect" src="{{ destSrcJaen }}" placeholder="Jaén photo" alt="Jaén photo" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
+          <div style="padding:16px 18px;display:flex;align-items:center;gap:10px;">
+            <div style="flex:1;"><h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;margin:0;">Jaén</h4></div>
+            <div style="width:46px;height:46px;border-radius:50%;background:#15cad2;color:#ffffff;display:flex;align-items:center;justify-content:center;font-family:'Varela Round',sans-serif;font-size:11px;font-weight:600;flex:none;text-align:center;line-height:1.1;">GRX<br>93km</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:90px 32px;">
+    <div style="text-align:center;margin-bottom:44px;">
+      <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">GET TO KNOW DMC SEVILLE EVENT</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(26px,3vw,36px);margin:0;color:#15cad2;">Experience Sevilla With DMC Seville Event</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;">
+      <div><h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;margin:0 0 10px;color:#ff5d1a;">01</h3><h4 style="font-weight:700;font-size:17px;margin:0 0 8px;color:#15cad2;">Personalized Itineraries</h4><p style="font-weight:300;font-size:14.5px;line-height:1.6;color:#3d4a50;margin:0;">Fully customisable event packages, whether gastronomical, relaxation, or cultural experiences.</p></div>
+      <div><h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;margin:0 0 10px;color:#ff5d1a;">02</h3><h4 style="font-weight:700;font-size:17px;margin:0 0 8px;color:#15cad2;">Expert Local Experiences</h4><p style="font-weight:300;font-size:14.5px;line-height:1.6;color:#3d4a50;margin:0;">Expert local guides passionate about sharing hidden gems, off the beaten path.</p></div>
+      <div><h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;margin:0 0 10px;color:#ff5d1a;">03</h3><h4 style="font-weight:700;font-size:17px;margin:0 0 8px;color:#15cad2;">Stress-Free Preparations</h4><p style="font-weight:300;font-size:14.5px;line-height:1.6;color:#3d4a50;margin:0;">Flights, accommodation and tours handled end-to-end. Our team is available 24/7.</p></div>
+    </div>
+  </section>
+
+  <section style="background:#0d3d40;color:#ffffff;padding:80px 32px;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:44px;">
+        <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">TESTIMONIALS</div>
+        <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(24px,3vw,32px);margin:0;color:#15cad2;">See What They Are Saying</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;">
+        <div style="background:#134548;border-radius:6px;padding:24px;">
+          <p style="font-weight:300;font-size:14.5px;line-height:1.7;margin:0 0 16px;color:#dbe4e6;">"We used DMC Seville Event when we had a group of 100 people for an event in Marbella. You get very professional help with everything you can think of. We will definitely use DMC Seville Event again."</p>
+          <div style="font-family:'Varela Round',sans-serif;font-size:13px;color:#15cad2;">AOB Travel — Sweden, January 2024</div>
+        </div>
+        <div style="background:#134548;border-radius:6px;padding:24px;">
+          <p style="font-weight:300;font-size:14.5px;line-height:1.7;margin:0 0 16px;color:#dbe4e6;">"We are back in Corsica and we keep thinking of this wonderful stay in Sevilla. Thank you for all your hard work and professionalism on this event, it was perfect. Incentive trip of 100 people in Seville."</p>
+          <div style="font-family:'Varela Round',sans-serif;font-size:13px;color:#15cad2;">Eranova — Corsica, May 2024</div>
+        </div>
+        <div style="background:#134548;border-radius:6px;padding:24px;">
+          <p style="font-weight:300;font-size:14.5px;line-height:1.7;margin:0 0 16px;color:#dbe4e6;">"Thank you again for everything: good company, professionalism, advice, and amazing work and support. We can't wait to come back to Seville with a new group."</p>
+          <div style="font-family:'Varela Round',sans-serif;font-size:13px;color:#15cad2;">Soir Event — Croatia, April 2024</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#ff5d1a;color:#ffffff;padding:70px 32px;text-align:center;">
+    <div style="font-family:'Varela Round',sans-serif;font-size:13px;letter-spacing:1.5px;margin-bottom:12px;">SEVILLE SPECIAL</div>
+    <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(26px,3.5vw,38px);margin:0 0 18px;">Plan Your Perfect Seville Event</h2>
+    <p style="font-weight:300;font-size:16px;max-width:560px;margin:0 auto 28px;">Corporate incentive, family trip, or meeting — DMC Seville Event has the perfect package for you.</p>
+    <a href="/contact/" style="background:#0d3d40;color:#ffffff;font-family:'Varela Round',sans-serif;font-weight:600;padding:14px 32px;border-radius:2px;font-size:15px;display:inline-block;transition:transform 0.25s,box-shadow 0.25s;" style-hover="transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,0.3);">Get In Touch</a>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,300"></dc-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>class Component extends DCLogic {
+  renderVals() {
+    return {
+      destSrcSevilla: '/uploads/mice-destination-seville.webp',
+      destSrcMalaga: '/uploads/mice-destination-malaga.webp',
+      destSrcHuelva: '/uploads/mice-destination-huelva.webp',
+      destSrcCadiz: '/uploads/mice-destination-cadiz.webp',
+      destSrcGranada: '/uploads/mice-destination-granada.webp',
+      destSrcCordoba: '/uploads/mice-destination-cordoba.webp',
+      destSrcAlmeria: '/uploads/mice-destination-almeria.webp',
+      destSrcJaen: '/uploads/mice-destination-jaen.webp',
+    };
+  }
+}</script></template>
+<div id="dmc-consent" hidden style="position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:560px;margin:0 auto;background:#0d3d40;color:#fff;font-family:Montserrat,sans-serif;font-size:14px;line-height:1.5;padding:16px 18px;border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.25)">
+We use Google Analytics cookies to see how visitors use our website. Do you accept statistics cookies?
+<div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap"><button type="button" data-v="yes" style="cursor:pointer;border:0;background:#15cad2;color:#0d3d40;font-weight:600;padding:8px 16px;border-radius:3px;font-family:inherit">Accept</button><button type="button" data-v="no" style="cursor:pointer;border:1px solid #fff;background:transparent;color:#fff;padding:8px 16px;border-radius:3px;font-family:inherit">Decline</button></div></div>
+<script>
+(function(){var b=document.getElementById('dmc-consent'),v=null;try{v=localStorage.getItem('dmc-consent');}catch(e){}
+if(!v)b.hidden=false;
+b.addEventListener('click',function(e){var x=e.target.getAttribute('data-v');if(!x)return;try{localStorage.setItem('dmc-consent',x);}catch(e){}
+if(x==='yes')gtag('consent','update',{analytics_storage:'granted'});b.hidden=true;});})();
+</script>
+<script>
+(function(){
+  var t=document.getElementById('dc-src'), s=document.getElementById('dc-static');
+  if(!t||!s) return;
+  function load(src,cb){var e=document.createElement('script');e.src=src;e.onload=cb;document.body.appendChild(e);}
+  function dedupe(){var seen={};document.querySelectorAll('script[type="application/ld+json"]').forEach(function(e){var k=e.textContent.trim();if(seen[k])e.remove();else seen[k]=1;});}
+  function go(){
+    s.parentNode.insertBefore(document.importNode(t.content,true), s.nextSibling);
+    var obs=new MutationObserver(function(){var r=document.getElementById('dc-root');
+      if(r&&r.firstElementChild){obs.disconnect();setTimeout(function(){s.remove();dedupe();setTimeout(dedupe,1500);},60);}});
+    obs.observe(document.body,{childList:true,subtree:true});
+    load('/image-slot.js',function(){load('/support.js');});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go();
+})();
+</script>
+
+</body></html>

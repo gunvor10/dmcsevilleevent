@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><base href="/"/><style>
+    .sc-placeholder{background:color-mix(in srgb,currentColor 8%,transparent);
+      border:1px solid color-mix(in srgb,currentColor 50%,transparent);
+      border-radius:2px;box-sizing:border-box;overflow:hidden}
+    @keyframes sc-shine{0%{background-position:100% 50%}100%{background-position:0% 50%}}
+    html.sc-dc-streaming .sc-placeholder,
+    html.sc-dc-streaming .sc-interp.sc-missing{position:relative;
+      background:color-mix(in srgb,currentColor 5%,transparent);
+      border-color:transparent}
+    html.sc-dc-streaming .sc-placeholder::before,
+    html.sc-dc-streaming .sc-interp.sc-missing::before{content:'';
+      position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg,rgba(217,119,87,0) 25%,rgba(247,225,211,.95) 37%,rgba(217,119,87,0) 63%);
+      background-size:400% 100%;animation:sc-shine 1.4s ease infinite}
+    html.sc-dc-streaming .sc-placeholder:nth-child(n+9 of .sc-placeholder)::before,
+    html.sc-dc-streaming .sc-interp.sc-missing:nth-child(n+9 of .sc-interp.sc-missing)::before{animation:none;
+      background:color-mix(in srgb,currentColor 8%,transparent)}
+    .sc-placeholder-error{padding:4px 8px;font:11px/1.4 ui-monospace,monospace;
+      color:color-mix(in srgb,currentColor 70%,transparent);word-break:break-word}
+    .sc-interp.sc-missing{display:inline-block;width:2em;height:1em;overflow:hidden;
+      vertical-align:text-bottom;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
+      border-radius:2px;box-sizing:border-box;color:transparent;
+      user-select:none}
+    .sc-interp.sc-unresolved{font-family:ui-monospace,monospace;font-size:.85em;
+      color:color-mix(in srgb,currentColor 50%,transparent);
+      background:color-mix(in srgb,currentColor 10%,transparent);border-radius:3px;
+      padding:0 3px}
+    .sc-host.sc-has-error{position:relative}
+    .sc-logic-error{position:absolute;top:8px;left:8px;z-index:2147483647;max-width:60ch;
+      padding:6px 10px;background:#b00020;color:#fff;font:12px/1.4 ui-monospace,monospace;
+      border-radius:4px;white-space:pre-wrap;pointer-events:none}
+    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts — keep both
+       in sync until dc-runtime regains a build step. */
+    @media print {
+      @page { margin: 0.5cm; }
+      figure, table { break-inside: avoid; }
+      #dc-root, #dc-root > .sc-host { height: auto; }
+      *, *::before, *::after {
+        print-color-adjust: exact; -webkit-print-color-adjust: exact;
+        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+        animation-delay: -99s !important; animation-duration: .001s !important;
+        animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+        animation-play-state: running !important; transition-duration: 0s !important;
+      }
+    }
+  </style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.dmcsevilleevent.com/"},{"@type":"ListItem","position":2,"name":"Inspiration","item":"https://www.dmcsevilleevent.com/inspiration/"},{"@type":"ListItem","position":3,"name":"Honouring San Fernando III: Seville’s Beloved Patron Saint","item":"https://www.dmcsevilleevent.com/honouring-san-fernando-iii-sevilles-beloved-patron-saint/"}]},{"@type":"BlogPosting","headline":"Honouring San Fernando III: Seville’s Beloved Patron Saint","description":"Every 30 May Seville honours San Fernando III, who entered the city in 1248. His story, the celebrations, and his tomb in Seville Cathedral.","image":"https://www.dmcsevilleevent.com/uploads/gunvor-guttormsen-macarena-church-seville.webp","inLanguage":"en","datePublished":"2026-10-18","dateModified":"2026-10-18","mainEntityOfPage":"https://www.dmcsevilleevent.com/honouring-san-fernando-iii-sevilles-beloved-patron-saint/","author":{"@type":"Person","@id":"https://www.dmcsevilleevent.com/about/#gunvor","name":"Gunvor Guttormsen","url":"https://www.dmcsevilleevent.com/about/"},"publisher":{"@type":"Organization","@id":"https://www.dmcsevilleevent.com/#organization","name":"DMC Seville Event","logo":{"@type":"ImageObject","url":"https://www.dmcsevilleevent.com/assets/dmc-logo-cropped.webp"}}}]}</script>
+<style>x-dc{display:none!important}</style>
+<style></style><style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><title>Honouring San Fernando III: Seville’s Beloved Patron Saint | DMC Seville Event</title><meta content="Every 30 May Seville honours San Fernando III, who entered the city in 1248. His story, the celebrations, and his tomb in Seville Cathedral." name="description"/><link href="https://www.dmcsevilleevent.com/honouring-san-fernando-iii-sevilles-beloved-patron-saint/" rel="canonical"/><meta content="article" property="og:type"/><meta content="DMC Seville Event" property="og:site_name"/><meta content="en_GB" property="og:locale"/><meta content="Honouring San Fernando III: Seville’s Beloved Patron Saint | DMC Seville Event" property="og:title"/><meta content="Every 30 May Seville honours San Fernando III, who entered the city in 1248. His story, the celebrations, and his tomb in Seville Cathedral." property="og:description"/><meta content="https://www.dmcsevilleevent.com/honouring-san-fernando-iii-sevilles-beloved-patron-saint/" property="og:url"/><meta content="https://www.dmcsevilleevent.com/uploads/gunvor-guttormsen-macarena-church-seville.webp" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><link data-dc-tpl="12" href="https://fonts.googleapis.com" rel="preconnect"/><link data-dc-tpl="13" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;family=Varela+Round&amp;display=swap" rel="stylesheet"/><style data-dc-tpl="15">body{margin:0;}a{color:#ff5d1a;text-decoration:none;}a:hover{color:#0d3d40;}*{box-sizing:border-box;}</style><style data-dc-tpl="3">a{text-decoration:none;}*{box-sizing:border-box;}</style><style data-dc-tpl="3">a{text-decoration:none;color:#cfe3e4;}a:hover{color:#ff5d1a;}</style><style>x-dc{display:none!important}</style><meta content="H0RdhqivH3abdaZlze3v44QQ5XISVadKqWreEA0e7PA" name="google-site-verification"/>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+var c=null;try{c=localStorage.getItem('dmc-consent');}catch(e){}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:c==='yes'?'granted':'denied'});
+gtag('js',new Date());gtag('config','G-EN4YBPBV42');
+</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EN4YBPBV42"></script></head>
+<body>
+<div id="dc-static"><div class="sc-host" data-sc-name="Guide-San-Fernando"><div data-dc-tpl="16" style="font-family: Montserrat, sans-serif; color: rgb(31, 45, 51); background: rgb(255, 253, 251);">
+<div class="sc-host" data-dc-tpl="17" data-sc-name="SiteHeader"><div data-dc-tpl="4" style="font-family: Montserrat, sans-serif; position: relative; z-index: 50;">
+<div data-dc-tpl="5" style="position: fixed; top: 0px; left: 0px; height: 3px; background: rgb(255, 93, 26); width: 0%; z-index: 200;"></div>
+<div data-dc-tpl="6" style='background: rgb(21, 202, 210); color: rgb(255, 255, 255); font-family: "Varela Round", sans-serif; font-size: 13px; padding: 8px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;'>
+<div data-dc-tpl="7" style="display: flex; gap: 20px; flex-wrap: wrap;">
+<span data-dc-tpl="8">+34 637 87 87 68</span>
+<span data-dc-tpl="9">events@dmcsevilleevent.com</span>
+</div>
+<div data-dc-tpl="10" style="display: flex; gap: 14px;">
+<a data-dc-tpl="11" href="https://www.facebook.com/Sevillaprivateguidegunvor/" style="color: rgb(255, 255, 255);">Facebook</a>
+<a data-dc-tpl="12" href="https://www.instagram.com/sevillaprivateguide_gunvor/" style="color: rgb(255, 255, 255);">Instagram</a>
+<a data-dc-tpl="13" href="https://www.linkedin.com/in/gunvor-guttormsen-ba05a728/" style="color: rgb(255, 255, 255);">LinkedIn</a>
+</div>
+</div>
+<header data-dc-tpl="14" style="display: flex; align-items: center; justify-content: space-between; padding: 16px 32px; background: rgb(255, 255, 255); flex-wrap: wrap; gap: 16px; box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 0px;">
+<a data-dc-tpl="15" href="/"><img alt="DMC Seville Event" data-dc-tpl="16" fetchpriority="high" src="/assets/dmc-logo-cropped.webp" style="height: 64px; width: auto; object-fit: contain;"/></a>
+<nav data-dc-tpl="17" style='display: flex; gap: 28px; flex-wrap: wrap; font-family: "Varela Round", sans-serif; font-size: 15px; font-weight: 400; align-items: center;'>
+<div data-dc-tpl="18" style="position: relative;">
+<button data-dc-tpl="19" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>MICE</button>
+</div>
+<div data-dc-tpl="32" style="position: relative;">
+<button data-dc-tpl="33" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>GROUPS</button>
+</div>
+<div data-dc-tpl="40" style="position: relative;">
+<button data-dc-tpl="41" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>DESTINATIONS</button>
+</div>
+<div data-dc-tpl="52" style="position: relative;">
+<button data-dc-tpl="53" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>GET IN TOUCH</button>
+</div>
+<a data-dc-tpl="59" href="/inspiration/" style="color: rgb(31, 45, 51);">INSPIRATION / BLOG</a>
+</nav>
+</header></div></div>
+<section data-dc-tpl="18" data-screen-label="Hero" style="position: relative; min-height: clamp(440px, 78svh, 760px); display: flex; align-items: flex-end; overflow: hidden;">
+<img alt="The death of San Fernando III in Seville, painting" data-dc-tpl="19" loading="lazy" src="/fotos/san-fernando/death-of-san-fernando-full-painting.webp" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; object-position: 15% 40%;"/>
+<div data-dc-tpl="20" style="position: absolute; inset: 0px; background: linear-gradient(to top, rgba(13, 61, 64, 0.88) 0%, rgba(13, 61, 64, 0.35) 55%, rgba(13, 61, 64, 0.1) 100%); pointer-events: none;"></div>
+<div data-dc-tpl="21" style="position: relative; z-index: 2; width: 100%; max-width: 1200px; margin: 0px auto; padding: 120px 32px 56px; color: rgb(255, 255, 255);">
+<div data-dc-tpl="22" style='display: flex; gap: 10px; align-items: center; font-family: "Varela Round", sans-serif; font-size: 13px; letter-spacing: 1.5px; margin-bottom: 18px;'>
+<a data-dc-tpl="23" href="/inspiration/" style="color: rgb(255, 255, 255);">INSPIRATION</a><span data-dc-tpl="24" style="color: rgb(21, 202, 210);">/</span><span data-dc-tpl="25" style="color: rgb(21, 202, 210);">CULTURE &amp; FESTIVALS GUIDE</span>
+</div>
+<h1 data-dc-tpl="26" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(32px, 4.8vw, 56px); line-height: 1.08; margin: 0px 0px 18px; max-width: 900px; text-transform: uppercase; letter-spacing: 1px; text-wrap: balance;">Honouring San Fernando III: Seville’s Beloved Patron Saint</h1>
+<p data-dc-tpl="27" style="font-weight: 300; font-size: clamp(17px, 1.8vw, 20px); line-height: 1.6; max-width: 640px; margin: 0px;">Each year on May 30th, the city of Seville pauses to honor the legacy of San Fernando III — a king, a saint, and a symbol of unity.</p>
+</div>
+</section>
+<section data-dc-tpl="28" data-screen-label="Intro" style="max-width: 1200px; margin: 0px auto; padding: 72px 32px 0px; display: flex; flex-wrap: wrap; gap: 48px 64px; align-items: flex-start;">
+<div data-dc-tpl="29" style="flex: 1 1 440px; min-width: 0px; max-width: 720px;">
+<p data-dc-tpl="30" style="font-weight: 400; font-size: 19px; line-height: 1.7; color: rgb(31, 45, 51); margin: 0px;">At DMC Seville Event, we believe that understanding the heart of a city means connecting with its stories, traditions, and people. And few figures represent the soul of Seville more than Ferdinand III of Castile, canonized as San Fernando.</p>
+</div>
+<div data-dc-tpl="31" style="flex: 0 1 340px; width: 100%; background: rgb(21, 202, 210); color: rgb(13, 61, 64); border-radius: 6px; padding: 30px 28px; margin: 0px auto;">
+<div data-dc-tpl="32" style='font-family: "Varela Round", sans-serif; font-size: 12px; letter-spacing: 1.5px; margin-bottom: 10px;'>FEAST DAY</div>
+<p data-dc-tpl="33" style="font-weight: 800; font-size: 30px; line-height: 1.1; margin: 0px 0px 8px;">30 May</p>
+<p data-dc-tpl="34" style="font-weight: 500; font-size: 15px; line-height: 1.5; margin: 0px;">Solemn Mass in Seville Cathedral and display of the king’s silver casket.</p>
+</div>
+</section>
+<section data-dc-tpl="35" data-screen-label="Quote" style="max-width: 900px; margin: 0px auto; padding: 72px 32px 0px; text-align: center;">
+<div data-dc-tpl="36" style="font-family: Georgia, serif; color: rgb(255, 93, 26); font-size: 48px; line-height: 1; margin-bottom: 8px;">“</div>
+<p data-dc-tpl="37" style="font-weight: 500; font-style: italic; font-size: clamp(19px, 2.4vw, 24px); line-height: 1.5; color: rgb(255, 93, 26); margin: 0px;">On this day, Seville reflects on the enduring legacy of San Fernando III — revered as both king and saint.</p>
+</section>
+<section data-dc-tpl="38" data-screen-label="Who was he" style="max-width: 1200px; margin: 0px auto; padding: 88px 32px 0px; display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: flex-start;">
+<div data-dc-tpl="39" style="flex: 1 1 440px; min-width: 0px;">
+<div data-dc-tpl="40" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>THE KING AND SAINT</div>
+<h2 data-dc-tpl="41" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(24px, 3vw, 34px); margin: 0px 0px 18px;">Who Was San Fernando III?</h2>
+<p data-dc-tpl="42" style="font-weight: 300; font-size: 16.5px; line-height: 1.85; color: rgb(61, 74, 80); margin: 0px 0px 16px;">Born in 1199, Ferdinand III united the kingdoms of Castile and León and became one of Spain’s most respected medieval rulers. Known for his deep faith and sense of justice, he led the reconquest of Seville in 1248, incorporating the city into Christian Spain and preserving its rich cultural heritage.</p>
+<p data-dc-tpl="43" style="font-weight: 300; font-size: 16.5px; line-height: 1.85; color: rgb(61, 74, 80); margin: 0px;">He died on May 30th, 1252, and was later canonized by Pope Clement X in 1671. His incorrupt body lies in the Royal Chapel of Seville Cathedral, where it continues to inspire devotion centuries later.</p>
+</div>
+<div data-dc-tpl="44" style="flex: 1 1 360px; display: flex; flex-direction: column; border-left: 2px solid rgb(21, 202, 210); padding-left: 28px; gap: 24px;">
+<div data-dc-tpl="45"><div data-dc-tpl="46" style="font-weight: 800; font-size: 22px; color: rgb(21, 202, 210); line-height: 1;">1199</div><div data-dc-tpl="47" style="font-weight: 600; font-size: 15px; margin-top: 6px;">Born</div></div>
+<div data-dc-tpl="48"><div data-dc-tpl="49" style="font-weight: 800; font-size: 22px; color: rgb(21, 202, 210); line-height: 1;">1230</div><div data-dc-tpl="50" style="font-weight: 600; font-size: 15px; margin-top: 6px;">Unites the kingdoms of Castile and León</div></div>
+<div data-dc-tpl="51"><div data-dc-tpl="52" style="font-weight: 800; font-size: 22px; color: rgb(21, 202, 210); line-height: 1;">1248</div><div data-dc-tpl="53" style="font-weight: 600; font-size: 15px; margin-top: 6px;">Enters Seville</div></div>
+<div data-dc-tpl="54"><div data-dc-tpl="55" style="font-weight: 800; font-size: 22px; color: rgb(21, 202, 210); line-height: 1;">30 May 1252</div><div data-dc-tpl="56" style="font-weight: 600; font-size: 15px; margin-top: 6px;">Dies in Seville</div></div>
+<div data-dc-tpl="57"><div data-dc-tpl="58" style="font-weight: 800; font-size: 22px; color: rgb(255, 93, 26); line-height: 1;">1671</div><div data-dc-tpl="59" style="font-weight: 600; font-size: 15px; margin-top: 6px;">Canonized by Pope Clement X</div></div>
+</div>
+</section>
+<section data-dc-tpl="60" data-screen-label="Celebration" style="max-width: 1200px; margin: 0px auto; padding: 88px 32px 0px; display: flex; flex-wrap: wrap-reverse; gap: 40px 56px; align-items: center;">
+<div data-dc-tpl="61" style="flex: 1 1 400px; height: 380px; border-radius: 6px; overflow: hidden;"><img alt="San Fernando procession in Seville on 30 May" decoding="async" loading="lazy" src="/fotos/san-fernando/san-fernando-procession-seville.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="63" style="flex: 1 1 400px;">
+<div data-dc-tpl="64" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>30 MAY</div>
+<h2 data-dc-tpl="65" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(24px, 3vw, 34px); margin: 0px 0px 18px;">How Is May 30th Celebrated in Seville?</h2>
+<p data-dc-tpl="66" style="font-weight: 300; font-size: 16.5px; line-height: 1.85; color: rgb(61, 74, 80); margin: 0px 0px 16px;">Every year, Seville commemorates San Fernando with a solemn Mass in the Cathedral, attended by local authorities and residents. His silver casket is displayed, and the faithful pay tribute to a king whose leadership still echoes through the city.</p>
+<p data-dc-tpl="67" style="font-weight: 300; font-size: 16.5px; line-height: 1.85; color: rgb(61, 74, 80); margin: 0px;">The atmosphere is one of both reverence and pride. Streets near the cathedral are adorned with flags, and church bells ring in his memory. It’s a moment when Seville reflects on its identity — shaped by history, marked by faith, and enriched by diversity.</p>
+</div>
+</section>
+<section data-dc-tpl="68" data-screen-label="Why it matters" style="background: rgb(246, 244, 239); margin-top: 88px; padding: 80px 32px;">
+<div data-dc-tpl="69" style="max-width: 1200px; margin: 0px auto; display: flex; flex-wrap: wrap; gap: 48px;">
+<div data-dc-tpl="70" style="flex: 1 1 300px;">
+<div data-dc-tpl="71" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>FOR VISITORS</div>
+<h2 data-dc-tpl="72" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(22px, 2.8vw, 30px); margin: 0px;">Why It Matters for Visitors</h2>
+</div>
+<div data-dc-tpl="73" style="flex: 2 1 480px;">
+<p data-dc-tpl="74" style="font-weight: 300; font-size: 16.5px; line-height: 1.85; color: rgb(61, 74, 80); margin: 0px 0px 16px;">For travelers seeking more than just photo opportunities, understanding Seville’s traditions adds depth to every experience. Joining a guided tour around the Cathedral, Alcázar, or the historic center on or around May 30th offers a powerful glimpse into the city’s soul.</p>
+<p data-dc-tpl="75" style="font-weight: 300; font-size: 16.5px; line-height: 1.85; color: rgb(61, 74, 80); margin: 0px;">At DMC Seville Event, we tailor experiences that connect our guests to the stories behind the monuments. Whether you’re walking the same streets San Fernando once entered, or standing before his tomb, you’re part of a living history.</p>
+</div>
+</div>
+</section>
+<section data-dc-tpl="76" data-screen-label="Closing" style="max-width: 820px; margin: 0px auto; padding: 88px 32px 0px; text-align: center;">
+<h2 data-dc-tpl="77" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(22px, 2.8vw, 30px); margin: 0px 0px 18px; color: rgb(21, 202, 210);">Discover Seville with Meaning</h2>
+<p data-dc-tpl="78" style="font-weight: 300; font-size: 17px; line-height: 1.8; color: rgb(61, 74, 80); margin: 0px 0px 12px;">Seville isn’t just a beautiful city — it’s a city that remembers. And on May 30th, as it honors San Fernando III, you’re invited to remember with it.</p>
+<p data-dc-tpl="79" style="font-weight: 300; font-size: 17px; line-height: 1.8; color: rgb(61, 74, 80); margin: 0px;">Join us, and see Seville through the eyes of its past and the spirit of its people.</p>
+</section>
+<section data-dc-tpl="80" data-screen-label="Tour offer" style="max-width: 1200px; margin: 0px auto; padding: 88px 32px 0px;">
+<div data-dc-tpl="81" style="background: rgb(13, 61, 64); color: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; display: flex; flex-wrap: wrap;">
+<div data-dc-tpl="82" style="flex: 1 1 380px; min-height: 320px; position: relative;"><img alt="Equestrian statue of San Fernando III in Plaza Nueva, Seville" data-dc-tpl="83" loading="lazy" src="/fotos/san-fernando/san-fernando-statue-plaza-nueva-seville.webp" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center 8%; display: block;"/></div>
+<div data-dc-tpl="84" style="flex: 1 1 380px; padding: 44px 40px; display: flex; flex-direction: column; justify-content: center; gap: 16px;">
+<div data-dc-tpl="85" style='font-family: "Varela Round", sans-serif; font-size: 12px; letter-spacing: 1.5px; color: rgb(21, 202, 210);'>FOR GROUPS</div>
+<h2 data-dc-tpl="86" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(22px, 2.8vw, 30px); line-height: 1.2; margin: 0px;">Interested in exploring the legacy of San Fernando III?</h2>
+<p data-dc-tpl="87" style="font-weight: 300; font-size: 16px; line-height: 1.7; color: rgb(207, 227, 228); margin: 0px;">Book a private historical tour with us and walk through the very heart of Seville’s rich past. We arrange licensed guides, skip-the-line entry to the Cathedral and Alcázar, and routes tailored to your group.</p>
+<div data-dc-tpl="88" style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px;">
+<a class="scp0" data-dc-tpl="89" href="/contact/?activity=Private%20Historical%20Tour" style='background: rgb(255, 93, 26); color: rgb(255, 255, 255); font-family: "Varela Round", sans-serif; font-weight: 600; padding: 14px 26px; border-radius: 2px; font-size: 15px;'>Book a Private Tour</a>
+</div>
+</div>
+</div>
+</section>
+<section data-dc-tpl="90" data-screen-label="Expert" style="background: rgb(234, 246, 246); margin-top: 88px; padding: 60px 32px 50px;">
+<div data-dc-tpl="91" style="max-width: 820px; margin: 0px auto; display: flex; align-items: center; gap: 40px; flex-wrap: wrap; justify-content: center;">
+<div data-dc-tpl="92" style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; flex: 0 0 auto;"><img alt="Gunvor Guttormsen in front of Macarena church, Seville" decoding="async" loading="lazy" src="/uploads/gunvor-guttormsen-macarena-church-seville.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:50%"/></div>
+<div data-dc-tpl="94" style="flex: 1 1 0%; min-width: 240px;">
+<h2 data-dc-tpl="95" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(20px, 2.6vw, 26px); margin: 0px 0px 12px;">We're Experts in Cultural Programmes in Seville</h2>
+<p data-dc-tpl="96" style="font-weight: 300; font-size: 15.5px; line-height: 1.7; color: rgb(61, 74, 80); margin: 0px 0px 24px;">Planning a visit around May 30th or a historical programme for your group? Send us an enquiry.</p>
+<a class="scp1" data-dc-tpl="97" href="/contact/" style='background: rgb(255, 93, 26); color: rgb(255, 255, 255); font-family: "Varela Round", sans-serif; font-weight: 600; padding: 14px 32px; border-radius: 2px; font-size: 15px; display: inline-block;'>Get In Touch</a>
+</div>
+</div>
+</section>
+<section data-dc-tpl="98" data-screen-label="Author" style="max-width: 1000px; margin: 0px auto; padding: 56px 32px 0px;">
+<div data-dc-tpl="99" style="display: flex; gap: 18px; align-items: center; padding: 24px; border: 1px solid rgb(236, 231, 220); border-radius: 6px; background: rgb(255, 255, 255);">
+<div data-dc-tpl="100" style="width: 56px; height: 56px; border-radius: 50%; overflow: hidden; flex: 0 0 auto;"><img alt="Gunvor Guttormsen" decoding="async" loading="lazy" src="/uploads/gunvor-guttormsen-avatar.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:50%"/></div>
+<p data-dc-tpl="102" style="font-weight: 300; font-size: 14.5px; line-height: 1.65; color: rgb(61, 74, 80); margin: 0px;">This text is written by <strong data-dc-tpl="103" style="font-weight: 700; color: rgb(31, 45, 51);">Gunvor Guttormsen</strong>. She is the owner of DMC Seville and has worked in tourism in Seville since 1999. She is a true Seville lover and wants to share her passion and love for Seville with you.<span data-dc-tpl="104" style="display: block; margin-top: 6px; font-size: 13px; color: rgb(91, 106, 112);">Last updated: 18 October 2026</span></p>
+</div>
+</section>
+<section data-dc-tpl="105" data-screen-label="More inspiration" style="max-width: 1200px; margin: 0px auto; padding: 72px 32px 88px;">
+<div data-dc-tpl="106" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; padding-bottom: 20px; border-bottom: 1px solid rgb(227, 236, 236); margin-bottom: 32px;">
+<h2 data-dc-tpl="107" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(22px, 2.8vw, 30px); margin: 0px;">More inspiration</h2>
+<a data-dc-tpl="108" href="/inspiration/" style='font-family: "Varela Round", sans-serif; font-size: 14px; font-weight: 600;'>Return to Seville inspiration →</a>
+</div>
+<div data-dc-tpl="109" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 24px;">
+<a class="scp2" data-dc-tpl="110" href="/el-rocio-pilgrimage-andalusias-most-soulful-celebration/" style="display: flex; flex-direction: column; color: rgb(31, 45, 51); border-radius: 4px; overflow: hidden; background: rgb(255, 255, 255); border: 1px solid rgb(236, 231, 220);">
+<div data-dc-tpl="111" style="height: 190px;"><img alt="El Rocío and Doñana" decoding="async" loading="lazy" src="/uploads/horseback-ride-sunset-huelva.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="113" style="padding: 20px 22px 24px;"><div data-dc-tpl="114" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 8px;'>OUTDOORS</div><div data-dc-tpl="115" style="font-weight: 700; font-size: 17px; line-height: 1.35;">El Rocío &amp; Doñana Experiences</div></div>
+</a>
+<a class="scp2" data-dc-tpl="116" href="/what-to-do-in-seville-in-spring/" style="display: flex; flex-direction: column; color: rgb(31, 45, 51); border-radius: 4px; overflow: hidden; background: rgb(255, 255, 255); border: 1px solid rgb(236, 231, 220);">
+<div data-dc-tpl="117" style="height: 190px;"><img alt="Seville in spring" decoding="async" loading="lazy" src="/uploads/damene-til-becquer-maria-luisaparken-sevilla.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="119" style="padding: 20px 22px 24px;"><div data-dc-tpl="120" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 8px;'>PLANNING GUIDES</div><div data-dc-tpl="121" style="font-weight: 700; font-size: 17px; line-height: 1.35;">What to Do in Seville in Spring</div></div>
+</a>
+<a class="scp2" data-dc-tpl="122" href="/flamenco-experiences-seville/" style="display: flex; flex-direction: column; color: rgb(31, 45, 51); border-radius: 4px; overflow: hidden; background: rgb(255, 255, 255); border: 1px solid rgb(236, 231, 220);">
+<div data-dc-tpl="123" style="height: 190px;"><img alt="Flamenco in Seville" decoding="async" loading="lazy" src="/uploads/best-flamenco-seville-2.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="125" style="padding: 20px 22px 24px;"><div data-dc-tpl="126" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 8px;'>CULTURE &amp; FESTIVALS</div><div data-dc-tpl="127" style="font-weight: 700; font-size: 17px; line-height: 1.35;">Flamenco Experiences in Seville</div></div>
+</a>
+</div>
+</section>
+<div class="sc-host" data-dc-tpl="128" data-sc-name="SiteFooter"><footer data-dc-tpl="4" style="background: rgb(13, 61, 64); color: rgb(207, 227, 228); padding: 60px 32px 30px; font-family: Montserrat, sans-serif; border-top: 4px solid rgb(21, 202, 210);">
+<div data-dc-tpl="5" style="max-width: 1200px; margin: 0px auto 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 36px;">
+<div data-dc-tpl="6">
+<a data-dc-tpl="7" href="/" style="display: inline-flex; background: rgb(255, 255, 255); border-radius: 6px; padding: 10px 14px; margin-bottom: 16px;"><img alt="DMC Seville Event" data-dc-tpl="8" loading="lazy" src="/assets/dmc-logo-cropped.webp" style="height: 60px; width: auto; object-fit: contain; display: block;"/></a>
+<p data-dc-tpl="9" style="font-weight: 300; font-size: 13.5px; line-height: 1.6;">C/ Milano Govinda 35, 41020 Sevilla, Spain</p>
+</div>
+<div data-dc-tpl="10">
+<h4 data-dc-tpl="11" style="font-weight: 700; color: rgb(255, 255, 255); font-size: 15px; margin: 0px 0px 14px;">Services</h4>
+<div data-dc-tpl="12" style="display: flex; flex-direction: column; gap: 8px; font-size: 13.5px; font-weight: 300;">
+<a data-dc-tpl="13" href="/trip/meetings-seville/">Meetings</a>
+<a data-dc-tpl="14" href="/trip/corporate-event-venue-seville/">Venue Finding</a>
+<a data-dc-tpl="15" href="/trip/corporate-incentive-trip-seville/">Corporate Incentive</a>
+<a data-dc-tpl="16" href="/trip/team-building-seville/">Team Building</a>
+<a data-dc-tpl="17" href="/group-travel-to-seville/">Group Travel</a>
+</div>
+</div>
+<div data-dc-tpl="18">
+<h4 data-dc-tpl="19" style="font-weight: 700; color: rgb(255, 255, 255); font-size: 15px; margin: 0px 0px 14px;">DMC Destinations in Andalusia</h4>
+<div data-dc-tpl="20" style="display: flex; flex-direction: column; gap: 8px; font-size: 13.5px; font-weight: 300;">
+<a data-dc-tpl="21" href="/incentive-trip-sevilla/">Incentive Trip Sevilla</a>
+<a data-dc-tpl="22" href="/dmc-malaga/">DMC Málaga</a>
+<a data-dc-tpl="23" href="/dmc-huelva/">DMC Huelva</a>
+<a data-dc-tpl="24" href="/dmc-cadiz/">DMC Cádiz</a>
+<a data-dc-tpl="25" href="/dmc-granada/">DMC Granada</a>
+<a data-dc-tpl="26" href="/dmc-cordoba/">DMC Córdoba</a>
+<a data-dc-tpl="27" href="/dmc-almeria/">DMC Almería</a>
+<a data-dc-tpl="28" href="/dmc-jaen/">DMC Jaén</a>
+</div>
+</div>
+<div data-dc-tpl="29">
+<h4 data-dc-tpl="30" style="font-weight: 700; color: rgb(255, 255, 255); font-size: 15px; margin: 0px 0px 14px;">Contact</h4>
+<p data-dc-tpl="31" style="font-weight: 300; font-size: 13.5px; line-height: 1.8; margin: 0px 0px 12px;">+34 637 87 87 68<br data-dc-tpl="32"/>events@dmcsevilleevent.com</p>
+<a data-dc-tpl="33" href="/contact/" style="color: rgb(21, 202, 210); font-weight: 500;">Contact Now</a>
+</div>
+</div>
+<div data-dc-tpl="34" style="text-align: center; font-size: 12.5px; font-weight: 300; border-top: 1px solid rgba(207, 227, 228, 0.2); padding-top: 22px; max-width: 1200px; margin: 0px auto;">© 2026 DMC Seville Event. All Rights Reserved.</div></footer></div></div></div></div><template id="dc-src"><x-dc>
+<helmet>
+<title>Honouring San Fernando III: Seville’s Beloved Patron Saint | DMC Seville Event</title>
+<meta name="description" content="Every 30 May Seville honours San Fernando III, who entered the city in 1248. His story, the celebrations, and his tomb in Seville Cathedral.">
+<link rel="canonical" href="https://www.dmcsevilleevent.com/honouring-san-fernando-iii-sevilles-beloved-patron-saint/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DMC Seville Event">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Honouring San Fernando III: Seville’s Beloved Patron Saint | DMC Seville Event">
+<meta property="og:description" content="Every 30 May Seville honours San Fernando III, who entered the city in 1248. His story, the celebrations, and his tomb in Seville Cathedral.">
+<meta property="og:url" content="https://www.dmcsevilleevent.com/honouring-san-fernando-iii-sevilles-beloved-patron-saint/">
+<meta property="og:image" content="https://www.dmcsevilleevent.com/uploads/gunvor-guttormsen-macarena-church-seville.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Varela+Round&display=swap" rel="stylesheet">
+
+<style>body{margin:0;}a{color:#ff5d1a;text-decoration:none;}a:hover{color:#0d3d40;}*{box-sizing:border-box;}</style>
+</helmet>
+<div style="font-family:'Montserrat',sans-serif;color:#1f2d33;background:#fffdfb;">
+  <dc-import name="SiteHeader" hint-size="100%,120"></dc-import>
+
+  <section data-screen-label="Hero" style="position:relative;min-height:clamp(440px,78svh,760px);display:flex;align-items:flex-end;overflow:hidden;">
+    <img src="/fotos/san-fernando/death-of-san-fernando-full-painting.webp" alt="The death of San Fernando III in Seville, painting" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:15% 40%;">
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,61,64,0.88) 0%,rgba(13,61,64,0.35) 55%,rgba(13,61,64,0.1) 100%);pointer-events:none;"></div>
+    <div style="position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding:120px 32px 56px;color:#ffffff;">
+      <div style="display:flex;gap:10px;align-items:center;font-family:'Varela Round',sans-serif;font-size:13px;letter-spacing:1.5px;margin-bottom:18px;">
+        <a href="/inspiration/" style="color:#ffffff;">INSPIRATION</a><span style="color:#15cad2;">/</span><span style="color:#15cad2;">CULTURE &amp; FESTIVALS GUIDE</span>
+      </div>
+      <h1 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(32px,4.8vw,56px);line-height:1.08;margin:0 0 18px;max-width:900px;text-transform:uppercase;letter-spacing:1px;text-wrap:balance;">Honouring San Fernando III: Seville’s Beloved Patron Saint</h1>
+      <p style="font-weight:300;font-size:clamp(17px,1.8vw,20px);line-height:1.6;max-width:640px;margin:0;">Each year on May 30th, the city of Seville pauses to honor the legacy of San Fernando III — a king, a saint, and a symbol of unity.</p>
+    </div>
+  </section>
+
+  <section data-screen-label="Intro" style="max-width:1200px;margin:0 auto;padding:72px 32px 0;display:flex;flex-wrap:wrap;gap:48px 64px;align-items:flex-start;">
+    <div style="flex:1 1 440px;min-width:0;max-width:720px;">
+      <p style="font-weight:400;font-size:19px;line-height:1.7;color:#1f2d33;margin:0;">At DMC Seville Event, we believe that understanding the heart of a city means connecting with its stories, traditions, and people. And few figures represent the soul of Seville more than Ferdinand III of Castile, canonized as San Fernando.</p>
+    </div>
+    <div style="flex:0 1 340px;width:100%;background:#15cad2;color:#0d3d40;border-radius:6px;padding:30px 28px;margin:0 auto;">
+      <div style="font-family:'Varela Round',sans-serif;font-size:12px;letter-spacing:1.5px;margin-bottom:10px;">FEAST DAY</div>
+      <p style="font-weight:800;font-size:30px;line-height:1.1;margin:0 0 8px;">30 May</p>
+      <p style="font-weight:500;font-size:15px;line-height:1.5;margin:0;">Solemn Mass in Seville Cathedral and display of the king’s silver casket.</p>
+    </div>
+  </section>
+
+  <section data-screen-label="Quote" style="max-width:900px;margin:0 auto;padding:72px 32px 0;text-align:center;">
+    <div style="font-family:Georgia,serif;color:#ff5d1a;font-size:48px;line-height:1;margin-bottom:8px;">“</div>
+    <p style="font-weight:500;font-style:italic;font-size:clamp(19px,2.4vw,24px);line-height:1.5;color:#ff5d1a;margin:0;">On this day, Seville reflects on the enduring legacy of San Fernando III — revered as both king and saint.</p>
+  </section>
+
+  <section data-screen-label="Who was he" style="max-width:1200px;margin:0 auto;padding:88px 32px 0;display:flex;flex-wrap:wrap;gap:40px 56px;align-items:flex-start;">
+    <div style="flex:1 1 440px;min-width:0;">
+      <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">THE KING AND SAINT</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(24px,3vw,34px);margin:0 0 18px;">Who Was San Fernando III?</h2>
+      <p style="font-weight:300;font-size:16.5px;line-height:1.85;color:#3d4a50;margin:0 0 16px;">Born in 1199, Ferdinand III united the kingdoms of Castile and León and became one of Spain’s most respected medieval rulers. Known for his deep faith and sense of justice, he led the reconquest of Seville in 1248, incorporating the city into Christian Spain and preserving its rich cultural heritage.</p>
+      <p style="font-weight:300;font-size:16.5px;line-height:1.85;color:#3d4a50;margin:0;">He died on May 30th, 1252, and was later canonized by Pope Clement X in 1671. His incorrupt body lies in the Royal Chapel of Seville Cathedral, where it continues to inspire devotion centuries later.</p>
+    </div>
+    <div style="flex:1 1 360px;display:flex;flex-direction:column;border-left:2px solid #15cad2;padding-left:28px;gap:24px;">
+      <div><div style="font-weight:800;font-size:22px;color:#15cad2;line-height:1;">1199</div><div style="font-weight:600;font-size:15px;margin-top:6px;">Born</div></div>
+      <div><div style="font-weight:800;font-size:22px;color:#15cad2;line-height:1;">1230</div><div style="font-weight:600;font-size:15px;margin-top:6px;">Unites the kingdoms of Castile and León</div></div>
+      <div><div style="font-weight:800;font-size:22px;color:#15cad2;line-height:1;">1248</div><div style="font-weight:600;font-size:15px;margin-top:6px;">Enters Seville</div></div>
+      <div><div style="font-weight:800;font-size:22px;color:#15cad2;line-height:1;">30 May 1252</div><div style="font-weight:600;font-size:15px;margin-top:6px;">Dies in Seville</div></div>
+      <div><div style="font-weight:800;font-size:22px;color:#ff5d1a;line-height:1;">1671</div><div style="font-weight:600;font-size:15px;margin-top:6px;">Canonized by Pope Clement X</div></div>
+    </div>
+  </section>
+
+  <section data-screen-label="Celebration" style="max-width:1200px;margin:0 auto;padding:88px 32px 0;display:flex;flex-wrap:wrap-reverse;gap:40px 56px;align-items:center;">
+    <div style="flex:1 1 400px;height:380px;border-radius:6px;overflow:hidden;"><image-slot id="guide-sanfernando-celebration" src="/fotos/san-fernando/san-fernando-procession-seville.webp" shape="rect" alt="San Fernando procession in Seville on 30 May" placeholder="30 May celebration photo" style="width:100%;height:100%;"></image-slot></div>
+    <div style="flex:1 1 400px;">
+      <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">30 MAY</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(24px,3vw,34px);margin:0 0 18px;">How Is May 30th Celebrated in Seville?</h2>
+      <p style="font-weight:300;font-size:16.5px;line-height:1.85;color:#3d4a50;margin:0 0 16px;">Every year, Seville commemorates San Fernando with a solemn Mass in the Cathedral, attended by local authorities and residents. His silver casket is displayed, and the faithful pay tribute to a king whose leadership still echoes through the city.</p>
+      <p style="font-weight:300;font-size:16.5px;line-height:1.85;color:#3d4a50;margin:0;">The atmosphere is one of both reverence and pride. Streets near the cathedral are adorned with flags, and church bells ring in his memory. It’s a moment when Seville reflects on its identity — shaped by history, marked by faith, and enriched by diversity.</p>
+    </div>
+  </section>
+
+  <section data-screen-label="Why it matters" style="background:#f6f4ef;margin-top:88px;padding:80px 32px;">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:48px;">
+      <div style="flex:1 1 300px;">
+        <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">FOR VISITORS</div>
+        <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,30px);margin:0;">Why It Matters for Visitors</h2>
+      </div>
+      <div style="flex:2 1 480px;">
+        <p style="font-weight:300;font-size:16.5px;line-height:1.85;color:#3d4a50;margin:0 0 16px;">For travelers seeking more than just photo opportunities, understanding Seville’s traditions adds depth to every experience. Joining a guided tour around the Cathedral, Alcázar, or the historic center on or around May 30th offers a powerful glimpse into the city’s soul.</p>
+        <p style="font-weight:300;font-size:16.5px;line-height:1.85;color:#3d4a50;margin:0;">At DMC Seville Event, we tailor experiences that connect our guests to the stories behind the monuments. Whether you’re walking the same streets San Fernando once entered, or standing before his tomb, you’re part of a living history.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Closing" style="max-width:820px;margin:0 auto;padding:88px 32px 0;text-align:center;">
+    <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,30px);margin:0 0 18px;color:#15cad2;">Discover Seville with Meaning</h2>
+    <p style="font-weight:300;font-size:17px;line-height:1.8;color:#3d4a50;margin:0 0 12px;">Seville isn’t just a beautiful city — it’s a city that remembers. And on May 30th, as it honors San Fernando III, you’re invited to remember with it.</p>
+    <p style="font-weight:300;font-size:17px;line-height:1.8;color:#3d4a50;margin:0;">Join us, and see Seville through the eyes of its past and the spirit of its people.</p>
+  </section>
+
+  <section data-screen-label="Tour offer" style="max-width:1200px;margin:0 auto;padding:88px 32px 0;">
+    <div style="background:#0d3d40;color:#ffffff;border-radius:6px;overflow:hidden;display:flex;flex-wrap:wrap;">
+      <div style="flex:1 1 380px;min-height:320px;position:relative;"><img src="/fotos/san-fernando/san-fernando-statue-plaza-nueva-seville.webp" alt="Equestrian statue of San Fernando III in Plaza Nueva, Seville" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 8%;display:block;"></div>
+      <div style="flex:1 1 380px;padding:44px 40px;display:flex;flex-direction:column;justify-content:center;gap:16px;">
+        <div style="font-family:'Varela Round',sans-serif;font-size:12px;letter-spacing:1.5px;color:#15cad2;">FOR GROUPS</div>
+        <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,30px);line-height:1.2;margin:0;">Interested in exploring the legacy of San Fernando III?</h2>
+        <p style="font-weight:300;font-size:16px;line-height:1.7;color:#cfe3e4;margin:0;">Book a private historical tour with us and walk through the very heart of Seville’s rich past. We arrange licensed guides, skip-the-line entry to the Cathedral and Alcázar, and routes tailored to your group.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;">
+          <a href="/contact/?activity=Private%20Historical%20Tour" style="background:#ff5d1a;color:#ffffff;font-family:'Varela Round',sans-serif;font-weight:600;padding:14px 26px;border-radius:2px;font-size:15px;" style-hover="background:#ffffff;color:#0d3d40;">Book a Private Tour</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Expert" style="background:#eaf6f6;margin-top:88px;padding:60px 32px 50px;">
+    <div style="max-width:820px;margin:0 auto;display:flex;align-items:center;gap:40px;flex-wrap:wrap;justify-content:center;">
+      <div style="width:150px;height:150px;border-radius:50%;overflow:hidden;flex:none;"><image-slot id="guide-sanfernando-contact-photo" shape="circle" src="/uploads/gunvor-guttormsen-macarena-church-seville.webp" alt="Gunvor Guttormsen in front of Macarena church, Seville" placeholder="Team photo" style="width:100%;height:100%;"></image-slot></div>
+      <div style="flex:1;min-width:240px;">
+        <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(20px,2.6vw,26px);margin:0 0 12px;">We're Experts in Cultural Programmes in Seville</h2>
+        <p style="font-weight:300;font-size:15.5px;line-height:1.7;color:#3d4a50;margin:0 0 24px;">Planning a visit around May 30th or a historical programme for your group? Send us an enquiry.</p>
+        <a href="/contact/" style="background:#ff5d1a;color:#ffffff;font-family:'Varela Round',sans-serif;font-weight:600;padding:14px 32px;border-radius:2px;font-size:15px;display:inline-block;" style-hover="background:#0d3d40;color:#ffffff;">Get In Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Author" style="max-width:1000px;margin:0 auto;padding:56px 32px 0;">
+    <div style="display:flex;gap:18px;align-items:center;padding:24px;border:1px solid #ece7dc;border-radius:6px;background:#ffffff;">
+      <div style="width:56px;height:56px;border-radius:50%;overflow:hidden;flex:none;"><image-slot id="guide-sanfernando-author-photo" shape="circle" src="/uploads/gunvor-guttormsen-avatar.webp" alt="Gunvor Guttormsen" placeholder="Author photo" style="width:100%;height:100%;"></image-slot></div>
+      <p style="font-weight:300;font-size:14.5px;line-height:1.65;color:#3d4a50;margin:0;">This text is written by <strong style="font-weight:700;color:#1f2d33;">Gunvor Guttormsen</strong>. She is the owner of DMC Seville and has worked in tourism in Seville since 1999. She is a true Seville lover and wants to share her passion and love for Seville with you.<span style="display:block;margin-top:6px;font-size:13px;color:#5b6a70;">Last updated: 18 October 2026</span></p>
+    </div>
+  </section>
+
+  <section data-screen-label="More inspiration" style="max-width:1200px;margin:0 auto;padding:72px 32px 88px;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;padding-bottom:20px;border-bottom:1px solid #e3ecec;margin-bottom:32px;">
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,30px);margin:0;">More inspiration</h2>
+      <a href="/inspiration/" style="font-family:'Varela Round',sans-serif;font-size:14px;font-weight:600;">Return to Seville inspiration →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:24px;">
+      <a href="/el-rocio-pilgrimage-andalusias-most-soulful-celebration/" style="display:flex;flex-direction:column;color:#1f2d33;border-radius:4px;overflow:hidden;background:#ffffff;border:1px solid #ece7dc;" style-hover="border-color:#15cad2;color:#1f2d33;">
+        <div style="height:190px;"><image-slot id="guide-sanfernando-more-1" shape="rect" src="/uploads/horseback-ride-sunset-huelva.webp" alt="El Rocío and Doñana" placeholder="Related activity photo" style="width:100%;height:100%;"></image-slot></div>
+        <div style="padding:20px 22px 24px;"><div style="font-family:'Varela Round',sans-serif;font-size:11.5px;letter-spacing:1.5px;color:#15cad2;margin-bottom:8px;">OUTDOORS</div><div style="font-weight:700;font-size:17px;line-height:1.35;">El Rocío &amp; Doñana Experiences</div></div>
+      </a>
+      <a href="/what-to-do-in-seville-in-spring/" style="display:flex;flex-direction:column;color:#1f2d33;border-radius:4px;overflow:hidden;background:#ffffff;border:1px solid #ece7dc;" style-hover="border-color:#15cad2;color:#1f2d33;">
+        <div style="height:190px;"><image-slot id="guide-sanfernando-more-2" shape="rect" src="/uploads/damene-til-becquer-maria-luisaparken-sevilla.webp" alt="Seville in spring" placeholder="Related activity photo" style="width:100%;height:100%;"></image-slot></div>
+        <div style="padding:20px 22px 24px;"><div style="font-family:'Varela Round',sans-serif;font-size:11.5px;letter-spacing:1.5px;color:#15cad2;margin-bottom:8px;">PLANNING GUIDES</div><div style="font-weight:700;font-size:17px;line-height:1.35;">What to Do in Seville in Spring</div></div>
+      </a>
+      <a href="/flamenco-experiences-seville/" style="display:flex;flex-direction:column;color:#1f2d33;border-radius:4px;overflow:hidden;background:#ffffff;border:1px solid #ece7dc;" style-hover="border-color:#15cad2;color:#1f2d33;">
+        <div style="height:190px;"><image-slot id="guide-sanfernando-more-3" shape="rect" src="/uploads/best-flamenco-seville-2.webp" alt="Flamenco in Seville" placeholder="Related activity photo" style="width:100%;height:100%;"></image-slot></div>
+        <div style="padding:20px 22px 24px;"><div style="font-family:'Varela Round',sans-serif;font-size:11.5px;letter-spacing:1.5px;color:#15cad2;margin-bottom:8px;">CULTURE &amp; FESTIVALS</div><div style="font-weight:700;font-size:17px;line-height:1.35;">Flamenco Experiences in Seville</div></div>
+      </a>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,300"></dc-import>
+</div>
+</x-dc>
+</template>
+<div id="dmc-consent" hidden style="position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:560px;margin:0 auto;background:#0d3d40;color:#fff;font-family:Montserrat,sans-serif;font-size:14px;line-height:1.5;padding:16px 18px;border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.25)">
+We use Google Analytics cookies to see how visitors use our website. Do you accept statistics cookies?
+<div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap"><button type="button" data-v="yes" style="cursor:pointer;border:0;background:#15cad2;color:#0d3d40;font-weight:600;padding:8px 16px;border-radius:3px;font-family:inherit">Accept</button><button type="button" data-v="no" style="cursor:pointer;border:1px solid #fff;background:transparent;color:#fff;padding:8px 16px;border-radius:3px;font-family:inherit">Decline</button></div></div>
+<script>
+(function(){var b=document.getElementById('dmc-consent'),v=null;try{v=localStorage.getItem('dmc-consent');}catch(e){}
+if(!v)b.hidden=false;
+b.addEventListener('click',function(e){var x=e.target.getAttribute('data-v');if(!x)return;try{localStorage.setItem('dmc-consent',x);}catch(e){}
+if(x==='yes')gtag('consent','update',{analytics_storage:'granted'});b.hidden=true;});})();
+</script>
+<script>
+(function(){
+  var t=document.getElementById('dc-src'), s=document.getElementById('dc-static');
+  if(!t||!s) return;
+  function load(src,cb){var e=document.createElement('script');e.src=src;e.onload=cb;document.body.appendChild(e);}
+  function dedupe(){var seen={};document.querySelectorAll('script[type="application/ld+json"]').forEach(function(e){var k=e.textContent.trim();if(seen[k])e.remove();else seen[k]=1;});}
+  function go(){
+    s.parentNode.insertBefore(document.importNode(t.content,true), s.nextSibling);
+    var obs=new MutationObserver(function(){var r=document.getElementById('dc-root');
+      if(r&&r.firstElementChild){obs.disconnect();setTimeout(function(){s.remove();dedupe();setTimeout(dedupe,1500);},60);}});
+    obs.observe(document.body,{childList:true,subtree:true});
+    load('/image-slot.js',function(){load('/support.js');});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go();
+})();
+</script>
+</body></html>

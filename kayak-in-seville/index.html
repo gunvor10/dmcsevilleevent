@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><base href="/"/><style>
+    .sc-placeholder{background:color-mix(in srgb,currentColor 8%,transparent);
+      border:1px solid color-mix(in srgb,currentColor 50%,transparent);
+      border-radius:2px;box-sizing:border-box;overflow:hidden}
+    @keyframes sc-shine{0%{background-position:100% 50%}100%{background-position:0% 50%}}
+    html.sc-dc-streaming .sc-placeholder,
+    html.sc-dc-streaming .sc-interp.sc-missing{position:relative;
+      background:color-mix(in srgb,currentColor 5%,transparent);
+      border-color:transparent}
+    html.sc-dc-streaming .sc-placeholder::before,
+    html.sc-dc-streaming .sc-interp.sc-missing::before{content:'';
+      position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg,rgba(217,119,87,0) 25%,rgba(247,225,211,.95) 37%,rgba(217,119,87,0) 63%);
+      background-size:400% 100%;animation:sc-shine 1.4s ease infinite}
+    html.sc-dc-streaming .sc-placeholder:nth-child(n+9 of .sc-placeholder)::before,
+    html.sc-dc-streaming .sc-interp.sc-missing:nth-child(n+9 of .sc-interp.sc-missing)::before{animation:none;
+      background:color-mix(in srgb,currentColor 8%,transparent)}
+    .sc-placeholder-error{padding:4px 8px;font:11px/1.4 ui-monospace,monospace;
+      color:color-mix(in srgb,currentColor 70%,transparent);word-break:break-word}
+    .sc-interp.sc-missing{display:inline-block;width:2em;height:1em;overflow:hidden;
+      vertical-align:text-bottom;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
+      border-radius:2px;box-sizing:border-box;color:transparent;
+      user-select:none}
+    .sc-interp.sc-unresolved{font-family:ui-monospace,monospace;font-size:.85em;
+      color:color-mix(in srgb,currentColor 50%,transparent);
+      background:color-mix(in srgb,currentColor 10%,transparent);border-radius:3px;
+      padding:0 3px}
+    .sc-host.sc-has-error{position:relative}
+    .sc-logic-error{position:absolute;top:8px;left:8px;z-index:2147483647;max-width:60ch;
+      padding:6px 10px;background:#b00020;color:#fff;font:12px/1.4 ui-monospace,monospace;
+      border-radius:4px;white-space:pre-wrap;pointer-events:none}
+    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts — keep both
+       in sync until dc-runtime regains a build step. */
+    @media print {
+      @page { margin: 0.5cm; }
+      figure, table { break-inside: avoid; }
+      #dc-root, #dc-root > .sc-host { height: auto; }
+      *, *::before, *::after {
+        print-color-adjust: exact; -webkit-print-color-adjust: exact;
+        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+        animation-delay: -99s !important; animation-duration: .001s !important;
+        animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+        animation-play-state: running !important; transition-duration: 0s !important;
+      }
+    }
+  </style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.dmcsevilleevent.com/"},{"@type":"ListItem","position":2,"name":"Inspiration","item":"https://www.dmcsevilleevent.com/inspiration/"},{"@type":"ListItem","position":3,"name":"Kayaking on the Guadalquivir in Seville for Groups","item":"https://www.dmcsevilleevent.com/kayak-in-seville/"}]},{"@type":"BlogPosting","headline":"Kayaking on the Guadalquivir in Seville for Groups","description":"Kayak tours, sunset paddles, kayak and tapas, and raft-building team building on the Guadalquivir in Seville. Organised for groups by DMC Seville Event.","image":"https://www.dmcsevilleevent.com/uploads/gunvor-guttormsen-macarena-church-seville.webp","inLanguage":"en","datePublished":"2026-10-18","dateModified":"2026-10-18","mainEntityOfPage":"https://www.dmcsevilleevent.com/kayak-in-seville/","author":{"@type":"Person","@id":"https://www.dmcsevilleevent.com/about/#gunvor","name":"Gunvor Guttormsen","url":"https://www.dmcsevilleevent.com/about/"},"publisher":{"@type":"Organization","@id":"https://www.dmcsevilleevent.com/#organization","name":"DMC Seville Event","logo":{"@type":"ImageObject","url":"https://www.dmcsevilleevent.com/assets/dmc-logo-cropped.webp"}}}]}</script>
+<style>x-dc{display:none!important}</style>
+<style></style><style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><title>Kayaking on the Guadalquivir in Seville for Groups | DMC Seville Event</title><meta content="Kayak tours, sunset paddles, kayak and tapas, and raft-building team building on the Guadalquivir in Seville. Organised for groups by DMC Seville Event." name="description"/><link href="https://www.dmcsevilleevent.com/kayak-in-seville/" rel="canonical"/><meta content="article" property="og:type"/><meta content="DMC Seville Event" property="og:site_name"/><meta content="en_GB" property="og:locale"/><meta content="Kayaking on the Guadalquivir in Seville for Groups | DMC Seville Event" property="og:title"/><meta content="Kayak tours, sunset paddles, kayak and tapas, and raft-building team building on the Guadalquivir in Seville. Organised for groups by DMC Seville Event." property="og:description"/><meta content="https://www.dmcsevilleevent.com/kayak-in-seville/" property="og:url"/><meta content="https://www.dmcsevilleevent.com/uploads/gunvor-guttormsen-macarena-church-seville.webp" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><link data-dc-tpl="12" href="https://fonts.googleapis.com" rel="preconnect"/><link data-dc-tpl="13" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;family=Varela+Round&amp;display=swap" rel="stylesheet"/><style data-dc-tpl="15">body{margin:0;}a{color:#ff5d1a;text-decoration:none;}a:hover{color:#0d3d40;}*{box-sizing:border-box;}summary::-webkit-details-marker{display:none;}details[open] summary .plus{transform:rotate(45deg);}</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do we need kayaking experience?","acceptedAnswer":{"@type":"Answer","text":"No. Local instructors give a safety briefing on land and accompany the group on the water. Kayaks are stable and suitable for beginners."}},{"@type":"Question","name":"Is it safe to kayak on the Guadalquivir?","acceptedAnswer":{"@type":"Answer","text":"Yes. The stretch through the city is calm, with very little current. All guests wear life jackets and are accompanied by certified instructors."}},{"@type":"Question","name":"What should guests wear?","acceptedAnswer":{"@type":"Answer","text":"Comfortable clothes that can get wet, sun protection and shoes that can go in the water. Changing facilities and storage are available at the base."}},{"@type":"Question","name":"What is the best time of year for kayaking in Seville?","acceptedAnswer":{"@type":"Answer","text":"Kayaking is possible all year. Spring and autumn are ideal; in summer we recommend early morning or sunset sessions to avoid the midday heat."}},{"@type":"Question","name":"How does the raft construction activity work?","acceptedAnswer":{"@type":"Answer","text":"Teams are given materials and a time limit to design and build a raft. Once finished, each team launches its raft for a race on the river. It combines planning, communication and a lot of laughter."}}]}</script><style data-dc-tpl="3">a{text-decoration:none;}*{box-sizing:border-box;}</style><style data-dc-tpl="3">a{text-decoration:none;color:#cfe3e4;}a:hover{color:#ff5d1a;}</style><style>x-dc{display:none!important}</style><meta content="H0RdhqivH3abdaZlze3v44QQ5XISVadKqWreEA0e7PA" name="google-site-verification"/>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+var c=null;try{c=localStorage.getItem('dmc-consent');}catch(e){}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:c==='yes'?'granted':'denied'});
+gtag('js',new Date());gtag('config','G-EN4YBPBV42');
+</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EN4YBPBV42"></script></head>
+<body>
+<div id="dc-static"><div class="sc-host" data-sc-name="Activity-Kayak"><div data-dc-tpl="16" style="font-family: Montserrat, sans-serif; color: rgb(31, 45, 51); background: rgb(255, 253, 251);">
+<div class="sc-host" data-dc-tpl="17" data-sc-name="SiteHeader"><div data-dc-tpl="4" style="font-family: Montserrat, sans-serif; position: relative; z-index: 50;">
+<div data-dc-tpl="5" style="position: fixed; top: 0px; left: 0px; height: 3px; background: rgb(255, 93, 26); width: 0%; z-index: 200;"></div>
+<div data-dc-tpl="6" style='background: rgb(21, 202, 210); color: rgb(255, 255, 255); font-family: "Varela Round", sans-serif; font-size: 13px; padding: 8px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;'>
+<div data-dc-tpl="7" style="display: flex; gap: 20px; flex-wrap: wrap;">
+<span data-dc-tpl="8">+34 637 87 87 68</span>
+<span data-dc-tpl="9">events@dmcsevilleevent.com</span>
+</div>
+<div data-dc-tpl="10" style="display: flex; gap: 14px;">
+<a data-dc-tpl="11" href="https://www.facebook.com/Sevillaprivateguidegunvor/" style="color: rgb(255, 255, 255);">Facebook</a>
+<a data-dc-tpl="12" href="https://www.instagram.com/sevillaprivateguide_gunvor/" style="color: rgb(255, 255, 255);">Instagram</a>
+<a data-dc-tpl="13" href="https://www.linkedin.com/in/gunvor-guttormsen-ba05a728/" style="color: rgb(255, 255, 255);">LinkedIn</a>
+</div>
+</div>
+<header data-dc-tpl="14" style="display: flex; align-items: center; justify-content: space-between; padding: 16px 32px; background: rgb(255, 255, 255); flex-wrap: wrap; gap: 16px; box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 0px;">
+<a data-dc-tpl="15" href="/"><img alt="DMC Seville Event" data-dc-tpl="16" fetchpriority="high" src="/assets/dmc-logo-cropped.webp" style="height: 64px; width: auto; object-fit: contain;"/></a>
+<nav data-dc-tpl="17" style='display: flex; gap: 28px; flex-wrap: wrap; font-family: "Varela Round", sans-serif; font-size: 15px; font-weight: 400; align-items: center;'>
+<div data-dc-tpl="18" style="position: relative;">
+<button data-dc-tpl="19" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>MICE</button>
+</div>
+<div data-dc-tpl="32" style="position: relative;">
+<button data-dc-tpl="33" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>GROUPS</button>
+</div>
+<div data-dc-tpl="40" style="position: relative;">
+<button data-dc-tpl="41" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>DESTINATIONS</button>
+</div>
+<div data-dc-tpl="52" style="position: relative;">
+<button data-dc-tpl="53" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>GET IN TOUCH</button>
+</div>
+<a data-dc-tpl="59" href="/inspiration/" style="color: rgb(31, 45, 51);">INSPIRATION / BLOG</a>
+</nav>
+</header></div></div>
+<section data-dc-tpl="18" data-screen-label="Hero" style="position: relative; min-height: clamp(440px, 78svh, 760px); display: flex; align-items: flex-end; overflow: hidden;">
+<img alt="Group kayaking at sunset towards the Triana Bridge in Seville" data-dc-tpl="19" loading="lazy" src="/fotos/kayak/kayak-seville-hero-sunset-triana-bridge.webp" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center 55%; display: block;"/>
+<div data-dc-tpl="20" style="position: absolute; inset: 0px; background: linear-gradient(to top, rgba(13, 61, 64, 0.88) 0%, rgba(13, 61, 64, 0.35) 55%, rgba(13, 61, 64, 0.1) 100%); pointer-events: none;"></div>
+<div data-dc-tpl="21" style="position: relative; z-index: 2; width: 100%; max-width: 1200px; margin: 0px auto; padding: 120px 32px 0px; color: rgb(255, 255, 255);">
+<div data-dc-tpl="22" style='display: flex; gap: 10px; align-items: center; font-family: "Varela Round", sans-serif; font-size: 13px; letter-spacing: 1.5px; margin-bottom: 18px;'>
+<a data-dc-tpl="23" href="/inspiration/" style="color: rgb(255, 255, 255);">INSPIRATION</a><span data-dc-tpl="24" style="color: rgb(21, 202, 210);">/</span><span data-dc-tpl="25" style="color: rgb(21, 202, 210);">OUTDOORS</span>
+</div>
+<h1 data-dc-tpl="26" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(34px, 5.2vw, 62px); line-height: 1.05; margin: 0px 0px 18px; max-width: 860px; text-transform: uppercase; letter-spacing: 1px; text-wrap: balance;">Kayak in Seville</h1>
+<p data-dc-tpl="27" style="font-weight: 300; font-size: clamp(17px, 1.8vw, 20px); line-height: 1.6; max-width: 640px; margin: 0px 0px 40px;">Paddle through the past: discover Seville's skyline, bridges and river life from the water of the Guadalquivir.</p>
+<div data-dc-tpl="28" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); border-top: 1px solid rgba(255, 255, 255, 0.3);">
+<div data-dc-tpl="29" style="padding: 20px 20px 26px 0px;">
+<div data-dc-tpl="30" style='font-family: "Varela Round", sans-serif; font-size: 12px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 6px;'>DURATION</div>
+<div data-dc-tpl="31" style="font-weight: 600; font-size: 16px;">1.5 – 4 hours</div>
+</div>
+<div data-dc-tpl="32" style="padding: 20px 20px 26px 0px;">
+<div data-dc-tpl="33" style='font-family: "Varela Round", sans-serif; font-size: 12px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 6px;'>GROUP SIZE</div>
+<div data-dc-tpl="34" style="font-weight: 600; font-size: 16px;">8 – 100 guests</div>
+</div>
+<div data-dc-tpl="35" style="padding: 20px 20px 26px 0px;">
+<div data-dc-tpl="36" style='font-family: "Varela Round", sans-serif; font-size: 12px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 6px;'>IDEAL FOR</div>
+<div data-dc-tpl="37" style="font-weight: 600; font-size: 16px;">Team building, incentives, active groups</div>
+</div>
+<div data-dc-tpl="38" style="padding: 20px 20px 26px 0px;">
+<div data-dc-tpl="39" style='font-family: "Varela Round", sans-serif; font-size: 12px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 6px;'>EXPERIENCE</div>
+<div data-dc-tpl="40" style="font-weight: 600; font-size: 16px;">None needed</div>
+</div>
+</div>
+</div>
+</section>
+<section data-dc-tpl="41" data-screen-label="Intro" style="max-width: 1200px; margin: 0px auto; padding: 72px 32px 0px; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start;">
+<div data-dc-tpl="42" style="flex: 1 1 440px; min-width: 0px; max-width: 720px;">
+<div data-dc-tpl="43" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>THE EXPERIENCE</div>
+<h2 data-dc-tpl="44" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(24px, 3vw, 34px); line-height: 1.2; color: rgb(21, 202, 210); margin: 0px 0px 22px; text-wrap: balance;">Paddle Through the Past: Kayaking on the Guadalquivir in Seville</h2>
+<p data-dc-tpl="45" style="font-weight: 400; font-size: 19px; line-height: 1.7; color: rgb(31, 45, 51); margin: 0px 0px 20px;">Seville is a city best explored slowly—with your senses open and your perspective fresh. While most visitors wander its shaded streets, there’s a quieter, equally enchanting way to discover its beauty: from the water.</p>
+<p data-dc-tpl="46" style="font-weight: 300; font-size: 16.5px; line-height: 1.85; color: rgb(61, 74, 80); margin: 0px 0px 20px;">Kayaking on the Guadalquivir River offers a completely new lens on Seville’s skyline, culture, and natural charm.</p>
+<p data-dc-tpl="47" style="font-weight: 300; font-size: 16.5px; line-height: 1.85; color: rgb(61, 74, 80); margin: 0px;">For groups, we organise everything around the paddle: certified instructors, kayaks and safety equipment, changing facilities, transfers and, if you wish, tapas or a team challenge on the riverbank afterwards.</p>
+</div>
+<aside data-dc-tpl="48" style="flex: 0 1 340px; width: 100%; position: sticky; top: 24px; background: rgb(13, 61, 64); color: rgb(255, 255, 255); border-radius: 6px; padding: 30px 28px; min-width: 0px; margin: 0px auto;">
+<div data-dc-tpl="49" style='font-family: "Varela Round", sans-serif; font-size: 12px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 8px;'>REQUEST A PROPOSAL</div>
+<div data-dc-tpl="50" style="font-weight: 700; font-size: 20px; line-height: 1.3; margin-bottom: 22px;"><span class="sc-interp">Guided Kayak Tour</span></div>
+<div data-dc-tpl="51" style="font-size: 13px; font-weight: 500; margin-bottom: 10px; color: rgb(207, 227, 228);">Number of guests</div>
+<div data-dc-tpl="52" style="display: flex; align-items: center; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 3px; margin-bottom: 22px;">
+<button aria-label="Fewer guests" class="scp0" data-dc-tpl="53" style="width: 48px; height: 46px; background: transparent; border: 0px; color: rgb(255, 255, 255); font-size: 20px; cursor: pointer;" type="button">−</button>
+<div data-dc-tpl="54" style="flex: 1 1 0%; text-align: center; font-weight: 700; font-size: 17px;"><span class="sc-interp">20</span></div>
+<button aria-label="More guests" class="scp0" data-dc-tpl="55" style="width: 48px; height: 46px; background: transparent; border: 0px; color: rgb(255, 255, 255); font-size: 20px; cursor: pointer;" type="button">+</button>
+</div>
+<div data-dc-tpl="56" style="font-size: 13px; font-weight: 500; margin-bottom: 10px; color: rgb(207, 227, 228);">Preferred time of day</div>
+<div data-dc-tpl="57" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 26px;">
+<button data-dc-tpl="59" style="cursor: pointer; padding: 10px 6px; border-radius: 2px; font-family: Montserrat, sans-serif; font-size: 13.5px; font-weight: 500; border: 1px solid rgba(255, 255, 255, 0.3); background: transparent; color: rgb(255, 255, 255);" type="button"><span class="sc-interp">Morning</span></button>
+<button data-dc-tpl="59" style="cursor: pointer; padding: 10px 6px; border-radius: 2px; font-family: Montserrat, sans-serif; font-size: 13.5px; font-weight: 500; border: 1px solid rgba(255, 255, 255, 0.3); background: transparent; color: rgb(255, 255, 255);" type="button"><span class="sc-interp">Midday</span></button>
+<button data-dc-tpl="59" style="cursor: pointer; padding: 10px 6px; border-radius: 2px; font-family: Montserrat, sans-serif; font-size: 13.5px; font-weight: 500; border: 1px solid rgba(255, 255, 255, 0.3); background: transparent; color: rgb(255, 255, 255);" type="button"><span class="sc-interp">Sunset</span></button>
+<button data-dc-tpl="59" style="cursor: pointer; padding: 10px 6px; border-radius: 2px; font-family: Montserrat, sans-serif; font-size: 13.5px; font-weight: 500; border: 1px solid rgba(255, 255, 255, 0.3); background: transparent; color: rgb(255, 255, 255);" type="button"><span class="sc-interp">Night</span></button>
+</div>
+<a class="scp1" data-dc-tpl="60" href="/contact/?activity=Guided+Kayak+Tour&amp;guests=20" style='display: block; text-align: center; background: rgb(255, 93, 26); color: rgb(255, 255, 255); font-family: "Varela Round", sans-serif; font-weight: 600; padding: 15px 20px; border-radius: 2px; font-size: 15px;'>Get My Proposal</a>
+<p data-dc-tpl="61" style="font-size: 13px; line-height: 1.6; color: rgb(207, 227, 228); margin: 14px 0px 0px; text-align: center;">Personal reply within 24 hours. No commitment.</p>
+</aside>
+</section>
+<section data-dc-tpl="62" data-screen-label="From the water" style="max-width: 1200px; margin: 0px auto; padding: 88px 32px 0px;">
+<div data-dc-tpl="63" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>FROM THE WATER</div>
+<h2 data-dc-tpl="64" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(24px, 3vw, 34px); margin: 0px 0px 40px;">What you'll see and feel</h2>
+<div data-dc-tpl="65" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 44px 48px;">
+<div data-dc-tpl="66" style="border-top: 3px solid rgb(21, 202, 210); padding-top: 22px;">
+<h3 data-dc-tpl="67" style="font-weight: 800; font-size: 19px; margin: 0px 0px 12px;">Float Beneath the Bridges of Time</h3>
+<p data-dc-tpl="68" style="font-weight: 300; font-size: 16px; line-height: 1.8; color: rgb(61, 74, 80); margin: 0px;">From your kayak, the city unfolds like a moving painting. Paddle under the Isabel II (Triana) Bridge, past the colorful facades of Calle Betis, and beneath the watchful eye of the Torre del Oro. Every stroke takes you through centuries of maritime history, connecting you with the same river that brought spices, explorers, and empires to Andalusia’s doorstep.</p>
+</div>
+<div data-dc-tpl="69" style="border-top: 3px solid rgb(21, 202, 210); padding-top: 22px;">
+<h3 data-dc-tpl="70" style="font-weight: 800; font-size: 19px; margin: 0px 0px 12px;">Nature in the Heart of the City</h3>
+<p data-dc-tpl="71" style="font-weight: 300; font-size: 16px; line-height: 1.8; color: rgb(61, 74, 80); margin: 0px 0px 12px;">Though Seville is full of architectural wonders, the river is home to a quieter, more natural side of the city. Along the banks, you’ll spot birds, reeds, and flowering trees. In early morning or just before sunset, the light turns golden and the water reflects the rhythm of flamenco—not in sound, but in flow.</p>
+<p data-dc-tpl="72" style="font-weight: 300; font-size: 16px; line-height: 1.8; color: rgb(61, 74, 80); margin: 0px;">It’s calm, peaceful, and surprisingly rejuvenating.</p>
+</div>
+<div data-dc-tpl="73" style="border-top: 3px solid rgb(21, 202, 210); padding-top: 22px;">
+<h3 data-dc-tpl="74" style="font-weight: 800; font-size: 19px; margin: 0px 0px 12px;">A Perfect Activity for All Kinds of Groups</h3>
+<p data-dc-tpl="75" style="font-weight: 300; font-size: 16px; line-height: 1.8; color: rgb(61, 74, 80); margin: 0px 0px 12px;">Whether it’s a small executive team looking for something calm, an incentive group seeking something memorable, or a large team up for a bit of fun—kayaking fits everyone.</p>
+<p data-dc-tpl="76" style="font-weight: 300; font-size: 16px; line-height: 1.8; color: rgb(61, 74, 80); margin: 0px;">No experience? No problem. Local instructors guide you gently from shore to shore, ensuring safety and ease.</p>
+</div>
+<div data-dc-tpl="77" style="border-top: 3px solid rgb(21, 202, 210); padding-top: 22px;">
+<h3 data-dc-tpl="78" style="font-weight: 800; font-size: 19px; margin: 0px 0px 12px;">A Photographer’s Dream</h3>
+<p data-dc-tpl="79" style="font-weight: 300; font-size: 16px; line-height: 1.8; color: rgb(61, 74, 80); margin: 0px;">Forget crowded viewpoints. From the kayak, you’ll have uninterrupted views of Seville’s most iconic sights—from unexpected angles. Bring a waterproof camera or just enjoy the moment: the reflections, the light, and the sense of drifting right through a living postcard.</p>
+</div>
+</div>
+</section>
+<section data-dc-tpl="80" data-screen-label="Formats" style="background: rgb(234, 246, 246); margin-top: 88px; padding: 80px 32px;">
+<div data-dc-tpl="81" style="max-width: 1200px; margin: 0px auto;">
+<div data-dc-tpl="82" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 36px;">
+<div data-dc-tpl="83">
+<div data-dc-tpl="84" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>CHOOSE YOUR EXPERIENCE</div>
+<h2 data-dc-tpl="85" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(24px, 3vw, 34px); margin: 0px;">Four ways to get on the river</h2>
+</div>
+<p data-dc-tpl="86" style="font-weight: 300; font-size: 15px; line-height: 1.6; color: rgb(61, 74, 80); margin: 0px; max-width: 340px;">Select an experience to add it to your proposal request. Every option can be adapted to your group.</p>
+</div>
+<div data-dc-tpl="87" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr)); gap: 22px;">
+<button data-dc-tpl="89" style="color-scheme: unset; forced-color-adjust: unset; math-depth: unset; position: unset; position-anchor: unset; text-size-adjust: unset; appearance: unset; color: unset; font-feature-settings: unset; font-kerning: unset; font-language-override: unset; font-optical-sizing: unset; font-palette: unset; font-size: unset; font-size-adjust: unset; font-stretch: unset; font-style: unset; font-synthesis: unset; font-variant: unset; font-variation-settings: unset; font-weight: unset; position-area: unset; text-orientation: unset; text-rendering: unset; text-spacing-trim: unset; -webkit-font-smoothing: unset; -webkit-locale: unset; -webkit-text-orientation: unset; -webkit-writing-mode: unset; writing-mode: unset; zoom: unset; accent-color: unset; place-content: unset; place-items: unset; place-self: unset; alignment-baseline: unset; anchor-name: unset; anchor-scope: unset; animation-composition: unset; animation: unset; animation-trigger: unset; app-region: unset; aspect-ratio: unset; backdrop-filter: unset; backface-visibility: unset; background-blend-mode: unset; baseline-shift: unset; baseline-source: unset; block-size: unset; border-block: unset; border-collapse: unset; border-end-end-radius: unset; border-end-start-radius: unset; border-inline: unset; border-shape: unset; border-start-end-radius: unset; border-start-start-radius: unset; inset: unset; box-decoration-break: unset; break-after: unset; break-before: unset; break-inside: unset; buffered-rendering: unset; caption-side: unset; caret-animation: unset; caret-color: unset; caret-shape: unset; clear: unset; clip: unset; clip-path: unset; clip-rule: unset; color-interpolation: unset; color-interpolation-filters: unset; color-rendering: unset; columns: unset; column-fill: unset; gap: unset; rule-break: unset; rule: unset; rule-inset: unset; rule-visibility-items: unset; column-span: unset; contain: unset; contain-intrinsic-block-size: unset; contain-intrinsic-size: unset; contain-intrinsic-inline-size: unset; container: unset; content: unset; content-visibility: unset; corner-shape: unset; corner-block-end-shape: unset; corner-block-start-shape: unset; counter-increment: unset; counter-reset: unset; counter-set: unset; cx: unset; cy: unset; d: unset; dominant-baseline: unset; dynamic-range-limit: unset; empty-cells: unset; field-sizing: unset; fill: unset; fill-opacity: unset; fill-rule: unset; filter: unset; flex: unset; flex-line-count: unset; flex-wrap: unset; float: unset; flood-color: unset; flood-opacity: unset; frame-sizing: unset; grid: unset; grid-area: unset; height: unset; hyphenate-character: unset; hyphenate-limit-chars: unset; hyphens: unset; image-orientation: unset; image-rendering: unset; initial-letter: unset; inline-size: unset; inset-block: unset; inset-inline: unset; interactivity: unset; interest-delay: unset; interpolate-size: unset; isolation: unset; letter-spacing: unset; lighting-color: unset; line-break: unset; line-height: unset; list-style: unset; margin-block: unset; margin: unset; margin-inline: unset; margin-trim: unset; marker: unset; mask: unset; mask-type: unset; math-shift: unset; math-style: unset; max-block-size: unset; max-height: unset; max-inline-size: unset; max-width: unset; min-block-size: unset; min-height: unset; min-inline-size: unset; min-width: unset; mix-blend-mode: unset; object-fit: unset; object-position: unset; object-view-box: unset; offset: unset; opacity: unset; order: unset; orphans: unset; outline: unset; outline-offset: unset; overflow-anchor: unset; overflow-block: unset; overflow-clip-margin: unset; overflow-inline: unset; overflow-wrap: unset; overlay: unset; overscroll-behavior-block: unset; overscroll-behavior-inline: unset; overscroll-behavior: unset; padding-block: unset; padding: unset; padding-inline: unset; page: unset; page-margin-safety: unset; page-orientation: unset; paint-order: unset; perspective: unset; perspective-origin: unset; pointer-events: unset; position-try: unset; position-visibility: unset; print-color-adjust: unset; quotes: unset; r: unset; reading-flow: unset; reading-order: unset; resize: unset; rotate: unset; ruby-align: unset; ruby-overhang: unset; ruby-position: unset; rule-overlap: unset; rx: unset; ry: unset; scale: unset; scroll-axis-lock: unset; scroll-behavior: unset; scroll-initial-target: unset; scroll-margin-block: unset; scroll-margin: unset; scroll-margin-inline: unset; scroll-marker-group: unset; scroll-padding-block: unset; scroll-padding: unset; scroll-padding-inline: unset; scroll-snap-align: unset; scroll-snap-stop: unset; scroll-snap-type: unset; scroll-target-group: unset; scroll-timeline: unset; scrollbar-color: unset; scrollbar-gutter: unset; scrollbar-width: unset; shape-image-threshold: unset; shape-margin: unset; shape-outside: unset; shape-rendering: unset; size: unset; speak: unset; stop-color: unset; stop-opacity: unset; stroke: unset; stroke-dasharray: unset; stroke-dashoffset: unset; stroke-linecap: unset; stroke-linejoin: unset; stroke-miterlimit: unset; stroke-opacity: unset; stroke-width: unset; tab-size: unset; table-layout: unset; text-align-last: unset; text-anchor: unset; text-autospace: unset; text-box: unset; text-combine-upright: unset; text-decoration: unset; text-decoration-skip-ink: unset; text-decoration-skip-spaces: unset; text-emphasis: unset; text-emphasis-position: unset; text-fit: unset; text-indent: unset; text-justify: unset; text-overflow: unset; text-shadow: unset; text-transform: unset; text-underline-offset: unset; text-underline-position: unset; text-wrap: unset; timeline-scope: unset; timeline-trigger: unset; touch-action: unset; transform: unset; transform-box: unset; transform-origin: unset; transform-style: unset; translate: unset; trigger-scope: unset; user-select: unset; vector-effect: unset; vertical-align: unset; view-timeline: unset; view-transition-class: unset; view-transition-group: unset; view-transition-name: unset; view-transition-scope: unset; visibility: unset; border-spacing: unset; -webkit-box-align: unset; -webkit-box-decoration-break: unset; -webkit-box-direction: unset; -webkit-box-flex: unset; -webkit-box-ordinal-group: unset; -webkit-box-orient: unset; -webkit-box-pack: unset; -webkit-box-reflect: unset; -webkit-line-break: unset; -webkit-line-clamp: unset; -webkit-mask-box-image: unset; -webkit-rtl-ordering: unset; -webkit-ruby-position: unset; -webkit-tap-highlight-color: unset; -webkit-text-combine: unset; -webkit-text-decorations-in-effect: unset; -webkit-text-fill-color: unset; -webkit-text-security: unset; -webkit-text-stroke: unset; -webkit-user-drag: unset; white-space-collapse: unset; widows: unset; width: unset; will-change: unset; window-drag: unset; word-break: unset; word-spacing: unset; x: unset; y: unset; z-index: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; text-align: left; font-family: Montserrat, sans-serif; border: 2px solid rgb(255, 93, 26); box-shadow: rgba(255, 93, 26, 0.18) 0px 10px 28px; transition: border-color 0.2s, box-shadow 0.2s;" type="button">
+<div data-dc-tpl="90" style="position: relative; height: 220px; overflow: hidden;">
+<img alt="Guided Kayak Tour" data-dc-tpl="91" loading="lazy" src="/fotos/kayak/kayak-team-building-group-from-above.webp" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%; display: block;"/>
+<span data-dc-tpl="92" style='position: absolute; top: 14px; left: 14px; background: rgb(255, 255, 255); color: rgb(13, 61, 64); font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; padding: 5px 10px; border-radius: 2px;'><span class="sc-interp">MOST BOOKED</span></span>
+</div>
+<div data-dc-tpl="93" style="padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1 1 0%;">
+<div data-dc-tpl="94" style="font-weight: 800; font-size: 18px; line-height: 1.3; color: rgb(31, 45, 51);"><span class="sc-interp">Guided Kayak Tour</span></div>
+<div data-dc-tpl="95" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80);"><span class="sc-interp">Paddle past the Triana Bridge, Calle Betis and the Torre del Oro with local instructors. Short safety briefing, then onto the water.</span></div>
+<div data-dc-tpl="96" style="display: flex; gap: 18px; flex-wrap: wrap; margin-top: auto; padding-top: 14px; border-top: 1px solid rgb(227, 236, 236); font-size: 13px; font-weight: 600; color: rgb(13, 61, 64);">
+<span data-dc-tpl="97"><span class="sc-interp">1.5 – 2 h</span></span><span data-dc-tpl="98"><span class="sc-interp">8 – 100 guests</span></span>
+</div>
+<div data-dc-tpl="99" style='font-family: "Varela Round", sans-serif; font-size: 13px; font-weight: 600; margin-top: 6px; color: rgb(255, 93, 26);'><span class="sc-interp">✓ Added to your request</span></div>
+</div>
+</button>
+<button data-dc-tpl="89" style="color-scheme: unset; forced-color-adjust: unset; math-depth: unset; position: unset; position-anchor: unset; text-size-adjust: unset; appearance: unset; color: unset; font-feature-settings: unset; font-kerning: unset; font-language-override: unset; font-optical-sizing: unset; font-palette: unset; font-size: unset; font-size-adjust: unset; font-stretch: unset; font-style: unset; font-synthesis: unset; font-variant: unset; font-variation-settings: unset; font-weight: unset; position-area: unset; text-orientation: unset; text-rendering: unset; text-spacing-trim: unset; -webkit-font-smoothing: unset; -webkit-locale: unset; -webkit-text-orientation: unset; -webkit-writing-mode: unset; writing-mode: unset; zoom: unset; accent-color: unset; place-content: unset; place-items: unset; place-self: unset; alignment-baseline: unset; anchor-name: unset; anchor-scope: unset; animation-composition: unset; animation: unset; animation-trigger: unset; app-region: unset; aspect-ratio: unset; backdrop-filter: unset; backface-visibility: unset; background-blend-mode: unset; baseline-shift: unset; baseline-source: unset; block-size: unset; border-block: unset; border-collapse: unset; border-end-end-radius: unset; border-end-start-radius: unset; border-inline: unset; border-shape: unset; border-start-end-radius: unset; border-start-start-radius: unset; inset: unset; box-decoration-break: unset; break-after: unset; break-before: unset; break-inside: unset; buffered-rendering: unset; caption-side: unset; caret-animation: unset; caret-color: unset; caret-shape: unset; clear: unset; clip: unset; clip-path: unset; clip-rule: unset; color-interpolation: unset; color-interpolation-filters: unset; color-rendering: unset; columns: unset; column-fill: unset; gap: unset; rule-break: unset; rule: unset; rule-inset: unset; rule-visibility-items: unset; column-span: unset; contain: unset; contain-intrinsic-block-size: unset; contain-intrinsic-size: unset; contain-intrinsic-inline-size: unset; container: unset; content: unset; content-visibility: unset; corner-shape: unset; corner-block-end-shape: unset; corner-block-start-shape: unset; counter-increment: unset; counter-reset: unset; counter-set: unset; cx: unset; cy: unset; d: unset; dominant-baseline: unset; dynamic-range-limit: unset; empty-cells: unset; field-sizing: unset; fill: unset; fill-opacity: unset; fill-rule: unset; filter: unset; flex: unset; flex-line-count: unset; flex-wrap: unset; float: unset; flood-color: unset; flood-opacity: unset; frame-sizing: unset; grid: unset; grid-area: unset; height: unset; hyphenate-character: unset; hyphenate-limit-chars: unset; hyphens: unset; image-orientation: unset; image-rendering: unset; initial-letter: unset; inline-size: unset; inset-block: unset; inset-inline: unset; interactivity: unset; interest-delay: unset; interpolate-size: unset; isolation: unset; letter-spacing: unset; lighting-color: unset; line-break: unset; line-height: unset; list-style: unset; margin-block: unset; margin: unset; margin-inline: unset; margin-trim: unset; marker: unset; mask: unset; mask-type: unset; math-shift: unset; math-style: unset; max-block-size: unset; max-height: unset; max-inline-size: unset; max-width: unset; min-block-size: unset; min-height: unset; min-inline-size: unset; min-width: unset; mix-blend-mode: unset; object-fit: unset; object-position: unset; object-view-box: unset; offset: unset; opacity: unset; order: unset; orphans: unset; outline: unset; outline-offset: unset; overflow-anchor: unset; overflow-block: unset; overflow-clip-margin: unset; overflow-inline: unset; overflow-wrap: unset; overlay: unset; overscroll-behavior-block: unset; overscroll-behavior-inline: unset; overscroll-behavior: unset; padding-block: unset; padding: unset; padding-inline: unset; page: unset; page-margin-safety: unset; page-orientation: unset; paint-order: unset; perspective: unset; perspective-origin: unset; pointer-events: unset; position-try: unset; position-visibility: unset; print-color-adjust: unset; quotes: unset; r: unset; reading-flow: unset; reading-order: unset; resize: unset; rotate: unset; ruby-align: unset; ruby-overhang: unset; ruby-position: unset; rule-overlap: unset; rx: unset; ry: unset; scale: unset; scroll-axis-lock: unset; scroll-behavior: unset; scroll-initial-target: unset; scroll-margin-block: unset; scroll-margin: unset; scroll-margin-inline: unset; scroll-marker-group: unset; scroll-padding-block: unset; scroll-padding: unset; scroll-padding-inline: unset; scroll-snap-align: unset; scroll-snap-stop: unset; scroll-snap-type: unset; scroll-target-group: unset; scroll-timeline: unset; scrollbar-color: unset; scrollbar-gutter: unset; scrollbar-width: unset; shape-image-threshold: unset; shape-margin: unset; shape-outside: unset; shape-rendering: unset; size: unset; speak: unset; stop-color: unset; stop-opacity: unset; stroke: unset; stroke-dasharray: unset; stroke-dashoffset: unset; stroke-linecap: unset; stroke-linejoin: unset; stroke-miterlimit: unset; stroke-opacity: unset; stroke-width: unset; tab-size: unset; table-layout: unset; text-align-last: unset; text-anchor: unset; text-autospace: unset; text-box: unset; text-combine-upright: unset; text-decoration: unset; text-decoration-skip-ink: unset; text-decoration-skip-spaces: unset; text-emphasis: unset; text-emphasis-position: unset; text-fit: unset; text-indent: unset; text-justify: unset; text-overflow: unset; text-shadow: unset; text-transform: unset; text-underline-offset: unset; text-underline-position: unset; text-wrap: unset; timeline-scope: unset; timeline-trigger: unset; touch-action: unset; transform: unset; transform-box: unset; transform-origin: unset; transform-style: unset; translate: unset; trigger-scope: unset; user-select: unset; vector-effect: unset; vertical-align: unset; view-timeline: unset; view-transition-class: unset; view-transition-group: unset; view-transition-name: unset; view-transition-scope: unset; visibility: unset; border-spacing: unset; -webkit-box-align: unset; -webkit-box-decoration-break: unset; -webkit-box-direction: unset; -webkit-box-flex: unset; -webkit-box-ordinal-group: unset; -webkit-box-orient: unset; -webkit-box-pack: unset; -webkit-box-reflect: unset; -webkit-line-break: unset; -webkit-line-clamp: unset; -webkit-mask-box-image: unset; -webkit-rtl-ordering: unset; -webkit-ruby-position: unset; -webkit-tap-highlight-color: unset; -webkit-text-combine: unset; -webkit-text-decorations-in-effect: unset; -webkit-text-fill-color: unset; -webkit-text-security: unset; -webkit-text-stroke: unset; -webkit-user-drag: unset; white-space-collapse: unset; widows: unset; width: unset; will-change: unset; window-drag: unset; word-break: unset; word-spacing: unset; x: unset; y: unset; z-index: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; text-align: left; font-family: Montserrat, sans-serif; border: 2px solid transparent; box-shadow: rgba(13, 61, 64, 0.06) 0px 2px 10px; transition: border-color 0.2s, box-shadow 0.2s;" type="button">
+<div data-dc-tpl="90" style="position: relative; height: 220px; overflow: hidden;">
+<img alt="Sunset &amp; Night Kayaking" data-dc-tpl="91" loading="lazy" src="/fotos/kayak/kayak-seville-single-kayak.webp" style="width: 100%; height: 100%; object-fit: cover; object-position: center 64%; display: block;"/>
+<span data-dc-tpl="92" style='position: absolute; top: 14px; left: 14px; background: rgb(255, 255, 255); color: rgb(13, 61, 64); font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; padding: 5px 10px; border-radius: 2px;'><span class="sc-interp">EVENINGS</span></span>
+</div>
+<div data-dc-tpl="93" style="padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1 1 0%;">
+<div data-dc-tpl="94" style="font-weight: 800; font-size: 18px; line-height: 1.3; color: rgb(31, 45, 51);"><span class="sc-interp">Sunset &amp; Night Kayaking</span></div>
+<div data-dc-tpl="95" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80);"><span class="sc-interp">Set off in the golden hour and return under the illuminated monuments of Seville, with drinks waiting on the bank.</span></div>
+<div data-dc-tpl="96" style="display: flex; gap: 18px; flex-wrap: wrap; margin-top: auto; padding-top: 14px; border-top: 1px solid rgb(227, 236, 236); font-size: 13px; font-weight: 600; color: rgb(13, 61, 64);">
+<span data-dc-tpl="97"><span class="sc-interp">2 h</span></span><span data-dc-tpl="98"><span class="sc-interp">8 – 60 guests</span></span>
+</div>
+<div data-dc-tpl="99" style='font-family: "Varela Round", sans-serif; font-size: 13px; font-weight: 600; margin-top: 6px; color: rgb(13, 61, 64);'><span class="sc-interp">+ Select this experience</span></div>
+</div>
+</button>
+<button data-dc-tpl="89" style="color-scheme: unset; forced-color-adjust: unset; math-depth: unset; position: unset; position-anchor: unset; text-size-adjust: unset; appearance: unset; color: unset; font-feature-settings: unset; font-kerning: unset; font-language-override: unset; font-optical-sizing: unset; font-palette: unset; font-size: unset; font-size-adjust: unset; font-stretch: unset; font-style: unset; font-synthesis: unset; font-variant: unset; font-variation-settings: unset; font-weight: unset; position-area: unset; text-orientation: unset; text-rendering: unset; text-spacing-trim: unset; -webkit-font-smoothing: unset; -webkit-locale: unset; -webkit-text-orientation: unset; -webkit-writing-mode: unset; writing-mode: unset; zoom: unset; accent-color: unset; place-content: unset; place-items: unset; place-self: unset; alignment-baseline: unset; anchor-name: unset; anchor-scope: unset; animation-composition: unset; animation: unset; animation-trigger: unset; app-region: unset; aspect-ratio: unset; backdrop-filter: unset; backface-visibility: unset; background-blend-mode: unset; baseline-shift: unset; baseline-source: unset; block-size: unset; border-block: unset; border-collapse: unset; border-end-end-radius: unset; border-end-start-radius: unset; border-inline: unset; border-shape: unset; border-start-end-radius: unset; border-start-start-radius: unset; inset: unset; box-decoration-break: unset; break-after: unset; break-before: unset; break-inside: unset; buffered-rendering: unset; caption-side: unset; caret-animation: unset; caret-color: unset; caret-shape: unset; clear: unset; clip: unset; clip-path: unset; clip-rule: unset; color-interpolation: unset; color-interpolation-filters: unset; color-rendering: unset; columns: unset; column-fill: unset; gap: unset; rule-break: unset; rule: unset; rule-inset: unset; rule-visibility-items: unset; column-span: unset; contain: unset; contain-intrinsic-block-size: unset; contain-intrinsic-size: unset; contain-intrinsic-inline-size: unset; container: unset; content: unset; content-visibility: unset; corner-shape: unset; corner-block-end-shape: unset; corner-block-start-shape: unset; counter-increment: unset; counter-reset: unset; counter-set: unset; cx: unset; cy: unset; d: unset; dominant-baseline: unset; dynamic-range-limit: unset; empty-cells: unset; field-sizing: unset; fill: unset; fill-opacity: unset; fill-rule: unset; filter: unset; flex: unset; flex-line-count: unset; flex-wrap: unset; float: unset; flood-color: unset; flood-opacity: unset; frame-sizing: unset; grid: unset; grid-area: unset; height: unset; hyphenate-character: unset; hyphenate-limit-chars: unset; hyphens: unset; image-orientation: unset; image-rendering: unset; initial-letter: unset; inline-size: unset; inset-block: unset; inset-inline: unset; interactivity: unset; interest-delay: unset; interpolate-size: unset; isolation: unset; letter-spacing: unset; lighting-color: unset; line-break: unset; line-height: unset; list-style: unset; margin-block: unset; margin: unset; margin-inline: unset; margin-trim: unset; marker: unset; mask: unset; mask-type: unset; math-shift: unset; math-style: unset; max-block-size: unset; max-height: unset; max-inline-size: unset; max-width: unset; min-block-size: unset; min-height: unset; min-inline-size: unset; min-width: unset; mix-blend-mode: unset; object-fit: unset; object-position: unset; object-view-box: unset; offset: unset; opacity: unset; order: unset; orphans: unset; outline: unset; outline-offset: unset; overflow-anchor: unset; overflow-block: unset; overflow-clip-margin: unset; overflow-inline: unset; overflow-wrap: unset; overlay: unset; overscroll-behavior-block: unset; overscroll-behavior-inline: unset; overscroll-behavior: unset; padding-block: unset; padding: unset; padding-inline: unset; page: unset; page-margin-safety: unset; page-orientation: unset; paint-order: unset; perspective: unset; perspective-origin: unset; pointer-events: unset; position-try: unset; position-visibility: unset; print-color-adjust: unset; quotes: unset; r: unset; reading-flow: unset; reading-order: unset; resize: unset; rotate: unset; ruby-align: unset; ruby-overhang: unset; ruby-position: unset; rule-overlap: unset; rx: unset; ry: unset; scale: unset; scroll-axis-lock: unset; scroll-behavior: unset; scroll-initial-target: unset; scroll-margin-block: unset; scroll-margin: unset; scroll-margin-inline: unset; scroll-marker-group: unset; scroll-padding-block: unset; scroll-padding: unset; scroll-padding-inline: unset; scroll-snap-align: unset; scroll-snap-stop: unset; scroll-snap-type: unset; scroll-target-group: unset; scroll-timeline: unset; scrollbar-color: unset; scrollbar-gutter: unset; scrollbar-width: unset; shape-image-threshold: unset; shape-margin: unset; shape-outside: unset; shape-rendering: unset; size: unset; speak: unset; stop-color: unset; stop-opacity: unset; stroke: unset; stroke-dasharray: unset; stroke-dashoffset: unset; stroke-linecap: unset; stroke-linejoin: unset; stroke-miterlimit: unset; stroke-opacity: unset; stroke-width: unset; tab-size: unset; table-layout: unset; text-align-last: unset; text-anchor: unset; text-autospace: unset; text-box: unset; text-combine-upright: unset; text-decoration: unset; text-decoration-skip-ink: unset; text-decoration-skip-spaces: unset; text-emphasis: unset; text-emphasis-position: unset; text-fit: unset; text-indent: unset; text-justify: unset; text-overflow: unset; text-shadow: unset; text-transform: unset; text-underline-offset: unset; text-underline-position: unset; text-wrap: unset; timeline-scope: unset; timeline-trigger: unset; touch-action: unset; transform: unset; transform-box: unset; transform-origin: unset; transform-style: unset; translate: unset; trigger-scope: unset; user-select: unset; vector-effect: unset; vertical-align: unset; view-timeline: unset; view-transition-class: unset; view-transition-group: unset; view-transition-name: unset; view-transition-scope: unset; visibility: unset; border-spacing: unset; -webkit-box-align: unset; -webkit-box-decoration-break: unset; -webkit-box-direction: unset; -webkit-box-flex: unset; -webkit-box-ordinal-group: unset; -webkit-box-orient: unset; -webkit-box-pack: unset; -webkit-box-reflect: unset; -webkit-line-break: unset; -webkit-line-clamp: unset; -webkit-mask-box-image: unset; -webkit-rtl-ordering: unset; -webkit-ruby-position: unset; -webkit-tap-highlight-color: unset; -webkit-text-combine: unset; -webkit-text-decorations-in-effect: unset; -webkit-text-fill-color: unset; -webkit-text-security: unset; -webkit-text-stroke: unset; -webkit-user-drag: unset; white-space-collapse: unset; widows: unset; width: unset; will-change: unset; window-drag: unset; word-break: unset; word-spacing: unset; x: unset; y: unset; z-index: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; text-align: left; font-family: Montserrat, sans-serif; border: 2px solid transparent; box-shadow: rgba(13, 61, 64, 0.06) 0px 2px 10px; transition: border-color 0.2s, box-shadow 0.2s;" type="button">
+<div data-dc-tpl="90" style="position: relative; height: 220px; overflow: hidden;">
+<img alt="Kayak + Tapas" data-dc-tpl="91" loading="lazy" src="/fotos/kayak/kayak-seville-paddling-together.webp" style="width: 100%; height: 100%; object-fit: cover; object-position: center 36%; display: block;"/>
+<span data-dc-tpl="92" style='position: absolute; top: 14px; left: 14px; background: rgb(255, 255, 255); color: rgb(13, 61, 64); font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; padding: 5px 10px; border-radius: 2px;'><span class="sc-interp">FOOD &amp; FUN</span></span>
+</div>
+<div data-dc-tpl="93" style="padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1 1 0%;">
+<div data-dc-tpl="94" style="font-weight: 800; font-size: 18px; line-height: 1.3; color: rgb(31, 45, 51);"><span class="sc-interp">Kayak + Tapas</span></div>
+<div data-dc-tpl="95" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80);"><span class="sc-interp">A relaxed paddle followed by a tapas lunch or dinner in Triana, a short walk from the river.</span></div>
+<div data-dc-tpl="96" style="display: flex; gap: 18px; flex-wrap: wrap; margin-top: auto; padding-top: 14px; border-top: 1px solid rgb(227, 236, 236); font-size: 13px; font-weight: 600; color: rgb(13, 61, 64);">
+<span data-dc-tpl="97"><span class="sc-interp">3 – 4 h</span></span><span data-dc-tpl="98"><span class="sc-interp">8 – 80 guests</span></span>
+</div>
+<div data-dc-tpl="99" style='font-family: "Varela Round", sans-serif; font-size: 13px; font-weight: 600; margin-top: 6px; color: rgb(13, 61, 64);'><span class="sc-interp">+ Select this experience</span></div>
+</div>
+</button>
+<button data-dc-tpl="89" style="color-scheme: unset; forced-color-adjust: unset; math-depth: unset; position: unset; position-anchor: unset; text-size-adjust: unset; appearance: unset; color: unset; font-feature-settings: unset; font-kerning: unset; font-language-override: unset; font-optical-sizing: unset; font-palette: unset; font-size: unset; font-size-adjust: unset; font-stretch: unset; font-style: unset; font-synthesis: unset; font-variant: unset; font-variation-settings: unset; font-weight: unset; position-area: unset; text-orientation: unset; text-rendering: unset; text-spacing-trim: unset; -webkit-font-smoothing: unset; -webkit-locale: unset; -webkit-text-orientation: unset; -webkit-writing-mode: unset; writing-mode: unset; zoom: unset; accent-color: unset; place-content: unset; place-items: unset; place-self: unset; alignment-baseline: unset; anchor-name: unset; anchor-scope: unset; animation-composition: unset; animation: unset; animation-trigger: unset; app-region: unset; aspect-ratio: unset; backdrop-filter: unset; backface-visibility: unset; background-blend-mode: unset; baseline-shift: unset; baseline-source: unset; block-size: unset; border-block: unset; border-collapse: unset; border-end-end-radius: unset; border-end-start-radius: unset; border-inline: unset; border-shape: unset; border-start-end-radius: unset; border-start-start-radius: unset; inset: unset; box-decoration-break: unset; break-after: unset; break-before: unset; break-inside: unset; buffered-rendering: unset; caption-side: unset; caret-animation: unset; caret-color: unset; caret-shape: unset; clear: unset; clip: unset; clip-path: unset; clip-rule: unset; color-interpolation: unset; color-interpolation-filters: unset; color-rendering: unset; columns: unset; column-fill: unset; gap: unset; rule-break: unset; rule: unset; rule-inset: unset; rule-visibility-items: unset; column-span: unset; contain: unset; contain-intrinsic-block-size: unset; contain-intrinsic-size: unset; contain-intrinsic-inline-size: unset; container: unset; content: unset; content-visibility: unset; corner-shape: unset; corner-block-end-shape: unset; corner-block-start-shape: unset; counter-increment: unset; counter-reset: unset; counter-set: unset; cx: unset; cy: unset; d: unset; dominant-baseline: unset; dynamic-range-limit: unset; empty-cells: unset; field-sizing: unset; fill: unset; fill-opacity: unset; fill-rule: unset; filter: unset; flex: unset; flex-line-count: unset; flex-wrap: unset; float: unset; flood-color: unset; flood-opacity: unset; frame-sizing: unset; grid: unset; grid-area: unset; height: unset; hyphenate-character: unset; hyphenate-limit-chars: unset; hyphens: unset; image-orientation: unset; image-rendering: unset; initial-letter: unset; inline-size: unset; inset-block: unset; inset-inline: unset; interactivity: unset; interest-delay: unset; interpolate-size: unset; isolation: unset; letter-spacing: unset; lighting-color: unset; line-break: unset; line-height: unset; list-style: unset; margin-block: unset; margin: unset; margin-inline: unset; margin-trim: unset; marker: unset; mask: unset; mask-type: unset; math-shift: unset; math-style: unset; max-block-size: unset; max-height: unset; max-inline-size: unset; max-width: unset; min-block-size: unset; min-height: unset; min-inline-size: unset; min-width: unset; mix-blend-mode: unset; object-fit: unset; object-position: unset; object-view-box: unset; offset: unset; opacity: unset; order: unset; orphans: unset; outline: unset; outline-offset: unset; overflow-anchor: unset; overflow-block: unset; overflow-clip-margin: unset; overflow-inline: unset; overflow-wrap: unset; overlay: unset; overscroll-behavior-block: unset; overscroll-behavior-inline: unset; overscroll-behavior: unset; padding-block: unset; padding: unset; padding-inline: unset; page: unset; page-margin-safety: unset; page-orientation: unset; paint-order: unset; perspective: unset; perspective-origin: unset; pointer-events: unset; position-try: unset; position-visibility: unset; print-color-adjust: unset; quotes: unset; r: unset; reading-flow: unset; reading-order: unset; resize: unset; rotate: unset; ruby-align: unset; ruby-overhang: unset; ruby-position: unset; rule-overlap: unset; rx: unset; ry: unset; scale: unset; scroll-axis-lock: unset; scroll-behavior: unset; scroll-initial-target: unset; scroll-margin-block: unset; scroll-margin: unset; scroll-margin-inline: unset; scroll-marker-group: unset; scroll-padding-block: unset; scroll-padding: unset; scroll-padding-inline: unset; scroll-snap-align: unset; scroll-snap-stop: unset; scroll-snap-type: unset; scroll-target-group: unset; scroll-timeline: unset; scrollbar-color: unset; scrollbar-gutter: unset; scrollbar-width: unset; shape-image-threshold: unset; shape-margin: unset; shape-outside: unset; shape-rendering: unset; size: unset; speak: unset; stop-color: unset; stop-opacity: unset; stroke: unset; stroke-dasharray: unset; stroke-dashoffset: unset; stroke-linecap: unset; stroke-linejoin: unset; stroke-miterlimit: unset; stroke-opacity: unset; stroke-width: unset; tab-size: unset; table-layout: unset; text-align-last: unset; text-anchor: unset; text-autospace: unset; text-box: unset; text-combine-upright: unset; text-decoration: unset; text-decoration-skip-ink: unset; text-decoration-skip-spaces: unset; text-emphasis: unset; text-emphasis-position: unset; text-fit: unset; text-indent: unset; text-justify: unset; text-overflow: unset; text-shadow: unset; text-transform: unset; text-underline-offset: unset; text-underline-position: unset; text-wrap: unset; timeline-scope: unset; timeline-trigger: unset; touch-action: unset; transform: unset; transform-box: unset; transform-origin: unset; transform-style: unset; translate: unset; trigger-scope: unset; user-select: unset; vector-effect: unset; vertical-align: unset; view-timeline: unset; view-transition-class: unset; view-transition-group: unset; view-transition-name: unset; view-transition-scope: unset; visibility: unset; border-spacing: unset; -webkit-box-align: unset; -webkit-box-decoration-break: unset; -webkit-box-direction: unset; -webkit-box-flex: unset; -webkit-box-ordinal-group: unset; -webkit-box-orient: unset; -webkit-box-pack: unset; -webkit-box-reflect: unset; -webkit-line-break: unset; -webkit-line-clamp: unset; -webkit-mask-box-image: unset; -webkit-rtl-ordering: unset; -webkit-ruby-position: unset; -webkit-tap-highlight-color: unset; -webkit-text-combine: unset; -webkit-text-decorations-in-effect: unset; -webkit-text-fill-color: unset; -webkit-text-security: unset; -webkit-text-stroke: unset; -webkit-user-drag: unset; white-space-collapse: unset; widows: unset; width: unset; will-change: unset; window-drag: unset; word-break: unset; word-spacing: unset; x: unset; y: unset; z-index: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; text-align: left; font-family: Montserrat, sans-serif; border: 2px solid transparent; box-shadow: rgba(13, 61, 64, 0.06) 0px 2px 10px; transition: border-color 0.2s, box-shadow 0.2s;" type="button">
+<div data-dc-tpl="90" style="position: relative; height: 220px; overflow: hidden;">
+<img alt="Raft Construction Team Building" data-dc-tpl="91" loading="lazy" src="/fotos/raft-construction/raft-construction-seville-teams-racing-guadalquivir.webp" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%; display: block;"/>
+<span data-dc-tpl="92" style='position: absolute; top: 14px; left: 14px; background: rgb(255, 255, 255); color: rgb(13, 61, 64); font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; padding: 5px 10px; border-radius: 2px;'><span class="sc-interp">TEAM BUILDING</span></span>
+</div>
+<div data-dc-tpl="93" style="padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1 1 0%;">
+<div data-dc-tpl="94" style="font-weight: 800; font-size: 18px; line-height: 1.3; color: rgb(31, 45, 51);"><span class="sc-interp">Raft Construction Team Building</span></div>
+<div data-dc-tpl="95" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80);"><span class="sc-interp">Teams receive barrels, poles and rope, design and build their own raft on the riverbank, then race it on the Guadalquivir.</span></div>
+<div data-dc-tpl="96" style="display: flex; gap: 18px; flex-wrap: wrap; margin-top: auto; padding-top: 14px; border-top: 1px solid rgb(227, 236, 236); font-size: 13px; font-weight: 600; color: rgb(13, 61, 64);">
+<span data-dc-tpl="97"><span class="sc-interp">3 – 4 h</span></span><span data-dc-tpl="98"><span class="sc-interp">12 – 100 guests</span></span>
+</div>
+<div data-dc-tpl="99" style='font-family: "Varela Round", sans-serif; font-size: 13px; font-weight: 600; margin-top: 6px; color: rgb(13, 61, 64);'><span class="sc-interp">+ Select this experience</span></div>
+</div>
+</button>
+</div>
+</div>
+</section>
+<section data-dc-tpl="100" data-screen-label="Gallery" style="max-width: 1200px; margin: 0px auto; padding: 88px 32px 0px;">
+<div data-dc-tpl="101" style="display: grid; grid-template-columns: repeat(4, minmax(0px, 1fr)); grid-auto-rows: 220px; gap: 14px;">
+<div data-dc-tpl="102" style="grid-area: span 2 / span 2; border-radius: 4px; overflow: hidden;"><img alt="Paddling together on the Guadalquivir" data-dc-tpl="103" loading="lazy" src="/fotos/kayak/kayak-seville-paddling-together.webp" style="width: 100%; height: 100%; object-fit: cover; object-position: center 29%; display: block;"/></div>
+<div data-dc-tpl="104" style="grid-column: span 2; border-radius: 4px; overflow: hidden;"><img alt="Setting off by kayak towards the Triana Bridge" data-dc-tpl="105" loading="lazy" src="/fotos/kayak/kayak-seville-setting-off-towards-triana-bridge.webp" style="width: 100%; height: 100%; object-fit: cover; object-position: center 39%; display: block;"/></div>
+<div data-dc-tpl="106" style="border-radius: 4px; overflow: hidden;"><img alt="Teams paddling on the Guadalquivir" data-dc-tpl="107" loading="lazy" src="/fotos/kayak/kayak-seville-teams-paddling-guadalquivir.webp" style="width: 100%; height: 100%; object-fit: cover; object-position: center 45%; display: block;"/></div>
+<div data-dc-tpl="108" style="border-radius: 4px; overflow: hidden;"><img alt="Safety briefing on the pontoon before kayaking in Seville" data-dc-tpl="109" loading="lazy" src="/fotos/kayak/kayak-seville-safety-briefing-on-pontoon.webp" style="width: 100%; height: 100%; object-fit: cover; object-position: center 55%; display: block;"/></div>
+</div>
+</section>
+<section data-dc-tpl="110" data-screen-label="Quote" style="max-width: 900px; margin: 0px auto; padding: 88px 32px; text-align: center;">
+<div data-dc-tpl="111" style="font-family: Georgia, serif; color: rgb(255, 93, 26); font-size: 48px; line-height: 1; margin-bottom: 8px;">“</div>
+<p data-dc-tpl="112" style="font-weight: 500; font-style: italic; font-size: clamp(19px, 2.4vw, 24px); line-height: 1.5; color: rgb(255, 93, 26); margin: 0px;">Seville invites you to glide—past its stories, under its bridges, and into its rhythm.</p>
+</section>
+<section data-dc-tpl="113" data-screen-label="Mix it up" style="background: rgb(246, 244, 239); padding: 80px 32px;">
+<div data-dc-tpl="114" style="max-width: 1200px; margin: 0px auto; display: flex; flex-wrap: wrap; gap: 48px;">
+<div data-dc-tpl="115" style="flex: 1 1 300px;">
+<div data-dc-tpl="116" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>WANT TO MIX IT UP?</div>
+<h2 data-dc-tpl="117" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(22px, 2.8vw, 30px); margin: 0px 0px 14px;">Try these creative variations</h2>
+<p data-dc-tpl="118" style="font-weight: 300; font-size: 15.5px; line-height: 1.7; color: rgb(61, 74, 80); margin: 0px;">Seville’s kayak scene offers more than one way to float. Add one of these to your paddle.</p>
+</div>
+<div data-dc-tpl="119" style="flex: 2 1 480px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 14px;">
+<div data-dc-tpl="120" style="background: rgb(255, 255, 255); border: 1px solid rgb(230, 225, 214); border-radius: 4px; padding: 22px 24px;"><div data-dc-tpl="121" style="font-weight: 700; font-size: 16px; margin-bottom: 6px;">Sketching or watercolour</div><p data-dc-tpl="122" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80); margin: 0px;">A guided art session on the riverbank after paddling.</p></div>
+<div data-dc-tpl="123" style="background: rgb(255, 255, 255); border: 1px solid rgb(230, 225, 214); border-radius: 4px; padding: 22px 24px;"><div data-dc-tpl="124" style="font-weight: 700; font-size: 16px; margin-bottom: 6px;">Mindfulness or yoga</div><p data-dc-tpl="125" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80); margin: 0px;">A calm session by the riverside to close the morning.</p></div>
+<a class="scp2" data-dc-tpl="126" href="/ceramic-workshop-in-seville/" style="background: rgb(255, 255, 255); border: 1px solid rgb(230, 225, 214); border-radius: 4px; padding: 22px 24px; color: rgb(31, 45, 51); grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; gap: 16px;"><span data-dc-tpl="127"><span data-dc-tpl="128" style="display: block; font-weight: 700; font-size: 16px; margin-bottom: 6px;">Kayak + ceramic painting in Triana</span><span data-dc-tpl="129" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80);">A full day of movement, creativity, and culture.</span></span><span data-dc-tpl="130" style="color: rgb(255, 93, 26); font-size: 20px;">→</span></a>
+</div>
+</div>
+</section>
+<section data-dc-tpl="131" data-screen-label="Combine" style="max-width: 1200px; margin: 0px auto; padding: 80px 32px 0px;">
+<div data-dc-tpl="132" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>COMBINE IT WITH</div>
+<h2 data-dc-tpl="133" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(22px, 2.8vw, 30px); margin: 0px 0px 32px;">Build it into a complete programme</h2>
+<div data-dc-tpl="134" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 18px;">
+<a class="scp2" data-dc-tpl="135" href="/trip/team-building-seville/" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; background: rgb(255, 255, 255); border: 1px solid rgb(230, 225, 214); border-radius: 4px; padding: 24px; color: rgb(31, 45, 51);">
+<span data-dc-tpl="136"><span data-dc-tpl="137" style="display: block; font-weight: 700; font-size: 17px; margin-bottom: 4px;">Team Building</span><span data-dc-tpl="138" style="font-weight: 300; font-size: 14px; color: rgb(61, 74, 80);">Challenges on and off the water</span></span><span data-dc-tpl="139" style="color: rgb(255, 93, 26); font-size: 20px;">→</span>
+</a>
+<a class="scp2" data-dc-tpl="140" href="/river-cruise-experiences-seville/" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; background: rgb(255, 255, 255); border: 1px solid rgb(230, 225, 214); border-radius: 4px; padding: 24px; color: rgb(31, 45, 51);">
+<span data-dc-tpl="141"><span data-dc-tpl="142" style="display: block; font-weight: 700; font-size: 17px; margin-bottom: 4px;">River Cruises</span><span data-dc-tpl="143" style="font-weight: 300; font-size: 14px; color: rgb(61, 74, 80);">The Guadalquivir at a slower pace</span></span><span data-dc-tpl="144" style="color: rgb(255, 93, 26); font-size: 20px;">→</span>
+</a>
+<a class="scp2" data-dc-tpl="145" href="/trip/corporate-incentive-trip-seville/" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; background: rgb(255, 255, 255); border: 1px solid rgb(230, 225, 214); border-radius: 4px; padding: 24px; color: rgb(31, 45, 51);">
+<span data-dc-tpl="146"><span data-dc-tpl="147" style="display: block; font-weight: 700; font-size: 17px; margin-bottom: 4px;">Incentive Trips</span><span data-dc-tpl="148" style="font-weight: 300; font-size: 14px; color: rgb(61, 74, 80);">An active highlight in your programme</span></span><span data-dc-tpl="149" style="color: rgb(255, 93, 26); font-size: 20px;">→</span>
+</a>
+</div>
+</section>
+<section data-dc-tpl="150" data-screen-label="Expert" style="background: rgb(234, 246, 246); margin-top: 80px; padding: 60px 32px 50px;">
+<div data-dc-tpl="151" style="max-width: 820px; margin: 0px auto; display: flex; align-items: center; gap: 40px; flex-wrap: wrap; justify-content: center;">
+<div data-dc-tpl="152" style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; flex: 0 0 auto;"><img alt="Gunvor Guttormsen in front of Macarena church, Seville" decoding="async" loading="lazy" src="/uploads/gunvor-guttormsen-macarena-church-seville.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:50%"/></div>
+<div data-dc-tpl="154" style="flex: 1 1 0%; min-width: 240px;">
+<h2 data-dc-tpl="155" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(20px, 2.6vw, 26px); margin: 0px 0px 12px;">Ready to See Seville Differently?</h2>
+<p data-dc-tpl="156" style="font-weight: 300; font-size: 15.5px; line-height: 1.7; color: rgb(61, 74, 80); margin: 0px 0px 24px;">Whether you’re looking for a gentle paddle or a scenic adventure, kayaking in Seville offers an authentic way to connect with the city. The river has stories to tell—go listen.</p>
+<a class="scp3" data-dc-tpl="157" href="/contact/" style='background: rgb(255, 93, 26); color: rgb(255, 255, 255); font-family: "Varela Round", sans-serif; font-weight: 600; padding: 14px 32px; border-radius: 2px; font-size: 15px; display: inline-block;'>Contact DMC Seville Event</a>
+</div>
+</div>
+</section>
+<section data-dc-tpl="158" data-screen-label="FAQ" style="max-width: 1000px; margin: 0px auto; padding: 80px 32px;">
+<div data-dc-tpl="159" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px; text-align: center;'>FAQ</div>
+<h2 data-dc-tpl="160" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(22px, 2.8vw, 30px); margin: 0px 0px 36px; text-align: center;">Kayaking in Seville: common questions</h2>
+<div data-dc-tpl="161" style="display: flex; flex-direction: column; border-top: 1px solid rgb(227, 236, 236);">
+<details data-dc-tpl="163" style="border-bottom: 1px solid rgb(227, 236, 236); padding: 22px 4px;">
+<summary data-dc-tpl="164" style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 20px; align-items: baseline; font-weight: 700; font-size: 17px; line-height: 1.4;"><span class="sc-interp">Do we need kayaking experience?</span><span class="plus" data-dc-tpl="165" style="color: rgb(255, 93, 26); font-size: 24px; line-height: 1; transition: transform 0.2s; flex: 0 0 auto;">+</span></summary>
+<p data-dc-tpl="166" style="margin: 14px 0px 0px; font-weight: 300; font-size: 15.5px; line-height: 1.75; color: rgb(61, 74, 80);"><span class="sc-interp">No. Local instructors give a safety briefing on land and accompany the group on the water. Kayaks are stable and suitable for beginners.</span></p>
+</details>
+<details data-dc-tpl="163" style="border-bottom: 1px solid rgb(227, 236, 236); padding: 22px 4px;">
+<summary data-dc-tpl="164" style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 20px; align-items: baseline; font-weight: 700; font-size: 17px; line-height: 1.4;"><span class="sc-interp">Is it safe to kayak on the Guadalquivir?</span><span class="plus" data-dc-tpl="165" style="color: rgb(255, 93, 26); font-size: 24px; line-height: 1; transition: transform 0.2s; flex: 0 0 auto;">+</span></summary>
+<p data-dc-tpl="166" style="margin: 14px 0px 0px; font-weight: 300; font-size: 15.5px; line-height: 1.75; color: rgb(61, 74, 80);"><span class="sc-interp">Yes. The stretch through the city is calm, with very little current. All guests wear life jackets and are accompanied by certified instructors.</span></p>
+</details>
+<details data-dc-tpl="163" style="border-bottom: 1px solid rgb(227, 236, 236); padding: 22px 4px;">
+<summary data-dc-tpl="164" style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 20px; align-items: baseline; font-weight: 700; font-size: 17px; line-height: 1.4;"><span class="sc-interp">What should guests wear?</span><span class="plus" data-dc-tpl="165" style="color: rgb(255, 93, 26); font-size: 24px; line-height: 1; transition: transform 0.2s; flex: 0 0 auto;">+</span></summary>
+<p data-dc-tpl="166" style="margin: 14px 0px 0px; font-weight: 300; font-size: 15.5px; line-height: 1.75; color: rgb(61, 74, 80);"><span class="sc-interp">Comfortable clothes that can get wet, sun protection and shoes that can go in the water. Changing facilities and storage are available at the base.</span></p>
+</details>
+<details data-dc-tpl="163" style="border-bottom: 1px solid rgb(227, 236, 236); padding: 22px 4px;">
+<summary data-dc-tpl="164" style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 20px; align-items: baseline; font-weight: 700; font-size: 17px; line-height: 1.4;"><span class="sc-interp">What is the best time of year for kayaking in Seville?</span><span class="plus" data-dc-tpl="165" style="color: rgb(255, 93, 26); font-size: 24px; line-height: 1; transition: transform 0.2s; flex: 0 0 auto;">+</span></summary>
+<p data-dc-tpl="166" style="margin: 14px 0px 0px; font-weight: 300; font-size: 15.5px; line-height: 1.75; color: rgb(61, 74, 80);"><span class="sc-interp">Kayaking is possible all year. Spring and autumn are ideal; in summer we recommend early morning or sunset sessions to avoid the midday heat.</span></p>
+</details>
+<details data-dc-tpl="163" style="border-bottom: 1px solid rgb(227, 236, 236); padding: 22px 4px;">
+<summary data-dc-tpl="164" style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 20px; align-items: baseline; font-weight: 700; font-size: 17px; line-height: 1.4;"><span class="sc-interp">How does the raft construction activity work?</span><span class="plus" data-dc-tpl="165" style="color: rgb(255, 93, 26); font-size: 24px; line-height: 1; transition: transform 0.2s; flex: 0 0 auto;">+</span></summary>
+<p data-dc-tpl="166" style="margin: 14px 0px 0px; font-weight: 300; font-size: 15.5px; line-height: 1.75; color: rgb(61, 74, 80);"><span class="sc-interp">Teams are given materials and a time limit to design and build a raft. Once finished, each team launches its raft for a race on the river. It combines planning, communication and a lot of laughter.</span></p>
+</details>
+</div>
+</section>
+<section data-dc-tpl="167" data-screen-label="Author" style="max-width: 1000px; margin: 0px auto; padding: 56px 32px 0px;">
+<div data-dc-tpl="168" style="display: flex; gap: 18px; align-items: center; padding: 24px; border: 1px solid rgb(236, 231, 220); border-radius: 6px; background: rgb(255, 255, 255);">
+<div data-dc-tpl="169" style="width: 56px; height: 56px; border-radius: 50%; overflow: hidden; flex: 0 0 auto;"><img alt="Gunvor Guttormsen" decoding="async" loading="lazy" src="/uploads/gunvor-guttormsen-avatar.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:50%"/></div>
+<p data-dc-tpl="171" style="font-weight: 300; font-size: 14.5px; line-height: 1.65; color: rgb(61, 74, 80); margin: 0px;">This text is written by <strong data-dc-tpl="172" style="font-weight: 700; color: rgb(31, 45, 51);">Gunvor Guttormsen</strong>. She is the owner of DMC Seville and has worked in tourism in Seville since 1999. She is a true Seville lover and wants to share her passion and love for Seville with you.<span data-dc-tpl="173" style="display: block; margin-top: 6px; font-size: 13px; color: rgb(91, 106, 112);">Last updated: 18 October 2026</span></p>
+</div>
+</section>
+<section data-dc-tpl="174" data-screen-label="More inspiration" style="max-width: 1200px; margin: 0px auto; padding: 72px 32px 88px;">
+<div data-dc-tpl="175" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; padding-bottom: 20px; border-bottom: 1px solid rgb(227, 236, 236); margin-bottom: 32px;">
+<h2 data-dc-tpl="176" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(22px, 2.8vw, 30px); margin: 0px;">More inspiration</h2>
+<a data-dc-tpl="177" href="/inspiration/" style='font-family: "Varela Round", sans-serif; font-size: 14px; font-weight: 600;'>All activities →</a>
+</div>
+<div data-dc-tpl="178" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 24px;">
+<a class="scp4" data-dc-tpl="179" href="/el-rocio-pilgrimage-andalusias-most-soulful-celebration/" style="display: flex; flex-direction: column; color: rgb(31, 45, 51); border-radius: 4px; overflow: hidden; background: rgb(255, 255, 255); border: 1px solid rgb(236, 231, 220);">
+<div data-dc-tpl="180" style="height: 190px;"><img alt="Horseback riding near Doñana" decoding="async" loading="lazy" src="/uploads/horseback-ride-sunset-huelva.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="182" style="padding: 20px 22px 24px;"><div data-dc-tpl="183" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 8px;'>OUTDOORS</div><div data-dc-tpl="184" style="font-weight: 700; font-size: 17px; line-height: 1.35;">El Rocío &amp; Doñana Experiences</div></div>
+</a>
+<a class="scp4" data-dc-tpl="185" href="/river-cruise-experiences-seville/" style="display: flex; flex-direction: column; color: rgb(31, 45, 51); border-radius: 4px; overflow: hidden; background: rgb(255, 255, 255); border: 1px solid rgb(236, 231, 220);">
+<div data-dc-tpl="186" style="height: 190px;"><img alt="River cruise in Seville" decoding="async" loading="lazy" src="/uploads/venue-finding-river-boat-sunset.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="188" style="padding: 20px 22px 24px;"><div data-dc-tpl="189" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 8px;'>EVENINGS</div><div data-dc-tpl="190" style="font-weight: 700; font-size: 17px; line-height: 1.35;">River Cruise Experiences in Seville</div></div>
+</a>
+<a class="scp4" data-dc-tpl="191" href="/treasure-hunt-in-seville/" style="display: flex; flex-direction: column; color: rgb(31, 45, 51); border-radius: 4px; overflow: hidden; background: rgb(255, 255, 255); border: 1px solid rgb(236, 231, 220);">
+<div data-dc-tpl="192" style="height: 190px;"><img alt="Treasure hunt in Seville" decoding="async" loading="lazy" src="/uploads/historical-team-building-seville.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="194" style="padding: 20px 22px 24px;"><div data-dc-tpl="195" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 8px;'>TEAM BUILDING</div><div data-dc-tpl="196" style="font-weight: 700; font-size: 17px; line-height: 1.35;">Treasure Hunt in Seville</div></div>
+</a>
+</div>
+</section>
+<div class="sc-host" data-dc-tpl="197" data-sc-name="SiteFooter"><footer data-dc-tpl="4" style="background: rgb(13, 61, 64); color: rgb(207, 227, 228); padding: 60px 32px 30px; font-family: Montserrat, sans-serif; border-top: 4px solid rgb(21, 202, 210);">
+<div data-dc-tpl="5" style="max-width: 1200px; margin: 0px auto 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 36px;">
+<div data-dc-tpl="6">
+<a data-dc-tpl="7" href="/" style="display: inline-flex; background: rgb(255, 255, 255); border-radius: 6px; padding: 10px 14px; margin-bottom: 16px;"><img alt="DMC Seville Event" data-dc-tpl="8" loading="lazy" src="/assets/dmc-logo-cropped.webp" style="height: 60px; width: auto; object-fit: contain; display: block;"/></a>
+<p data-dc-tpl="9" style="font-weight: 300; font-size: 13.5px; line-height: 1.6;">C/ Milano Govinda 35, 41020 Sevilla, Spain</p>
+</div>
+<div data-dc-tpl="10">
+<h4 data-dc-tpl="11" style="font-weight: 700; color: rgb(255, 255, 255); font-size: 15px; margin: 0px 0px 14px;">Services</h4>
+<div data-dc-tpl="12" style="display: flex; flex-direction: column; gap: 8px; font-size: 13.5px; font-weight: 300;">
+<a data-dc-tpl="13" href="/trip/meetings-seville/">Meetings</a>
+<a data-dc-tpl="14" href="/trip/corporate-event-venue-seville/">Venue Finding</a>
+<a data-dc-tpl="15" href="/trip/corporate-incentive-trip-seville/">Corporate Incentive</a>
+<a data-dc-tpl="16" href="/trip/team-building-seville/">Team Building</a>
+<a data-dc-tpl="17" href="/group-travel-to-seville/">Group Travel</a>
+</div>
+</div>
+<div data-dc-tpl="18">
+<h4 data-dc-tpl="19" style="font-weight: 700; color: rgb(255, 255, 255); font-size: 15px; margin: 0px 0px 14px;">DMC Destinations in Andalusia</h4>
+<div data-dc-tpl="20" style="display: flex; flex-direction: column; gap: 8px; font-size: 13.5px; font-weight: 300;">
+<a data-dc-tpl="21" href="/incentive-trip-sevilla/">Incentive Trip Sevilla</a>
+<a data-dc-tpl="22" href="/dmc-malaga/">DMC Málaga</a>
+<a data-dc-tpl="23" href="/dmc-huelva/">DMC Huelva</a>
+<a data-dc-tpl="24" href="/dmc-cadiz/">DMC Cádiz</a>
+<a data-dc-tpl="25" href="/dmc-granada/">DMC Granada</a>
+<a data-dc-tpl="26" href="/dmc-cordoba/">DMC Córdoba</a>
+<a data-dc-tpl="27" href="/dmc-almeria/">DMC Almería</a>
+<a data-dc-tpl="28" href="/dmc-jaen/">DMC Jaén</a>
+</div>
+</div>
+<div data-dc-tpl="29">
+<h4 data-dc-tpl="30" style="font-weight: 700; color: rgb(255, 255, 255); font-size: 15px; margin: 0px 0px 14px;">Contact</h4>
+<p data-dc-tpl="31" style="font-weight: 300; font-size: 13.5px; line-height: 1.8; margin: 0px 0px 12px;">+34 637 87 87 68<br data-dc-tpl="32"/>events@dmcsevilleevent.com</p>
+<a data-dc-tpl="33" href="/contact/" style="color: rgb(21, 202, 210); font-weight: 500;">Contact Now</a>
+</div>
+</div>
+<div data-dc-tpl="34" style="text-align: center; font-size: 12.5px; font-weight: 300; border-top: 1px solid rgba(207, 227, 228, 0.2); padding-top: 22px; max-width: 1200px; margin: 0px auto;">© 2026 DMC Seville Event. All Rights Reserved.</div></footer></div></div></div></div><template id="dc-src"><x-dc>
+<helmet>
+<title>Kayaking on the Guadalquivir in Seville for Groups | DMC Seville Event</title>
+<meta name="description" content="Kayak tours, sunset paddles, kayak and tapas, and raft-building team building on the Guadalquivir in Seville. Organised for groups by DMC Seville Event.">
+<link rel="canonical" href="https://www.dmcsevilleevent.com/kayak-in-seville/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DMC Seville Event">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Kayaking on the Guadalquivir in Seville for Groups | DMC Seville Event">
+<meta property="og:description" content="Kayak tours, sunset paddles, kayak and tapas, and raft-building team building on the Guadalquivir in Seville. Organised for groups by DMC Seville Event.">
+<meta property="og:url" content="https://www.dmcsevilleevent.com/kayak-in-seville/">
+<meta property="og:image" content="https://www.dmcsevilleevent.com/uploads/gunvor-guttormsen-macarena-church-seville.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Varela+Round&display=swap" rel="stylesheet">
+
+<style>body{margin:0;}a{color:#ff5d1a;text-decoration:none;}a:hover{color:#0d3d40;}*{box-sizing:border-box;}summary::-webkit-details-marker{display:none;}details[open] summary .plus{transform:rotate(45deg);}</style>
+</helmet>
+<div style="font-family:'Montserrat',sans-serif;color:#1f2d33;background:#fffdfb;">
+  <dc-import name="SiteHeader" hint-size="100%,120"></dc-import>
+
+  <section data-screen-label="Hero" style="position:relative;min-height:clamp(440px,78svh,760px);display:flex;align-items:flex-end;overflow:hidden;">
+    <img src="/fotos/kayak/kayak-seville-hero-sunset-triana-bridge.webp" alt="Group kayaking at sunset towards the Triana Bridge in Seville" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block;">
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,61,64,0.88) 0%,rgba(13,61,64,0.35) 55%,rgba(13,61,64,0.1) 100%);pointer-events:none;"></div>
+    <div style="position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding:120px 32px 0;color:#ffffff;">
+      <div style="display:flex;gap:10px;align-items:center;font-family:'Varela Round',sans-serif;font-size:13px;letter-spacing:1.5px;margin-bottom:18px;">
+        <a href="/inspiration/" style="color:#ffffff;">INSPIRATION</a><span style="color:#15cad2;">/</span><span style="color:#15cad2;">OUTDOORS</span>
+      </div>
+      <h1 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(34px,5.2vw,62px);line-height:1.05;margin:0 0 18px;max-width:860px;text-transform:uppercase;letter-spacing:1px;text-wrap:balance;">Kayak in Seville</h1>
+      <p style="font-weight:300;font-size:clamp(17px,1.8vw,20px);line-height:1.6;max-width:640px;margin:0 0 40px;">Paddle through the past: discover Seville's skyline, bridges and river life from the water of the Guadalquivir.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));border-top:1px solid rgba(255,255,255,0.3);">
+        <div style="padding:20px 20px 26px 0;">
+          <div style="font-family:'Varela Round',sans-serif;font-size:12px;letter-spacing:1.5px;color:#15cad2;margin-bottom:6px;">DURATION</div>
+          <div style="font-weight:600;font-size:16px;">1.5 – 4 hours</div>
+        </div>
+        <div style="padding:20px 20px 26px 0;">
+          <div style="font-family:'Varela Round',sans-serif;font-size:12px;letter-spacing:1.5px;color:#15cad2;margin-bottom:6px;">GROUP SIZE</div>
+          <div style="font-weight:600;font-size:16px;">8 – 100 guests</div>
+        </div>
+        <div style="padding:20px 20px 26px 0;">
+          <div style="font-family:'Varela Round',sans-serif;font-size:12px;letter-spacing:1.5px;color:#15cad2;margin-bottom:6px;">IDEAL FOR</div>
+          <div style="font-weight:600;font-size:16px;">Team building, incentives, active groups</div>
+        </div>
+        <div style="padding:20px 20px 26px 0;">
+          <div style="font-family:'Varela Round',sans-serif;font-size:12px;letter-spacing:1.5px;color:#15cad2;margin-bottom:6px;">EXPERIENCE</div>
+          <div style="font-weight:600;font-size:16px;">None needed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Intro" style="max-width:1200px;margin:0 auto;padding:72px 32px 0;display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start;">
+    <div style="flex:1 1 440px;min-width:0;max-width:720px;">
+      <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">THE EXPERIENCE</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(24px,3vw,34px);line-height:1.2;color:#15cad2;margin:0 0 22px;text-wrap:balance;">Paddle Through the Past: Kayaking on the Guadalquivir in Seville</h2>
+      <p style="font-weight:400;font-size:19px;line-height:1.7;color:#1f2d33;margin:0 0 20px;">Seville is a city best explored slowly—with your senses open and your perspective fresh. While most visitors wander its shaded streets, there’s a quieter, equally enchanting way to discover its beauty: from the water.</p>
+      <p style="font-weight:300;font-size:16.5px;line-height:1.85;color:#3d4a50;margin:0 0 20px;">Kayaking on the Guadalquivir River offers a completely new lens on Seville’s skyline, culture, and natural charm.</p>
+      <p style="font-weight:300;font-size:16.5px;line-height:1.85;color:#3d4a50;margin:0;">For groups, we organise everything around the paddle: certified instructors, kayaks and safety equipment, changing facilities, transfers and, if you wish, tapas or a team challenge on the riverbank afterwards.</p>
+    </div>
+    <aside style="flex:0 1 340px;width:100%;position:sticky;top:24px;background:#0d3d40;color:#ffffff;border-radius:6px;padding:30px 28px;min-width:0;margin:0 auto;">
+      <div style="font-family:'Varela Round',sans-serif;font-size:12px;letter-spacing:1.5px;color:#15cad2;margin-bottom:8px;">REQUEST A PROPOSAL</div>
+      <div style="font-weight:700;font-size:20px;line-height:1.3;margin-bottom:22px;">{{ selectedName }}</div>
+      <div style="font-size:13px;font-weight:500;margin-bottom:10px;color:#cfe3e4;">Number of guests</div>
+      <div style="display:flex;align-items:center;border:1px solid rgba(255,255,255,0.3);border-radius:3px;margin-bottom:22px;">
+        <button type="button" onClick="{{ dec }}" aria-label="Fewer guests" style="width:48px;height:46px;background:transparent;border:0;color:#ffffff;font-size:20px;cursor:pointer;" style-hover="background:rgba(255,255,255,0.08);">−</button>
+        <div style="flex:1;text-align:center;font-weight:700;font-size:17px;">{{ guests }}</div>
+        <button type="button" onClick="{{ inc }}" aria-label="More guests" style="width:48px;height:46px;background:transparent;border:0;color:#ffffff;font-size:20px;cursor:pointer;" style-hover="background:rgba(255,255,255,0.08);">+</button>
+      </div>
+      <div style="font-size:13px;font-weight:500;margin-bottom:10px;color:#cfe3e4;">Preferred time of day</div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:26px;">
+        <sc-for list="{{ timeItems }}" as="s" hint-placeholder-count="4">
+          <button type="button" onClick="{{ s.pick }}" style="{{ s.style }}">{{ s.label }}</button>
+        </sc-for>
+      </div>
+      <a href="{{ enquiryHref }}" style="display:block;text-align:center;background:#ff5d1a;color:#ffffff;font-family:'Varela Round',sans-serif;font-weight:600;padding:15px 20px;border-radius:2px;font-size:15px;" style-hover="background:#ffffff;color:#0d3d40;">Get My Proposal</a>
+      <p style="font-size:13px;line-height:1.6;color:#cfe3e4;margin:14px 0 0;text-align:center;">Personal reply within 24 hours. No commitment.</p>
+    </aside>
+  </section>
+
+  <section data-screen-label="From the water" style="max-width:1200px;margin:0 auto;padding:88px 32px 0;">
+    <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">FROM THE WATER</div>
+    <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(24px,3vw,34px);margin:0 0 40px;">What you'll see and feel</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:44px 48px;">
+      <div style="border-top:3px solid #15cad2;padding-top:22px;">
+        <h3 style="font-weight:800;font-size:19px;margin:0 0 12px;">Float Beneath the Bridges of Time</h3>
+        <p style="font-weight:300;font-size:16px;line-height:1.8;color:#3d4a50;margin:0;">From your kayak, the city unfolds like a moving painting. Paddle under the Isabel II (Triana) Bridge, past the colorful facades of Calle Betis, and beneath the watchful eye of the Torre del Oro. Every stroke takes you through centuries of maritime history, connecting you with the same river that brought spices, explorers, and empires to Andalusia’s doorstep.</p>
+      </div>
+      <div style="border-top:3px solid #15cad2;padding-top:22px;">
+        <h3 style="font-weight:800;font-size:19px;margin:0 0 12px;">Nature in the Heart of the City</h3>
+        <p style="font-weight:300;font-size:16px;line-height:1.8;color:#3d4a50;margin:0 0 12px;">Though Seville is full of architectural wonders, the river is home to a quieter, more natural side of the city. Along the banks, you’ll spot birds, reeds, and flowering trees. In early morning or just before sunset, the light turns golden and the water reflects the rhythm of flamenco—not in sound, but in flow.</p>
+        <p style="font-weight:300;font-size:16px;line-height:1.8;color:#3d4a50;margin:0;">It’s calm, peaceful, and surprisingly rejuvenating.</p>
+      </div>
+      <div style="border-top:3px solid #15cad2;padding-top:22px;">
+        <h3 style="font-weight:800;font-size:19px;margin:0 0 12px;">A Perfect Activity for All Kinds of Groups</h3>
+        <p style="font-weight:300;font-size:16px;line-height:1.8;color:#3d4a50;margin:0 0 12px;">Whether it’s a small executive team looking for something calm, an incentive group seeking something memorable, or a large team up for a bit of fun—kayaking fits everyone.</p>
+        <p style="font-weight:300;font-size:16px;line-height:1.8;color:#3d4a50;margin:0;">No experience? No problem. Local instructors guide you gently from shore to shore, ensuring safety and ease.</p>
+      </div>
+      <div style="border-top:3px solid #15cad2;padding-top:22px;">
+        <h3 style="font-weight:800;font-size:19px;margin:0 0 12px;">A Photographer’s Dream</h3>
+        <p style="font-weight:300;font-size:16px;line-height:1.8;color:#3d4a50;margin:0;">Forget crowded viewpoints. From the kayak, you’ll have uninterrupted views of Seville’s most iconic sights—from unexpected angles. Bring a waterproof camera or just enjoy the moment: the reflections, the light, and the sense of drifting right through a living postcard.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Formats" style="background:#eaf6f6;margin-top:88px;padding:80px 32px;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:36px;">
+        <div>
+          <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">CHOOSE YOUR EXPERIENCE</div>
+          <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(24px,3vw,34px);margin:0;">Four ways to get on the river</h2>
+        </div>
+        <p style="font-weight:300;font-size:15px;line-height:1.6;color:#3d4a50;margin:0;max-width:340px;">Select an experience to add it to your proposal request. Every option can be adapted to your group.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(400px,100%),1fr));gap:22px;">
+        <sc-for list="{{ formatItems }}" as="f" hint-placeholder-count="4">
+          <button type="button" onClick="{{ f.pick }}" style="{{ f.cardStyle }}">
+            <div style="position:relative;height:220px;overflow:hidden;">
+              <img src="{{ f.img }}" alt="{{ f.name }}" style="width:100%;height:100%;object-fit:cover;object-position:{{ f.pos }};display:block;">
+              <span style="position:absolute;top:14px;left:14px;background:#ffffff;color:#0d3d40;font-family:'Varela Round',sans-serif;font-size:11.5px;letter-spacing:1px;padding:5px 10px;border-radius:2px;">{{ f.tag }}</span>
+            </div>
+            <div style="padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1;">
+              <div style="font-weight:800;font-size:18px;line-height:1.3;color:#1f2d33;">{{ f.name }}</div>
+              <div style="font-weight:300;font-size:14.5px;line-height:1.6;color:#3d4a50;">{{ f.text }}</div>
+              <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:auto;padding-top:14px;border-top:1px solid #e3ecec;font-size:13px;font-weight:600;color:#0d3d40;">
+                <span>{{ f.duration }}</span><span>{{ f.capacity }}</span>
+              </div>
+              <div style="{{ f.selStyle }}">{{ f.selLabel }}</div>
+            </div>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Gallery" style="max-width:1200px;margin:0 auto;padding:88px 32px 0;">
+    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:220px;gap:14px;">
+      <div style="grid-column:span 2;grid-row:span 2;border-radius:4px;overflow:hidden;"><img src="/fotos/kayak/kayak-seville-paddling-together.webp" alt="Paddling together on the Guadalquivir" style="width:100%;height:100%;object-fit:cover;object-position:center 29%;display:block;"></div>
+      <div style="grid-column:span 2;border-radius:4px;overflow:hidden;"><img src="/fotos/kayak/kayak-seville-setting-off-towards-triana-bridge.webp" alt="Setting off by kayak towards the Triana Bridge" style="width:100%;height:100%;object-fit:cover;object-position:center 39%;display:block;"></div>
+      <div style="border-radius:4px;overflow:hidden;"><img src="/fotos/kayak/kayak-seville-teams-paddling-guadalquivir.webp" alt="Teams paddling on the Guadalquivir" style="width:100%;height:100%;object-fit:cover;object-position:center 45%;display:block;"></div>
+      <div style="border-radius:4px;overflow:hidden;"><img src="/fotos/kayak/kayak-seville-safety-briefing-on-pontoon.webp" alt="Safety briefing on the pontoon before kayaking in Seville" style="width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block;"></div>
+    </div>
+  </section>
+
+  <section data-screen-label="Quote" style="max-width:900px;margin:0 auto;padding:88px 32px;text-align:center;">
+    <div style="font-family:Georgia,serif;color:#ff5d1a;font-size:48px;line-height:1;margin-bottom:8px;">“</div>
+    <p style="font-weight:500;font-style:italic;font-size:clamp(19px,2.4vw,24px);line-height:1.5;color:#ff5d1a;margin:0;">Seville invites you to glide—past its stories, under its bridges, and into its rhythm.</p>
+  </section>
+
+  <section data-screen-label="Mix it up" style="background:#f6f4ef;padding:80px 32px;">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:48px;">
+      <div style="flex:1 1 300px;">
+        <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">WANT TO MIX IT UP?</div>
+        <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,30px);margin:0 0 14px;">Try these creative variations</h2>
+        <p style="font-weight:300;font-size:15.5px;line-height:1.7;color:#3d4a50;margin:0;">Seville’s kayak scene offers more than one way to float. Add one of these to your paddle.</p>
+      </div>
+      <div style="flex:2 1 480px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:14px;">
+        <div style="background:#ffffff;border:1px solid #e6e1d6;border-radius:4px;padding:22px 24px;"><div style="font-weight:700;font-size:16px;margin-bottom:6px;">Sketching or watercolour</div><p style="font-weight:300;font-size:14.5px;line-height:1.6;color:#3d4a50;margin:0;">A guided art session on the riverbank after paddling.</p></div>
+        <div style="background:#ffffff;border:1px solid #e6e1d6;border-radius:4px;padding:22px 24px;"><div style="font-weight:700;font-size:16px;margin-bottom:6px;">Mindfulness or yoga</div><p style="font-weight:300;font-size:14.5px;line-height:1.6;color:#3d4a50;margin:0;">A calm session by the riverside to close the morning.</p></div>
+        <a href="/ceramic-workshop-in-seville/" style="background:#ffffff;border:1px solid #e6e1d6;border-radius:4px;padding:22px 24px;color:#1f2d33;grid-column:1 / -1;display:flex;justify-content:space-between;align-items:center;gap:16px;" style-hover="border-color:#ff5d1a;color:#1f2d33;"><span><span style="display:block;font-weight:700;font-size:16px;margin-bottom:6px;">Kayak + ceramic painting in Triana</span><span style="font-weight:300;font-size:14.5px;line-height:1.6;color:#3d4a50;">A full day of movement, creativity, and culture.</span></span><span style="color:#ff5d1a;font-size:20px;">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Combine" style="max-width:1200px;margin:0 auto;padding:80px 32px 0;">
+    <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">COMBINE IT WITH</div>
+    <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,30px);margin:0 0 32px;">Build it into a complete programme</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:18px;">
+      <a href="/trip/team-building-seville/" style="display:flex;justify-content:space-between;align-items:center;gap:16px;background:#ffffff;border:1px solid #e6e1d6;border-radius:4px;padding:24px;color:#1f2d33;" style-hover="border-color:#ff5d1a;color:#1f2d33;">
+        <span><span style="display:block;font-weight:700;font-size:17px;margin-bottom:4px;">Team Building</span><span style="font-weight:300;font-size:14px;color:#3d4a50;">Challenges on and off the water</span></span><span style="color:#ff5d1a;font-size:20px;">→</span>
+      </a>
+      <a href="/river-cruise-experiences-seville/" style="display:flex;justify-content:space-between;align-items:center;gap:16px;background:#ffffff;border:1px solid #e6e1d6;border-radius:4px;padding:24px;color:#1f2d33;" style-hover="border-color:#ff5d1a;color:#1f2d33;">
+        <span><span style="display:block;font-weight:700;font-size:17px;margin-bottom:4px;">River Cruises</span><span style="font-weight:300;font-size:14px;color:#3d4a50;">The Guadalquivir at a slower pace</span></span><span style="color:#ff5d1a;font-size:20px;">→</span>
+      </a>
+      <a href="/trip/corporate-incentive-trip-seville/" style="display:flex;justify-content:space-between;align-items:center;gap:16px;background:#ffffff;border:1px solid #e6e1d6;border-radius:4px;padding:24px;color:#1f2d33;" style-hover="border-color:#ff5d1a;color:#1f2d33;">
+        <span><span style="display:block;font-weight:700;font-size:17px;margin-bottom:4px;">Incentive Trips</span><span style="font-weight:300;font-size:14px;color:#3d4a50;">An active highlight in your programme</span></span><span style="color:#ff5d1a;font-size:20px;">→</span>
+      </a>
+    </div>
+  </section>
+
+  <section data-screen-label="Expert" style="background:#eaf6f6;margin-top:80px;padding:60px 32px 50px;">
+    <div style="max-width:820px;margin:0 auto;display:flex;align-items:center;gap:40px;flex-wrap:wrap;justify-content:center;">
+      <div style="width:150px;height:150px;border-radius:50%;overflow:hidden;flex:none;"><image-slot id="activity-kayak-contact-photo" shape="circle" src="/uploads/gunvor-guttormsen-macarena-church-seville.webp" alt="Gunvor Guttormsen in front of Macarena church, Seville" placeholder="Team photo" style="width:100%;height:100%;"></image-slot></div>
+      <div style="flex:1;min-width:240px;">
+        <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(20px,2.6vw,26px);margin:0 0 12px;">Ready to See Seville Differently?</h2>
+        <p style="font-weight:300;font-size:15.5px;line-height:1.7;color:#3d4a50;margin:0 0 24px;">Whether you’re looking for a gentle paddle or a scenic adventure, kayaking in Seville offers an authentic way to connect with the city. The river has stories to tell—go listen.</p>
+        <a href="/contact/" style="background:#ff5d1a;color:#ffffff;font-family:'Varela Round',sans-serif;font-weight:600;padding:14px 32px;border-radius:2px;font-size:15px;display:inline-block;" style-hover="background:#0d3d40;color:#ffffff;">Contact DMC Seville Event</a>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="FAQ" style="max-width:1000px;margin:0 auto;padding:80px 32px;">
+    <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;text-align:center;">FAQ</div>
+    <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,30px);margin:0 0 36px;text-align:center;">Kayaking in Seville: common questions</h2>
+    <div style="display:flex;flex-direction:column;border-top:1px solid #e3ecec;">
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+        <details style="border-bottom:1px solid #e3ecec;padding:22px 4px;">
+          <summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:baseline;font-weight:700;font-size:17px;line-height:1.4;">{{ f.q }}<span class="plus" style="color:#ff5d1a;font-size:24px;line-height:1;transition:transform .2s ease;flex:none;">+</span></summary>
+          <p style="margin:14px 0 0;font-weight:300;font-size:15.5px;line-height:1.75;color:#3d4a50;">{{ f.a }}</p>
+        </details>
+      </sc-for>
+    </div>
+  </section>
+
+  <section data-screen-label="Author" style="max-width:1000px;margin:0 auto;padding:56px 32px 0;">
+    <div style="display:flex;gap:18px;align-items:center;padding:24px;border:1px solid #ece7dc;border-radius:6px;background:#ffffff;">
+      <div style="width:56px;height:56px;border-radius:50%;overflow:hidden;flex:none;"><image-slot id="activity-kayak-author-photo" shape="circle" src="/uploads/gunvor-guttormsen-avatar.webp" alt="Gunvor Guttormsen" placeholder="Author photo" style="width:100%;height:100%;"></image-slot></div>
+      <p style="font-weight:300;font-size:14.5px;line-height:1.65;color:#3d4a50;margin:0;">This text is written by <strong style="font-weight:700;color:#1f2d33;">Gunvor Guttormsen</strong>. She is the owner of DMC Seville and has worked in tourism in Seville since 1999. She is a true Seville lover and wants to share her passion and love for Seville with you.<span style="display:block;margin-top:6px;font-size:13px;color:#5b6a70;">Last updated: 18 October 2026</span></p>
+    </div>
+  </section>
+
+  <section data-screen-label="More inspiration" style="max-width:1200px;margin:0 auto;padding:72px 32px 88px;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;padding-bottom:20px;border-bottom:1px solid #e3ecec;margin-bottom:32px;">
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,30px);margin:0;">More inspiration</h2>
+      <a href="/inspiration/" style="font-family:'Varela Round',sans-serif;font-size:14px;font-weight:600;">All activities →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:24px;">
+      <a href="/el-rocio-pilgrimage-andalusias-most-soulful-celebration/" style="display:flex;flex-direction:column;color:#1f2d33;border-radius:4px;overflow:hidden;background:#ffffff;border:1px solid #ece7dc;" style-hover="border-color:#15cad2;color:#1f2d33;">
+        <div style="height:190px;"><image-slot id="activity-kayak-more-1" shape="rect" src="/uploads/horseback-ride-sunset-huelva.webp" alt="Horseback riding near Doñana" placeholder="Related activity photo" style="width:100%;height:100%;"></image-slot></div>
+        <div style="padding:20px 22px 24px;"><div style="font-family:'Varela Round',sans-serif;font-size:11.5px;letter-spacing:1.5px;color:#15cad2;margin-bottom:8px;">OUTDOORS</div><div style="font-weight:700;font-size:17px;line-height:1.35;">El Rocío &amp; Doñana Experiences</div></div>
+      </a>
+      <a href="/river-cruise-experiences-seville/" style="display:flex;flex-direction:column;color:#1f2d33;border-radius:4px;overflow:hidden;background:#ffffff;border:1px solid #ece7dc;" style-hover="border-color:#15cad2;color:#1f2d33;">
+        <div style="height:190px;"><image-slot id="activity-kayak-more-2" shape="rect" src="/uploads/venue-finding-river-boat-sunset.webp" alt="River cruise in Seville" placeholder="Related activity photo" style="width:100%;height:100%;"></image-slot></div>
+        <div style="padding:20px 22px 24px;"><div style="font-family:'Varela Round',sans-serif;font-size:11.5px;letter-spacing:1.5px;color:#15cad2;margin-bottom:8px;">EVENINGS</div><div style="font-weight:700;font-size:17px;line-height:1.35;">River Cruise Experiences in Seville</div></div>
+      </a>
+      <a href="/treasure-hunt-in-seville/" style="display:flex;flex-direction:column;color:#1f2d33;border-radius:4px;overflow:hidden;background:#ffffff;border:1px solid #ece7dc;" style-hover="border-color:#15cad2;color:#1f2d33;">
+        <div style="height:190px;"><image-slot id="activity-kayak-more-3" shape="rect" src="/uploads/historical-team-building-seville.webp" alt="Treasure hunt in Seville" placeholder="Related activity photo" style="width:100%;height:100%;"></image-slot></div>
+        <div style="padding:20px 22px 24px;"><div style="font-family:'Varela Round',sans-serif;font-size:11.5px;letter-spacing:1.5px;color:#15cad2;margin-bottom:8px;">TEAM BUILDING</div><div style="font-weight:700;font-size:17px;line-height:1.35;">Treasure Hunt in Seville</div></div>
+      </a>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,300"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sel: 0, guests: 20, time: null };
+  formats = [
+    { name: 'Guided Kayak Tour', img: '/fotos/kayak/kayak-team-building-group-from-above.webp', pos: 'center 50%', tag: 'MOST BOOKED', text: 'Paddle past the Triana Bridge, Calle Betis and the Torre del Oro with local instructors. Short safety briefing, then onto the water.', duration: '1.5 – 2 h', capacity: '8 – 100 guests' },
+    { name: 'Sunset & Night Kayaking', img: '/fotos/kayak/kayak-seville-single-kayak.webp', pos: 'center 64%', tag: 'EVENINGS', text: 'Set off in the golden hour and return under the illuminated monuments of Seville, with drinks waiting on the bank.', duration: '2 h', capacity: '8 – 60 guests' },
+    { name: 'Kayak + Tapas', img: '/fotos/kayak/kayak-seville-paddling-together.webp', pos: 'center 36%', tag: 'FOOD & FUN', text: 'A relaxed paddle followed by a tapas lunch or dinner in Triana, a short walk from the river.', duration: '3 – 4 h', capacity: '8 – 80 guests' },
+    { name: 'Raft Construction Team Building', img: '/fotos/raft-construction/raft-construction-seville-teams-racing-guadalquivir.webp', pos: 'center 50%', tag: 'TEAM BUILDING', text: 'Teams receive barrels, poles and rope, design and build their own raft on the riverbank, then race it on the Guadalquivir.', duration: '3 – 4 h', capacity: '12 – 100 guests' }
+  ];
+  times = ['Morning', 'Midday', 'Sunset', 'Night'];
+  faqs = [
+    { q: 'Do we need kayaking experience?', a: 'No. Local instructors give a safety briefing on land and accompany the group on the water. Kayaks are stable and suitable for beginners.' },
+    { q: 'Is it safe to kayak on the Guadalquivir?', a: 'Yes. The stretch through the city is calm, with very little current. All guests wear life jackets and are accompanied by certified instructors.' },
+    { q: 'What should guests wear?', a: 'Comfortable clothes that can get wet, sun protection and shoes that can go in the water. Changing facilities and storage are available at the base.' },
+    { q: 'What is the best time of year for kayaking in Seville?', a: 'Kayaking is possible all year. Spring and autumn are ideal; in summer we recommend early morning or sunset sessions to avoid the midday heat.' },
+    { q: 'How does the raft construction activity work?', a: 'Teams are given materials and a time limit to design and build a raft. Once finished, each team launches its raft for a race on the river. It combines planning, communication and a lot of laughter.' }
+  ];
+  componentDidMount() {
+    const s = document.createElement('script');
+    s.type = 'application/ld+json';
+    s.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: this.faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) });
+    document.head.appendChild(s);
+  }
+  renderVals() {
+    const { sel, guests, time } = this.state;
+    const formatItems = this.formats.map((f, i) => {
+      const on = i === sel;
+      return {
+        ...f, pos: f.pos || 'center',
+        slotId: 'activity-kayak-format-' + (i + 1),
+        pick: () => this.setState({ sel: i }),
+        cardStyle: 'all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;background:#ffffff;border-radius:6px;overflow:hidden;text-align:left;font-family:Montserrat,sans-serif;border:2px solid ' + (on ? '#ff5d1a' : 'transparent') + ';box-shadow:' + (on ? '0 10px 28px rgba(255,93,26,0.18)' : '0 2px 10px rgba(13,61,64,0.06)') + ';transition:border-color .2s,box-shadow .2s;',
+        selStyle: 'font-family:Varela Round,sans-serif;font-size:13px;font-weight:600;margin-top:6px;color:' + (on ? '#ff5d1a' : '#0d3d40'),
+        selLabel: on ? '✓ Added to your request' : '+ Select this experience'
+      };
+    });
+    const timeItems = this.times.map(l => ({
+      label: l,
+      pick: () => this.setState({ time: time === l ? null : l }),
+      style: 'cursor:pointer;padding:10px 6px;border-radius:2px;font-family:Montserrat,sans-serif;font-size:13.5px;font-weight:500;border:1px solid ' + (time === l ? '#15cad2' : 'rgba(255,255,255,0.3)') + ';background:' + (time === l ? '#15cad2' : 'transparent') + ';color:' + (time === l ? '#0d3d40' : '#ffffff')
+    }));
+    const q = new URLSearchParams({ activity: this.formats[sel].name, guests: String(guests), ...(time ? { time } : {}) });
+    return {
+      formatItems, timeItems, guests, faqs: this.faqs,
+      selectedName: this.formats[sel].name,
+      dec: () => this.setState(s => ({ guests: Math.max(8, s.guests - (s.guests > 50 ? 10 : 2)) })),
+      inc: () => this.setState(s => ({ guests: Math.min(200, s.guests + (s.guests >= 50 ? 10 : 2)) })),
+      enquiryHref: '/contact/?' + q.toString()
+    };
+  }
+}
+</script></template>
+<div id="dmc-consent" hidden style="position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:560px;margin:0 auto;background:#0d3d40;color:#fff;font-family:Montserrat,sans-serif;font-size:14px;line-height:1.5;padding:16px 18px;border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.25)">
+We use Google Analytics cookies to see how visitors use our website. Do you accept statistics cookies?
+<div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap"><button type="button" data-v="yes" style="cursor:pointer;border:0;background:#15cad2;color:#0d3d40;font-weight:600;padding:8px 16px;border-radius:3px;font-family:inherit">Accept</button><button type="button" data-v="no" style="cursor:pointer;border:1px solid #fff;background:transparent;color:#fff;padding:8px 16px;border-radius:3px;font-family:inherit">Decline</button></div></div>
+<script>
+(function(){var b=document.getElementById('dmc-consent'),v=null;try{v=localStorage.getItem('dmc-consent');}catch(e){}
+if(!v)b.hidden=false;
+b.addEventListener('click',function(e){var x=e.target.getAttribute('data-v');if(!x)return;try{localStorage.setItem('dmc-consent',x);}catch(e){}
+if(x==='yes')gtag('consent','update',{analytics_storage:'granted'});b.hidden=true;});})();
+</script>
+<script>
+(function(){
+  var t=document.getElementById('dc-src'), s=document.getElementById('dc-static');
+  if(!t||!s) return;
+  function load(src,cb){var e=document.createElement('script');e.src=src;e.onload=cb;document.body.appendChild(e);}
+  function dedupe(){var seen={};document.querySelectorAll('script[type="application/ld+json"]').forEach(function(e){var k=e.textContent.trim();if(seen[k])e.remove();else seen[k]=1;});}
+  function go(){
+    s.parentNode.insertBefore(document.importNode(t.content,true), s.nextSibling);
+    var obs=new MutationObserver(function(){var r=document.getElementById('dc-root');
+      if(r&&r.firstElementChild){obs.disconnect();setTimeout(function(){s.remove();dedupe();setTimeout(dedupe,1500);},60);}});
+    obs.observe(document.body,{childList:true,subtree:true});
+    load('/image-slot.js',function(){load('/support.js');});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go();
+})();
+</script>
+
+</body></html>

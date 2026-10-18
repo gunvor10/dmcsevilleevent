@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><base href="/"/><style>
+    .sc-placeholder{background:color-mix(in srgb,currentColor 8%,transparent);
+      border:1px solid color-mix(in srgb,currentColor 50%,transparent);
+      border-radius:2px;box-sizing:border-box;overflow:hidden}
+    @keyframes sc-shine{0%{background-position:100% 50%}100%{background-position:0% 50%}}
+    html.sc-dc-streaming .sc-placeholder,
+    html.sc-dc-streaming .sc-interp.sc-missing{position:relative;
+      background:color-mix(in srgb,currentColor 5%,transparent);
+      border-color:transparent}
+    html.sc-dc-streaming .sc-placeholder::before,
+    html.sc-dc-streaming .sc-interp.sc-missing::before{content:'';
+      position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg,rgba(217,119,87,0) 25%,rgba(247,225,211,.95) 37%,rgba(217,119,87,0) 63%);
+      background-size:400% 100%;animation:sc-shine 1.4s ease infinite}
+    html.sc-dc-streaming .sc-placeholder:nth-child(n+9 of .sc-placeholder)::before,
+    html.sc-dc-streaming .sc-interp.sc-missing:nth-child(n+9 of .sc-interp.sc-missing)::before{animation:none;
+      background:color-mix(in srgb,currentColor 8%,transparent)}
+    .sc-placeholder-error{padding:4px 8px;font:11px/1.4 ui-monospace,monospace;
+      color:color-mix(in srgb,currentColor 70%,transparent);word-break:break-word}
+    .sc-interp.sc-missing{display:inline-block;width:2em;height:1em;overflow:hidden;
+      vertical-align:text-bottom;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
+      border-radius:2px;box-sizing:border-box;color:transparent;
+      user-select:none}
+    .sc-interp.sc-unresolved{font-family:ui-monospace,monospace;font-size:.85em;
+      color:color-mix(in srgb,currentColor 50%,transparent);
+      background:color-mix(in srgb,currentColor 10%,transparent);border-radius:3px;
+      padding:0 3px}
+    .sc-host.sc-has-error{position:relative}
+    .sc-logic-error{position:absolute;top:8px;left:8px;z-index:2147483647;max-width:60ch;
+      padding:6px 10px;background:#b00020;color:#fff;font:12px/1.4 ui-monospace,monospace;
+      border-radius:4px;white-space:pre-wrap;pointer-events:none}
+    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts — keep both
+       in sync until dc-runtime regains a build step. */
+    @media print {
+      @page { margin: 0.5cm; }
+      figure, table { break-inside: avoid; }
+      #dc-root, #dc-root > .sc-host { height: auto; }
+      *, *::before, *::after {
+        print-color-adjust: exact; -webkit-print-color-adjust: exact;
+        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+        animation-delay: -99s !important; animation-duration: .001s !important;
+        animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+        animation-play-state: running !important; transition-duration: 0s !important;
+      }
+    }
+  </style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Concierge Services Seville | Luxury Lifestyle &amp; Event Assistance</title>
+<meta content="Experience Seville with ease and elegance. Our bespoke concierge services offer VIP support for travel, events, and personal requests." name="description"/>
+<link href="https://www.dmcsevilleevent.com/trip/concierge-services-seville/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="DMC Seville Event" property="og:site_name"/>
+<meta content="en_GB" property="og:locale"/>
+<meta content="Concierge Services Seville | Luxury Lifestyle &amp; Event Assistance" property="og:title"/>
+<meta content="Experience Seville with ease and elegance. Our bespoke concierge services offer VIP support for travel, events, and personal requests." property="og:description"/>
+<meta content="https://www.dmcsevilleevent.com/trip/concierge-services-seville/" property="og:url"/>
+<meta content="https://www.dmcsevilleevent.com/uploads/battur-seville2.webp" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Who are concierge services in Seville designed for?","acceptedAnswer":{"@type":"Answer","text":"Individuals, VIP travelers, groups and corporate guests who expect efficiency, discretion and exclusive access during their stay in Seville."}},{"@type":"Question","name":"What kind of requests can your concierge team handle?","acceptedAnswer":{"@type":"Answer","text":"From private transfers and last-minute restaurant bookings to personal shopping, private chefs and full lifestyle management — no request is too small or too complex."}},{"@type":"Question","name":"Do you provide concierge support for corporate events?","acceptedAnswer":{"@type":"Answer","text":"Yes, we offer corporate concierge and executive support for both large conferences and intimate corporate gatherings."}},{"@type":"Question","name":"How quickly can concierge requests be arranged?","acceptedAnswer":{"@type":"Answer","text":"Our team offers rapid response for most requests, including last-minute reservations, thanks to strong local partnerships."}},{"@type":"Question","name":"Is the concierge team bilingual?","acceptedAnswer":{"@type":"Answer","text":"Yes, our concierge team is bilingual and professional, ensuring smooth communication throughout your stay."}},{"@type":"Question","name":"Can concierge services be combined with group travel or MICE programs?","acceptedAnswer":{"@type":"Answer","text":"Yes — concierge services integrate seamlessly with our group travel and MICE event services for a fully coordinated experience."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Concierge Services","name":"Concierge Services Seville","description":"Experience Seville with ease and elegance. Our bespoke concierge services offer VIP support for travel, events, and personal requests.","areaServed":{"@type":"City","name":"Seville"},"url":"https://www.dmcsevilleevent.com/trip/concierge-services-seville/","provider":{"@type":"LocalBusiness","name":"DMC Seville Event","telephone":"+34637878768","url":"https://www.dmcsevilleevent.com","address":{"@type":"PostalAddress","streetAddress":"C/ Milano Govinda 35","addressLocality":"Sevilla","postalCode":"41020","addressCountry":"ES"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.dmcsevilleevent.com/"},{"@type":"ListItem","position":2,"name":"Concierge Services Seville","item":"https://www.dmcsevilleevent.com/trip/concierge-services-seville/"}]}]}</script>
+<style>x-dc{display:none!important}</style>
+<style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><style></style><link data-dc-tpl="1" href="https://fonts.googleapis.com" rel="preconnect"/><link data-dc-tpl="2" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;family=Varela+Round&amp;display=swap" rel="stylesheet"/><style data-dc-tpl="4">.fade-el{opacity:1;}nsform:none !important;}.tint-band{background:#f6f4ef;}.faq-cols-2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr));}.faq-cols-1{grid-template-columns:1fr;}.hero-h-360{height:clamp(440px,78vh,760px);height:clamp(440px,78svh,760px);}.hero-h-260{height:260px;}.hero-h-full{height:calc(100vh - 120px);min-height:520px;max-height:860px;}.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}@media (max-width:900px){.related-grid{grid-template-columns:repeat(2,1fr);}}@media (max-width:560px){.related-grid{grid-template-columns:1fr;}}@keyframes heroSlideFade4{0%,100%{opacity:0;}2%{opacity:1;}23%{opacity:1;}25%{opacity:0;}}@keyframes heroSlideFade5{0%,100%{opacity:0;}1.6%{opacity:1;}18.4%{opacity:1;}20%{opacity:0;}}body{margin:0;}a{text-decoration:none;}*{box-sizing:border-box;}</style><style data-dc-tpl="3">a{text-decoration:none;}*{box-sizing:border-box;}</style><style data-dc-tpl="3">a{text-decoration:none;color:#cfe3e4;}a:hover{color:#ff5d1a;}</style><style>x-dc{display:none!important}</style><meta content="H0RdhqivH3abdaZlze3v44QQ5XISVadKqWreEA0e7PA" name="google-site-verification"/>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+var c=null;try{c=localStorage.getItem('dmc-consent');}catch(e){}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:c==='yes'?'granted':'denied'});
+gtag('js',new Date());gtag('config','G-EN4YBPBV42');
+</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EN4YBPBV42"></script></head>
+<body>
+<div id="dc-static"><div class="sc-host" data-sc-name="Service-Concierge"><div class="sc-host" data-dc-tpl="0" data-sc-name="ServicePage"><div class="" data-dc-tpl="5" style="font-family: Montserrat, sans-serif; color: rgb(31, 45, 51); background: rgb(255, 253, 251);">
+<div class="sc-host" data-dc-tpl="6" data-sc-name="SiteHeader"><div data-dc-tpl="4" style="font-family: Montserrat, sans-serif; position: relative; z-index: 50;">
+<div data-dc-tpl="5" style="position: fixed; top: 0px; left: 0px; height: 3px; background: rgb(255, 93, 26); width: 0%; z-index: 200;"></div>
+<div data-dc-tpl="6" style='background: rgb(21, 202, 210); color: rgb(255, 255, 255); font-family: "Varela Round", sans-serif; font-size: 13px; padding: 8px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;'>
+<div data-dc-tpl="7" style="display: flex; gap: 20px; flex-wrap: wrap;">
+<span data-dc-tpl="8">+34 637 87 87 68</span>
+<span data-dc-tpl="9">events@dmcsevilleevent.com</span>
+</div>
+<div data-dc-tpl="10" style="display: flex; gap: 14px;">
+<a data-dc-tpl="11" href="https://www.facebook.com/Sevillaprivateguidegunvor/" style="color: rgb(255, 255, 255);">Facebook</a>
+<a data-dc-tpl="12" href="https://www.instagram.com/sevillaprivateguide_gunvor/" style="color: rgb(255, 255, 255);">Instagram</a>
+<a data-dc-tpl="13" href="https://www.linkedin.com/in/gunvor-guttormsen-ba05a728/" style="color: rgb(255, 255, 255);">LinkedIn</a>
+</div>
+</div>
+<header data-dc-tpl="14" style="display: flex; align-items: center; justify-content: space-between; padding: 16px 32px; background: rgb(255, 255, 255); flex-wrap: wrap; gap: 16px; box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 0px;">
+<a data-dc-tpl="15" href="/"><img alt="DMC Seville Event" data-dc-tpl="16" fetchpriority="high" src="/assets/dmc-logo-cropped.webp" style="height: 64px; width: auto; object-fit: contain;"/></a>
+<nav data-dc-tpl="17" style='display: flex; gap: 28px; flex-wrap: wrap; font-family: "Varela Round", sans-serif; font-size: 15px; font-weight: 400; align-items: center;'>
+<div data-dc-tpl="18" style="position: relative;">
+<button data-dc-tpl="19" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>MICE</button>
+</div>
+<div data-dc-tpl="32" style="position: relative;">
+<button data-dc-tpl="33" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>GROUPS</button>
+</div>
+<div data-dc-tpl="40" style="position: relative;">
+<button data-dc-tpl="41" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>DESTINATIONS</button>
+</div>
+<div data-dc-tpl="52" style="position: relative;">
+<button data-dc-tpl="53" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>GET IN TOUCH</button>
+</div>
+<a data-dc-tpl="59" href="/inspiration/" style="color: rgb(31, 45, 51);">INSPIRATION / BLOG</a>
+</nav>
+</header></div></div>
+<section class="hero-h-360" data-dc-tpl="7" style="position: relative; overflow: hidden;">
+<img alt="Concierge Services Seville — hero image" decoding="async" loading="lazy" src="/fotos/concierge-service/concierge-service-hero-seville-river-sunset.webp" style="position: absolute; inset: 0px; width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/>
+<div data-dc-tpl="11" style="position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px; color: rgb(255, 255, 255); text-shadow: rgba(0, 0, 0, 0.55) 0px 2px 10px;">
+<h1 data-dc-tpl="12" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(30px, 4.5vw, 48px); margin: 0px 0px 12px; max-width: 800px; text-transform: uppercase; letter-spacing: 1px;"><span class="sc-interp">Concierge Services Seville</span></h1>
+<p data-dc-tpl="13" style="font-family: Montserrat, sans-serif; font-weight: 300; font-size: 17px; max-width: 600px; margin: 0px;"><span class="sc-interp">Your personal gateway to the city.</span></p>
+</div>
+</section>
+<section data-dc-tpl="15" style="padding: 80px 32px 0px; text-align: center;">
+<h2 data-dc-tpl="16" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(24px, 3.2vw, 34px); color: rgb(21, 202, 210); margin: 0px auto; max-width: 800px;"><span class="sc-interp">Concierge Services Seville</span></h2>
+</section>
+<section data-dc-tpl="17" style="max-width: 1200px; margin: 0px auto; padding: 80px 32px 0px; display: grid; grid-template-columns: minmax(0px, 1.3fr) minmax(0px, 0.9fr); gap: 52px; align-items: start;">
+<p data-dc-tpl="18" style="font-weight: 300; font-size: 16.5px; line-height: 1.85; color: rgb(61, 74, 80); margin: 0px; white-space: pre-wrap;"><span class="sc-interp">Enjoy the best of Seville without the stress of planning. Our luxury concierge services in Seville are designed for individuals, VIP travelers, groups, and corporate guests who expect efficiency, discretion, and exclusive access.
+
+Whether you need private transfers, last-minute reservations, personal shoppers, or full lifestyle management, DMC Seville Event delivers it with professionalism and flair.
+
+Our concierge service goes beyond logistics — we offer personalized, high-end assistance for clients who value time, comfort, and curated experiences. No request is too small or too complex.
+
+Whether you're in Seville for leisure, business, or a special event — including large conferences and intimate corporate gatherings — our local knowledge and elite network open doors to the best the city has to offer.</span></p>
+<div class="fade-el" data-dc-tpl="19" style="width: 100%; height: 460px; border-radius: 4px; overflow: hidden;"><img alt="Concierge Services Seville — vertical photo" decoding="async" loading="lazy" src="/fotos/concierge-service/concierge-service-private-cathedral-rooftop-visit.webp" style="width: 100%; height: 100%; transition: transform 0.5s;;display:block;object-fit:cover;border-radius:4px"/></div>
+</section>
+<div class="tint-band" data-dc-tpl="21" style="padding: 80px 0px 88px; margin-top: 64px;">
+<section data-dc-tpl="22" style="max-width: 1200px; margin: 0px auto; padding: 0px 32px;">
+<h2 data-dc-tpl="23" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(20px, 2.6vw, 26px); color: rgb(31, 45, 51); margin: 0px 0px 8px; text-align: center;">What We Offer</h2>
+</section>
+<section data-dc-tpl="26" style="max-width: 1200px; margin: 0px auto; padding: 24px 32px 0px; display: grid; grid-template-columns: minmax(0px, 0.8fr) minmax(0px, 1fr); gap: 24px;">
+<div class="fade-el" data-dc-tpl="27" style="width: 100%; height: 420px; border-radius: 4px; overflow: hidden;"><img alt="Concierge Services Seville — vertical photo" decoding="async" loading="lazy" src="/uploads/gala-dinner-sevilla4.webp" style="width: 100%; height: 100%; transition: transform 0.5s;;display:block;object-fit:cover;border-radius:4px"/></div>
+<div data-dc-tpl="29" style="display: grid; grid-template-columns: repeat(2, minmax(0px, 1fr)); gap: 16px; align-content: start;">
+<div data-dc-tpl="31" style="display: flex; gap: 12px; align-items: flex-start; background: rgb(255, 255, 255); border-radius: 6px; padding: 18px;">
+<span data-dc-tpl="32" style="font-family: Montserrat, sans-serif; color: rgb(255, 93, 26); font-weight: 800; font-size: 12px; letter-spacing: 0.5px; background: rgb(246, 244, 240); border-radius: 4px; padding: 3px 7px; flex-shrink: 0;"><span class="sc-interp">01</span></span>
+<span data-dc-tpl="33" style="font-weight: 400; font-size: 14.5px; line-height: 1.5;"><span class="sc-interp">VIP airport meet &amp; greet</span></span>
+</div>
+<div data-dc-tpl="31" style="display: flex; gap: 12px; align-items: flex-start; background: rgb(255, 255, 255); border-radius: 6px; padding: 18px;">
+<span data-dc-tpl="32" style="font-family: Montserrat, sans-serif; color: rgb(255, 93, 26); font-weight: 800; font-size: 12px; letter-spacing: 0.5px; background: rgb(246, 244, 240); border-radius: 4px; padding: 3px 7px; flex-shrink: 0;"><span class="sc-interp">02</span></span>
+<span data-dc-tpl="33" style="font-weight: 400; font-size: 14.5px; line-height: 1.5;"><span class="sc-interp">Private luxury transport (chauffeur, executive vans, limos)</span></span>
+</div>
+<div data-dc-tpl="31" style="display: flex; gap: 12px; align-items: flex-start; background: rgb(255, 255, 255); border-radius: 6px; padding: 18px;">
+<span data-dc-tpl="32" style="font-family: Montserrat, sans-serif; color: rgb(255, 93, 26); font-weight: 800; font-size: 12px; letter-spacing: 0.5px; background: rgb(246, 244, 240); border-radius: 4px; padding: 3px 7px; flex-shrink: 0;"><span class="sc-interp">03</span></span>
+<span data-dc-tpl="33" style="font-weight: 400; font-size: 14.5px; line-height: 1.5;"><span class="sc-interp">Last-minute restaurant &amp; show bookings</span></span>
+</div>
+<div data-dc-tpl="31" style="display: flex; gap: 12px; align-items: flex-start; background: rgb(255, 255, 255); border-radius: 6px; padding: 18px;">
+<span data-dc-tpl="32" style="font-family: Montserrat, sans-serif; color: rgb(255, 93, 26); font-weight: 800; font-size: 12px; letter-spacing: 0.5px; background: rgb(246, 244, 240); border-radius: 4px; padding: 3px 7px; flex-shrink: 0;"><span class="sc-interp">04</span></span>
+<span data-dc-tpl="33" style="font-weight: 400; font-size: 14.5px; line-height: 1.5;"><span class="sc-interp">Cultural experiences, private guides &amp; backstage access</span></span>
+</div>
+<div data-dc-tpl="31" style="display: flex; gap: 12px; align-items: flex-start; background: rgb(255, 255, 255); border-radius: 6px; padding: 18px;">
+<span data-dc-tpl="32" style="font-family: Montserrat, sans-serif; color: rgb(255, 93, 26); font-weight: 800; font-size: 12px; letter-spacing: 0.5px; background: rgb(246, 244, 240); border-radius: 4px; padding: 3px 7px; flex-shrink: 0;"><span class="sc-interp">05</span></span>
+<span data-dc-tpl="33" style="font-weight: 400; font-size: 14.5px; line-height: 1.5;"><span class="sc-interp">Personal shopping &amp; styling</span></span>
+</div>
+<div data-dc-tpl="31" style="display: flex; gap: 12px; align-items: flex-start; background: rgb(255, 255, 255); border-radius: 6px; padding: 18px;">
+<span data-dc-tpl="32" style="font-family: Montserrat, sans-serif; color: rgb(255, 93, 26); font-weight: 800; font-size: 12px; letter-spacing: 0.5px; background: rgb(246, 244, 240); border-radius: 4px; padding: 3px 7px; flex-shrink: 0;"><span class="sc-interp">06</span></span>
+<span data-dc-tpl="33" style="font-weight: 400; font-size: 14.5px; line-height: 1.5;"><span class="sc-interp">On-demand event staffing (hostesses, security, translators)</span></span>
+</div>
+<div data-dc-tpl="31" style="display: flex; gap: 12px; align-items: flex-start; background: rgb(255, 255, 255); border-radius: 6px; padding: 18px;">
+<span data-dc-tpl="32" style="font-family: Montserrat, sans-serif; color: rgb(255, 93, 26); font-weight: 800; font-size: 12px; letter-spacing: 0.5px; background: rgb(246, 244, 240); border-radius: 4px; padding: 3px 7px; flex-shrink: 0;"><span class="sc-interp">07</span></span>
+<span data-dc-tpl="33" style="font-weight: 400; font-size: 14.5px; line-height: 1.5;"><span class="sc-interp">Luxury villa &amp; hotel reservations</span></span>
+</div>
+<div data-dc-tpl="31" style="display: flex; gap: 12px; align-items: flex-start; background: rgb(255, 255, 255); border-radius: 6px; padding: 18px;">
+<span data-dc-tpl="32" style="font-family: Montserrat, sans-serif; color: rgb(255, 93, 26); font-weight: 800; font-size: 12px; letter-spacing: 0.5px; background: rgb(246, 244, 240); border-radius: 4px; padding: 3px 7px; flex-shrink: 0;"><span class="sc-interp">08</span></span>
+<span data-dc-tpl="33" style="font-weight: 400; font-size: 14.5px; line-height: 1.5;"><span class="sc-interp">Private chefs, wellness services &amp; spa bookings</span></span>
+</div>
+<div data-dc-tpl="31" style="display: flex; gap: 12px; align-items: flex-start; background: rgb(255, 255, 255); border-radius: 6px; padding: 18px;">
+<span data-dc-tpl="32" style="font-family: Montserrat, sans-serif; color: rgb(255, 93, 26); font-weight: 800; font-size: 12px; letter-spacing: 0.5px; background: rgb(246, 244, 240); border-radius: 4px; padding: 3px 7px; flex-shrink: 0;"><span class="sc-interp">09</span></span>
+<span data-dc-tpl="33" style="font-weight: 400; font-size: 14.5px; line-height: 1.5;"><span class="sc-interp">Corporate concierge &amp; executive support during events</span></span>
+</div>
+</div>
+</section>
+</div>
+<section data-dc-tpl="35" style="max-width: 900px; margin: 0px auto; padding: 110px 32px; text-align: center;">
+<div data-dc-tpl="36" style="font-family: Georgia, serif; color: rgb(255, 93, 26); font-size: 48px; line-height: 1; margin-bottom: 8px;">“</div>
+<p data-dc-tpl="37" style="font-family: Montserrat, sans-serif; font-weight: 500; font-style: italic; font-size: clamp(19px, 2.4vw, 24px); line-height: 1.5; color: rgb(255, 93, 26); margin: 0px;"><span class="sc-interp">True luxury is having every detail taken care of — even before you ask.</span></p>
+</section>
+<section data-dc-tpl="39" style="max-width: 1200px; margin: 0px auto; padding: 96px 32px 0px; display: grid; grid-template-columns: minmax(0px, 1fr) minmax(0px, 0.8fr); gap: 48px; align-items: center;">
+<div data-dc-tpl="40">
+<h2 data-dc-tpl="41" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(22px, 2.8vw, 28px); color: rgb(31, 45, 51); margin: 0px 0px 14px;"><span class="sc-interp">Concierge Services</span></h2>
+<p data-dc-tpl="43" style="font-weight: 700; font-size: 16px; color: rgb(31, 45, 51); margin: 0px 0px 8px;"><span class="sc-interp">End-to-End Services for Your Stay in Seville</span></p>
+<p data-dc-tpl="44" style="font-weight: 300; font-size: 15.5px; line-height: 1.75; color: rgb(61, 74, 80); margin: 0px 0px 8px; white-space: pre-wrap;"><span class="sc-interp">As a local DMC with deep expertise, we provide full-service planning and on-site coordination. Our tailored concierge solutions in Seville are stress-free and impactful. Every service is bespoke and tailored to your preferences.
+
+We offer:</span></p>
+<ul data-dc-tpl="45" style="list-style: none; margin: 16px 0px 0px; padding: 0px; display: flex; flex-direction: column; gap: 10px;">
+<li data-dc-tpl="47" style="display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 15px; line-height: 1.5; color: rgb(61, 74, 80);"><span data-dc-tpl="48" style="width: 6px; height: 6px; border-radius: 50%; background: rgb(21, 202, 210); margin-top: 7px; flex-shrink: 0;"></span><span class="sc-interp">VIP airport meet &amp; greet</span></li>
+<li data-dc-tpl="47" style="display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 15px; line-height: 1.5; color: rgb(61, 74, 80);"><span data-dc-tpl="48" style="width: 6px; height: 6px; border-radius: 50%; background: rgb(21, 202, 210); margin-top: 7px; flex-shrink: 0;"></span><span class="sc-interp">Private luxury transport (chauffeur, executive vans, limos)</span></li>
+<li data-dc-tpl="47" style="display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 15px; line-height: 1.5; color: rgb(61, 74, 80);"><span data-dc-tpl="48" style="width: 6px; height: 6px; border-radius: 50%; background: rgb(21, 202, 210); margin-top: 7px; flex-shrink: 0;"></span><span class="sc-interp">Last-minute restaurant &amp; show bookings</span></li>
+<li data-dc-tpl="47" style="display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 15px; line-height: 1.5; color: rgb(61, 74, 80);"><span data-dc-tpl="48" style="width: 6px; height: 6px; border-radius: 50%; background: rgb(21, 202, 210); margin-top: 7px; flex-shrink: 0;"></span><span class="sc-interp">Cultural experiences, private guides &amp; backstage access</span></li>
+<li data-dc-tpl="47" style="display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 15px; line-height: 1.5; color: rgb(61, 74, 80);"><span data-dc-tpl="48" style="width: 6px; height: 6px; border-radius: 50%; background: rgb(21, 202, 210); margin-top: 7px; flex-shrink: 0;"></span><span class="sc-interp">Personal shopping &amp; styling</span></li>
+<li data-dc-tpl="47" style="display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 15px; line-height: 1.5; color: rgb(61, 74, 80);"><span data-dc-tpl="48" style="width: 6px; height: 6px; border-radius: 50%; background: rgb(21, 202, 210); margin-top: 7px; flex-shrink: 0;"></span><span class="sc-interp">On-demand event staffing (hostesses, security, translators)</span></li>
+<li data-dc-tpl="47" style="display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 15px; line-height: 1.5; color: rgb(61, 74, 80);"><span data-dc-tpl="48" style="width: 6px; height: 6px; border-radius: 50%; background: rgb(21, 202, 210); margin-top: 7px; flex-shrink: 0;"></span><span class="sc-interp">Luxury villa &amp; hotel reservations</span></li>
+<li data-dc-tpl="47" style="display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 15px; line-height: 1.5; color: rgb(61, 74, 80);"><span data-dc-tpl="48" style="width: 6px; height: 6px; border-radius: 50%; background: rgb(21, 202, 210); margin-top: 7px; flex-shrink: 0;"></span><span class="sc-interp">Private chefs, wellness services &amp; spa bookings</span></li>
+</ul>
+</div>
+<div data-dc-tpl="51" style="width: 100%; height: 380px; border-radius: 4px; overflow: hidden;"><img alt="Concierge Services Seville — programs photo" decoding="async" loading="lazy" src="/fotos/concierge-service/concierge-service-private-chauffeur-mercedes-fleet.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:4px"/></div>
+</section>
+<section data-dc-tpl="54" style="max-width: 1200px; margin: 0px auto; padding: 96px 32px 0px; display: grid; grid-template-columns: minmax(0px, 0.8fr) minmax(0px, 1fr); gap: 48px; align-items: center;">
+<div data-dc-tpl="55" style="width: 100%; height: 380px; border-radius: 4px; overflow: hidden;"><img alt="Concierge Services Seville — destination photo" decoding="async" loading="lazy" src="/fotos/concierge-service/concierge-service-seville-giralda-at-sunset.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:4px"/></div>
+<div data-dc-tpl="57">
+<h2 data-dc-tpl="58" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(22px, 2.8vw, 28px); color: rgb(31, 45, 51); margin: 0px 0px 14px;"><span class="sc-interp">Why Book Concierge Services in Seville?</span></h2>
+<p data-dc-tpl="59" style="font-weight: 300; font-size: 15.5px; line-height: 1.75; color: rgb(61, 74, 80); margin: 0px 0px 8px; white-space: pre-wrap;"><span class="sc-interp">Seville isn’t just a beautiful destination — it’s a city where culture, luxury and lifestyle blend effortlessly. From its Moorish palaces and flamenco soul to modern luxury amenities, Seville is the perfect setting for curated, high-end experiences.</span></p>
+<ul data-dc-tpl="60" style="list-style: none; margin: 16px 0px 0px; padding: 0px; display: flex; flex-direction: column; gap: 10px;">
+<li data-dc-tpl="62" style="display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 15px; line-height: 1.5; color: rgb(61, 74, 80);"><span data-dc-tpl="63" style="width: 6px; height: 6px; border-radius: 50%; background: rgb(21, 202, 210); margin-top: 7px; flex-shrink: 0;"></span><span class="sc-interp">World-class gastronomy with Michelin restaurants &amp; hidden gems</span></li>
+<li data-dc-tpl="62" style="display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 15px; line-height: 1.5; color: rgb(61, 74, 80);"><span data-dc-tpl="63" style="width: 6px; height: 6px; border-radius: 50%; background: rgb(21, 202, 210); margin-top: 7px; flex-shrink: 0;"></span><span class="sc-interp">Cultural richness — private flamenco shows &amp; exclusive art access</span></li>
+<li data-dc-tpl="62" style="display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 15px; line-height: 1.5; color: rgb(61, 74, 80);"><span data-dc-tpl="63" style="width: 6px; height: 6px; border-radius: 50%; background: rgb(21, 202, 210); margin-top: 7px; flex-shrink: 0;"></span><span class="sc-interp">Luxury accommodations, villas &amp; boutique hotels</span></li>
+<li data-dc-tpl="62" style="display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 15px; line-height: 1.5; color: rgb(61, 74, 80);"><span data-dc-tpl="63" style="width: 6px; height: 6px; border-radius: 50%; background: rgb(21, 202, 210); margin-top: 7px; flex-shrink: 0;"></span><span class="sc-interp">Excellent connectivity — high-speed trains &amp; major international airport</span></li>
+<li data-dc-tpl="62" style="display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 15px; line-height: 1.5; color: rgb(61, 74, 80);"><span data-dc-tpl="63" style="width: 6px; height: 6px; border-radius: 50%; background: rgb(21, 202, 210); margin-top: 7px; flex-shrink: 0;"></span><span class="sc-interp">Mild climate and year-round outdoor lifestyle</span></li>
+<li data-dc-tpl="62" style="display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 15px; line-height: 1.5; color: rgb(61, 74, 80);"><span data-dc-tpl="63" style="width: 6px; height: 6px; border-radius: 50%; background: rgb(21, 202, 210); margin-top: 7px; flex-shrink: 0;"></span><span class="sc-interp">A perfect mix of old-world charm and modern comfort</span></li>
+</ul>
+</div>
+</section>
+<section data-dc-tpl="65" style="max-width: 1200px; margin: 0px auto; padding: 96px 32px 0px; display: grid; grid-template-columns: minmax(0px, 1fr) minmax(0px, 0.8fr); gap: 48px; align-items: center;">
+<div data-dc-tpl="66">
+<h2 data-dc-tpl="67" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(22px, 2.8vw, 28px); color: rgb(31, 45, 51); margin: 0px 0px 14px;"><span class="sc-interp">Why Work with DMC Seville Event for Concierge Services?</span></h2>
+<p data-dc-tpl="68" style="font-weight: 300; font-size: 15.5px; line-height: 1.75; color: rgb(61, 74, 80); margin: 0px 0px 8px; white-space: pre-wrap;"><span class="sc-interp">We are not just locals — we are insiders. With over a decade of experience supporting international guests, VIP clients and event planners, we ensure every detail is handled with care and precision.</span></p>
+<ul data-dc-tpl="69" style="list-style: none; margin: 16px 0px 0px; padding: 0px; display: flex; flex-direction: column; gap: 10px;">
+<li data-dc-tpl="71" style="display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 15px; line-height: 1.5; color: rgb(61, 74, 80);"><span data-dc-tpl="72" style="width: 6px; height: 6px; border-radius: 50%; background: rgb(21, 202, 210); margin-top: 7px; flex-shrink: 0;"></span><span class="sc-interp">100% tailor-made services</span></li>
+<li data-dc-tpl="71" style="display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 15px; line-height: 1.5; color: rgb(61, 74, 80);"><span data-dc-tpl="72" style="width: 6px; height: 6px; border-radius: 50%; background: rgb(21, 202, 210); margin-top: 7px; flex-shrink: 0;"></span><span class="sc-interp">Bilingual, professional concierge team</span></li>
+<li data-dc-tpl="71" style="display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 15px; line-height: 1.5; color: rgb(61, 74, 80);"><span data-dc-tpl="72" style="width: 6px; height: 6px; border-radius: 50%; background: rgb(21, 202, 210); margin-top: 7px; flex-shrink: 0;"></span><span class="sc-interp">Rapid response and availability</span></li>
+<li data-dc-tpl="71" style="display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 15px; line-height: 1.5; color: rgb(61, 74, 80);"><span data-dc-tpl="72" style="width: 6px; height: 6px; border-radius: 50%; background: rgb(21, 202, 210); margin-top: 7px; flex-shrink: 0;"></span><span class="sc-interp">Partnerships with top local vendors, venues &amp; brands</span></li>
+<li data-dc-tpl="71" style="display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 15px; line-height: 1.5; color: rgb(61, 74, 80);"><span data-dc-tpl="72" style="width: 6px; height: 6px; border-radius: 50%; background: rgb(21, 202, 210); margin-top: 7px; flex-shrink: 0;"></span><span class="sc-interp">Seamless coordination with your event or travel itinerary</span></li>
+</ul>
+</div>
+<div data-dc-tpl="73" style="width: 100%; height: 380px; border-radius: 4px; overflow: hidden;"><img alt="Concierge Services Seville — team photo" decoding="async" loading="lazy" src="/uploads/gala-dinner-sevilla8.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:4px"/></div>
+</section>
+<section data-dc-tpl="75" style="max-width: 1200px; margin: 0px auto; padding: 96px 32px 90px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">
+<div data-dc-tpl="76">
+<div class="fade-el" data-dc-tpl="77" style="width: 100%; height: 280px; border-radius: 4px; overflow: hidden;"><img alt="Concierge Services Seville photo" decoding="async" loading="lazy" src="/uploads/sevilla-gala-dinner10.webp" style="width: 100%; height: 100%; transition: transform 0.5s;;display:block;object-fit:cover;border-radius:4px"/></div>
+</div>
+<div data-dc-tpl="81">
+<div class="fade-el" data-dc-tpl="82" style="width: 100%; height: 280px; border-radius: 4px; overflow: hidden;"><img alt="Concierge Services Seville photo" decoding="async" loading="lazy" src="/fotos/concierge-service/concierge-service-luxury-hotel-pool.webp" style="width: 100%; height: 100%; transition: transform 0.5s;;display:block;object-fit:cover;border-radius:4px"/></div>
+</div>
+<div data-dc-tpl="86">
+<div class="fade-el" data-dc-tpl="87" style="width: 100%; height: 280px; border-radius: 4px; overflow: hidden;"><img alt="Concierge Services Seville photo" decoding="async" loading="lazy" src="/uploads/private-tour-to-granada-16.webp" style="width: 100%; height: 100%; transition: transform 0.5s;;display:block;object-fit:cover;border-radius:4px"/></div>
+</div>
+</section>
+<section data-dc-tpl="115" style="background: rgb(234, 246, 246); padding: 60px 32px 50px;">
+<div data-dc-tpl="116" style="max-width: 820px; margin: 0px auto; display: flex; align-items: center; gap: 40px; flex-wrap: wrap; justify-content: center; text-align: center;">
+<div data-dc-tpl="117" style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; flex: 0 0 auto;"><img alt="Gunvor Guttormsen in front of Macarena church, Seville" decoding="async" loading="lazy" src="/uploads/gunvor-guttormsen-macarena-church-seville.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:50%"/></div>
+<div data-dc-tpl="119" style="flex: 1 1 0%; min-width: 240px; text-align: left;">
+<h2 data-dc-tpl="120" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(20px, 2.6vw, 26px); margin: 0px 0px 12px;">We're Experts in <span class="sc-interp">Concierge Services Seville</span></h2>
+<p data-dc-tpl="121" style="font-weight: 300; font-size: 15.5px; line-height: 1.7; color: rgb(61, 74, 80); margin: 0px 0px 24px;">Planning <span class="sc-interp">Concierge Services Seville</span> in Seville? Send us an enquiry.</p>
+<a data-dc-tpl="122" href="/contact/" style='background: rgb(255, 93, 26); color: rgb(255, 255, 255); font-family: "Varela Round", sans-serif; font-weight: 600; padding: 14px 32px; border-radius: 2px; font-size: 15px; display: inline-block;'>Get In Touch</a>
+</div>
+</div>
+</section>
+<section data-dc-tpl="123" style="max-width: 1200px; margin: 0px auto; padding: 90px 32px;">
+<div data-dc-tpl="124" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px; text-align: center;'>FAQ</div>
+<h2 data-dc-tpl="125" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(24px, 3vw, 30px); margin: 0px 0px 24px; text-align: center;">Frequently Asked Questions — <span class="sc-interp">Concierge Services Seville</span></h2>
+<div class="faq-cols-2" data-dc-tpl="126" style="display: grid; gap: 0px 48px;">
+<div data-dc-tpl="128" style="border-bottom: 1px solid rgb(236, 231, 224); padding: 16px 0px;">
+<div data-dc-tpl="129" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 15.5px; margin: 0px 0px 6px;"><span class="sc-interp">Who are concierge services in Seville designed for?</span></div>
+<div data-dc-tpl="130" style="font-weight: 300; font-size: 14px; line-height: 1.55; color: rgb(61, 74, 80);"><span class="sc-interp">Individuals, VIP travelers, groups and corporate guests who expect efficiency, discretion and exclusive access during their stay in Seville.</span></div>
+</div>
+<div data-dc-tpl="128" style="border-bottom: 1px solid rgb(236, 231, 224); padding: 16px 0px;">
+<div data-dc-tpl="129" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 15.5px; margin: 0px 0px 6px;"><span class="sc-interp">What kind of requests can your concierge team handle?</span></div>
+<div data-dc-tpl="130" style="font-weight: 300; font-size: 14px; line-height: 1.55; color: rgb(61, 74, 80);"><span class="sc-interp">From private transfers and last-minute restaurant bookings to personal shopping, private chefs and full lifestyle management — no request is too small or too complex.</span></div>
+</div>
+<div data-dc-tpl="128" style="border-bottom: 1px solid rgb(236, 231, 224); padding: 16px 0px;">
+<div data-dc-tpl="129" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 15.5px; margin: 0px 0px 6px;"><span class="sc-interp">Do you provide concierge support for corporate events?</span></div>
+<div data-dc-tpl="130" style="font-weight: 300; font-size: 14px; line-height: 1.55; color: rgb(61, 74, 80);"><span class="sc-interp">Yes, we offer corporate concierge and executive support for both large conferences and intimate corporate gatherings.</span></div>
+</div>
+<div data-dc-tpl="128" style="border-bottom: 1px solid rgb(236, 231, 224); padding: 16px 0px;">
+<div data-dc-tpl="129" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 15.5px; margin: 0px 0px 6px;"><span class="sc-interp">How quickly can concierge requests be arranged?</span></div>
+<div data-dc-tpl="130" style="font-weight: 300; font-size: 14px; line-height: 1.55; color: rgb(61, 74, 80);"><span class="sc-interp">Our team offers rapid response for most requests, including last-minute reservations, thanks to strong local partnerships.</span></div>
+</div>
+<div data-dc-tpl="128" style="border-bottom: 1px solid rgb(236, 231, 224); padding: 16px 0px;">
+<div data-dc-tpl="129" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 15.5px; margin: 0px 0px 6px;"><span class="sc-interp">Is the concierge team bilingual?</span></div>
+<div data-dc-tpl="130" style="font-weight: 300; font-size: 14px; line-height: 1.55; color: rgb(61, 74, 80);"><span class="sc-interp">Yes, our concierge team is bilingual and professional, ensuring smooth communication throughout your stay.</span></div>
+</div>
+<div data-dc-tpl="128" style="border-bottom: 1px solid rgb(236, 231, 224); padding: 16px 0px;">
+<div data-dc-tpl="129" style="font-family: Montserrat, sans-serif; font-weight: 700; font-size: 15.5px; margin: 0px 0px 6px;"><span class="sc-interp">Can concierge services be combined with group travel or MICE programs?</span></div>
+<div data-dc-tpl="130" style="font-weight: 300; font-size: 14px; line-height: 1.55; color: rgb(61, 74, 80);"><span class="sc-interp">Yes — concierge services integrate seamlessly with our group travel and MICE event services for a fully coordinated experience.</span></div>
+</div>
+</div>
+</section>
+<section data-dc-tpl="132" style="max-width: 1200px; margin: 0px auto; padding: 40px 32px 60px; border-top: 1px solid rgb(236, 231, 224);">
+<div data-dc-tpl="133" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 16px; text-align: center;'>EXPLORE MORE</div>
+<div class="related-grid" data-dc-tpl="134">
+<a class="scp1" data-dc-tpl="136" href="/trip/tailor-made-trips-seville/" style="display: block; border-radius: 6px; overflow: hidden; background: rgb(246, 244, 240); transition: transform 0.3s;">
+<div data-dc-tpl="137" style="width: 100%; height: 130px; overflow: hidden;"><img alt="Tailor Made photo" decoding="async" loading="lazy" src="/uploads/day-trip-ronda-from-seville-10.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="139" style="padding: 12px 14px;"><span data-dc-tpl="140" style='font-family: "Varela Round", sans-serif; font-weight: 600; font-size: 14px; color: rgb(31, 45, 51);'><span class="sc-interp">Tailor Made</span></span></div>
+</a>
+<a class="scp1" data-dc-tpl="136" href="/trip/incoming-services-seville/" style="display: block; border-radius: 6px; overflow: hidden; background: rgb(246, 244, 240); transition: transform 0.3s;">
+<div data-dc-tpl="137" style="width: 100%; height: 130px; overflow: hidden;"><img alt="Incoming Services photo" decoding="async" loading="lazy" src="/uploads/bodega-andrada.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="139" style="padding: 12px 14px;"><span data-dc-tpl="140" style='font-family: "Varela Round", sans-serif; font-weight: 600; font-size: 14px; color: rgb(31, 45, 51);'><span class="sc-interp">Incoming Services</span></span></div>
+</a>
+<a class="scp1" data-dc-tpl="136" href="/group-travel-to-seville/" style="display: block; border-radius: 6px; overflow: hidden; background: rgb(246, 244, 240); transition: transform 0.3s;">
+<div data-dc-tpl="137" style="width: 100%; height: 130px; overflow: hidden;"><img alt="Groups photo" decoding="async" loading="lazy" src="/uploads/group-seville-2026-2.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="139" style="padding: 12px 14px;"><span data-dc-tpl="140" style='font-family: "Varela Round", sans-serif; font-weight: 600; font-size: 14px; color: rgb(31, 45, 51);'><span class="sc-interp">Groups</span></span></div>
+</a>
+</div>
+</section>
+<div class="sc-host" data-dc-tpl="141" data-sc-name="SiteFooter"><footer data-dc-tpl="4" style="background: rgb(13, 61, 64); color: rgb(207, 227, 228); padding: 60px 32px 30px; font-family: Montserrat, sans-serif; border-top: 4px solid rgb(21, 202, 210);">
+<div data-dc-tpl="5" style="max-width: 1200px; margin: 0px auto 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 36px;">
+<div data-dc-tpl="6">
+<a data-dc-tpl="7" href="/" style="display: inline-flex; background: rgb(255, 255, 255); border-radius: 6px; padding: 10px 14px; margin-bottom: 16px;"><img alt="DMC Seville Event" data-dc-tpl="8" loading="lazy" src="/assets/dmc-logo-cropped.webp" style="height: 60px; width: auto; object-fit: contain; display: block;"/></a>
+<p data-dc-tpl="9" style="font-weight: 300; font-size: 13.5px; line-height: 1.6;">C/ Milano Govinda 35, 41020 Sevilla, Spain</p>
+</div>
+<div data-dc-tpl="10">
+<h4 data-dc-tpl="11" style="font-weight: 700; color: rgb(255, 255, 255); font-size: 15px; margin: 0px 0px 14px;">Services</h4>
+<div data-dc-tpl="12" style="display: flex; flex-direction: column; gap: 8px; font-size: 13.5px; font-weight: 300;">
+<a data-dc-tpl="13" href="/trip/meetings-seville/">Meetings</a>
+<a data-dc-tpl="14" href="/trip/corporate-event-venue-seville/">Venue Finding</a>
+<a data-dc-tpl="15" href="/trip/corporate-incentive-trip-seville/">Corporate Incentive</a>
+<a data-dc-tpl="16" href="/trip/team-building-seville/">Team Building</a>
+<a data-dc-tpl="17" href="/group-travel-to-seville/">Group Travel</a>
+</div>
+</div>
+<div data-dc-tpl="18">
+<h4 data-dc-tpl="19" style="font-weight: 700; color: rgb(255, 255, 255); font-size: 15px; margin: 0px 0px 14px;">DMC Destinations in Andalusia</h4>
+<div data-dc-tpl="20" style="display: flex; flex-direction: column; gap: 8px; font-size: 13.5px; font-weight: 300;">
+<a data-dc-tpl="21" href="/incentive-trip-sevilla/">Incentive Trip Sevilla</a>
+<a data-dc-tpl="22" href="/dmc-malaga/">DMC Málaga</a>
+<a data-dc-tpl="23" href="/dmc-huelva/">DMC Huelva</a>
+<a data-dc-tpl="24" href="/dmc-cadiz/">DMC Cádiz</a>
+<a data-dc-tpl="25" href="/dmc-granada/">DMC Granada</a>
+<a data-dc-tpl="26" href="/dmc-cordoba/">DMC Córdoba</a>
+<a data-dc-tpl="27" href="/dmc-almeria/">DMC Almería</a>
+<a data-dc-tpl="28" href="/dmc-jaen/">DMC Jaén</a>
+</div>
+</div>
+<div data-dc-tpl="29">
+<h4 data-dc-tpl="30" style="font-weight: 700; color: rgb(255, 255, 255); font-size: 15px; margin: 0px 0px 14px;">Contact</h4>
+<p data-dc-tpl="31" style="font-weight: 300; font-size: 13.5px; line-height: 1.8; margin: 0px 0px 12px;">+34 637 87 87 68<br data-dc-tpl="32"/>events@dmcsevilleevent.com</p>
+<a data-dc-tpl="33" href="/contact/" style="color: rgb(21, 202, 210); font-weight: 500;">Contact Now</a>
+</div>
+</div>
+<div data-dc-tpl="34" style="text-align: center; font-size: 12.5px; font-weight: 300; border-top: 1px solid rgba(207, 227, 228, 0.2); padding-top: 22px; max-width: 1200px; margin: 0px auto;">© 2026 DMC Seville Event. All Rights Reserved.</div></footer></div></div></div></div></div><template id="dc-src"><x-dc>
+<dc-import name="ServicePage" title="{{ title }}" h1="{{ h1 }}" tagline="{{ tagline }}" description="{{ description }}" heading="{{ heading }}" quote="{{ quote }}" highlights="{{ highlights }}" related-services="{{ relatedServices }}" programs-heading="{{ programsHeading }}" programs-subhead="{{ programsSubhead }}" programs-intro="{{ programsIntro }}" programs-list="{{ programsList }}" why-destination-heading="{{ whyDestHeading }}" why-destination-intro="{{ whyDestIntro }}" why-destination-list="{{ whyDestList }}" why-us-heading="{{ whyUsHeading }}" why-us-intro="{{ whyUsIntro }}" why-us-list="{{ whyUsList }}" faqs="{{ faqs }}" hero-src="/fotos/concierge-service/concierge-service-hero-seville-river-sunset.webp" vertical1-src="/fotos/concierge-service/concierge-service-private-cathedral-rooftop-visit.webp" vertical2-src="/uploads/gala-dinner-sevilla4.webp" programs-src="/fotos/concierge-service/concierge-service-private-chauffeur-mercedes-fleet.webp" why-destination-src="/fotos/concierge-service/concierge-service-seville-giralda-at-sunset.webp" why-us-src="/uploads/gala-dinner-sevilla8.webp" strip1-src="/uploads/sevilla-gala-dinner10.webp" strip2-src="/fotos/concierge-service/concierge-service-luxury-hotel-pool.webp" strip3-src="/uploads/private-tour-to-granada-16.webp" hint-size="100%,3400"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="">
+
+class Component extends DCLogic {
+  renderVals() {
+    const relatedServices = [
+      {label: 'Tailor Made', key: 'tailormade', href: '/trip/tailor-made-trips-seville/', img: '/uploads/day-trip-ronda-from-seville-10.webp'},
+      {label: 'Incoming Services', key: 'incoming', href: '/trip/incoming-services-seville/', img: '/uploads/bodega-andrada.webp'},
+      {label: 'Groups', key: 'groups', href: '/group-travel-to-seville/', img: '/uploads/group-seville-2026-2.webp'}
+    ];
+    return {
+      title: 'Concierge Services Seville',
+      h1: 'Concierge Services Seville',
+      tagline: 'Your personal gateway to the city.',
+      heading: 'Concierge Services Seville',
+      quote: 'True luxury is having every detail taken care of — even before you ask.',
+      description: "Enjoy the best of Seville without the stress of planning. Our luxury concierge services in Seville are designed for individuals, VIP travelers, groups, and corporate guests who expect efficiency, discretion, and exclusive access.\n\nWhether you need private transfers, last-minute reservations, personal shoppers, or full lifestyle management, DMC Seville Event delivers it with professionalism and flair.\n\nOur concierge service goes beyond logistics — we offer personalized, high-end assistance for clients who value time, comfort, and curated experiences. No request is too small or too complex.\n\nWhether you're in Seville for leisure, business, or a special event — including large conferences and intimate corporate gatherings — our local knowledge and elite network open doors to the best the city has to offer.",
+      highlights: [
+        'VIP airport meet & greet',
+        'Private luxury transport (chauffeur, executive vans, limos)',
+        'Last-minute restaurant & show bookings',
+        'Cultural experiences, private guides & backstage access',
+        'Personal shopping & styling',
+        'On-demand event staffing (hostesses, security, translators)',
+        'Luxury villa & hotel reservations',
+        'Private chefs, wellness services & spa bookings',
+        'Corporate concierge & executive support during events'
+      ],
+      programsHeading: 'Concierge Services',
+      programsSubhead: 'End-to-End Services for Your Stay in Seville',
+      programsIntro: 'As a local DMC with deep expertise, we provide full-service planning and on-site coordination. Our tailored concierge solutions in Seville are stress-free and impactful. Every service is bespoke and tailored to your preferences.\n\nWe offer:',
+      programsList: [
+        'VIP airport meet & greet',
+        'Private luxury transport (chauffeur, executive vans, limos)',
+        'Last-minute restaurant & show bookings',
+        'Cultural experiences, private guides & backstage access',
+        'Personal shopping & styling',
+        'On-demand event staffing (hostesses, security, translators)',
+        'Luxury villa & hotel reservations',
+        'Private chefs, wellness services & spa bookings'
+      ],
+      whyDestHeading: 'Why Book Concierge Services in Seville?',
+      whyDestIntro: 'Seville isn\u2019t just a beautiful destination — it\u2019s a city where culture, luxury and lifestyle blend effortlessly. From its Moorish palaces and flamenco soul to modern luxury amenities, Seville is the perfect setting for curated, high-end experiences.',
+      whyDestList: [
+        'World-class gastronomy with Michelin restaurants & hidden gems',
+        'Cultural richness — private flamenco shows & exclusive art access',
+        'Luxury accommodations, villas & boutique hotels',
+        'Excellent connectivity — high-speed trains & major international airport',
+        'Mild climate and year-round outdoor lifestyle',
+        'A perfect mix of old-world charm and modern comfort'
+      ],
+      whyUsHeading: 'Why Work with DMC Seville Event for Concierge Services?',
+      whyUsIntro: 'We are not just locals — we are insiders. With over a decade of experience supporting international guests, VIP clients and event planners, we ensure every detail is handled with care and precision.',
+      whyUsList: [
+        '100% tailor-made services',
+        'Bilingual, professional concierge team',
+        'Rapid response and availability',
+        'Partnerships with top local vendors, venues & brands',
+        'Seamless coordination with your event or travel itinerary'
+      ],
+      relatedServices,
+      faqs: [
+        {q:'Who are concierge services in Seville designed for?', a:'Individuals, VIP travelers, groups and corporate guests who expect efficiency, discretion and exclusive access during their stay in Seville.'},
+        {q:'What kind of requests can your concierge team handle?', a:'From private transfers and last-minute restaurant bookings to personal shopping, private chefs and full lifestyle management — no request is too small or too complex.'},
+        {q:'Do you provide concierge support for corporate events?', a:'Yes, we offer corporate concierge and executive support for both large conferences and intimate corporate gatherings.'},
+        {q:'How quickly can concierge requests be arranged?', a:'Our team offers rapid response for most requests, including last-minute reservations, thanks to strong local partnerships.'},
+        {q:'Is the concierge team bilingual?', a:'Yes, our concierge team is bilingual and professional, ensuring smooth communication throughout your stay.'},
+        {q:'Can concierge services be combined with group travel or MICE programs?', a:'Yes — concierge services integrate seamlessly with our group travel and MICE event services for a fully coordinated experience.'}
+      ]
+    };
+  }
+}
+
+</script></template>
+<div id="dmc-consent" hidden style="position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:560px;margin:0 auto;background:#0d3d40;color:#fff;font-family:Montserrat,sans-serif;font-size:14px;line-height:1.5;padding:16px 18px;border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.25)">
+We use Google Analytics cookies to see how visitors use our website. Do you accept statistics cookies?
+<div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap"><button type="button" data-v="yes" style="cursor:pointer;border:0;background:#15cad2;color:#0d3d40;font-weight:600;padding:8px 16px;border-radius:3px;font-family:inherit">Accept</button><button type="button" data-v="no" style="cursor:pointer;border:1px solid #fff;background:transparent;color:#fff;padding:8px 16px;border-radius:3px;font-family:inherit">Decline</button></div></div>
+<script>
+(function(){var b=document.getElementById('dmc-consent'),v=null;try{v=localStorage.getItem('dmc-consent');}catch(e){}
+if(!v)b.hidden=false;
+b.addEventListener('click',function(e){var x=e.target.getAttribute('data-v');if(!x)return;try{localStorage.setItem('dmc-consent',x);}catch(e){}
+if(x==='yes')gtag('consent','update',{analytics_storage:'granted'});b.hidden=true;});})();
+</script>
+<script>
+(function(){
+  var t=document.getElementById('dc-src'), s=document.getElementById('dc-static');
+  if(!t||!s) return;
+  function load(src,cb){var e=document.createElement('script');e.src=src;e.onload=cb;document.body.appendChild(e);}
+  function dedupe(){var seen={};document.querySelectorAll('script[type="application/ld+json"]').forEach(function(e){var k=e.textContent.trim();if(seen[k])e.remove();else seen[k]=1;});}
+  function go(){
+    s.parentNode.insertBefore(document.importNode(t.content,true), s.nextSibling);
+    var obs=new MutationObserver(function(){var r=document.getElementById('dc-root');
+      if(r&&r.firstElementChild){obs.disconnect();setTimeout(function(){s.remove();dedupe();setTimeout(dedupe,1500);},60);}});
+    obs.observe(document.body,{childList:true,subtree:true});
+    load('/image-slot.js',function(){load('/support.js');});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go();
+})();
+</script>
+
+</body></html>
