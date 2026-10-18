@@ -20,6 +20,11 @@
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/ceramic-workshop/ceramic-workshop-seville-tile-painting-group.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/ceramic-workshop/ceramic-workshop-seville-tiles-in-progress.webp
 
+## cooking-experience
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/cooking-experience/cooking-experience-bodega-gongora-sherry-cellar.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/cooking-experience/cooking-experience-paella-chef.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/cooking-experience/cooking-experience-wine-and-tapas-shop.webp
+
 ## destination-pages
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/destination-pages/destination-costa-del-sol-beach-toast.webp
 
