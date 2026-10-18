@@ -144,8 +144,10 @@
 
 ## spring
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/spring/spring-seville-feria-de-abril.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/spring/spring-seville-hero-orange-trees-and-giralda.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/spring/spring-seville-park-flowers.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/spring/spring-seville-semana-santa-easter-procession.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/spring/spring-seville-semana-santa-virgin-paso.webp
 
 ## sunset-kayak
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/sunset-kayak/sunset-kayak-seville-hero-triana-bridge.webp
