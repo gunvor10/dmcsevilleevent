@@ -159,6 +159,7 @@
 
 ## venues
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/venues/venue-seville-hacienda.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/venues/venues-hotels-seville-hotel-alfonso-xiii-at-dusk.webp
 
 ## wine-and-sip
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/wine-and-sip/wine-and-sip-seville-neon-painting-group.webp
