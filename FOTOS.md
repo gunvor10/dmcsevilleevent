@@ -47,6 +47,7 @@
 
 ## movie-making
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/movie-making/movie-making-seville-action-scene-clapperboard.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/movie-making/movie-making-seville-final-performance-on-stage.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/movie-making/movie-making-seville-flamenco-scene-filming.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/movie-making/movie-making-seville-silent-film-scene-cathedral.webp
 
