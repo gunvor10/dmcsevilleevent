@@ -2,6 +2,7 @@
 
 ## about-us
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/about-us/about-us-gunvor-with-anibal-gonzalez-statue.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/about-us/about-us-hero-gunvor-at-setas-sunset.webp
 
 ## alcazar
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/alcazar/alcazar-seville-banos-de-maria-de-padilla.webp
