@@ -14,7 +14,9 @@
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/alcazar/alcazar-seville-salon-de-embajadores-dome.webp
 
 ## best-time
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/best-time/best-time-seville-autumn-country-farm.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/best-time/best-time-seville-sunflowers-june.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/best-time/best-time-seville-winter-palacio-san-telmo.webp
 
 ## camino-del-rocio
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/camino-del-rocio/camino-del-rocio-carriage-crossing-the-water.webp
