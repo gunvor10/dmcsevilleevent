@@ -69,6 +69,7 @@
 
 ## kayak
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/kayak/kayak-seville-group-on-river.webp
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/kayak/kayak-seville-hero-sunset-triana-bridge.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/kayak/kayak-seville-on-the-river.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/kayak/kayak-seville-paddling-together.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/kayak/kayak-seville-paddling-towards-triana.webp
@@ -130,6 +131,9 @@
 ## spring
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/spring/spring-seville-feria-de-abril.webp
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/spring/spring-seville-park-flowers.webp
+
+## sunset-kayak
+- https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/sunset-kayak/sunset-kayak-seville-hero-triana-bridge.webp
 
 ## treasure-hunt
 - https://raw.githubusercontent.com/gunvor10/dmcsevilleevent/main/fotos/treasure-hunt/treasure-hunt-seville-bullfighting-challenge.webp
