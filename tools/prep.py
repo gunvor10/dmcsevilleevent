@@ -134,6 +134,8 @@ if changed:
 SOCIAL = {
     "https://www.facebook.com/Sevillaprivateguidegunvor/": "https://www.facebook.com/dmcsevilleevent/",
     "https://www.instagram.com/sevillaprivateguide_gunvor/": "https://www.instagram.com/dmcsevilleevent/",
+    # company NIF/CIF confirmed by Gunvor 19.10.2026: B90380494 (Design's Travel Guarantee page had ...497)
+    "ESB 90380497": "ESB90380494",
 }
 n = 0
 for p in text_files():
