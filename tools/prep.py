@@ -129,3 +129,17 @@ hp = os.path.join(SRC, "SiteHeader.dc.html"); t = open(hp, encoding="utf-8").rea
 t2, changed = mh["apply"](t)
 if changed:
     open(hp, "w", encoding="utf-8").write(t2); print("mobile burger menu added to header")
+
+# ---- 5. DMC's own social profiles (Design still links the Sevilla Private Guide ones) ----
+SOCIAL = {
+    "https://www.facebook.com/Sevillaprivateguidegunvor/": "https://www.facebook.com/dmcsevilleevent/",
+    "https://www.instagram.com/sevillaprivateguide_gunvor/": "https://www.instagram.com/dmcsevilleevent/",
+}
+n = 0
+for p in text_files():
+    t = open(p, encoding="utf-8").read(); o = t
+    for a, b in SOCIAL.items():
+        t = t.replace(a, b)
+    if t != o:
+        open(p, "w", encoding="utf-8").write(t); n += 1
+print("social links updated in", n, "files")

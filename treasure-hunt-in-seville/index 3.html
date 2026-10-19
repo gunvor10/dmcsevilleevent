@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><base href="/"/><style>
+    .sc-placeholder{background:color-mix(in srgb,currentColor 8%,transparent);
+      border:1px solid color-mix(in srgb,currentColor 50%,transparent);
+      border-radius:2px;box-sizing:border-box;overflow:hidden}
+    @keyframes sc-shine{0%{background-position:100% 50%}100%{background-position:0% 50%}}
+    html.sc-dc-streaming .sc-placeholder,
+    html.sc-dc-streaming .sc-interp.sc-missing{position:relative;
+      background:color-mix(in srgb,currentColor 5%,transparent);
+      border-color:transparent}
+    html.sc-dc-streaming .sc-placeholder::before,
+    html.sc-dc-streaming .sc-interp.sc-missing::before{content:'';
+      position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg,rgba(217,119,87,0) 25%,rgba(247,225,211,.95) 37%,rgba(217,119,87,0) 63%);
+      background-size:400% 100%;animation:sc-shine 1.4s ease infinite}
+    html.sc-dc-streaming .sc-placeholder:nth-child(n+9 of .sc-placeholder)::before,
+    html.sc-dc-streaming .sc-interp.sc-missing:nth-child(n+9 of .sc-interp.sc-missing)::before{animation:none;
+      background:color-mix(in srgb,currentColor 8%,transparent)}
+    .sc-placeholder-error{padding:4px 8px;font:11px/1.4 ui-monospace,monospace;
+      color:color-mix(in srgb,currentColor 70%,transparent);word-break:break-word}
+    .sc-interp.sc-missing{display:inline-block;width:2em;height:1em;overflow:hidden;
+      vertical-align:text-bottom;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
+      border-radius:2px;box-sizing:border-box;color:transparent;
+      user-select:none}
+    .sc-interp.sc-unresolved{font-family:ui-monospace,monospace;font-size:.85em;
+      color:color-mix(in srgb,currentColor 50%,transparent);
+      background:color-mix(in srgb,currentColor 10%,transparent);border-radius:3px;
+      padding:0 3px}
+    .sc-host.sc-has-error{position:relative}
+    .sc-logic-error{position:absolute;top:8px;left:8px;z-index:2147483647;max-width:60ch;
+      padding:6px 10px;background:#b00020;color:#fff;font:12px/1.4 ui-monospace,monospace;
+      border-radius:4px;white-space:pre-wrap;pointer-events:none}
+    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts — keep both
+       in sync until dc-runtime regains a build step. */
+    @media print {
+      @page { margin: 0.5cm; }
+      figure, table { break-inside: avoid; }
+      #dc-root, #dc-root > .sc-host { height: auto; }
+      *, *::before, *::after {
+        print-color-adjust: exact; -webkit-print-color-adjust: exact;
+        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+        animation-delay: -99s !important; animation-duration: .001s !important;
+        animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+        animation-play-state: running !important; transition-duration: 0s !important;
+      }
+    }
+  </style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.dmcsevilleevent.com/"},{"@type":"ListItem","position":2,"name":"Inspiration","item":"https://www.dmcsevilleevent.com/inspiration/"},{"@type":"ListItem","position":3,"name":"Treasure Hunt in Seville: Team Building with a Twist","item":"https://www.dmcsevilleevent.com/treasure-hunt-in-seville/"}]},{"@type":"BlogPosting","headline":"Treasure Hunt in Seville: Team Building with a Twist","description":"Tailor-made treasure hunts through Seville's old town for corporate groups. Clues, riddles and missions that combine team building with culture.","image":"https://www.dmcsevilleevent.com/uploads/historical-team-building-seville.webp","inLanguage":"en","datePublished":"2026-10-18","dateModified":"2026-10-18","mainEntityOfPage":"https://www.dmcsevilleevent.com/treasure-hunt-in-seville/","author":{"@type":"Person","@id":"https://www.dmcsevilleevent.com/about/#gunvor","name":"Gunvor Guttormsen","url":"https://www.dmcsevilleevent.com/about/"},"publisher":{"@type":"Organization","@id":"https://www.dmcsevilleevent.com/#organization","name":"DMC Seville Event","logo":{"@type":"ImageObject","url":"https://www.dmcsevilleevent.com/assets/dmc-logo-cropped.webp"}}}]}</script>
+<style>x-dc{display:none!important}</style>
+<style></style><style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><title>Treasure Hunt in Seville: Team Building with a Twist | DMC Seville Event</title><meta content="Tailor-made treasure hunts through Seville's old town for corporate groups. Clues, riddles and missions that combine team building with culture." name="description"/><link href="https://www.dmcsevilleevent.com/treasure-hunt-in-seville/" rel="canonical"/><meta content="article" property="og:type"/><meta content="DMC Seville Event" property="og:site_name"/><meta content="en_GB" property="og:locale"/><meta content="Treasure Hunt in Seville: Team Building with a Twist | DMC Seville Event" property="og:title"/><meta content="Tailor-made treasure hunts through Seville's old town for corporate groups. Clues, riddles and missions that combine team building with culture." property="og:description"/><meta content="https://www.dmcsevilleevent.com/treasure-hunt-in-seville/" property="og:url"/><meta content="https://www.dmcsevilleevent.com/uploads/historical-team-building-seville.webp" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><link data-dc-tpl="12" href="https://fonts.googleapis.com" rel="preconnect"/><link data-dc-tpl="13" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;family=Varela+Round&amp;display=swap" rel="stylesheet"/><style data-dc-tpl="15">body{margin:0;}a{color:#ff5d1a;text-decoration:none;}a:hover{color:#0d3d40;}*{box-sizing:border-box;}summary::-webkit-details-marker{display:none;}details[open] summary .plus{transform:rotate(45deg);}</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many people can take part?","acceptedAnswer":{"@type":"Answer","text":"Treasure hunts work for groups from around 10 people up to 300. Large groups are split into teams of 5 to 8, each with its own route so the old town never gets crowded."}},{"@type":"Question","name":"How long does a treasure hunt take?","acceptedAnswer":{"@type":"Answer","text":"Most hunts last between 2 and 3 hours, including the briefing and the finale. The duration can be adapted to fit your programme."}},{"@type":"Question","name":"Is it suitable for all fitness levels?","acceptedAnswer":{"@type":"Answer","text":"Yes. The routes are on foot through the flat historic centre, and the distance can be adapted for your group."}},{"@type":"Question","name":"In which languages can it be run?","acceptedAnswer":{"@type":"Answer","text":"The clues, materials and facilitators can be provided in English, Spanish and other languages on request."}},{"@type":"Question","name":"Can the treasure hunt have a theme?","acceptedAnswer":{"@type":"Answer","text":"Yes. Popular themes include oranges, flamenco, painting, San Fernando III, Aníbal González and the operas set in Seville, such as Carmen. We can also create a theme around your company."}},{"@type":"Question","name":"Can we meet historical characters on the way?","acceptedAnswer":{"@type":"Answer","text":"Yes. Professional actors in costume can play characters such as Carmen, Cervantes, Velázquez or San Fernando III, each setting the teams a challenge before giving them the next clue."}},{"@type":"Question","name":"What happens if it rains?","acceptedAnswer":{"@type":"Answer","text":"Rain is rare in Seville, but we always have a plan B, with more indoor stops or a shorter route ending in a covered venue."}}]}</script><style data-dc-tpl="3">a{text-decoration:none;}*{box-sizing:border-box;}</style><style data-dc-tpl="3">a{text-decoration:none;color:#cfe3e4;}a:hover{color:#ff5d1a;}</style><style>x-dc{display:none!important}</style><meta content="H0RdhqivH3abdaZlze3v44QQ5XISVadKqWreEA0e7PA" name="google-site-verification"/>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+var c=null;try{c=localStorage.getItem('dmc-consent');}catch(e){}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:c==='yes'?'granted':'denied'});
+gtag('js',new Date());gtag('config','G-EN4YBPBV42');
+</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EN4YBPBV42"></script><style id="dmc-mobile-nav">
+@media (max-width:900px){
+  [data-nav="topbar"]{display:none!important}
+  header[data-nav="bar"]{padding:10px 18px!important;flex-wrap:nowrap!important}
+  header[data-nav="bar"] img{height:50px!important}
+  [data-nav-toggle]{display:flex!important}
+  nav[data-nav="menu"]{display:none!important;position:absolute;top:100%;left:0;right:0;z-index:60;background:#ffffff;
+    flex-direction:column!important;align-items:stretch!important;gap:0!important;padding:4px 18px 18px;
+    box-shadow:0 12px 24px rgba(0,0,0,.12);max-height:calc(100vh - 80px);overflow-y:auto}
+  html.nav-open nav[data-nav="menu"]{display:flex!important}
+  nav[data-nav="menu"]>div,nav[data-nav="menu"]>a{padding:14px 2px;border-bottom:1px solid #edf1f1;font-size:16px!important}
+  nav[data-nav="menu"]>div>button{font-size:16px!important;width:100%;text-align:left!important}
+  nav[data-nav="menu"]>div>div{position:static!important;box-shadow:none!important;min-width:0!important;
+    grid-template-columns:1fr!important;padding:6px 0 0 8px!important}
+}
+/* Phones: Design's fixed side-by-side layouts (text + photo, numbered lists) stack in one column,
+   4-photo galleries become 2 x 2, wide card grids become one card per row. */
+@media (max-width:760px){
+  [style*="minmax(0px, 1fr) minmax(0px, 0.8fr)"],[style*="minmax(0px, 0.8fr) minmax(0px, 1fr)"],
+  [style*="minmax(0px, 1.3fr) minmax(0px, 0.9fr)"],[style*="minmax(0px, 0.8fr) minmax(0px, 1.2fr)"],
+  [style*="minmax(0px, 1fr) minmax(0px, 1fr)"],[style*="minmax(0px, 1fr) 320px"],
+  [style*="minmax(0,1fr) minmax(0,0.8fr)"],[style*="minmax(0,0.8fr) minmax(0,1fr)"],
+  [style*="minmax(0,1.3fr) minmax(0,0.9fr)"],[style*="minmax(0,0.8fr) minmax(0,1.2fr)"],
+  [style*="minmax(0,1fr) minmax(0,1fr)"],[style*="minmax(0,1fr) 320px"],
+  [style*="grid-template-columns: 1fr 1fr"],[style*="grid-template-columns:1fr 1fr"],
+  [style*="repeat(2, minmax(0px, 1fr))"],[style*="repeat(2,minmax(0,1fr))"],
+  [style*="minmax(340px"],[style*="minmax(280px"],[style*="minmax(260px"]{
+    grid-template-columns:minmax(0,1fr)!important;gap:28px!important}
+  [style*="repeat(4, minmax(0px, 1fr))"],[style*="repeat(4,minmax(0,1fr))"],
+  [style*="repeat(4, 1fr)"],[style*="repeat(4,1fr)"],[style*="repeat(3, 1fr)"],[style*="repeat(3,1fr)"]{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  section[style*="padding"]{padding-left:20px!important;padding-right:20px!important}
+  /* destination pages: day-by-day programme (photo beside text) */
+  div:has(> div[style*="height: 160px"][style*="flex: none"]){flex-direction:column!important}
+  div[style*="height: 160px"][style*="flex: none"]{width:100%!important;height:190px!important}
+  /* groups page: service cards (photo beside text) */
+  a:has(> [style*="width: 38%"]){flex-direction:column!important}
+  a > [style*="width: 38%"]{width:100%!important;height:200px!important}
+}
+</style></head>
+<body>
+<div id="dc-static"><div class="sc-host" data-sc-name="Activity-Treasure-Hunt"><div data-dc-tpl="16" style="font-family: Montserrat, sans-serif; color: rgb(31, 45, 51); background: rgb(255, 253, 251);">
+<div class="sc-host" data-dc-tpl="17" data-sc-name="SiteHeader"><div data-dc-tpl="4" style="font-family: Montserrat, sans-serif; position: relative; z-index: 50;">
+<div data-dc-tpl="5" style="position: fixed; top: 0px; left: 0px; height: 3px; background: rgb(255, 93, 26); width: 0%; z-index: 200;"></div>
+<div data-dc-tpl="6" data-nav="topbar" style='background: rgb(21, 202, 210); color: rgb(255, 255, 255); font-family: "Varela Round", sans-serif; font-size: 13px; padding: 8px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;'>
+<div data-dc-tpl="7" style="display: flex; gap: 20px; flex-wrap: wrap;">
+<span data-dc-tpl="8">+34 637 87 87 68</span>
+<span data-dc-tpl="9">events@dmcsevilleevent.com</span>
+</div>
+<div data-dc-tpl="10" style="display: flex; gap: 14px;">
+<a data-dc-tpl="11" href="https://www.facebook.com/dmcsevilleevent/" style="color: rgb(255, 255, 255);">Facebook</a>
+<a data-dc-tpl="12" href="https://www.instagram.com/dmcsevilleevent/" style="color: rgb(255, 255, 255);">Instagram</a>
+<a data-dc-tpl="13" href="https://www.linkedin.com/in/gunvor-guttormsen-ba05a728/" style="color: rgb(255, 255, 255);">LinkedIn</a>
+</div>
+</div>
+<header data-dc-tpl="14" data-nav="bar" style="position: relative; display: flex; align-items: center; justify-content: space-between; padding: 16px 32px; background: rgb(255, 255, 255); flex-wrap: wrap; gap: 16px; box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 0px;">
+<a data-dc-tpl="15" href="/"><img alt="DMC Seville Event" data-dc-tpl="16" fetchpriority="high" src="/assets/dmc-logo-cropped.webp" style="height: 64px; width: auto; object-fit: contain;"/></a>
+<button aria-label="Menu" data-dc-tpl="17" data-nav-toggle="1" style="display: none; background: none; border: 0px; cursor: pointer; padding: 8px; margin-left: auto; flex-direction: column; gap: 5px;" type="button"><span data-dc-tpl="18" style="display: block; width: 26px; height: 3px; background: rgb(13, 61, 64); border-radius: 2px;"></span><span data-dc-tpl="19" style="display: block; width: 26px; height: 3px; background: rgb(13, 61, 64); border-radius: 2px;"></span><span data-dc-tpl="20" style="display: block; width: 26px; height: 3px; background: rgb(13, 61, 64); border-radius: 2px;"></span></button>
+<nav data-dc-tpl="21" data-nav="menu" style='display: flex; gap: 28px; flex-wrap: wrap; font-family: "Varela Round", sans-serif; font-size: 15px; font-weight: 400; align-items: center;'>
+<div data-dc-tpl="22" style="position: relative;">
+<button data-dc-tpl="23" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>MICE</button>
+</div>
+<div data-dc-tpl="36" style="position: relative;">
+<button data-dc-tpl="37" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>GROUPS</button>
+</div>
+<div data-dc-tpl="44" style="position: relative;">
+<button data-dc-tpl="45" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>DESTINATIONS</button>
+</div>
+<div data-dc-tpl="56" style="position: relative;">
+<button data-dc-tpl="57" style='background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-family: "Varela Round", sans-serif; font-size: 15px; color: rgb(31, 45, 51); cursor: pointer; padding: 0px;'>GET IN TOUCH</button>
+</div>
+<a data-dc-tpl="63" href="/inspiration/" style="color: rgb(31, 45, 51);">INSPIRATION / BLOG</a>
+</nav>
+</header></div></div>
+<section data-dc-tpl="18" data-screen-label="Hero" style="position: relative; min-height: clamp(440px, 78svh, 760px); display: flex; align-items: flex-end; overflow: hidden;">
+<img alt="Treasure hunt team at the Seville bullring" decoding="async" loading="lazy" src="/fotos/treasure-hunt/treasure-hunt-seville-bullring-team.webp" style="position: absolute; inset: 0px; width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/>
+<div data-dc-tpl="20" style="position: absolute; inset: 0px; background: linear-gradient(to top, rgba(13, 61, 64, 0.88) 0%, rgba(13, 61, 64, 0.35) 55%, rgba(13, 61, 64, 0.1) 100%); pointer-events: none;"></div>
+<div data-dc-tpl="21" style="position: relative; z-index: 2; width: 100%; max-width: 1200px; margin: 0px auto; padding: 120px 32px 0px; color: rgb(255, 255, 255);">
+<div data-dc-tpl="22" style='display: flex; gap: 10px; align-items: center; font-family: "Varela Round", sans-serif; font-size: 13px; letter-spacing: 1.5px; margin-bottom: 18px;'>
+<a data-dc-tpl="23" href="/inspiration/" style="color: rgb(255, 255, 255);">INSPIRATION</a><span data-dc-tpl="24" style="color: rgb(21, 202, 210);">/</span><span data-dc-tpl="25" style="color: rgb(21, 202, 210);">TEAM BUILDING</span>
+</div>
+<h1 data-dc-tpl="26" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(34px, 5.2vw, 62px); line-height: 1.05; margin: 0px 0px 18px; max-width: 860px; text-transform: uppercase; letter-spacing: 1px; text-wrap: balance;">Treasure Hunt in Seville</h1>
+<p data-dc-tpl="27" style="font-weight: 300; font-size: clamp(17px, 1.8vw, 20px); line-height: 1.6; max-width: 640px; margin: 0px 0px 40px;">Team building with a twist: clues, riddles and hidden plazas in the heart of Seville.</p>
+<div data-dc-tpl="28" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); border-top: 1px solid rgba(255, 255, 255, 0.3);">
+<div data-dc-tpl="29" style="padding: 20px 20px 26px 0px;">
+<div data-dc-tpl="30" style='font-family: "Varela Round", sans-serif; font-size: 12px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 6px;'>DURATION</div>
+<div data-dc-tpl="31" style="font-weight: 600; font-size: 16px;">2 – 4 hours</div>
+</div>
+<div data-dc-tpl="32" style="padding: 20px 20px 26px 0px;">
+<div data-dc-tpl="33" style='font-family: "Varela Round", sans-serif; font-size: 12px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 6px;'>GROUP SIZE</div>
+<div data-dc-tpl="34" style="font-weight: 600; font-size: 16px;">10 – 300 guests</div>
+</div>
+<div data-dc-tpl="35" style="padding: 20px 20px 26px 0px;">
+<div data-dc-tpl="36" style='font-family: "Varela Round", sans-serif; font-size: 12px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 6px;'>IDEAL FOR</div>
+<div data-dc-tpl="37" style="font-weight: 600; font-size: 16px;">Team building, retreats, incentives</div>
+</div>
+<div data-dc-tpl="38" style="padding: 20px 20px 26px 0px;">
+<div data-dc-tpl="39" style='font-family: "Varela Round", sans-serif; font-size: 12px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 6px;'>EXPERIENCE</div>
+<div data-dc-tpl="40" style="font-weight: 600; font-size: 16px;">None needed</div>
+</div>
+</div>
+</div>
+</section>
+<section data-dc-tpl="41" data-screen-label="Intro" style="max-width: 1200px; margin: 0px auto; padding: 72px 32px 0px; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start;">
+<div data-dc-tpl="42" style="flex: 1 1 440px; min-width: 0px; max-width: 720px;">
+<div data-dc-tpl="43" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>THE EXPERIENCE</div>
+<h2 data-dc-tpl="44" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(24px, 3vw, 34px); line-height: 1.2; color: rgb(21, 202, 210); margin: 0px 0px 22px; text-wrap: balance;">Treasure Hunt in Seville: Team Building with a Twist</h2>
+<p data-dc-tpl="45" style="font-weight: 400; font-size: 19px; line-height: 1.7; color: rgb(31, 45, 51); margin: 0px 0px 20px;">Looking for a dynamic, engaging, and fun way to unite your team during a corporate event in Seville? Forget the usual meeting room icebreakers—try a tailor-made treasure hunt through the heart of Seville instead.</p>
+<p data-dc-tpl="46" style="font-weight: 300; font-size: 16.5px; line-height: 1.85; color: rgb(61, 74, 80); margin: 0px;">Our custom treasure hunts are designed specifically for corporate and incentive groups looking for a memorable experience that combines team-building with cultural discovery. Picture your colleagues navigating Seville’s charming alleyways, solving clues near the Cathedral, and racing to uncover secrets in hidden plazas.</p>
+</div>
+<aside data-dc-tpl="47" style="flex: 0 1 340px; width: 100%; position: sticky; top: 24px; background: rgb(13, 61, 64); color: rgb(255, 255, 255); border-radius: 6px; padding: 30px 28px; min-width: 0px; margin: 0px auto;">
+<div data-dc-tpl="48" style='font-family: "Varela Round", sans-serif; font-size: 12px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 8px;'>REQUEST A PROPOSAL</div>
+<div data-dc-tpl="49" style="font-weight: 700; font-size: 20px; line-height: 1.3; margin-bottom: 22px;"><span class="sc-interp">Classic Old Town Hunt</span></div>
+<div data-dc-tpl="50" style="font-size: 13px; font-weight: 500; margin-bottom: 10px; color: rgb(207, 227, 228);">Number of guests</div>
+<div data-dc-tpl="51" style="display: flex; align-items: center; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 3px; margin-bottom: 22px;">
+<button aria-label="Fewer guests" class="scp0" data-dc-tpl="52" style="width: 48px; height: 46px; background: transparent; border: 0px; color: rgb(255, 255, 255); font-size: 20px; cursor: pointer;" type="button">−</button>
+<div data-dc-tpl="53" style="flex: 1 1 0%; text-align: center; font-weight: 700; font-size: 17px;"><span class="sc-interp">24</span></div>
+<button aria-label="More guests" class="scp0" data-dc-tpl="54" style="width: 48px; height: 46px; background: transparent; border: 0px; color: rgb(255, 255, 255); font-size: 20px; cursor: pointer;" type="button">+</button>
+</div>
+<div data-dc-tpl="55" style="font-size: 13px; font-weight: 500; margin-bottom: 10px; color: rgb(207, 227, 228);">Where in your programme?</div>
+<div data-dc-tpl="56" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 26px;">
+<button data-dc-tpl="58" style="cursor: pointer; padding: 10px 6px; border-radius: 2px; font-family: Montserrat, sans-serif; font-size: 12.5px; font-weight: 500; line-height: 1.3; border: 1px solid rgba(255, 255, 255, 0.3); background: transparent; color: rgb(255, 255, 255);" type="button"><span class="sc-interp">Morning</span></button>
+<button data-dc-tpl="58" style="cursor: pointer; padding: 10px 6px; border-radius: 2px; font-family: Montserrat, sans-serif; font-size: 12.5px; font-weight: 500; line-height: 1.3; border: 1px solid rgba(255, 255, 255, 0.3); background: transparent; color: rgb(255, 255, 255);" type="button"><span class="sc-interp">Afternoon</span></button>
+<button data-dc-tpl="58" style="cursor: pointer; padding: 10px 6px; border-radius: 2px; font-family: Montserrat, sans-serif; font-size: 12.5px; font-weight: 500; line-height: 1.3; border: 1px solid rgba(255, 255, 255, 0.3); background: transparent; color: rgb(255, 255, 255);" type="button"><span class="sc-interp">Evening</span></button>
+<button data-dc-tpl="58" style="cursor: pointer; padding: 10px 6px; border-radius: 2px; font-family: Montserrat, sans-serif; font-size: 12.5px; font-weight: 500; line-height: 1.3; border: 1px solid rgba(255, 255, 255, 0.3); background: transparent; color: rgb(255, 255, 255);" type="button"><span class="sc-interp">With dinner</span></button>
+</div>
+<a class="scp1" data-dc-tpl="59" href="/contact/?activity=Classic+Old+Town+Hunt&amp;guests=24" style='display: block; text-align: center; background: rgb(255, 93, 26); color: rgb(255, 255, 255); font-family: "Varela Round", sans-serif; font-weight: 600; padding: 15px 20px; border-radius: 2px; font-size: 15px;'>Get My Proposal</a>
+<p data-dc-tpl="60" style="font-size: 13px; line-height: 1.6; color: rgb(207, 227, 228); margin: 14px 0px 0px; text-align: center;">Personal reply within 24 hours. No commitment.</p>
+</aside>
+</section>
+<section data-dc-tpl="61" data-screen-label="Quote" style="max-width: 900px; margin: 0px auto; padding: 88px 32px 0px; text-align: center;">
+<div data-dc-tpl="62" style="font-family: Georgia, serif; color: rgb(255, 93, 26); font-size: 48px; line-height: 1; margin-bottom: 8px;">“</div>
+<p data-dc-tpl="63" style="font-weight: 500; font-style: italic; font-size: clamp(19px, 2.4vw, 24px); line-height: 1.5; color: rgb(255, 93, 26); margin: 0px;">In every alley, a story; around every corner, a connection. The treasure isn’t just what you find—it’s how you get there together.</p>
+</section>
+<section data-dc-tpl="64" data-screen-label="Formats" style="background: rgb(234, 246, 246); margin-top: 88px; padding: 80px 32px;">
+<div data-dc-tpl="65" style="max-width: 1200px; margin: 0px auto;">
+<div data-dc-tpl="66" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 36px;">
+<div data-dc-tpl="67">
+<div data-dc-tpl="68" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>CHOOSE YOUR ACTIVITY</div>
+<h2 data-dc-tpl="69" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(24px, 3vw, 34px); margin: 0px;">Choose your hunt</h2>
+</div>
+<p data-dc-tpl="70" style="font-weight: 300; font-size: 15px; line-height: 1.6; color: rgb(61, 74, 80); margin: 0px; max-width: 360px;">Select an activity to add it to your proposal request. Every format can be adapted to your group.</p>
+</div>
+<div data-dc-tpl="71" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 22px;">
+<button data-dc-tpl="73" style="color-scheme: unset; forced-color-adjust: unset; math-depth: unset; position: unset; position-anchor: unset; text-size-adjust: unset; appearance: unset; color: unset; font-feature-settings: unset; font-kerning: unset; font-language-override: unset; font-optical-sizing: unset; font-palette: unset; font-size: unset; font-size-adjust: unset; font-stretch: unset; font-style: unset; font-synthesis: unset; font-variant: unset; font-variation-settings: unset; font-weight: unset; position-area: unset; text-orientation: unset; text-rendering: unset; text-spacing-trim: unset; -webkit-font-smoothing: unset; -webkit-locale: unset; -webkit-text-orientation: unset; -webkit-writing-mode: unset; writing-mode: unset; zoom: unset; accent-color: unset; place-content: unset; place-items: unset; place-self: unset; alignment-baseline: unset; anchor-name: unset; anchor-scope: unset; animation-composition: unset; animation: unset; animation-trigger: unset; app-region: unset; aspect-ratio: unset; backdrop-filter: unset; backface-visibility: unset; background-blend-mode: unset; baseline-shift: unset; baseline-source: unset; block-size: unset; border-block: unset; border-collapse: unset; border-end-end-radius: unset; border-end-start-radius: unset; border-inline: unset; border-shape: unset; border-start-end-radius: unset; border-start-start-radius: unset; inset: unset; box-decoration-break: unset; break-after: unset; break-before: unset; break-inside: unset; buffered-rendering: unset; caption-side: unset; caret-animation: unset; caret-color: unset; caret-shape: unset; clear: unset; clip: unset; clip-path: unset; clip-rule: unset; color-interpolation: unset; color-interpolation-filters: unset; color-rendering: unset; columns: unset; column-fill: unset; gap: unset; rule-break: unset; rule: unset; rule-inset: unset; rule-visibility-items: unset; column-span: unset; contain: unset; contain-intrinsic-block-size: unset; contain-intrinsic-size: unset; contain-intrinsic-inline-size: unset; container: unset; content: unset; content-visibility: unset; corner-shape: unset; corner-block-end-shape: unset; corner-block-start-shape: unset; counter-increment: unset; counter-reset: unset; counter-set: unset; cx: unset; cy: unset; d: unset; dominant-baseline: unset; dynamic-range-limit: unset; empty-cells: unset; field-sizing: unset; fill: unset; fill-opacity: unset; fill-rule: unset; filter: unset; flex: unset; flex-line-count: unset; flex-wrap: unset; float: unset; flood-color: unset; flood-opacity: unset; frame-sizing: unset; grid: unset; grid-area: unset; height: unset; hyphenate-character: unset; hyphenate-limit-chars: unset; hyphens: unset; image-orientation: unset; image-rendering: unset; initial-letter: unset; inline-size: unset; inset-block: unset; inset-inline: unset; interactivity: unset; interest-delay: unset; interpolate-size: unset; isolation: unset; letter-spacing: unset; lighting-color: unset; line-break: unset; line-height: unset; list-style: unset; margin-block: unset; margin: unset; margin-inline: unset; margin-trim: unset; marker: unset; mask: unset; mask-type: unset; math-shift: unset; math-style: unset; max-block-size: unset; max-height: unset; max-inline-size: unset; max-width: unset; min-block-size: unset; min-height: unset; min-inline-size: unset; min-width: unset; mix-blend-mode: unset; object-fit: unset; object-position: unset; object-view-box: unset; offset: unset; opacity: unset; order: unset; orphans: unset; outline: unset; outline-offset: unset; overflow-anchor: unset; overflow-block: unset; overflow-clip-margin: unset; overflow-inline: unset; overflow-wrap: unset; overlay: unset; overscroll-behavior-block: unset; overscroll-behavior-inline: unset; overscroll-behavior: unset; padding-block: unset; padding: unset; padding-inline: unset; page: unset; page-margin-safety: unset; page-orientation: unset; paint-order: unset; perspective: unset; perspective-origin: unset; pointer-events: unset; position-try: unset; position-visibility: unset; print-color-adjust: unset; quotes: unset; r: unset; reading-flow: unset; reading-order: unset; resize: unset; rotate: unset; ruby-align: unset; ruby-overhang: unset; ruby-position: unset; rule-overlap: unset; rx: unset; ry: unset; scale: unset; scroll-axis-lock: unset; scroll-behavior: unset; scroll-initial-target: unset; scroll-margin-block: unset; scroll-margin: unset; scroll-margin-inline: unset; scroll-marker-group: unset; scroll-padding-block: unset; scroll-padding: unset; scroll-padding-inline: unset; scroll-snap-align: unset; scroll-snap-stop: unset; scroll-snap-type: unset; scroll-target-group: unset; scroll-timeline: unset; scrollbar-color: unset; scrollbar-gutter: unset; scrollbar-width: unset; shape-image-threshold: unset; shape-margin: unset; shape-outside: unset; shape-rendering: unset; size: unset; speak: unset; stop-color: unset; stop-opacity: unset; stroke: unset; stroke-dasharray: unset; stroke-dashoffset: unset; stroke-linecap: unset; stroke-linejoin: unset; stroke-miterlimit: unset; stroke-opacity: unset; stroke-width: unset; tab-size: unset; table-layout: unset; text-align-last: unset; text-anchor: unset; text-autospace: unset; text-box: unset; text-combine-upright: unset; text-decoration: unset; text-decoration-skip-ink: unset; text-decoration-skip-spaces: unset; text-emphasis: unset; text-emphasis-position: unset; text-fit: unset; text-indent: unset; text-justify: unset; text-overflow: unset; text-shadow: unset; text-transform: unset; text-underline-offset: unset; text-underline-position: unset; text-wrap: unset; timeline-scope: unset; timeline-trigger: unset; touch-action: unset; transform: unset; transform-box: unset; transform-origin: unset; transform-style: unset; translate: unset; trigger-scope: unset; user-select: unset; vector-effect: unset; vertical-align: unset; view-timeline: unset; view-transition-class: unset; view-transition-group: unset; view-transition-name: unset; view-transition-scope: unset; visibility: unset; border-spacing: unset; -webkit-box-align: unset; -webkit-box-decoration-break: unset; -webkit-box-direction: unset; -webkit-box-flex: unset; -webkit-box-ordinal-group: unset; -webkit-box-orient: unset; -webkit-box-pack: unset; -webkit-box-reflect: unset; -webkit-line-break: unset; -webkit-line-clamp: unset; -webkit-mask-box-image: unset; -webkit-rtl-ordering: unset; -webkit-ruby-position: unset; -webkit-tap-highlight-color: unset; -webkit-text-combine: unset; -webkit-text-decorations-in-effect: unset; -webkit-text-fill-color: unset; -webkit-text-security: unset; -webkit-text-stroke: unset; -webkit-user-drag: unset; white-space-collapse: unset; widows: unset; width: unset; will-change: unset; window-drag: unset; word-break: unset; word-spacing: unset; x: unset; y: unset; z-index: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; text-align: left; font-family: Montserrat, sans-serif; border: 2px solid rgb(255, 93, 26); box-shadow: rgba(255, 93, 26, 0.18) 0px 10px 28px; transition: border-color 0.2s, box-shadow 0.2s;" type="button">
+<div data-dc-tpl="74" style="position: relative; height: 210px; overflow: hidden;">
+<img alt="Classic Old Town Hunt" decoding="async" loading="lazy" src="/uploads/historical-team-building-seville.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/>
+<span data-dc-tpl="76" style='position: absolute; top: 14px; left: 14px; background: rgb(255, 255, 255); color: rgb(13, 61, 64); font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; padding: 5px 10px; border-radius: 2px;'><span class="sc-interp">MOST BOOKED</span></span>
+</div>
+<div data-dc-tpl="77" style="padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1 1 0%;">
+<div data-dc-tpl="78" style="font-weight: 800; font-size: 18px; line-height: 1.3; color: rgb(31, 45, 51);"><span class="sc-interp">Classic Old Town Hunt</span></div>
+<div data-dc-tpl="79" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80);"><span class="sc-interp">Clues and riddles lead teams through the Cathedral quarter, Santa Cruz and hidden plazas, finishing with the treasure and a drink together.</span></div>
+<div data-dc-tpl="80" style="display: flex; flex-direction: column; gap: 6px;">
+<div data-dc-tpl="81" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; color: rgb(21, 202, 210);'><span class="sc-interp">PERFECT FOR</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Corporate and incentive groups</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">First-time visitors</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Mixed fitness levels</span></div>
+</div>
+<div data-dc-tpl="85" style="display: flex; gap: 18px; flex-wrap: wrap; margin-top: auto; padding-top: 14px; border-top: 1px solid rgb(227, 236, 236); font-size: 13px; font-weight: 600; color: rgb(13, 61, 64);">
+<span data-dc-tpl="86"><span class="sc-interp">2 – 3 h</span></span><span data-dc-tpl="87"><span class="sc-interp">10 – 300 guests</span></span>
+</div>
+<div data-dc-tpl="88" style='font-family: "Varela Round", sans-serif; font-size: 13px; font-weight: 600; margin-top: 6px; color: rgb(255, 93, 26);'><span class="sc-interp">✓ Added to your request</span></div>
+</div>
+</button>
+<button data-dc-tpl="73" style="color-scheme: unset; forced-color-adjust: unset; math-depth: unset; position: unset; position-anchor: unset; text-size-adjust: unset; appearance: unset; color: unset; font-feature-settings: unset; font-kerning: unset; font-language-override: unset; font-optical-sizing: unset; font-palette: unset; font-size: unset; font-size-adjust: unset; font-stretch: unset; font-style: unset; font-synthesis: unset; font-variant: unset; font-variation-settings: unset; font-weight: unset; position-area: unset; text-orientation: unset; text-rendering: unset; text-spacing-trim: unset; -webkit-font-smoothing: unset; -webkit-locale: unset; -webkit-text-orientation: unset; -webkit-writing-mode: unset; writing-mode: unset; zoom: unset; accent-color: unset; place-content: unset; place-items: unset; place-self: unset; alignment-baseline: unset; anchor-name: unset; anchor-scope: unset; animation-composition: unset; animation: unset; animation-trigger: unset; app-region: unset; aspect-ratio: unset; backdrop-filter: unset; backface-visibility: unset; background-blend-mode: unset; baseline-shift: unset; baseline-source: unset; block-size: unset; border-block: unset; border-collapse: unset; border-end-end-radius: unset; border-end-start-radius: unset; border-inline: unset; border-shape: unset; border-start-end-radius: unset; border-start-start-radius: unset; inset: unset; box-decoration-break: unset; break-after: unset; break-before: unset; break-inside: unset; buffered-rendering: unset; caption-side: unset; caret-animation: unset; caret-color: unset; caret-shape: unset; clear: unset; clip: unset; clip-path: unset; clip-rule: unset; color-interpolation: unset; color-interpolation-filters: unset; color-rendering: unset; columns: unset; column-fill: unset; gap: unset; rule-break: unset; rule: unset; rule-inset: unset; rule-visibility-items: unset; column-span: unset; contain: unset; contain-intrinsic-block-size: unset; contain-intrinsic-size: unset; contain-intrinsic-inline-size: unset; container: unset; content: unset; content-visibility: unset; corner-shape: unset; corner-block-end-shape: unset; corner-block-start-shape: unset; counter-increment: unset; counter-reset: unset; counter-set: unset; cx: unset; cy: unset; d: unset; dominant-baseline: unset; dynamic-range-limit: unset; empty-cells: unset; field-sizing: unset; fill: unset; fill-opacity: unset; fill-rule: unset; filter: unset; flex: unset; flex-line-count: unset; flex-wrap: unset; float: unset; flood-color: unset; flood-opacity: unset; frame-sizing: unset; grid: unset; grid-area: unset; height: unset; hyphenate-character: unset; hyphenate-limit-chars: unset; hyphens: unset; image-orientation: unset; image-rendering: unset; initial-letter: unset; inline-size: unset; inset-block: unset; inset-inline: unset; interactivity: unset; interest-delay: unset; interpolate-size: unset; isolation: unset; letter-spacing: unset; lighting-color: unset; line-break: unset; line-height: unset; list-style: unset; margin-block: unset; margin: unset; margin-inline: unset; margin-trim: unset; marker: unset; mask: unset; mask-type: unset; math-shift: unset; math-style: unset; max-block-size: unset; max-height: unset; max-inline-size: unset; max-width: unset; min-block-size: unset; min-height: unset; min-inline-size: unset; min-width: unset; mix-blend-mode: unset; object-fit: unset; object-position: unset; object-view-box: unset; offset: unset; opacity: unset; order: unset; orphans: unset; outline: unset; outline-offset: unset; overflow-anchor: unset; overflow-block: unset; overflow-clip-margin: unset; overflow-inline: unset; overflow-wrap: unset; overlay: unset; overscroll-behavior-block: unset; overscroll-behavior-inline: unset; overscroll-behavior: unset; padding-block: unset; padding: unset; padding-inline: unset; page: unset; page-margin-safety: unset; page-orientation: unset; paint-order: unset; perspective: unset; perspective-origin: unset; pointer-events: unset; position-try: unset; position-visibility: unset; print-color-adjust: unset; quotes: unset; r: unset; reading-flow: unset; reading-order: unset; resize: unset; rotate: unset; ruby-align: unset; ruby-overhang: unset; ruby-position: unset; rule-overlap: unset; rx: unset; ry: unset; scale: unset; scroll-axis-lock: unset; scroll-behavior: unset; scroll-initial-target: unset; scroll-margin-block: unset; scroll-margin: unset; scroll-margin-inline: unset; scroll-marker-group: unset; scroll-padding-block: unset; scroll-padding: unset; scroll-padding-inline: unset; scroll-snap-align: unset; scroll-snap-stop: unset; scroll-snap-type: unset; scroll-target-group: unset; scroll-timeline: unset; scrollbar-color: unset; scrollbar-gutter: unset; scrollbar-width: unset; shape-image-threshold: unset; shape-margin: unset; shape-outside: unset; shape-rendering: unset; size: unset; speak: unset; stop-color: unset; stop-opacity: unset; stroke: unset; stroke-dasharray: unset; stroke-dashoffset: unset; stroke-linecap: unset; stroke-linejoin: unset; stroke-miterlimit: unset; stroke-opacity: unset; stroke-width: unset; tab-size: unset; table-layout: unset; text-align-last: unset; text-anchor: unset; text-autospace: unset; text-box: unset; text-combine-upright: unset; text-decoration: unset; text-decoration-skip-ink: unset; text-decoration-skip-spaces: unset; text-emphasis: unset; text-emphasis-position: unset; text-fit: unset; text-indent: unset; text-justify: unset; text-overflow: unset; text-shadow: unset; text-transform: unset; text-underline-offset: unset; text-underline-position: unset; text-wrap: unset; timeline-scope: unset; timeline-trigger: unset; touch-action: unset; transform: unset; transform-box: unset; transform-origin: unset; transform-style: unset; translate: unset; trigger-scope: unset; user-select: unset; vector-effect: unset; vertical-align: unset; view-timeline: unset; view-transition-class: unset; view-transition-group: unset; view-transition-name: unset; view-transition-scope: unset; visibility: unset; border-spacing: unset; -webkit-box-align: unset; -webkit-box-decoration-break: unset; -webkit-box-direction: unset; -webkit-box-flex: unset; -webkit-box-ordinal-group: unset; -webkit-box-orient: unset; -webkit-box-pack: unset; -webkit-box-reflect: unset; -webkit-line-break: unset; -webkit-line-clamp: unset; -webkit-mask-box-image: unset; -webkit-rtl-ordering: unset; -webkit-ruby-position: unset; -webkit-tap-highlight-color: unset; -webkit-text-combine: unset; -webkit-text-decorations-in-effect: unset; -webkit-text-fill-color: unset; -webkit-text-security: unset; -webkit-text-stroke: unset; -webkit-user-drag: unset; white-space-collapse: unset; widows: unset; width: unset; will-change: unset; window-drag: unset; word-break: unset; word-spacing: unset; x: unset; y: unset; z-index: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; text-align: left; font-family: Montserrat, sans-serif; border: 2px solid transparent; box-shadow: rgba(13, 61, 64, 0.06) 0px 2px 10px; transition: border-color 0.2s, box-shadow 0.2s;" type="button">
+<div data-dc-tpl="74" style="position: relative; height: 210px; overflow: hidden;">
+<img alt="Digital Treasure Hunt" decoding="async" loading="lazy" src="/fotos/treasure-hunt/treasure-hunt-seville-team-solving-clue.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/>
+<span data-dc-tpl="76" style='position: absolute; top: 14px; left: 14px; background: rgb(255, 255, 255); color: rgb(13, 61, 64); font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; padding: 5px 10px; border-radius: 2px;'><span class="sc-interp">TECH</span></span>
+</div>
+<div data-dc-tpl="77" style="padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1 1 0%;">
+<div data-dc-tpl="78" style="font-weight: 800; font-size: 18px; line-height: 1.3; color: rgb(31, 45, 51);"><span class="sc-interp">Digital Treasure Hunt</span></div>
+<div data-dc-tpl="79" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80);"><span class="sc-interp">Teams play on a tablet or app with GPS-triggered questions, augmented clues and a live ranking the organiser can follow in real time.</span></div>
+<div data-dc-tpl="80" style="display: flex; flex-direction: column; gap: 6px;">
+<div data-dc-tpl="81" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; color: rgb(21, 202, 210);'><span class="sc-interp">INCLUDES</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">App or tablet per team</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Live leaderboard</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Photo and video missions</span></div>
+</div>
+<div data-dc-tpl="85" style="display: flex; gap: 18px; flex-wrap: wrap; margin-top: auto; padding-top: 14px; border-top: 1px solid rgb(227, 236, 236); font-size: 13px; font-weight: 600; color: rgb(13, 61, 64);">
+<span data-dc-tpl="86"><span class="sc-interp">2 – 3 h</span></span><span data-dc-tpl="87"><span class="sc-interp">20 – 300 guests</span></span>
+</div>
+<div data-dc-tpl="88" style='font-family: "Varela Round", sans-serif; font-size: 13px; font-weight: 600; margin-top: 6px; color: rgb(13, 61, 64);'><span class="sc-interp">+ Select this hunt</span></div>
+</div>
+</button>
+<button data-dc-tpl="73" style="color-scheme: unset; forced-color-adjust: unset; math-depth: unset; position: unset; position-anchor: unset; text-size-adjust: unset; appearance: unset; color: unset; font-feature-settings: unset; font-kerning: unset; font-language-override: unset; font-optical-sizing: unset; font-palette: unset; font-size: unset; font-size-adjust: unset; font-stretch: unset; font-style: unset; font-synthesis: unset; font-variant: unset; font-variation-settings: unset; font-weight: unset; position-area: unset; text-orientation: unset; text-rendering: unset; text-spacing-trim: unset; -webkit-font-smoothing: unset; -webkit-locale: unset; -webkit-text-orientation: unset; -webkit-writing-mode: unset; writing-mode: unset; zoom: unset; accent-color: unset; place-content: unset; place-items: unset; place-self: unset; alignment-baseline: unset; anchor-name: unset; anchor-scope: unset; animation-composition: unset; animation: unset; animation-trigger: unset; app-region: unset; aspect-ratio: unset; backdrop-filter: unset; backface-visibility: unset; background-blend-mode: unset; baseline-shift: unset; baseline-source: unset; block-size: unset; border-block: unset; border-collapse: unset; border-end-end-radius: unset; border-end-start-radius: unset; border-inline: unset; border-shape: unset; border-start-end-radius: unset; border-start-start-radius: unset; inset: unset; box-decoration-break: unset; break-after: unset; break-before: unset; break-inside: unset; buffered-rendering: unset; caption-side: unset; caret-animation: unset; caret-color: unset; caret-shape: unset; clear: unset; clip: unset; clip-path: unset; clip-rule: unset; color-interpolation: unset; color-interpolation-filters: unset; color-rendering: unset; columns: unset; column-fill: unset; gap: unset; rule-break: unset; rule: unset; rule-inset: unset; rule-visibility-items: unset; column-span: unset; contain: unset; contain-intrinsic-block-size: unset; contain-intrinsic-size: unset; contain-intrinsic-inline-size: unset; container: unset; content: unset; content-visibility: unset; corner-shape: unset; corner-block-end-shape: unset; corner-block-start-shape: unset; counter-increment: unset; counter-reset: unset; counter-set: unset; cx: unset; cy: unset; d: unset; dominant-baseline: unset; dynamic-range-limit: unset; empty-cells: unset; field-sizing: unset; fill: unset; fill-opacity: unset; fill-rule: unset; filter: unset; flex: unset; flex-line-count: unset; flex-wrap: unset; float: unset; flood-color: unset; flood-opacity: unset; frame-sizing: unset; grid: unset; grid-area: unset; height: unset; hyphenate-character: unset; hyphenate-limit-chars: unset; hyphens: unset; image-orientation: unset; image-rendering: unset; initial-letter: unset; inline-size: unset; inset-block: unset; inset-inline: unset; interactivity: unset; interest-delay: unset; interpolate-size: unset; isolation: unset; letter-spacing: unset; lighting-color: unset; line-break: unset; line-height: unset; list-style: unset; margin-block: unset; margin: unset; margin-inline: unset; margin-trim: unset; marker: unset; mask: unset; mask-type: unset; math-shift: unset; math-style: unset; max-block-size: unset; max-height: unset; max-inline-size: unset; max-width: unset; min-block-size: unset; min-height: unset; min-inline-size: unset; min-width: unset; mix-blend-mode: unset; object-fit: unset; object-position: unset; object-view-box: unset; offset: unset; opacity: unset; order: unset; orphans: unset; outline: unset; outline-offset: unset; overflow-anchor: unset; overflow-block: unset; overflow-clip-margin: unset; overflow-inline: unset; overflow-wrap: unset; overlay: unset; overscroll-behavior-block: unset; overscroll-behavior-inline: unset; overscroll-behavior: unset; padding-block: unset; padding: unset; padding-inline: unset; page: unset; page-margin-safety: unset; page-orientation: unset; paint-order: unset; perspective: unset; perspective-origin: unset; pointer-events: unset; position-try: unset; position-visibility: unset; print-color-adjust: unset; quotes: unset; r: unset; reading-flow: unset; reading-order: unset; resize: unset; rotate: unset; ruby-align: unset; ruby-overhang: unset; ruby-position: unset; rule-overlap: unset; rx: unset; ry: unset; scale: unset; scroll-axis-lock: unset; scroll-behavior: unset; scroll-initial-target: unset; scroll-margin-block: unset; scroll-margin: unset; scroll-margin-inline: unset; scroll-marker-group: unset; scroll-padding-block: unset; scroll-padding: unset; scroll-padding-inline: unset; scroll-snap-align: unset; scroll-snap-stop: unset; scroll-snap-type: unset; scroll-target-group: unset; scroll-timeline: unset; scrollbar-color: unset; scrollbar-gutter: unset; scrollbar-width: unset; shape-image-threshold: unset; shape-margin: unset; shape-outside: unset; shape-rendering: unset; size: unset; speak: unset; stop-color: unset; stop-opacity: unset; stroke: unset; stroke-dasharray: unset; stroke-dashoffset: unset; stroke-linecap: unset; stroke-linejoin: unset; stroke-miterlimit: unset; stroke-opacity: unset; stroke-width: unset; tab-size: unset; table-layout: unset; text-align-last: unset; text-anchor: unset; text-autospace: unset; text-box: unset; text-combine-upright: unset; text-decoration: unset; text-decoration-skip-ink: unset; text-decoration-skip-spaces: unset; text-emphasis: unset; text-emphasis-position: unset; text-fit: unset; text-indent: unset; text-justify: unset; text-overflow: unset; text-shadow: unset; text-transform: unset; text-underline-offset: unset; text-underline-position: unset; text-wrap: unset; timeline-scope: unset; timeline-trigger: unset; touch-action: unset; transform: unset; transform-box: unset; transform-origin: unset; transform-style: unset; translate: unset; trigger-scope: unset; user-select: unset; vector-effect: unset; vertical-align: unset; view-timeline: unset; view-transition-class: unset; view-transition-group: unset; view-transition-name: unset; view-transition-scope: unset; visibility: unset; border-spacing: unset; -webkit-box-align: unset; -webkit-box-decoration-break: unset; -webkit-box-direction: unset; -webkit-box-flex: unset; -webkit-box-ordinal-group: unset; -webkit-box-orient: unset; -webkit-box-pack: unset; -webkit-box-reflect: unset; -webkit-line-break: unset; -webkit-line-clamp: unset; -webkit-mask-box-image: unset; -webkit-rtl-ordering: unset; -webkit-ruby-position: unset; -webkit-tap-highlight-color: unset; -webkit-text-combine: unset; -webkit-text-decorations-in-effect: unset; -webkit-text-fill-color: unset; -webkit-text-security: unset; -webkit-text-stroke: unset; -webkit-user-drag: unset; white-space-collapse: unset; widows: unset; width: unset; will-change: unset; window-drag: unset; word-break: unset; word-spacing: unset; x: unset; y: unset; z-index: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; text-align: left; font-family: Montserrat, sans-serif; border: 2px solid transparent; box-shadow: rgba(13, 61, 64, 0.06) 0px 2px 10px; transition: border-color 0.2s, box-shadow 0.2s;" type="button">
+<div data-dc-tpl="74" style="position: relative; height: 210px; overflow: hidden;">
+<img alt="Tapas Treasure Hunt" decoding="async" loading="lazy" src="/fotos/treasure-hunt/treasure-hunt-seville-group-street.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/>
+<span data-dc-tpl="76" style='position: absolute; top: 14px; left: 14px; background: rgb(255, 255, 255); color: rgb(13, 61, 64); font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; padding: 5px 10px; border-radius: 2px;'><span class="sc-interp">FOOD &amp; FUN</span></span>
+</div>
+<div data-dc-tpl="77" style="padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1 1 0%;">
+<div data-dc-tpl="78" style="font-weight: 800; font-size: 18px; line-height: 1.3; color: rgb(31, 45, 51);"><span class="sc-interp">Tapas Treasure Hunt</span></div>
+<div data-dc-tpl="79" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80);"><span class="sc-interp">Each solved clue leads to a tapas bar, where the next riddle is served with a tapa and a drink.</span></div>
+<div data-dc-tpl="80" style="display: flex; flex-direction: column; gap: 6px;">
+<div data-dc-tpl="81" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; color: rgb(21, 202, 210);'><span class="sc-interp">IDEAL FOR</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Relaxed groups</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Lunch or dinner programmes</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Food lovers</span></div>
+</div>
+<div data-dc-tpl="85" style="display: flex; gap: 18px; flex-wrap: wrap; margin-top: auto; padding-top: 14px; border-top: 1px solid rgb(227, 236, 236); font-size: 13px; font-weight: 600; color: rgb(13, 61, 64);">
+<span data-dc-tpl="86"><span class="sc-interp">3 h</span></span><span data-dc-tpl="87"><span class="sc-interp">10 – 60 guests</span></span>
+</div>
+<div data-dc-tpl="88" style='font-family: "Varela Round", sans-serif; font-size: 13px; font-weight: 600; margin-top: 6px; color: rgb(13, 61, 64);'><span class="sc-interp">+ Select this hunt</span></div>
+</div>
+</button>
+<button data-dc-tpl="73" style="color-scheme: unset; forced-color-adjust: unset; math-depth: unset; position: unset; position-anchor: unset; text-size-adjust: unset; appearance: unset; color: unset; font-feature-settings: unset; font-kerning: unset; font-language-override: unset; font-optical-sizing: unset; font-palette: unset; font-size: unset; font-size-adjust: unset; font-stretch: unset; font-style: unset; font-synthesis: unset; font-variant: unset; font-variation-settings: unset; font-weight: unset; position-area: unset; text-orientation: unset; text-rendering: unset; text-spacing-trim: unset; -webkit-font-smoothing: unset; -webkit-locale: unset; -webkit-text-orientation: unset; -webkit-writing-mode: unset; writing-mode: unset; zoom: unset; accent-color: unset; place-content: unset; place-items: unset; place-self: unset; alignment-baseline: unset; anchor-name: unset; anchor-scope: unset; animation-composition: unset; animation: unset; animation-trigger: unset; app-region: unset; aspect-ratio: unset; backdrop-filter: unset; backface-visibility: unset; background-blend-mode: unset; baseline-shift: unset; baseline-source: unset; block-size: unset; border-block: unset; border-collapse: unset; border-end-end-radius: unset; border-end-start-radius: unset; border-inline: unset; border-shape: unset; border-start-end-radius: unset; border-start-start-radius: unset; inset: unset; box-decoration-break: unset; break-after: unset; break-before: unset; break-inside: unset; buffered-rendering: unset; caption-side: unset; caret-animation: unset; caret-color: unset; caret-shape: unset; clear: unset; clip: unset; clip-path: unset; clip-rule: unset; color-interpolation: unset; color-interpolation-filters: unset; color-rendering: unset; columns: unset; column-fill: unset; gap: unset; rule-break: unset; rule: unset; rule-inset: unset; rule-visibility-items: unset; column-span: unset; contain: unset; contain-intrinsic-block-size: unset; contain-intrinsic-size: unset; contain-intrinsic-inline-size: unset; container: unset; content: unset; content-visibility: unset; corner-shape: unset; corner-block-end-shape: unset; corner-block-start-shape: unset; counter-increment: unset; counter-reset: unset; counter-set: unset; cx: unset; cy: unset; d: unset; dominant-baseline: unset; dynamic-range-limit: unset; empty-cells: unset; field-sizing: unset; fill: unset; fill-opacity: unset; fill-rule: unset; filter: unset; flex: unset; flex-line-count: unset; flex-wrap: unset; float: unset; flood-color: unset; flood-opacity: unset; frame-sizing: unset; grid: unset; grid-area: unset; height: unset; hyphenate-character: unset; hyphenate-limit-chars: unset; hyphens: unset; image-orientation: unset; image-rendering: unset; initial-letter: unset; inline-size: unset; inset-block: unset; inset-inline: unset; interactivity: unset; interest-delay: unset; interpolate-size: unset; isolation: unset; letter-spacing: unset; lighting-color: unset; line-break: unset; line-height: unset; list-style: unset; margin-block: unset; margin: unset; margin-inline: unset; margin-trim: unset; marker: unset; mask: unset; mask-type: unset; math-shift: unset; math-style: unset; max-block-size: unset; max-height: unset; max-inline-size: unset; max-width: unset; min-block-size: unset; min-height: unset; min-inline-size: unset; min-width: unset; mix-blend-mode: unset; object-fit: unset; object-position: unset; object-view-box: unset; offset: unset; opacity: unset; order: unset; orphans: unset; outline: unset; outline-offset: unset; overflow-anchor: unset; overflow-block: unset; overflow-clip-margin: unset; overflow-inline: unset; overflow-wrap: unset; overlay: unset; overscroll-behavior-block: unset; overscroll-behavior-inline: unset; overscroll-behavior: unset; padding-block: unset; padding: unset; padding-inline: unset; page: unset; page-margin-safety: unset; page-orientation: unset; paint-order: unset; perspective: unset; perspective-origin: unset; pointer-events: unset; position-try: unset; position-visibility: unset; print-color-adjust: unset; quotes: unset; r: unset; reading-flow: unset; reading-order: unset; resize: unset; rotate: unset; ruby-align: unset; ruby-overhang: unset; ruby-position: unset; rule-overlap: unset; rx: unset; ry: unset; scale: unset; scroll-axis-lock: unset; scroll-behavior: unset; scroll-initial-target: unset; scroll-margin-block: unset; scroll-margin: unset; scroll-margin-inline: unset; scroll-marker-group: unset; scroll-padding-block: unset; scroll-padding: unset; scroll-padding-inline: unset; scroll-snap-align: unset; scroll-snap-stop: unset; scroll-snap-type: unset; scroll-target-group: unset; scroll-timeline: unset; scrollbar-color: unset; scrollbar-gutter: unset; scrollbar-width: unset; shape-image-threshold: unset; shape-margin: unset; shape-outside: unset; shape-rendering: unset; size: unset; speak: unset; stop-color: unset; stop-opacity: unset; stroke: unset; stroke-dasharray: unset; stroke-dashoffset: unset; stroke-linecap: unset; stroke-linejoin: unset; stroke-miterlimit: unset; stroke-opacity: unset; stroke-width: unset; tab-size: unset; table-layout: unset; text-align-last: unset; text-anchor: unset; text-autospace: unset; text-box: unset; text-combine-upright: unset; text-decoration: unset; text-decoration-skip-ink: unset; text-decoration-skip-spaces: unset; text-emphasis: unset; text-emphasis-position: unset; text-fit: unset; text-indent: unset; text-justify: unset; text-overflow: unset; text-shadow: unset; text-transform: unset; text-underline-offset: unset; text-underline-position: unset; text-wrap: unset; timeline-scope: unset; timeline-trigger: unset; touch-action: unset; transform: unset; transform-box: unset; transform-origin: unset; transform-style: unset; translate: unset; trigger-scope: unset; user-select: unset; vector-effect: unset; vertical-align: unset; view-timeline: unset; view-transition-class: unset; view-transition-group: unset; view-transition-name: unset; view-transition-scope: unset; visibility: unset; border-spacing: unset; -webkit-box-align: unset; -webkit-box-decoration-break: unset; -webkit-box-direction: unset; -webkit-box-flex: unset; -webkit-box-ordinal-group: unset; -webkit-box-orient: unset; -webkit-box-pack: unset; -webkit-box-reflect: unset; -webkit-line-break: unset; -webkit-line-clamp: unset; -webkit-mask-box-image: unset; -webkit-rtl-ordering: unset; -webkit-ruby-position: unset; -webkit-tap-highlight-color: unset; -webkit-text-combine: unset; -webkit-text-decorations-in-effect: unset; -webkit-text-fill-color: unset; -webkit-text-security: unset; -webkit-text-stroke: unset; -webkit-user-drag: unset; white-space-collapse: unset; widows: unset; width: unset; will-change: unset; window-drag: unset; word-break: unset; word-spacing: unset; x: unset; y: unset; z-index: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; text-align: left; font-family: Montserrat, sans-serif; border: 2px solid transparent; box-shadow: rgba(13, 61, 64, 0.06) 0px 2px 10px; transition: border-color 0.2s, box-shadow 0.2s;" type="button">
+<div data-dc-tpl="74" style="position: relative; height: 210px; overflow: hidden;">
+<img alt="Hacienda Treasure Hunt" decoding="async" loading="lazy" src="/fotos/treasure-hunt/treasure-hunt-seville-bullfighting-challenge.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/>
+<span data-dc-tpl="76" style='position: absolute; top: 14px; left: 14px; background: rgb(255, 255, 255); color: rgb(13, 61, 64); font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; padding: 5px 10px; border-radius: 2px;'><span class="sc-interp">COUNTRYSIDE</span></span>
+</div>
+<div data-dc-tpl="77" style="padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1 1 0%;">
+<div data-dc-tpl="78" style="font-weight: 800; font-size: 18px; line-height: 1.3; color: rgb(31, 45, 51);"><span class="sc-interp">Hacienda Treasure Hunt</span></div>
+<div data-dc-tpl="79" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80);"><span class="sc-interp">A treasure hunt on an Andalusian hacienda, with team building challenges inspired by life on the finca: bullfighting, ceramic painting, a cooking class and flamenco.</span></div>
+<div data-dc-tpl="80" style="display: flex; flex-direction: column; gap: 6px;">
+<div data-dc-tpl="81" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; color: rgb(21, 202, 210);'><span class="sc-interp">TEAM CHALLENGES</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Bullfighting</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Ceramic painting</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Cooking class</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Flamenco</span></div>
+</div>
+<div data-dc-tpl="85" style="display: flex; gap: 18px; flex-wrap: wrap; margin-top: auto; padding-top: 14px; border-top: 1px solid rgb(227, 236, 236); font-size: 13px; font-weight: 600; color: rgb(13, 61, 64);">
+<span data-dc-tpl="86"><span class="sc-interp">3 – 4 h</span></span><span data-dc-tpl="87"><span class="sc-interp">10 – 150 guests</span></span>
+</div>
+<div data-dc-tpl="88" style='font-family: "Varela Round", sans-serif; font-size: 13px; font-weight: 600; margin-top: 6px; color: rgb(13, 61, 64);'><span class="sc-interp">+ Select this hunt</span></div>
+</div>
+</button>
+<button data-dc-tpl="73" style="color-scheme: unset; forced-color-adjust: unset; math-depth: unset; position: unset; position-anchor: unset; text-size-adjust: unset; appearance: unset; color: unset; font-feature-settings: unset; font-kerning: unset; font-language-override: unset; font-optical-sizing: unset; font-palette: unset; font-size: unset; font-size-adjust: unset; font-stretch: unset; font-style: unset; font-synthesis: unset; font-variant: unset; font-variation-settings: unset; font-weight: unset; position-area: unset; text-orientation: unset; text-rendering: unset; text-spacing-trim: unset; -webkit-font-smoothing: unset; -webkit-locale: unset; -webkit-text-orientation: unset; -webkit-writing-mode: unset; writing-mode: unset; zoom: unset; accent-color: unset; place-content: unset; place-items: unset; place-self: unset; alignment-baseline: unset; anchor-name: unset; anchor-scope: unset; animation-composition: unset; animation: unset; animation-trigger: unset; app-region: unset; aspect-ratio: unset; backdrop-filter: unset; backface-visibility: unset; background-blend-mode: unset; baseline-shift: unset; baseline-source: unset; block-size: unset; border-block: unset; border-collapse: unset; border-end-end-radius: unset; border-end-start-radius: unset; border-inline: unset; border-shape: unset; border-start-end-radius: unset; border-start-start-radius: unset; inset: unset; box-decoration-break: unset; break-after: unset; break-before: unset; break-inside: unset; buffered-rendering: unset; caption-side: unset; caret-animation: unset; caret-color: unset; caret-shape: unset; clear: unset; clip: unset; clip-path: unset; clip-rule: unset; color-interpolation: unset; color-interpolation-filters: unset; color-rendering: unset; columns: unset; column-fill: unset; gap: unset; rule-break: unset; rule: unset; rule-inset: unset; rule-visibility-items: unset; column-span: unset; contain: unset; contain-intrinsic-block-size: unset; contain-intrinsic-size: unset; contain-intrinsic-inline-size: unset; container: unset; content: unset; content-visibility: unset; corner-shape: unset; corner-block-end-shape: unset; corner-block-start-shape: unset; counter-increment: unset; counter-reset: unset; counter-set: unset; cx: unset; cy: unset; d: unset; dominant-baseline: unset; dynamic-range-limit: unset; empty-cells: unset; field-sizing: unset; fill: unset; fill-opacity: unset; fill-rule: unset; filter: unset; flex: unset; flex-line-count: unset; flex-wrap: unset; float: unset; flood-color: unset; flood-opacity: unset; frame-sizing: unset; grid: unset; grid-area: unset; height: unset; hyphenate-character: unset; hyphenate-limit-chars: unset; hyphens: unset; image-orientation: unset; image-rendering: unset; initial-letter: unset; inline-size: unset; inset-block: unset; inset-inline: unset; interactivity: unset; interest-delay: unset; interpolate-size: unset; isolation: unset; letter-spacing: unset; lighting-color: unset; line-break: unset; line-height: unset; list-style: unset; margin-block: unset; margin: unset; margin-inline: unset; margin-trim: unset; marker: unset; mask: unset; mask-type: unset; math-shift: unset; math-style: unset; max-block-size: unset; max-height: unset; max-inline-size: unset; max-width: unset; min-block-size: unset; min-height: unset; min-inline-size: unset; min-width: unset; mix-blend-mode: unset; object-fit: unset; object-position: unset; object-view-box: unset; offset: unset; opacity: unset; order: unset; orphans: unset; outline: unset; outline-offset: unset; overflow-anchor: unset; overflow-block: unset; overflow-clip-margin: unset; overflow-inline: unset; overflow-wrap: unset; overlay: unset; overscroll-behavior-block: unset; overscroll-behavior-inline: unset; overscroll-behavior: unset; padding-block: unset; padding: unset; padding-inline: unset; page: unset; page-margin-safety: unset; page-orientation: unset; paint-order: unset; perspective: unset; perspective-origin: unset; pointer-events: unset; position-try: unset; position-visibility: unset; print-color-adjust: unset; quotes: unset; r: unset; reading-flow: unset; reading-order: unset; resize: unset; rotate: unset; ruby-align: unset; ruby-overhang: unset; ruby-position: unset; rule-overlap: unset; rx: unset; ry: unset; scale: unset; scroll-axis-lock: unset; scroll-behavior: unset; scroll-initial-target: unset; scroll-margin-block: unset; scroll-margin: unset; scroll-margin-inline: unset; scroll-marker-group: unset; scroll-padding-block: unset; scroll-padding: unset; scroll-padding-inline: unset; scroll-snap-align: unset; scroll-snap-stop: unset; scroll-snap-type: unset; scroll-target-group: unset; scroll-timeline: unset; scrollbar-color: unset; scrollbar-gutter: unset; scrollbar-width: unset; shape-image-threshold: unset; shape-margin: unset; shape-outside: unset; shape-rendering: unset; size: unset; speak: unset; stop-color: unset; stop-opacity: unset; stroke: unset; stroke-dasharray: unset; stroke-dashoffset: unset; stroke-linecap: unset; stroke-linejoin: unset; stroke-miterlimit: unset; stroke-opacity: unset; stroke-width: unset; tab-size: unset; table-layout: unset; text-align-last: unset; text-anchor: unset; text-autospace: unset; text-box: unset; text-combine-upright: unset; text-decoration: unset; text-decoration-skip-ink: unset; text-decoration-skip-spaces: unset; text-emphasis: unset; text-emphasis-position: unset; text-fit: unset; text-indent: unset; text-justify: unset; text-overflow: unset; text-shadow: unset; text-transform: unset; text-underline-offset: unset; text-underline-position: unset; text-wrap: unset; timeline-scope: unset; timeline-trigger: unset; touch-action: unset; transform: unset; transform-box: unset; transform-origin: unset; transform-style: unset; translate: unset; trigger-scope: unset; user-select: unset; vector-effect: unset; vertical-align: unset; view-timeline: unset; view-transition-class: unset; view-transition-group: unset; view-transition-name: unset; view-transition-scope: unset; visibility: unset; border-spacing: unset; -webkit-box-align: unset; -webkit-box-decoration-break: unset; -webkit-box-direction: unset; -webkit-box-flex: unset; -webkit-box-ordinal-group: unset; -webkit-box-orient: unset; -webkit-box-pack: unset; -webkit-box-reflect: unset; -webkit-line-break: unset; -webkit-line-clamp: unset; -webkit-mask-box-image: unset; -webkit-rtl-ordering: unset; -webkit-ruby-position: unset; -webkit-tap-highlight-color: unset; -webkit-text-combine: unset; -webkit-text-decorations-in-effect: unset; -webkit-text-fill-color: unset; -webkit-text-security: unset; -webkit-text-stroke: unset; -webkit-user-drag: unset; white-space-collapse: unset; widows: unset; width: unset; will-change: unset; window-drag: unset; word-break: unset; word-spacing: unset; x: unset; y: unset; z-index: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; text-align: left; font-family: Montserrat, sans-serif; border: 2px solid transparent; box-shadow: rgba(13, 61, 64, 0.06) 0px 2px 10px; transition: border-color 0.2s, box-shadow 0.2s;" type="button">
+<div data-dc-tpl="74" style="position: relative; height: 210px; overflow: hidden;">
+<img alt="Characters Hunt" decoding="async" loading="lazy" src="/uploads/treasure-hunt-sevilla-costumed-characters.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/>
+<span data-dc-tpl="76" style='position: absolute; top: 14px; left: 14px; background: rgb(255, 255, 255); color: rgb(13, 61, 64); font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; padding: 5px 10px; border-radius: 2px;'><span class="sc-interp">NEW</span></span>
+</div>
+<div data-dc-tpl="77" style="padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1 1 0%;">
+<div data-dc-tpl="78" style="font-weight: 800; font-size: 18px; line-height: 1.3; color: rgb(31, 45, 51);"><span class="sc-interp">Characters Hunt</span></div>
+<div data-dc-tpl="79" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80);"><span class="sc-interp">Teams meet Carmen, Cervantes, Velázquez, San Fernando III and other famous Sevillanos along the route, each with a challenge to complete for the next clue.</span></div>
+<div data-dc-tpl="80" style="display: flex; flex-direction: column; gap: 6px;">
+<div data-dc-tpl="81" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; color: rgb(21, 202, 210);'><span class="sc-interp">INCLUDES</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Actors in historical costume</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Challenges set by each character</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Great photo moments</span></div>
+</div>
+<div data-dc-tpl="85" style="display: flex; gap: 18px; flex-wrap: wrap; margin-top: auto; padding-top: 14px; border-top: 1px solid rgb(227, 236, 236); font-size: 13px; font-weight: 600; color: rgb(13, 61, 64);">
+<span data-dc-tpl="86"><span class="sc-interp">2.5 – 3 h</span></span><span data-dc-tpl="87"><span class="sc-interp">10 – 200 guests</span></span>
+</div>
+<div data-dc-tpl="88" style='font-family: "Varela Round", sans-serif; font-size: 13px; font-weight: 600; margin-top: 6px; color: rgb(13, 61, 64);'><span class="sc-interp">+ Select this hunt</span></div>
+</div>
+</button>
+<button data-dc-tpl="73" style="color-scheme: unset; forced-color-adjust: unset; math-depth: unset; position: unset; position-anchor: unset; text-size-adjust: unset; appearance: unset; color: unset; font-feature-settings: unset; font-kerning: unset; font-language-override: unset; font-optical-sizing: unset; font-palette: unset; font-size: unset; font-size-adjust: unset; font-stretch: unset; font-style: unset; font-synthesis: unset; font-variant: unset; font-variation-settings: unset; font-weight: unset; position-area: unset; text-orientation: unset; text-rendering: unset; text-spacing-trim: unset; -webkit-font-smoothing: unset; -webkit-locale: unset; -webkit-text-orientation: unset; -webkit-writing-mode: unset; writing-mode: unset; zoom: unset; accent-color: unset; place-content: unset; place-items: unset; place-self: unset; alignment-baseline: unset; anchor-name: unset; anchor-scope: unset; animation-composition: unset; animation: unset; animation-trigger: unset; app-region: unset; aspect-ratio: unset; backdrop-filter: unset; backface-visibility: unset; background-blend-mode: unset; baseline-shift: unset; baseline-source: unset; block-size: unset; border-block: unset; border-collapse: unset; border-end-end-radius: unset; border-end-start-radius: unset; border-inline: unset; border-shape: unset; border-start-end-radius: unset; border-start-start-radius: unset; inset: unset; box-decoration-break: unset; break-after: unset; break-before: unset; break-inside: unset; buffered-rendering: unset; caption-side: unset; caret-animation: unset; caret-color: unset; caret-shape: unset; clear: unset; clip: unset; clip-path: unset; clip-rule: unset; color-interpolation: unset; color-interpolation-filters: unset; color-rendering: unset; columns: unset; column-fill: unset; gap: unset; rule-break: unset; rule: unset; rule-inset: unset; rule-visibility-items: unset; column-span: unset; contain: unset; contain-intrinsic-block-size: unset; contain-intrinsic-size: unset; contain-intrinsic-inline-size: unset; container: unset; content: unset; content-visibility: unset; corner-shape: unset; corner-block-end-shape: unset; corner-block-start-shape: unset; counter-increment: unset; counter-reset: unset; counter-set: unset; cx: unset; cy: unset; d: unset; dominant-baseline: unset; dynamic-range-limit: unset; empty-cells: unset; field-sizing: unset; fill: unset; fill-opacity: unset; fill-rule: unset; filter: unset; flex: unset; flex-line-count: unset; flex-wrap: unset; float: unset; flood-color: unset; flood-opacity: unset; frame-sizing: unset; grid: unset; grid-area: unset; height: unset; hyphenate-character: unset; hyphenate-limit-chars: unset; hyphens: unset; image-orientation: unset; image-rendering: unset; initial-letter: unset; inline-size: unset; inset-block: unset; inset-inline: unset; interactivity: unset; interest-delay: unset; interpolate-size: unset; isolation: unset; letter-spacing: unset; lighting-color: unset; line-break: unset; line-height: unset; list-style: unset; margin-block: unset; margin: unset; margin-inline: unset; margin-trim: unset; marker: unset; mask: unset; mask-type: unset; math-shift: unset; math-style: unset; max-block-size: unset; max-height: unset; max-inline-size: unset; max-width: unset; min-block-size: unset; min-height: unset; min-inline-size: unset; min-width: unset; mix-blend-mode: unset; object-fit: unset; object-position: unset; object-view-box: unset; offset: unset; opacity: unset; order: unset; orphans: unset; outline: unset; outline-offset: unset; overflow-anchor: unset; overflow-block: unset; overflow-clip-margin: unset; overflow-inline: unset; overflow-wrap: unset; overlay: unset; overscroll-behavior-block: unset; overscroll-behavior-inline: unset; overscroll-behavior: unset; padding-block: unset; padding: unset; padding-inline: unset; page: unset; page-margin-safety: unset; page-orientation: unset; paint-order: unset; perspective: unset; perspective-origin: unset; pointer-events: unset; position-try: unset; position-visibility: unset; print-color-adjust: unset; quotes: unset; r: unset; reading-flow: unset; reading-order: unset; resize: unset; rotate: unset; ruby-align: unset; ruby-overhang: unset; ruby-position: unset; rule-overlap: unset; rx: unset; ry: unset; scale: unset; scroll-axis-lock: unset; scroll-behavior: unset; scroll-initial-target: unset; scroll-margin-block: unset; scroll-margin: unset; scroll-margin-inline: unset; scroll-marker-group: unset; scroll-padding-block: unset; scroll-padding: unset; scroll-padding-inline: unset; scroll-snap-align: unset; scroll-snap-stop: unset; scroll-snap-type: unset; scroll-target-group: unset; scroll-timeline: unset; scrollbar-color: unset; scrollbar-gutter: unset; scrollbar-width: unset; shape-image-threshold: unset; shape-margin: unset; shape-outside: unset; shape-rendering: unset; size: unset; speak: unset; stop-color: unset; stop-opacity: unset; stroke: unset; stroke-dasharray: unset; stroke-dashoffset: unset; stroke-linecap: unset; stroke-linejoin: unset; stroke-miterlimit: unset; stroke-opacity: unset; stroke-width: unset; tab-size: unset; table-layout: unset; text-align-last: unset; text-anchor: unset; text-autospace: unset; text-box: unset; text-combine-upright: unset; text-decoration: unset; text-decoration-skip-ink: unset; text-decoration-skip-spaces: unset; text-emphasis: unset; text-emphasis-position: unset; text-fit: unset; text-indent: unset; text-justify: unset; text-overflow: unset; text-shadow: unset; text-transform: unset; text-underline-offset: unset; text-underline-position: unset; text-wrap: unset; timeline-scope: unset; timeline-trigger: unset; touch-action: unset; transform: unset; transform-box: unset; transform-origin: unset; transform-style: unset; translate: unset; trigger-scope: unset; user-select: unset; vector-effect: unset; vertical-align: unset; view-timeline: unset; view-transition-class: unset; view-transition-group: unset; view-transition-name: unset; view-transition-scope: unset; visibility: unset; border-spacing: unset; -webkit-box-align: unset; -webkit-box-decoration-break: unset; -webkit-box-direction: unset; -webkit-box-flex: unset; -webkit-box-ordinal-group: unset; -webkit-box-orient: unset; -webkit-box-pack: unset; -webkit-box-reflect: unset; -webkit-line-break: unset; -webkit-line-clamp: unset; -webkit-mask-box-image: unset; -webkit-rtl-ordering: unset; -webkit-ruby-position: unset; -webkit-tap-highlight-color: unset; -webkit-text-combine: unset; -webkit-text-decorations-in-effect: unset; -webkit-text-fill-color: unset; -webkit-text-security: unset; -webkit-text-stroke: unset; -webkit-user-drag: unset; white-space-collapse: unset; widows: unset; width: unset; will-change: unset; window-drag: unset; word-break: unset; word-spacing: unset; x: unset; y: unset; z-index: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; text-align: left; font-family: Montserrat, sans-serif; border: 2px solid transparent; box-shadow: rgba(13, 61, 64, 0.06) 0px 2px 10px; transition: border-color 0.2s, box-shadow 0.2s;" type="button">
+<div data-dc-tpl="74" style="position: relative; height: 210px; overflow: hidden;">
+<img alt="Branded Company Hunt" decoding="async" loading="lazy" src="/fotos/treasure-hunt/treasure-hunt-seville-clue-easel.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/>
+<span data-dc-tpl="76" style='position: absolute; top: 14px; left: 14px; background: rgb(255, 255, 255); color: rgb(13, 61, 64); font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; padding: 5px 10px; border-radius: 2px;'><span class="sc-interp">CUSTOM</span></span>
+</div>
+<div data-dc-tpl="77" style="padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1 1 0%;">
+<div data-dc-tpl="78" style="font-weight: 800; font-size: 18px; line-height: 1.3; color: rgb(31, 45, 51);"><span class="sc-interp">Branded Company Hunt</span></div>
+<div data-dc-tpl="79" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80);"><span class="sc-interp">A fully personalised hunt where the missions, questions and final treasure are built around your company, milestone or event theme.</span></div>
+<div data-dc-tpl="80" style="display: flex; flex-direction: column; gap: 6px;">
+<div data-dc-tpl="81" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1px; color: rgb(21, 202, 210);'><span class="sc-interp">INCLUDES</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Clues based on your values</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Company branding</span></div>
+<div data-dc-tpl="83" style="display: flex; gap: 8px; font-size: 13.5px; font-weight: 500; color: rgb(31, 45, 51);"><span data-dc-tpl="84" style="color: rgb(21, 202, 210);">•</span><span class="sc-interp">Link to your conference theme</span></div>
+</div>
+<div data-dc-tpl="85" style="display: flex; gap: 18px; flex-wrap: wrap; margin-top: auto; padding-top: 14px; border-top: 1px solid rgb(227, 236, 236); font-size: 13px; font-weight: 600; color: rgb(13, 61, 64);">
+<span data-dc-tpl="86"><span class="sc-interp">On request</span></span><span data-dc-tpl="87"><span class="sc-interp">20 – 300 guests</span></span>
+</div>
+<div data-dc-tpl="88" style='font-family: "Varela Round", sans-serif; font-size: 13px; font-weight: 600; margin-top: 6px; color: rgb(13, 61, 64);'><span class="sc-interp">+ Select this hunt</span></div>
+</div>
+</button>
+</div>
+</div>
+</section>
+<section data-dc-tpl="89" data-screen-label="How it works" style="max-width: 1200px; margin: 0px auto; padding: 88px 32px 0px;">
+<div data-dc-tpl="90" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>HOW IT WORKS</div>
+<h2 data-dc-tpl="91" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(24px, 3vw, 34px); margin: 0px 0px 18px;">From the starting whistle to the final treasure</h2>
+<div data-dc-tpl="92" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 32px; margin-top: 22px;">
+<div data-dc-tpl="93" style="border-top: 3px solid rgb(21, 202, 210); padding-top: 20px;"><div data-dc-tpl="94" style="font-weight: 800; font-size: 28px; color: rgb(21, 202, 210); line-height: 1; margin-bottom: 12px;">01</div><div data-dc-tpl="95" style="font-weight: 700; font-size: 17px; margin-bottom: 8px;">Kick-off briefing</div><p data-dc-tpl="96" style="font-weight: 300; font-size: 15px; line-height: 1.7; color: rgb(61, 74, 80); margin: 0px;">Teams are formed, each receives a map, a clue book and a team captain. The rules are explained and the clock starts.</p></div>
+<div data-dc-tpl="97" style="border-top: 3px solid rgb(21, 202, 210); padding-top: 20px;"><div data-dc-tpl="98" style="font-weight: 800; font-size: 28px; color: rgb(21, 202, 210); line-height: 1; margin-bottom: 12px;">02</div><div data-dc-tpl="99" style="font-weight: 700; font-size: 17px; margin-bottom: 8px;">Clues &amp; riddles</div><p data-dc-tpl="100" style="font-weight: 300; font-size: 15px; line-height: 1.7; color: rgb(61, 74, 80); margin: 0px;">Teams navigate the old town, solve puzzles linked to monuments and decide their next move together.</p></div>
+<div data-dc-tpl="101" style="border-top: 3px solid rgb(21, 202, 210); padding-top: 20px;"><div data-dc-tpl="102" style="font-weight: 800; font-size: 28px; color: rgb(21, 202, 210); line-height: 1; margin-bottom: 12px;">03</div><div data-dc-tpl="103" style="font-weight: 700; font-size: 17px; margin-bottom: 8px;">Missions &amp; challenges</div><p data-dc-tpl="104" style="font-weight: 300; font-size: 15px; line-height: 1.7; color: rgb(61, 74, 80); margin: 0px;">Photo tasks, questions for locals and small challenges at each stop earn extra points.</p></div>
+<div data-dc-tpl="105" style="border-top: 3px solid rgb(255, 93, 26); padding-top: 20px;"><div data-dc-tpl="106" style="font-weight: 800; font-size: 28px; color: rgb(255, 93, 26); line-height: 1; margin-bottom: 12px;">04</div><div data-dc-tpl="107" style="font-weight: 700; font-size: 17px; margin-bottom: 8px;">Finale &amp; prizes</div><p data-dc-tpl="108" style="font-weight: 300; font-size: 15px; line-height: 1.7; color: rgb(61, 74, 80); margin: 0px;">Teams meet at the finish for the results, the treasure and a drink or tapas together.</p></div>
+</div>
+</section>
+<section data-dc-tpl="109" data-screen-label="Teamwork" style="max-width: 1200px; margin: 0px auto; padding: 88px 32px 0px; display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: center;">
+<div data-dc-tpl="110" style="flex: 1 1 400px; height: 380px; border-radius: 6px; overflow: hidden;"><img alt="Team reading a clue together on a treasure hunt in Seville" decoding="async" loading="lazy" src="/uploads/treasure-hunt-sevilla-riddle.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="112" style="flex: 1 1 400px;">
+<div data-dc-tpl="113" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>TEAMWORK</div>
+<h2 data-dc-tpl="114" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(24px, 3vw, 34px); margin: 0px 0px 18px;">Teamwork and Communication in Action</h2>
+<p data-dc-tpl="115" style="font-weight: 300; font-size: 16.5px; line-height: 1.85; color: rgb(61, 74, 80); margin: 0px 0px 16px;">As teams navigate through Seville’s old town, they must solve clues, interpret riddles, and decide their next move together. This creates a natural environment for collaboration, strategic thinking, and open communication—far more dynamic than any indoor workshop.</p><p data-dc-tpl="116" style="font-weight: 300; font-size: 16.5px; line-height: 1.85; color: rgb(61, 74, 80); margin: 0px;">The treasure hunt format encourages all participants to contribute, making it an ideal exercise for diverse teams with varying personalities and skill sets.</p>
+</div>
+</section>
+<section data-dc-tpl="117" data-screen-label="Competition" style="max-width: 1200px; margin: 0px auto; padding: 88px 32px 0px; display: flex; flex-wrap: wrap-reverse; gap: 40px 56px; align-items: center;">
+<div data-dc-tpl="118" style="flex: 1 1 400px; height: 380px; border-radius: 6px; overflow: hidden;"><img alt="Teams solving clues in a Seville street during a treasure hunt" decoding="async" loading="lazy" src="/uploads/treasure-hunt-sevilla-city-gymkhana.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="120" style="flex: 1 1 400px;">
+<div data-dc-tpl="121" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>TEAM SPIRIT</div>
+<h2 data-dc-tpl="122" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(24px, 3vw, 34px); margin: 0px 0px 18px;">Friendly Competition Builds Team Spirit</h2>
+<p data-dc-tpl="123" style="font-weight: 300; font-size: 16.5px; line-height: 1.85; color: rgb(61, 74, 80); margin: 0px 0px 16px;">Who doesn’t enjoy a little rivalry? Splitting into teams adds a layer of excitement and motivation. Whether it’s racing to the next clue or cracking a puzzle faster than the others, that shared sense of purpose and energy turns colleagues into teammates—and teammates into friends.</p><p data-dc-tpl="124" style="font-weight: 600; font-size: 17px; color: rgb(255, 93, 26); margin: 0px;">The prize may be symbolic, but the memories created are very real.</p>
+</div>
+</section>
+<section data-dc-tpl="125" data-screen-label="Discover" style="max-width: 1200px; margin: 0px auto; padding: 88px 32px 0px; display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: center;">
+<div data-dc-tpl="126" style="flex: 1 1 400px; height: 380px; border-radius: 6px; overflow: hidden;"><img alt="Plaza de España, a stop on the treasure hunt" decoding="async" loading="lazy" src="/uploads/plaza-de-espana-seville.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="128" style="flex: 1 1 400px;">
+<div data-dc-tpl="129" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>DISCOVER SEVILLE</div>
+<h2 data-dc-tpl="130" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(24px, 3vw, 34px); margin: 0px 0px 18px;">Discover Seville in a Playful, Immersive Way</h2>
+<p data-dc-tpl="131" style="font-weight: 300; font-size: 16.5px; line-height: 1.85; color: rgb(61, 74, 80); margin: 0px 0px 16px;">Instead of passively listening to a guide, your group becomes the protagonist of their own adventure. Each stop along the way reveals pieces of Seville’s rich history—from Roman ruins and Moorish palaces to tucked-away plazas and hidden gardens.</p><p data-dc-tpl="132" style="font-weight: 300; font-size: 16.5px; line-height: 1.85; color: rgb(61, 74, 80); margin: 0px 0px 22px;">It’s sightseeing, storytelling, and scavenger hunting, all rolled into one. Perfect for curious minds and energetic spirits.</p><div data-dc-tpl="133" style="display: flex; flex-wrap: wrap; gap: 8px;"><span data-dc-tpl="134" style="border: 1px solid rgb(207, 227, 228); border-radius: 40px; padding: 8px 14px; font-size: 13.5px; font-weight: 600; color: rgb(13, 61, 64);">Cathedral &amp; Giralda</span><span data-dc-tpl="135" style="border: 1px solid rgb(207, 227, 228); border-radius: 40px; padding: 8px 14px; font-size: 13.5px; font-weight: 600; color: rgb(13, 61, 64);">Alcázar</span><span data-dc-tpl="136" style="border: 1px solid rgb(207, 227, 228); border-radius: 40px; padding: 8px 14px; font-size: 13.5px; font-weight: 600; color: rgb(13, 61, 64);">Santa Cruz</span><span data-dc-tpl="137" style="border: 1px solid rgb(207, 227, 228); border-radius: 40px; padding: 8px 14px; font-size: 13.5px; font-weight: 600; color: rgb(13, 61, 64);">Plaza de España</span><span data-dc-tpl="138" style="border: 1px solid rgb(207, 227, 228); border-radius: 40px; padding: 8px 14px; font-size: 13.5px; font-weight: 600; color: rgb(13, 61, 64);">Triana</span><span data-dc-tpl="139" style="border: 1px solid rgb(207, 227, 228); border-radius: 40px; padding: 8px 14px; font-size: 13.5px; font-weight: 600; color: rgb(13, 61, 64);">Setas</span></div>
+</div>
+</section>
+<section data-dc-tpl="140" data-screen-label="Tailored" style="margin-top: 0px; padding: 88px 32px 80px;">
+<div data-dc-tpl="141" style="max-width: 1200px; margin: 0px auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 44px 56px;">
+<div data-dc-tpl="142">
+<div data-dc-tpl="143" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>FLEXIBLE</div>
+<h2 data-dc-tpl="144" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(22px, 2.8vw, 30px); margin: 0px 0px 16px;">Flexible for Groups of All Sizes and Profiles</h2>
+<p data-dc-tpl="145" style="font-weight: 300; font-size: 16.5px; line-height: 1.85; color: rgb(61, 74, 80); margin: 0px 0px 16px;">Whether you’re organizing a small leadership retreat or a large incentive group, the treasure hunt can be tailored to suit your team’s size, schedule, and fitness level. The route can be adapted to focus on central highlights or include quieter corners for a more local, authentic feel.</p>
+<p data-dc-tpl="146" style="font-weight: 300; font-size: 16.5px; line-height: 1.85; color: rgb(61, 74, 80); margin: 0px;">Language, duration, and themes can also be customized to match your group’s needs.</p>
+</div>
+<div data-dc-tpl="147">
+<div data-dc-tpl="148" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>YOUR BRAND</div>
+<h2 data-dc-tpl="149" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(22px, 2.8vw, 30px); margin: 0px 0px 16px;">Custom-Built to Reflect Your Company Culture</h2>
+<p data-dc-tpl="150" style="font-weight: 300; font-size: 16.5px; line-height: 1.85; color: rgb(61, 74, 80); margin: 0px 0px 16px;">Want to reinforce company values, celebrate a milestone, or tie the activity to your conference themes? We can personalize the treasure hunt to reflect your branding or goals—whether it’s through custom clues, themed missions, or integration into a larger corporate event.</p>
+<p data-dc-tpl="151" style="font-weight: 300; font-size: 16.5px; line-height: 1.85; color: rgb(61, 74, 80); margin: 0px;">Our goal is to create not just a fun activity, but a meaningful experience that aligns with your purpose.</p>
+</div>
+</div>
+</section>
+<section data-dc-tpl="152" data-screen-label="Themes" style="background: rgb(246, 244, 239); padding: 80px 32px;">
+<div data-dc-tpl="153" style="max-width: 1200px; margin: 0px auto;">
+<div data-dc-tpl="154" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 32px;">
+<div data-dc-tpl="155">
+<div data-dc-tpl="156" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>CHOOSE A THEME</div>
+<h2 data-dc-tpl="157" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(24px, 3vw, 34px); margin: 0px;">Themed treasure hunts</h2>
+</div>
+<p data-dc-tpl="158" style="font-weight: 300; font-size: 15px; line-height: 1.6; color: rgb(61, 74, 80); margin: 0px; max-width: 380px;">Every clue, mission and stop is built around one story of Seville. Pick a theme or let us create one for you.</p>
+</div>
+<div data-dc-tpl="159" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 16px;">
+<div data-dc-tpl="160" style="background: rgb(255, 255, 255); border: 1px solid rgb(230, 225, 214); border-radius: 6px; padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 8px;"><div data-dc-tpl="161" style="font-weight: 800; font-size: 17px; color: rgb(31, 45, 51);">Orange Theme</div><p data-dc-tpl="162" style="font-weight: 300; font-size: 14.5px; line-height: 1.65; color: rgb(61, 74, 80); margin: 0px;">Follow the scent of Seville’s 40,000 orange trees, from the Patio de los Naranjos to a bitter orange marmalade or orange wine tasting at the finish.</p></div>
+<div data-dc-tpl="163" style="background: rgb(255, 255, 255); border: 1px solid rgb(230, 225, 214); border-radius: 6px; padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 8px;"><div data-dc-tpl="164" style="font-weight: 800; font-size: 17px; color: rgb(31, 45, 51);">Flamenco Theme</div><p data-dc-tpl="165" style="font-weight: 300; font-size: 14.5px; line-height: 1.65; color: rgb(61, 74, 80); margin: 0px;">Clues hidden in the birthplaces of flamenco in Triana, rhythm challenges on the way and a short flamenco class as the final mission.</p></div>
+<div data-dc-tpl="166" style="background: rgb(255, 255, 255); border: 1px solid rgb(230, 225, 214); border-radius: 6px; padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 8px;"><div data-dc-tpl="167" style="font-weight: 800; font-size: 17px; color: rgb(31, 45, 51);">Painting Theme</div><p data-dc-tpl="168" style="font-weight: 300; font-size: 14.5px; line-height: 1.65; color: rgb(61, 74, 80); margin: 0px;">On the trail of Murillo and Velázquez, with missions at the places they lived and painted, ending with a group painting of the city.</p></div>
+<div data-dc-tpl="169" style="background: rgb(255, 255, 255); border: 1px solid rgb(230, 225, 214); border-radius: 6px; padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 8px;"><div data-dc-tpl="170" style="font-weight: 800; font-size: 17px; color: rgb(31, 45, 51);">San Fernando III Theme</div><p data-dc-tpl="171" style="font-weight: 300; font-size: 14.5px; line-height: 1.65; color: rgb(61, 74, 80); margin: 0px;">Relive the king’s entry into Seville in 1248, from the city walls to his tomb in the Royal Chapel of the Cathedral.</p></div>
+<div data-dc-tpl="172" style="background: rgb(255, 255, 255); border: 1px solid rgb(230, 225, 214); border-radius: 6px; padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 8px;"><div data-dc-tpl="173" style="font-weight: 800; font-size: 17px; color: rgb(31, 45, 51);">Aníbal González Theme</div><p data-dc-tpl="174" style="font-weight: 300; font-size: 14.5px; line-height: 1.65; color: rgb(61, 74, 80); margin: 0px;">Discover the architect of the 1929 Ibero-American Exposition, with clues across Plaza de España, María Luisa Park and the pavilions.</p></div>
+<div data-dc-tpl="175" style="background: rgb(255, 255, 255); border: 1px solid rgb(230, 225, 214); border-radius: 6px; padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 8px;"><div data-dc-tpl="176" style="font-weight: 800; font-size: 17px; color: rgb(31, 45, 51);">Carmen &amp; Opera Theme</div><p data-dc-tpl="177" style="font-weight: 300; font-size: 14.5px; line-height: 1.65; color: rgb(61, 74, 80); margin: 0px;">Seville is the setting of more than 100 operas. Follow Carmen, Don Giovanni and Figaro to the places where their stories take place.</p></div>
+<div data-dc-tpl="178" style="background: rgb(255, 255, 255); border: 1px solid rgb(230, 225, 214); border-radius: 6px; padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 8px;"><div data-dc-tpl="179" style="font-weight: 800; font-size: 17px; color: rgb(31, 45, 51);">Discovery &amp; New World Theme</div><p data-dc-tpl="180" style="font-weight: 300; font-size: 14.5px; line-height: 1.65; color: rgb(61, 74, 80); margin: 0px;">Seville as the gateway to the Americas: the Torre del Oro, the Archive of the Indies and the voyage of Magellan and Elcano.</p></div>
+<div data-dc-tpl="181" style="background: rgb(255, 255, 255); border: 1px solid rgb(230, 225, 214); border-radius: 6px; padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 8px;"><div data-dc-tpl="182" style="font-weight: 800; font-size: 17px; color: rgb(31, 45, 51);">Your Company Theme</div><p data-dc-tpl="183" style="font-weight: 300; font-size: 14.5px; line-height: 1.65; color: rgb(61, 74, 80); margin: 0px;">Missions, questions and the final treasure built around your company values, milestone or conference theme.</p></div>
+</div>
+</div>
+</section>
+<section data-dc-tpl="184" data-screen-label="Characters" style="max-width: 1200px; margin: 0px auto; padding: 88px 32px 0px;">
+<div data-dc-tpl="185" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 32px;">
+<div data-dc-tpl="186">
+<div data-dc-tpl="187" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>MEET THE LOCALS</div>
+<h2 data-dc-tpl="188" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(24px, 3vw, 34px); margin: 0px;">Meet Seville’s famous characters along the way</h2>
+</div>
+<p data-dc-tpl="189" style="font-weight: 300; font-size: 15px; line-height: 1.6; color: rgb(61, 74, 80); margin: 0px; max-width: 380px;">Professional actors in costume wait at secret stops. Teams must find them, win their trust and complete their challenge to receive the next clue.</p>
+</div>
+<div data-dc-tpl="190" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); gap: 22px;">
+<div data-dc-tpl="191" style="display: flex; flex-direction: column; background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; box-shadow: rgba(13, 61, 64, 0.06) 0px 2px 10px;">
+<div data-dc-tpl="192" style="height: 220px;"><img alt="Actor playing Carmen with a group in Seville" decoding="async" loading="lazy" src="/fotos/treasure-hunt/characters/character-carmen.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="194" style="padding: 20px 22px 24px;"><div data-dc-tpl="195" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 6px;'>FROM THE OPERA</div><div data-dc-tpl="196" style="font-weight: 800; font-size: 18px; margin-bottom: 8px;">Carmen</div><p data-dc-tpl="197" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80); margin: 0px;">The cigar maker from the Royal Tobacco Factory challenges teams to a sevillanas step or a song before handing over her clue.</p></div>
+</div>
+<div data-dc-tpl="198" style="display: flex; flex-direction: column; background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; box-shadow: rgba(13, 61, 64, 0.06) 0px 2px 10px;">
+<div data-dc-tpl="199" style="height: 220px;"><img alt="San Fernando III, portrait" data-dc-tpl="200" loading="lazy" src="/fotos/treasure-hunt/characters/character-san-fernando-iii.webp" style="width: 100%; height: 100%; object-fit: cover; object-position: center 12%; display: block;"/></div>
+<div data-dc-tpl="201" style="padding: 20px 22px 24px;"><div data-dc-tpl="202" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 6px;'>KING &amp; SAINT</div><div data-dc-tpl="203" style="font-weight: 800; font-size: 18px; margin-bottom: 8px;">San Fernando III</div><p data-dc-tpl="204" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80); margin: 0px;">The king himself, in full armour, tests the teams’ knowledge of the city he entered in 1248.</p></div>
+</div>
+<div data-dc-tpl="205" style="display: flex; flex-direction: column; background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; box-shadow: rgba(13, 61, 64, 0.06) 0px 2px 10px;">
+<div data-dc-tpl="206" style="height: 220px;"><img alt="Actor playing Cervantes reading to a group in Seville" decoding="async" loading="lazy" src="/fotos/treasure-hunt/characters/character-cervantes.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="208" style="padding: 20px 22px 24px;"><div data-dc-tpl="209" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 6px;'>WRITER</div><div data-dc-tpl="210" style="font-weight: 800; font-size: 18px; margin-bottom: 8px;">Cervantes</div><p data-dc-tpl="211" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80); margin: 0px;">The author of Don Quixote, who lived in Seville and began his novel here, reads from his book and sets the teams a riddle in words.</p></div>
+</div>
+<div data-dc-tpl="212" style="display: flex; flex-direction: column; background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; box-shadow: rgba(13, 61, 64, 0.06) 0px 2px 10px;">
+<div data-dc-tpl="213" style="height: 220px;"><img alt="Actor playing Velázquez with a team painting in Seville" decoding="async" loading="lazy" src="/fotos/treasure-hunt/characters/character-velazquez.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="215" style="padding: 20px 22px 24px;"><div data-dc-tpl="216" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 6px;'>PAINTER</div><div data-dc-tpl="217" style="font-weight: 800; font-size: 18px; margin-bottom: 8px;">Velázquez</div><p data-dc-tpl="218" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80); margin: 0px;">Seville’s most famous painter sets a riddle about his masterpiece Las Meninas.</p></div>
+</div>
+<div data-dc-tpl="219" style="display: flex; flex-direction: column; background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; box-shadow: rgba(13, 61, 64, 0.06) 0px 2px 10px;">
+<div data-dc-tpl="220" style="height: 220px;"><img alt="Actor playing Aníbal González at Plaza de España" decoding="async" loading="lazy" src="/fotos/treasure-hunt/characters/character-anibal-gonzalez.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="222" style="padding: 20px 22px 24px;"><div data-dc-tpl="223" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 6px;'>ARCHITECT</div><div data-dc-tpl="224" style="font-weight: 800; font-size: 18px; margin-bottom: 8px;">Aníbal González</div><p data-dc-tpl="225" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80); margin: 0px;">The architect of Plaza de España shows teams the tiles of the provinces, and hides a clue in one of them.</p></div>
+</div>
+<div data-dc-tpl="226" style="display: flex; flex-direction: column; background: rgb(255, 255, 255); border-radius: 6px; overflow: hidden; box-shadow: rgba(13, 61, 64, 0.06) 0px 2px 10px;">
+<div data-dc-tpl="227" style="height: 220px;"><img alt="Actor playing Don Juan Tenorio with a group in Seville" decoding="async" loading="lazy" src="/fotos/treasure-hunt/characters/character-don-juan-tenorio.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="229" style="padding: 20px 22px 24px;"><div data-dc-tpl="230" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 6px;'>LEGEND</div><div data-dc-tpl="231" style="font-weight: 800; font-size: 18px; margin-bottom: 8px;">Don Juan Tenorio</div><p data-dc-tpl="232" style="font-weight: 300; font-size: 14.5px; line-height: 1.6; color: rgb(61, 74, 80); margin: 0px;">The charming seducer of Seville legend tries to lead teams astray with a false clue. Who will see through him?</p></div>
+</div>
+</div>
+</section>
+<section data-dc-tpl="233" data-screen-label="Workshops" style="max-width: 1200px; margin: 0px auto; padding: 88px 32px 0px;">
+<div data-dc-tpl="234" style="background: rgb(13, 61, 64); color: rgb(255, 255, 255); border-radius: 6px; padding: 44px 40px; display: flex; flex-wrap: wrap; gap: 28px 56px; align-items: center;">
+<div data-dc-tpl="235" style="flex: 1 1 360px;">
+<div data-dc-tpl="236" style='font-family: "Varela Round", sans-serif; font-size: 12px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 10px;'>ADD A WORKSHOP STOP</div>
+<h2 data-dc-tpl="237" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(22px, 2.8vw, 30px); line-height: 1.2; margin: 0px 0px 14px;">Hands-on missions along the route</h2>
+<p data-dc-tpl="238" style="font-weight: 300; font-size: 16px; line-height: 1.7; color: rgb(207, 227, 228); margin: 0px;">Turn one or more stops into a short workshop with a local expert. Teams earn points, and bring home something they made together.</p>
+</div>
+<div data-dc-tpl="239" style="flex: 1 1 420px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); gap: 10px;">
+<a class="scp2" data-dc-tpl="240" href="/flamenco-experiences-seville/" style="border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 4px; padding: 16px 18px; color: rgb(255, 255, 255); font-weight: 600; font-size: 15px;">Flamenco class →</a>
+<a class="scp2" data-dc-tpl="241" href="/painting-team-building-in-seville/" style="border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 4px; padding: 16px 18px; color: rgb(255, 255, 255); font-weight: 600; font-size: 15px;">Painting session →</a>
+<a class="scp2" data-dc-tpl="242" href="/ceramic-workshop-in-seville/" style="border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 4px; padding: 16px 18px; color: rgb(255, 255, 255); font-weight: 600; font-size: 15px;">Ceramic tile painting →</a>
+<div data-dc-tpl="243" style="border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 4px; padding: 16px 18px; font-weight: 600; font-size: 15px;">Fan painting</div>
+<div data-dc-tpl="244" style="border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 4px; padding: 16px 18px; font-weight: 600; font-size: 15px;">Guitar &amp; palmas</div>
+<div data-dc-tpl="245" style="border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 4px; padding: 16px 18px; font-weight: 600; font-size: 15px;">Tapas or orange marmalade cooking</div>
+</div>
+</div>
+</section>
+<section data-dc-tpl="246" data-screen-label="Gallery" style="max-width: 1200px; margin: 0px auto; padding: 88px 32px 0px;">
+<div data-dc-tpl="247" style="display: grid; grid-template-columns: repeat(4, minmax(0px, 1fr)); grid-auto-rows: 220px; gap: 14px;">
+<div data-dc-tpl="248" style="grid-area: span 2 / span 2; border-radius: 4px; overflow: hidden;"><img alt="Team studying the treasure hunt map" decoding="async" loading="lazy" src="/uploads/treasure-hunt-sevilla-map.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="250" style="grid-column: span 2; border-radius: 4px; overflow: hidden;"><img alt="Historic courtyard on the treasure hunt route" decoding="async" loading="lazy" src="/uploads/treasure-hunt-sevilla-courtyard.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="252" style="border-radius: 4px; overflow: hidden;"><img alt="Team checking a clue on the phone" decoding="async" loading="lazy" src="/uploads/treasure-hunt-sevilla-team-phone.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="254" style="border-radius: 4px; overflow: hidden;"><img alt="Treasure hunt team with paper hats" decoding="async" loading="lazy" src="/uploads/treasure-hunt-sevilla-team-hats.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+</div>
+</section>
+<section data-dc-tpl="256" data-screen-label="Closing" style="max-width: 820px; margin: 0px auto; padding: 88px 32px; text-align: center;">
+<h2 data-dc-tpl="257" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(22px, 2.8vw, 30px); margin: 0px 0px 18px; color: rgb(21, 202, 210);">We Handle Everything</h2>
+<p data-dc-tpl="258" style="font-weight: 300; font-size: 17px; line-height: 1.8; color: rgb(61, 74, 80); margin: 0px;">Let us handle the logistics—from planning and facilitation to materials and support on the day. All you need to bring is your team and a sense of adventure.</p>
+</section>
+<section data-dc-tpl="259" data-screen-label="Combine" style="background: rgb(246, 244, 239); padding: 80px 32px;">
+<div data-dc-tpl="260" style="max-width: 1200px; margin: 0px auto;">
+<div data-dc-tpl="261" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px;'>COMBINE IT WITH</div>
+<h2 data-dc-tpl="262" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(22px, 2.8vw, 30px); margin: 0px 0px 32px;">Build it into a complete programme</h2>
+<div data-dc-tpl="263" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 18px;">
+<a class="scp3" data-dc-tpl="264" href="/trip/team-building-seville/" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; background: rgb(255, 255, 255); border: 1px solid rgb(230, 225, 214); border-radius: 4px; padding: 24px; color: rgb(31, 45, 51);">
+<span data-dc-tpl="265"><span data-dc-tpl="266" style="display: block; font-weight: 700; font-size: 17px; margin-bottom: 4px;">Team Building</span><span data-dc-tpl="267" style="font-weight: 300; font-size: 14px; color: rgb(61, 74, 80);">More ways to bring your team together</span></span><span data-dc-tpl="268" style="color: rgb(255, 93, 26); font-size: 20px;">→</span>
+</a>
+<a class="scp3" data-dc-tpl="269" href="/trip/gala-dinner-seville/" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; background: rgb(255, 255, 255); border: 1px solid rgb(230, 225, 214); border-radius: 4px; padding: 24px; color: rgb(31, 45, 51);">
+<span data-dc-tpl="270"><span data-dc-tpl="271" style="display: block; font-weight: 700; font-size: 17px; margin-bottom: 4px;">Gala Dinners</span><span data-dc-tpl="272" style="font-weight: 300; font-size: 14px; color: rgb(61, 74, 80);">Celebrate the winners at dinner</span></span><span data-dc-tpl="273" style="color: rgb(255, 93, 26); font-size: 20px;">→</span>
+</a>
+<a class="scp3" data-dc-tpl="274" href="/trip/corporate-incentive-trip-seville/" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; background: rgb(255, 255, 255); border: 1px solid rgb(230, 225, 214); border-radius: 4px; padding: 24px; color: rgb(31, 45, 51);">
+<span data-dc-tpl="275"><span data-dc-tpl="276" style="display: block; font-weight: 700; font-size: 17px; margin-bottom: 4px;">Incentive Trips</span><span data-dc-tpl="277" style="font-weight: 300; font-size: 14px; color: rgb(61, 74, 80);">An active start to your programme</span></span><span data-dc-tpl="278" style="color: rgb(255, 93, 26); font-size: 20px;">→</span>
+</a>
+</div>
+</div>
+</section>
+<section data-dc-tpl="279" data-screen-label="Expert" style="background: rgb(234, 246, 246); padding: 60px 32px 50px;">
+<div data-dc-tpl="280" style="max-width: 820px; margin: 0px auto; display: flex; align-items: center; gap: 40px; flex-wrap: wrap; justify-content: center;">
+<div data-dc-tpl="281" style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; flex: 0 0 auto;"><img alt="Gunvor Guttormsen in front of Macarena church, Seville" decoding="async" loading="lazy" src="/uploads/gunvor-guttormsen-macarena-church-seville.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:50%"/></div>
+<div data-dc-tpl="283" style="flex: 1 1 0%; min-width: 240px;">
+<h2 data-dc-tpl="284" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(20px, 2.6vw, 26px); margin: 0px 0px 12px;">Ready for the Hunt?</h2>
+<p data-dc-tpl="285" style="font-weight: 300; font-size: 15.5px; line-height: 1.7; color: rgb(61, 74, 80); margin: 0px 0px 24px;">Contact DMC Seville Event to turn your next corporate event in Seville into an unforgettable journey through teamwork, discovery, and laughter.</p>
+<a class="scp4" data-dc-tpl="286" href="/contact/" style='background: rgb(255, 93, 26); color: rgb(255, 255, 255); font-family: "Varela Round", sans-serif; font-weight: 600; padding: 14px 32px; border-radius: 2px; font-size: 15px; display: inline-block;'>Contact DMC Seville Event</a>
+</div>
+</div>
+</section>
+<section data-dc-tpl="287" data-screen-label="FAQ" style="max-width: 1000px; margin: 0px auto; padding: 80px 32px 56px;">
+<div data-dc-tpl="288" style='font-family: "Varela Round", sans-serif; color: rgb(255, 93, 26); font-size: 13px; letter-spacing: 1.5px; margin-bottom: 10px; text-align: center;'>FAQ</div>
+<h2 data-dc-tpl="289" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(22px, 2.8vw, 30px); margin: 0px 0px 36px; text-align: center;">Treasure hunts in Seville: common questions</h2>
+<div data-dc-tpl="290" style="display: flex; flex-direction: column; border-top: 1px solid rgb(227, 236, 236);">
+<details data-dc-tpl="292" style="border-bottom: 1px solid rgb(227, 236, 236); padding: 22px 4px;">
+<summary data-dc-tpl="293" style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 20px; align-items: baseline; font-weight: 700; font-size: 17px; line-height: 1.4;"><span class="sc-interp">How many people can take part?</span><span class="plus" data-dc-tpl="294" style="color: rgb(255, 93, 26); font-size: 24px; line-height: 1; transition: transform 0.2s; flex: 0 0 auto;">+</span></summary>
+<p data-dc-tpl="295" style="margin: 14px 0px 0px; font-weight: 300; font-size: 15.5px; line-height: 1.75; color: rgb(61, 74, 80);"><span class="sc-interp">Treasure hunts work for groups from around 10 people up to 300. Large groups are split into teams of 5 to 8, each with its own route so the old town never gets crowded.</span></p>
+</details>
+<details data-dc-tpl="292" style="border-bottom: 1px solid rgb(227, 236, 236); padding: 22px 4px;">
+<summary data-dc-tpl="293" style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 20px; align-items: baseline; font-weight: 700; font-size: 17px; line-height: 1.4;"><span class="sc-interp">How long does a treasure hunt take?</span><span class="plus" data-dc-tpl="294" style="color: rgb(255, 93, 26); font-size: 24px; line-height: 1; transition: transform 0.2s; flex: 0 0 auto;">+</span></summary>
+<p data-dc-tpl="295" style="margin: 14px 0px 0px; font-weight: 300; font-size: 15.5px; line-height: 1.75; color: rgb(61, 74, 80);"><span class="sc-interp">Most hunts last between 2 and 3 hours, including the briefing and the finale. The duration can be adapted to fit your programme.</span></p>
+</details>
+<details data-dc-tpl="292" style="border-bottom: 1px solid rgb(227, 236, 236); padding: 22px 4px;">
+<summary data-dc-tpl="293" style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 20px; align-items: baseline; font-weight: 700; font-size: 17px; line-height: 1.4;"><span class="sc-interp">Is it suitable for all fitness levels?</span><span class="plus" data-dc-tpl="294" style="color: rgb(255, 93, 26); font-size: 24px; line-height: 1; transition: transform 0.2s; flex: 0 0 auto;">+</span></summary>
+<p data-dc-tpl="295" style="margin: 14px 0px 0px; font-weight: 300; font-size: 15.5px; line-height: 1.75; color: rgb(61, 74, 80);"><span class="sc-interp">Yes. The routes are on foot through the flat historic centre, and the distance can be adapted for your group.</span></p>
+</details>
+<details data-dc-tpl="292" style="border-bottom: 1px solid rgb(227, 236, 236); padding: 22px 4px;">
+<summary data-dc-tpl="293" style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 20px; align-items: baseline; font-weight: 700; font-size: 17px; line-height: 1.4;"><span class="sc-interp">In which languages can it be run?</span><span class="plus" data-dc-tpl="294" style="color: rgb(255, 93, 26); font-size: 24px; line-height: 1; transition: transform 0.2s; flex: 0 0 auto;">+</span></summary>
+<p data-dc-tpl="295" style="margin: 14px 0px 0px; font-weight: 300; font-size: 15.5px; line-height: 1.75; color: rgb(61, 74, 80);"><span class="sc-interp">The clues, materials and facilitators can be provided in English, Spanish and other languages on request.</span></p>
+</details>
+<details data-dc-tpl="292" style="border-bottom: 1px solid rgb(227, 236, 236); padding: 22px 4px;">
+<summary data-dc-tpl="293" style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 20px; align-items: baseline; font-weight: 700; font-size: 17px; line-height: 1.4;"><span class="sc-interp">Can the treasure hunt have a theme?</span><span class="plus" data-dc-tpl="294" style="color: rgb(255, 93, 26); font-size: 24px; line-height: 1; transition: transform 0.2s; flex: 0 0 auto;">+</span></summary>
+<p data-dc-tpl="295" style="margin: 14px 0px 0px; font-weight: 300; font-size: 15.5px; line-height: 1.75; color: rgb(61, 74, 80);"><span class="sc-interp">Yes. Popular themes include oranges, flamenco, painting, San Fernando III, Aníbal González and the operas set in Seville, such as Carmen. We can also create a theme around your company.</span></p>
+</details>
+<details data-dc-tpl="292" style="border-bottom: 1px solid rgb(227, 236, 236); padding: 22px 4px;">
+<summary data-dc-tpl="293" style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 20px; align-items: baseline; font-weight: 700; font-size: 17px; line-height: 1.4;"><span class="sc-interp">Can we meet historical characters on the way?</span><span class="plus" data-dc-tpl="294" style="color: rgb(255, 93, 26); font-size: 24px; line-height: 1; transition: transform 0.2s; flex: 0 0 auto;">+</span></summary>
+<p data-dc-tpl="295" style="margin: 14px 0px 0px; font-weight: 300; font-size: 15.5px; line-height: 1.75; color: rgb(61, 74, 80);"><span class="sc-interp">Yes. Professional actors in costume can play characters such as Carmen, Cervantes, Velázquez or San Fernando III, each setting the teams a challenge before giving them the next clue.</span></p>
+</details>
+<details data-dc-tpl="292" style="border-bottom: 1px solid rgb(227, 236, 236); padding: 22px 4px;">
+<summary data-dc-tpl="293" style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 20px; align-items: baseline; font-weight: 700; font-size: 17px; line-height: 1.4;"><span class="sc-interp">What happens if it rains?</span><span class="plus" data-dc-tpl="294" style="color: rgb(255, 93, 26); font-size: 24px; line-height: 1; transition: transform 0.2s; flex: 0 0 auto;">+</span></summary>
+<p data-dc-tpl="295" style="margin: 14px 0px 0px; font-weight: 300; font-size: 15.5px; line-height: 1.75; color: rgb(61, 74, 80);"><span class="sc-interp">Rain is rare in Seville, but we always have a plan B, with more indoor stops or a shorter route ending in a covered venue.</span></p>
+</details>
+</div>
+<div data-dc-tpl="296" style="display: flex; gap: 18px; align-items: center; margin-top: 48px; padding: 24px; border: 1px solid rgb(236, 231, 220); border-radius: 6px; background: rgb(255, 255, 255);">
+<div data-dc-tpl="297" style="width: 56px; height: 56px; border-radius: 50%; overflow: hidden; flex: 0 0 auto;"><img alt="Gunvor Guttormsen" decoding="async" loading="lazy" src="/uploads/gunvor-guttormsen-avatar.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:50%"/></div>
+<p data-dc-tpl="299" style="font-weight: 300; font-size: 14.5px; line-height: 1.65; color: rgb(61, 74, 80); margin: 0px;">This text is written by <strong data-dc-tpl="300" style="font-weight: 700; color: rgb(31, 45, 51);">Gunvor Guttormsen</strong>. She is the owner of DMC Seville and has worked in tourism in Seville since 1999. She is a true Seville lover and wants to share her passion and love for Seville with you.<span data-dc-tpl="301" style="display: block; margin-top: 6px; font-size: 13px; color: rgb(91, 106, 112);">Last updated: 18 October 2026</span></p>
+</div>
+</section>
+<section data-dc-tpl="302" data-screen-label="More inspiration" style="max-width: 1200px; margin: 0px auto; padding: 32px 32px 88px;">
+<div data-dc-tpl="303" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; padding-bottom: 20px; border-bottom: 1px solid rgb(227, 236, 236); margin-bottom: 32px;">
+<h2 data-dc-tpl="304" style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(22px, 2.8vw, 30px); margin: 0px;">More inspiration</h2>
+<a data-dc-tpl="305" href="/inspiration/" style='font-family: "Varela Round", sans-serif; font-size: 14px; font-weight: 600;'>Return to Seville inspiration →</a>
+</div>
+<div data-dc-tpl="306" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 24px;">
+<a class="scp5" data-dc-tpl="307" href="/movie-making-in-seville/" style="display: flex; flex-direction: column; color: rgb(31, 45, 51); border-radius: 4px; overflow: hidden; background: rgb(255, 255, 255); border: 1px solid rgb(236, 231, 220);">
+<div data-dc-tpl="308" style="height: 190px;"><img alt="Movie making team building" decoding="async" loading="lazy" src="/uploads/movie-clips-shooting-team-building-spain.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="310" style="padding: 20px 22px 24px;"><div data-dc-tpl="311" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 8px;'>TEAM BUILDING</div><div data-dc-tpl="312" style="font-weight: 700; font-size: 17px; line-height: 1.35;">Movie Making in Seville</div></div>
+</a>
+<a class="scp5" data-dc-tpl="313" href="/painting-team-building-in-seville/" style="display: flex; flex-direction: column; color: rgb(31, 45, 51); border-radius: 4px; overflow: hidden; background: rgb(255, 255, 255); border: 1px solid rgb(236, 231, 220);">
+<div data-dc-tpl="314" style="height: 190px;"><img alt="Painting team building" decoding="async" loading="lazy" src="/uploads/painting-team-building-spain.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="316" style="padding: 20px 22px 24px;"><div data-dc-tpl="317" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 8px;'>TEAM BUILDING</div><div data-dc-tpl="318" style="font-weight: 700; font-size: 17px; line-height: 1.35;">Painting Team Building in Seville</div></div>
+</a>
+<a class="scp5" data-dc-tpl="319" href="/15-best-tapas-bars-in-seville/" style="display: flex; flex-direction: column; color: rgb(31, 45, 51); border-radius: 4px; overflow: hidden; background: rgb(255, 255, 255); border: 1px solid rgb(236, 231, 220);">
+<div data-dc-tpl="320" style="height: 190px;"><img alt="Tapas in Seville" decoding="async" loading="lazy" src="/uploads/tapas-tour-seville-22.webp" style="width: 100%; height: 100%;;display:block;object-fit:cover;border-radius:0"/></div>
+<div data-dc-tpl="322" style="padding: 20px 22px 24px;"><div data-dc-tpl="323" style='font-family: "Varela Round", sans-serif; font-size: 11.5px; letter-spacing: 1.5px; color: rgb(21, 202, 210); margin-bottom: 8px;'>FOOD &amp; WINE</div><div data-dc-tpl="324" style="font-weight: 700; font-size: 17px; line-height: 1.35;">15 Best Tapas Bars in Seville</div></div>
+</a>
+</div>
+</section>
+<div class="sc-host" data-dc-tpl="325" data-sc-name="SiteFooter"><footer data-dc-tpl="4" style="background: rgb(13, 61, 64); color: rgb(207, 227, 228); padding: 60px 32px 30px; font-family: Montserrat, sans-serif; border-top: 4px solid rgb(21, 202, 210);">
+<div data-dc-tpl="5" style="max-width: 1200px; margin: 0px auto 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 36px;">
+<div data-dc-tpl="6">
+<a data-dc-tpl="7" href="/" style="display: inline-flex; background: rgb(255, 255, 255); border-radius: 6px; padding: 10px 14px; margin-bottom: 16px;"><img alt="DMC Seville Event" data-dc-tpl="8" loading="lazy" src="/assets/dmc-logo-cropped.webp" style="height: 60px; width: auto; object-fit: contain; display: block;"/></a>
+<p data-dc-tpl="9" style="font-weight: 300; font-size: 13.5px; line-height: 1.6;">C/ Milano Govinda 35, 41020 Sevilla, Spain</p>
+</div>
+<div data-dc-tpl="10">
+<h4 data-dc-tpl="11" style="font-weight: 700; color: rgb(255, 255, 255); font-size: 15px; margin: 0px 0px 14px;">Services</h4>
+<div data-dc-tpl="12" style="display: flex; flex-direction: column; gap: 8px; font-size: 13.5px; font-weight: 300;">
+<a data-dc-tpl="13" href="/trip/meetings-seville/">Meetings</a>
+<a data-dc-tpl="14" href="/trip/corporate-event-venue-seville/">Venue Finding</a>
+<a data-dc-tpl="15" href="/trip/corporate-incentive-trip-seville/">Corporate Incentive</a>
+<a data-dc-tpl="16" href="/trip/team-building-seville/">Team Building</a>
+<a data-dc-tpl="17" href="/group-travel-to-seville/">Group Travel</a>
+</div>
+</div>
+<div data-dc-tpl="18">
+<h4 data-dc-tpl="19" style="font-weight: 700; color: rgb(255, 255, 255); font-size: 15px; margin: 0px 0px 14px;">DMC Destinations in Andalusia</h4>
+<div data-dc-tpl="20" style="display: flex; flex-direction: column; gap: 8px; font-size: 13.5px; font-weight: 300;">
+<a data-dc-tpl="21" href="/incentive-trip-sevilla/">Incentive Trip Sevilla</a>
+<a data-dc-tpl="22" href="/dmc-malaga/">DMC Málaga</a>
+<a data-dc-tpl="23" href="/dmc-huelva/">DMC Huelva</a>
+<a data-dc-tpl="24" href="/dmc-cadiz/">DMC Cádiz</a>
+<a data-dc-tpl="25" href="/dmc-granada/">DMC Granada</a>
+<a data-dc-tpl="26" href="/dmc-cordoba/">DMC Córdoba</a>
+<a data-dc-tpl="27" href="/dmc-almeria/">DMC Almería</a>
+<a data-dc-tpl="28" href="/dmc-jaen/">DMC Jaén</a>
+</div>
+</div>
+<div data-dc-tpl="29">
+<h4 data-dc-tpl="30" style="font-weight: 700; color: rgb(255, 255, 255); font-size: 15px; margin: 0px 0px 14px;">Contact</h4>
+<p data-dc-tpl="31" style="font-weight: 300; font-size: 13.5px; line-height: 1.8; margin: 0px 0px 12px;">+34 637 87 87 68<br data-dc-tpl="32"/>events@dmcsevilleevent.com</p>
+<a data-dc-tpl="33" href="/contact/" style="color: rgb(21, 202, 210); font-weight: 500;">Contact Now</a>
+</div>
+</div>
+<div data-dc-tpl="34" style="text-align: center; font-size: 12.5px; font-weight: 300; border-top: 1px solid rgba(207, 227, 228, 0.2); padding-top: 22px; max-width: 1200px; margin: 0px auto;">© 2026 DMC Seville Event. All Rights Reserved. · <a data-dc-tpl="35" href="/privacy-policy/" style="color: inherit;">Privacy &amp; Cookies</a> · <a data-dc-tpl="36" href="/legal-notice/" style="color: inherit;">Legal Notice</a></div></footer></div></div></div></div><template id="dc-src"><x-dc>
+<helmet>
+<title>Treasure Hunt in Seville: Team Building with a Twist | DMC Seville Event</title>
+<meta name="description" content="Tailor-made treasure hunts through Seville's old town for corporate groups. Clues, riddles and missions that combine team building with culture.">
+<link rel="canonical" href="https://www.dmcsevilleevent.com/treasure-hunt-in-seville/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DMC Seville Event">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Treasure Hunt in Seville: Team Building with a Twist | DMC Seville Event">
+<meta property="og:description" content="Tailor-made treasure hunts through Seville's old town for corporate groups. Clues, riddles and missions that combine team building with culture.">
+<meta property="og:url" content="https://www.dmcsevilleevent.com/treasure-hunt-in-seville/">
+<meta property="og:image" content="https://www.dmcsevilleevent.com/uploads/historical-team-building-seville.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Varela+Round&display=swap" rel="stylesheet">
+
+<style>body{margin:0;}a{color:#ff5d1a;text-decoration:none;}a:hover{color:#0d3d40;}*{box-sizing:border-box;}summary::-webkit-details-marker{display:none;}details[open] summary .plus{transform:rotate(45deg);}</style>
+</helmet>
+<div style="font-family:'Montserrat',sans-serif;color:#1f2d33;background:#fffdfb;">
+  <dc-import name="SiteHeader" hint-size="100%,120"></dc-import>
+
+  <section data-screen-label="Hero" style="position:relative;min-height:clamp(440px,78svh,760px);display:flex;align-items:flex-end;overflow:hidden;">
+    <image-slot id="activity-treasure-hero" src="/fotos/treasure-hunt/treasure-hunt-seville-bullring-team.webp" shape="rect" alt="Treasure hunt team at the Seville bullring" placeholder="Treasure hunt hero photo" style="position:absolute;inset:0;width:100%;height:100%;"></image-slot>
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,61,64,0.88) 0%,rgba(13,61,64,0.35) 55%,rgba(13,61,64,0.1) 100%);pointer-events:none;"></div>
+    <div style="position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding:120px 32px 0;color:#ffffff;">
+      <div style="display:flex;gap:10px;align-items:center;font-family:'Varela Round',sans-serif;font-size:13px;letter-spacing:1.5px;margin-bottom:18px;">
+        <a href="/inspiration/" style="color:#ffffff;">INSPIRATION</a><span style="color:#15cad2;">/</span><span style="color:#15cad2;">TEAM BUILDING</span>
+      </div>
+      <h1 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(34px,5.2vw,62px);line-height:1.05;margin:0 0 18px;max-width:860px;text-transform:uppercase;letter-spacing:1px;text-wrap:balance;">Treasure Hunt in Seville</h1>
+      <p style="font-weight:300;font-size:clamp(17px,1.8vw,20px);line-height:1.6;max-width:640px;margin:0 0 40px;">Team building with a twist: clues, riddles and hidden plazas in the heart of Seville.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));border-top:1px solid rgba(255,255,255,0.3);">
+        <div style="padding:20px 20px 26px 0;">
+          <div style="font-family:'Varela Round',sans-serif;font-size:12px;letter-spacing:1.5px;color:#15cad2;margin-bottom:6px;">DURATION</div>
+          <div style="font-weight:600;font-size:16px;">2 – 4 hours</div>
+        </div>
+        <div style="padding:20px 20px 26px 0;">
+          <div style="font-family:'Varela Round',sans-serif;font-size:12px;letter-spacing:1.5px;color:#15cad2;margin-bottom:6px;">GROUP SIZE</div>
+          <div style="font-weight:600;font-size:16px;">10 – 300 guests</div>
+        </div>
+        <div style="padding:20px 20px 26px 0;">
+          <div style="font-family:'Varela Round',sans-serif;font-size:12px;letter-spacing:1.5px;color:#15cad2;margin-bottom:6px;">IDEAL FOR</div>
+          <div style="font-weight:600;font-size:16px;">Team building, retreats, incentives</div>
+        </div>
+        <div style="padding:20px 20px 26px 0;">
+          <div style="font-family:'Varela Round',sans-serif;font-size:12px;letter-spacing:1.5px;color:#15cad2;margin-bottom:6px;">EXPERIENCE</div>
+          <div style="font-weight:600;font-size:16px;">None needed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Intro" style="max-width:1200px;margin:0 auto;padding:72px 32px 0;display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start;">
+    <div style="flex:1 1 440px;min-width:0;max-width:720px;">
+      <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">THE EXPERIENCE</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(24px,3vw,34px);line-height:1.2;color:#15cad2;margin:0 0 22px;text-wrap:balance;">Treasure Hunt in Seville: Team Building with a Twist</h2>
+      <p style="font-weight:400;font-size:19px;line-height:1.7;color:#1f2d33;margin:0 0 20px;">Looking for a dynamic, engaging, and fun way to unite your team during a corporate event in Seville? Forget the usual meeting room icebreakers—try a tailor-made treasure hunt through the heart of Seville instead.</p>
+      <p style="font-weight:300;font-size:16.5px;line-height:1.85;color:#3d4a50;margin:0;">Our custom treasure hunts are designed specifically for corporate and incentive groups looking for a memorable experience that combines team-building with cultural discovery. Picture your colleagues navigating Seville’s charming alleyways, solving clues near the Cathedral, and racing to uncover secrets in hidden plazas.</p>
+    </div>
+    <aside style="flex:0 1 340px;width:100%;position:sticky;top:24px;background:#0d3d40;color:#ffffff;border-radius:6px;padding:30px 28px;min-width:0;margin:0 auto;">
+      <div style="font-family:'Varela Round',sans-serif;font-size:12px;letter-spacing:1.5px;color:#15cad2;margin-bottom:8px;">REQUEST A PROPOSAL</div>
+      <div style="font-weight:700;font-size:20px;line-height:1.3;margin-bottom:22px;">{{ selectedName }}</div>
+      <div style="font-size:13px;font-weight:500;margin-bottom:10px;color:#cfe3e4;">Number of guests</div>
+      <div style="display:flex;align-items:center;border:1px solid rgba(255,255,255,0.3);border-radius:3px;margin-bottom:22px;">
+        <button type="button" onClick="{{ dec }}" aria-label="Fewer guests" style="width:48px;height:46px;background:transparent;border:0;color:#ffffff;font-size:20px;cursor:pointer;" style-hover="background:rgba(255,255,255,0.08);">−</button>
+        <div style="flex:1;text-align:center;font-weight:700;font-size:17px;">{{ guests }}</div>
+        <button type="button" onClick="{{ inc }}" aria-label="More guests" style="width:48px;height:46px;background:transparent;border:0;color:#ffffff;font-size:20px;cursor:pointer;" style-hover="background:rgba(255,255,255,0.08);">+</button>
+      </div>
+      <div style="font-size:13px;font-weight:500;margin-bottom:10px;color:#cfe3e4;">Where in your programme?</div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:26px;">
+        <sc-for list="{{ slotItems }}" as="s" hint-placeholder-count="4">
+          <button type="button" onClick="{{ s.pick }}" style="{{ s.style }}">{{ s.label }}</button>
+        </sc-for>
+      </div>
+      <a href="{{ enquiryHref }}" style="display:block;text-align:center;background:#ff5d1a;color:#ffffff;font-family:'Varela Round',sans-serif;font-weight:600;padding:15px 20px;border-radius:2px;font-size:15px;" style-hover="background:#ffffff;color:#0d3d40;">Get My Proposal</a>
+      <p style="font-size:13px;line-height:1.6;color:#cfe3e4;margin:14px 0 0;text-align:center;">Personal reply within 24 hours. No commitment.</p>
+    </aside>
+  </section>
+
+  <section data-screen-label="Quote" style="max-width:900px;margin:0 auto;padding:88px 32px 0;text-align:center;">
+    <div style="font-family:Georgia,serif;color:#ff5d1a;font-size:48px;line-height:1;margin-bottom:8px;">“</div>
+    <p style="font-weight:500;font-style:italic;font-size:clamp(19px,2.4vw,24px);line-height:1.5;color:#ff5d1a;margin:0;">In every alley, a story; around every corner, a connection. The treasure isn’t just what you find—it’s how you get there together.</p>
+  </section>
+
+  <section data-screen-label="Formats" style="background:#eaf6f6;margin-top:88px;padding:80px 32px;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:36px;">
+        <div>
+          <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">CHOOSE YOUR ACTIVITY</div>
+          <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(24px,3vw,34px);margin:0;">Choose your hunt</h2>
+        </div>
+        <p style="font-weight:300;font-size:15px;line-height:1.6;color:#3d4a50;margin:0;max-width:360px;">Select an activity to add it to your proposal request. Every format can be adapted to your group.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:22px;">
+        <sc-for list="{{ formatItems }}" as="f" hint-placeholder-count="7">
+          <button type="button" onClick="{{ f.pick }}" style="{{ f.cardStyle }}">
+            <div style="position:relative;height:210px;overflow:hidden;">
+              <image-slot id="{{ f.slotId }}" shape="rect" src="{{ f.img }}" alt="{{ f.name }}" placeholder="{{ f.name }} photo" style="width:100%;height:100%;"></image-slot>
+              <span style="position:absolute;top:14px;left:14px;background:#ffffff;color:#0d3d40;font-family:'Varela Round',sans-serif;font-size:11.5px;letter-spacing:1px;padding:5px 10px;border-radius:2px;">{{ f.tag }}</span>
+            </div>
+            <div style="padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1;">
+              <div style="font-weight:800;font-size:18px;line-height:1.3;color:#1f2d33;">{{ f.name }}</div>
+              <div style="font-weight:300;font-size:14.5px;line-height:1.6;color:#3d4a50;">{{ f.text }}</div>
+              <div style="display:flex;flex-direction:column;gap:6px;">
+                <div style="font-family:'Varela Round',sans-serif;font-size:11.5px;letter-spacing:1px;color:#15cad2;">{{ f.forLabel }}</div>
+                <sc-for list="{{ f.for }}" as="x" hint-placeholder-count="3">
+                  <div style="display:flex;gap:8px;font-size:13.5px;font-weight:500;color:#1f2d33;"><span style="color:#15cad2;">•</span>{{ x }}</div>
+                </sc-for>
+              </div>
+              <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:auto;padding-top:14px;border-top:1px solid #e3ecec;font-size:13px;font-weight:600;color:#0d3d40;">
+                <span>{{ f.duration }}</span><span>{{ f.capacity }}</span>
+              </div>
+              <div style="{{ f.selStyle }}">{{ f.selLabel }}</div>
+            </div>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="How it works" style="max-width:1200px;margin:0 auto;padding:88px 32px 0;">
+    <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">HOW IT WORKS</div>
+    <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(24px,3vw,34px);margin:0 0 18px;">From the starting whistle to the final treasure</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:32px;margin-top:22px;">
+      <div style="border-top:3px solid #15cad2;padding-top:20px;"><div style="font-weight:800;font-size:28px;color:#15cad2;line-height:1;margin-bottom:12px;">01</div><div style="font-weight:700;font-size:17px;margin-bottom:8px;">Kick-off briefing</div><p style="font-weight:300;font-size:15px;line-height:1.7;color:#3d4a50;margin:0;">Teams are formed, each receives a map, a clue book and a team captain. The rules are explained and the clock starts.</p></div>
+      <div style="border-top:3px solid #15cad2;padding-top:20px;"><div style="font-weight:800;font-size:28px;color:#15cad2;line-height:1;margin-bottom:12px;">02</div><div style="font-weight:700;font-size:17px;margin-bottom:8px;">Clues &amp; riddles</div><p style="font-weight:300;font-size:15px;line-height:1.7;color:#3d4a50;margin:0;">Teams navigate the old town, solve puzzles linked to monuments and decide their next move together.</p></div>
+      <div style="border-top:3px solid #15cad2;padding-top:20px;"><div style="font-weight:800;font-size:28px;color:#15cad2;line-height:1;margin-bottom:12px;">03</div><div style="font-weight:700;font-size:17px;margin-bottom:8px;">Missions &amp; challenges</div><p style="font-weight:300;font-size:15px;line-height:1.7;color:#3d4a50;margin:0;">Photo tasks, questions for locals and small challenges at each stop earn extra points.</p></div>
+      <div style="border-top:3px solid #ff5d1a;padding-top:20px;"><div style="font-weight:800;font-size:28px;color:#ff5d1a;line-height:1;margin-bottom:12px;">04</div><div style="font-weight:700;font-size:17px;margin-bottom:8px;">Finale &amp; prizes</div><p style="font-weight:300;font-size:15px;line-height:1.7;color:#3d4a50;margin:0;">Teams meet at the finish for the results, the treasure and a drink or tapas together.</p></div>
+    </div>
+  </section>
+
+  <section data-screen-label="Teamwork" style="max-width:1200px;margin:0 auto;padding:88px 32px 0;display:flex;flex-wrap:wrap;gap:40px 56px;align-items:center;">
+    <div style="flex:1 1 400px;height:380px;border-radius:6px;overflow:hidden;"><image-slot id="activity-treasure-teamwork" shape="rect" src="/uploads/treasure-hunt-sevilla-riddle.webp" alt="Team reading a clue together on a treasure hunt in Seville" placeholder="Team solving a clue photo" style="width:100%;height:100%;"></image-slot></div>
+    <div style="flex:1 1 400px;">
+      <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">TEAMWORK</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(24px,3vw,34px);margin:0 0 18px;">Teamwork and Communication in Action</h2>
+      <p style="font-weight:300;font-size:16.5px;line-height:1.85;color:#3d4a50;margin:0 0 16px;">As teams navigate through Seville’s old town, they must solve clues, interpret riddles, and decide their next move together. This creates a natural environment for collaboration, strategic thinking, and open communication—far more dynamic than any indoor workshop.</p><p style="font-weight:300;font-size:16.5px;line-height:1.85;color:#3d4a50;margin:0;">The treasure hunt format encourages all participants to contribute, making it an ideal exercise for diverse teams with varying personalities and skill sets.</p>
+    </div>
+  </section>
+
+  <section data-screen-label="Competition" style="max-width:1200px;margin:0 auto;padding:88px 32px 0;display:flex;flex-wrap:wrap-reverse;gap:40px 56px;align-items:center;">
+    <div style="flex:1 1 400px;height:380px;border-radius:6px;overflow:hidden;"><image-slot id="activity-treasure-competition" shape="rect" src="/uploads/treasure-hunt-sevilla-city-gymkhana.webp" alt="Teams solving clues in a Seville street during a treasure hunt" placeholder="Teams racing photo" style="width:100%;height:100%;"></image-slot></div>
+    <div style="flex:1 1 400px;">
+      <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">TEAM SPIRIT</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(24px,3vw,34px);margin:0 0 18px;">Friendly Competition Builds Team Spirit</h2>
+      <p style="font-weight:300;font-size:16.5px;line-height:1.85;color:#3d4a50;margin:0 0 16px;">Who doesn’t enjoy a little rivalry? Splitting into teams adds a layer of excitement and motivation. Whether it’s racing to the next clue or cracking a puzzle faster than the others, that shared sense of purpose and energy turns colleagues into teammates—and teammates into friends.</p><p style="font-weight:600;font-size:17px;color:#ff5d1a;margin:0;">The prize may be symbolic, but the memories created are very real.</p>
+    </div>
+  </section>
+
+  <section data-screen-label="Discover" style="max-width:1200px;margin:0 auto;padding:88px 32px 0;display:flex;flex-wrap:wrap;gap:40px 56px;align-items:center;">
+    <div style="flex:1 1 400px;height:380px;border-radius:6px;overflow:hidden;"><image-slot id="activity-treasure-discover" shape="rect" src="/uploads/plaza-de-espana-seville.webp" alt="Plaza de España, a stop on the treasure hunt" placeholder="Seville monuments photo" style="width:100%;height:100%;"></image-slot></div>
+    <div style="flex:1 1 400px;">
+      <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">DISCOVER SEVILLE</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(24px,3vw,34px);margin:0 0 18px;">Discover Seville in a Playful, Immersive Way</h2>
+      <p style="font-weight:300;font-size:16.5px;line-height:1.85;color:#3d4a50;margin:0 0 16px;">Instead of passively listening to a guide, your group becomes the protagonist of their own adventure. Each stop along the way reveals pieces of Seville’s rich history—from Roman ruins and Moorish palaces to tucked-away plazas and hidden gardens.</p><p style="font-weight:300;font-size:16.5px;line-height:1.85;color:#3d4a50;margin:0 0 22px;">It’s sightseeing, storytelling, and scavenger hunting, all rolled into one. Perfect for curious minds and energetic spirits.</p><div style="display:flex;flex-wrap:wrap;gap:8px;"><span style="border:1px solid #cfe3e4;border-radius:40px;padding:8px 14px;font-size:13.5px;font-weight:600;color:#0d3d40;">Cathedral &amp; Giralda</span><span style="border:1px solid #cfe3e4;border-radius:40px;padding:8px 14px;font-size:13.5px;font-weight:600;color:#0d3d40;">Alcázar</span><span style="border:1px solid #cfe3e4;border-radius:40px;padding:8px 14px;font-size:13.5px;font-weight:600;color:#0d3d40;">Santa Cruz</span><span style="border:1px solid #cfe3e4;border-radius:40px;padding:8px 14px;font-size:13.5px;font-weight:600;color:#0d3d40;">Plaza de España</span><span style="border:1px solid #cfe3e4;border-radius:40px;padding:8px 14px;font-size:13.5px;font-weight:600;color:#0d3d40;">Triana</span><span style="border:1px solid #cfe3e4;border-radius:40px;padding:8px 14px;font-size:13.5px;font-weight:600;color:#0d3d40;">Setas</span></div>
+    </div>
+  </section>
+
+  <section data-screen-label="Tailored" style="margin-top:0;padding:88px 32px 80px;">
+    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:44px 56px;">
+      <div>
+        <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">FLEXIBLE</div>
+        <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,30px);margin:0 0 16px;">Flexible for Groups of All Sizes and Profiles</h2>
+        <p style="font-weight:300;font-size:16.5px;line-height:1.85;color:#3d4a50;margin:0 0 16px;">Whether you’re organizing a small leadership retreat or a large incentive group, the treasure hunt can be tailored to suit your team’s size, schedule, and fitness level. The route can be adapted to focus on central highlights or include quieter corners for a more local, authentic feel.</p>
+        <p style="font-weight:300;font-size:16.5px;line-height:1.85;color:#3d4a50;margin:0;">Language, duration, and themes can also be customized to match your group’s needs.</p>
+      </div>
+      <div>
+        <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">YOUR BRAND</div>
+        <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,30px);margin:0 0 16px;">Custom-Built to Reflect Your Company Culture</h2>
+        <p style="font-weight:300;font-size:16.5px;line-height:1.85;color:#3d4a50;margin:0 0 16px;">Want to reinforce company values, celebrate a milestone, or tie the activity to your conference themes? We can personalize the treasure hunt to reflect your branding or goals—whether it’s through custom clues, themed missions, or integration into a larger corporate event.</p>
+        <p style="font-weight:300;font-size:16.5px;line-height:1.85;color:#3d4a50;margin:0;">Our goal is to create not just a fun activity, but a meaningful experience that aligns with your purpose.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Themes" style="background:#f6f4ef;padding:80px 32px;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:32px;">
+        <div>
+          <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">CHOOSE A THEME</div>
+          <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(24px,3vw,34px);margin:0;">Themed treasure hunts</h2>
+        </div>
+        <p style="font-weight:300;font-size:15px;line-height:1.6;color:#3d4a50;margin:0;max-width:380px;">Every clue, mission and stop is built around one story of Seville. Pick a theme or let us create one for you.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:16px;">
+        <div style="background:#ffffff;border:1px solid #e6e1d6;border-radius:6px;padding:24px 24px 26px;display:flex;flex-direction:column;gap:8px;"><div style="font-weight:800;font-size:17px;color:#1f2d33;">Orange Theme</div><p style="font-weight:300;font-size:14.5px;line-height:1.65;color:#3d4a50;margin:0;">Follow the scent of Seville’s 40,000 orange trees, from the Patio de los Naranjos to a bitter orange marmalade or orange wine tasting at the finish.</p></div>
+        <div style="background:#ffffff;border:1px solid #e6e1d6;border-radius:6px;padding:24px 24px 26px;display:flex;flex-direction:column;gap:8px;"><div style="font-weight:800;font-size:17px;color:#1f2d33;">Flamenco Theme</div><p style="font-weight:300;font-size:14.5px;line-height:1.65;color:#3d4a50;margin:0;">Clues hidden in the birthplaces of flamenco in Triana, rhythm challenges on the way and a short flamenco class as the final mission.</p></div>
+        <div style="background:#ffffff;border:1px solid #e6e1d6;border-radius:6px;padding:24px 24px 26px;display:flex;flex-direction:column;gap:8px;"><div style="font-weight:800;font-size:17px;color:#1f2d33;">Painting Theme</div><p style="font-weight:300;font-size:14.5px;line-height:1.65;color:#3d4a50;margin:0;">On the trail of Murillo and Velázquez, with missions at the places they lived and painted, ending with a group painting of the city.</p></div>
+        <div style="background:#ffffff;border:1px solid #e6e1d6;border-radius:6px;padding:24px 24px 26px;display:flex;flex-direction:column;gap:8px;"><div style="font-weight:800;font-size:17px;color:#1f2d33;">San Fernando III Theme</div><p style="font-weight:300;font-size:14.5px;line-height:1.65;color:#3d4a50;margin:0;">Relive the king’s entry into Seville in 1248, from the city walls to his tomb in the Royal Chapel of the Cathedral.</p></div>
+        <div style="background:#ffffff;border:1px solid #e6e1d6;border-radius:6px;padding:24px 24px 26px;display:flex;flex-direction:column;gap:8px;"><div style="font-weight:800;font-size:17px;color:#1f2d33;">Aníbal González Theme</div><p style="font-weight:300;font-size:14.5px;line-height:1.65;color:#3d4a50;margin:0;">Discover the architect of the 1929 Ibero-American Exposition, with clues across Plaza de España, María Luisa Park and the pavilions.</p></div>
+        <div style="background:#ffffff;border:1px solid #e6e1d6;border-radius:6px;padding:24px 24px 26px;display:flex;flex-direction:column;gap:8px;"><div style="font-weight:800;font-size:17px;color:#1f2d33;">Carmen &amp; Opera Theme</div><p style="font-weight:300;font-size:14.5px;line-height:1.65;color:#3d4a50;margin:0;">Seville is the setting of more than 100 operas. Follow Carmen, Don Giovanni and Figaro to the places where their stories take place.</p></div>
+        <div style="background:#ffffff;border:1px solid #e6e1d6;border-radius:6px;padding:24px 24px 26px;display:flex;flex-direction:column;gap:8px;"><div style="font-weight:800;font-size:17px;color:#1f2d33;">Discovery &amp; New World Theme</div><p style="font-weight:300;font-size:14.5px;line-height:1.65;color:#3d4a50;margin:0;">Seville as the gateway to the Americas: the Torre del Oro, the Archive of the Indies and the voyage of Magellan and Elcano.</p></div>
+        <div style="background:#ffffff;border:1px solid #e6e1d6;border-radius:6px;padding:24px 24px 26px;display:flex;flex-direction:column;gap:8px;"><div style="font-weight:800;font-size:17px;color:#1f2d33;">Your Company Theme</div><p style="font-weight:300;font-size:14.5px;line-height:1.65;color:#3d4a50;margin:0;">Missions, questions and the final treasure built around your company values, milestone or conference theme.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Characters" style="max-width:1200px;margin:0 auto;padding:88px 32px 0;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:32px;">
+      <div>
+        <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">MEET THE LOCALS</div>
+        <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(24px,3vw,34px);margin:0;">Meet Seville’s famous characters along the way</h2>
+      </div>
+      <p style="font-weight:300;font-size:15px;line-height:1.6;color:#3d4a50;margin:0;max-width:380px;">Professional actors in costume wait at secret stops. Teams must find them, win their trust and complete their challenge to receive the next clue.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));gap:22px;">
+        <div style="display:flex;flex-direction:column;background:#ffffff;border-radius:6px;overflow:hidden;box-shadow:0 2px 10px rgba(13,61,64,0.06);">
+          <div style="height:220px;"><image-slot id="activity-treasure-char-carmen" src="/fotos/treasure-hunt/characters/character-carmen.webp" shape="rect" alt="Actor playing Carmen with a group in Seville" placeholder="Carmen character photo" style="width:100%;height:100%;"></image-slot></div>
+          <div style="padding:20px 22px 24px;"><div style="font-family:'Varela Round',sans-serif;font-size:11.5px;letter-spacing:1.5px;color:#15cad2;margin-bottom:6px;">FROM THE OPERA</div><div style="font-weight:800;font-size:18px;margin-bottom:8px;">Carmen</div><p style="font-weight:300;font-size:14.5px;line-height:1.6;color:#3d4a50;margin:0;">The cigar maker from the Royal Tobacco Factory challenges teams to a sevillanas step or a song before handing over her clue.</p></div>
+        </div>
+        <div style="display:flex;flex-direction:column;background:#ffffff;border-radius:6px;overflow:hidden;box-shadow:0 2px 10px rgba(13,61,64,0.06);">
+          <div style="height:220px;"><img src="/fotos/treasure-hunt/characters/character-san-fernando-iii.webp" alt="San Fernando III, portrait" style="width:100%;height:100%;object-fit:cover;object-position:center 12%;display:block;"></div>
+          <div style="padding:20px 22px 24px;"><div style="font-family:'Varela Round',sans-serif;font-size:11.5px;letter-spacing:1.5px;color:#15cad2;margin-bottom:6px;">KING &amp; SAINT</div><div style="font-weight:800;font-size:18px;margin-bottom:8px;">San Fernando III</div><p style="font-weight:300;font-size:14.5px;line-height:1.6;color:#3d4a50;margin:0;">The king himself, in full armour, tests the teams’ knowledge of the city he entered in 1248.</p></div>
+        </div>
+        <div style="display:flex;flex-direction:column;background:#ffffff;border-radius:6px;overflow:hidden;box-shadow:0 2px 10px rgba(13,61,64,0.06);">
+          <div style="height:220px;"><image-slot id="activity-treasure-char-cervantes" src="/fotos/treasure-hunt/characters/character-cervantes.webp" shape="rect" alt="Actor playing Cervantes reading to a group in Seville" placeholder="Cervantes character photo" style="width:100%;height:100%;"></image-slot></div>
+          <div style="padding:20px 22px 24px;"><div style="font-family:'Varela Round',sans-serif;font-size:11.5px;letter-spacing:1.5px;color:#15cad2;margin-bottom:6px;">WRITER</div><div style="font-weight:800;font-size:18px;margin-bottom:8px;">Cervantes</div><p style="font-weight:300;font-size:14.5px;line-height:1.6;color:#3d4a50;margin:0;">The author of Don Quixote, who lived in Seville and began his novel here, reads from his book and sets the teams a riddle in words.</p></div>
+        </div>
+        <div style="display:flex;flex-direction:column;background:#ffffff;border-radius:6px;overflow:hidden;box-shadow:0 2px 10px rgba(13,61,64,0.06);">
+          <div style="height:220px;"><image-slot id="activity-treasure-char-velazquez" src="/fotos/treasure-hunt/characters/character-velazquez.webp" shape="rect" alt="Actor playing Velázquez with a team painting in Seville" placeholder="Velázquez character photo" style="width:100%;height:100%;"></image-slot></div>
+          <div style="padding:20px 22px 24px;"><div style="font-family:'Varela Round',sans-serif;font-size:11.5px;letter-spacing:1.5px;color:#15cad2;margin-bottom:6px;">PAINTER</div><div style="font-weight:800;font-size:18px;margin-bottom:8px;">Velázquez</div><p style="font-weight:300;font-size:14.5px;line-height:1.6;color:#3d4a50;margin:0;">Seville’s most famous painter sets a riddle about his masterpiece Las Meninas.</p></div>
+        </div>
+        <div style="display:flex;flex-direction:column;background:#ffffff;border-radius:6px;overflow:hidden;box-shadow:0 2px 10px rgba(13,61,64,0.06);">
+          <div style="height:220px;"><image-slot id="activity-treasure-char-anibal" src="/fotos/treasure-hunt/characters/character-anibal-gonzalez.webp" shape="rect" alt="Actor playing Aníbal González at Plaza de España" placeholder="Aníbal González character photo" style="width:100%;height:100%;"></image-slot></div>
+          <div style="padding:20px 22px 24px;"><div style="font-family:'Varela Round',sans-serif;font-size:11.5px;letter-spacing:1.5px;color:#15cad2;margin-bottom:6px;">ARCHITECT</div><div style="font-weight:800;font-size:18px;margin-bottom:8px;">Aníbal González</div><p style="font-weight:300;font-size:14.5px;line-height:1.6;color:#3d4a50;margin:0;">The architect of Plaza de España shows teams the tiles of the provinces, and hides a clue in one of them.</p></div>
+        </div>
+        <div style="display:flex;flex-direction:column;background:#ffffff;border-radius:6px;overflow:hidden;box-shadow:0 2px 10px rgba(13,61,64,0.06);">
+          <div style="height:220px;"><image-slot id="activity-treasure-char-donjuan" src="/fotos/treasure-hunt/characters/character-don-juan-tenorio.webp" shape="rect" alt="Actor playing Don Juan Tenorio with a group in Seville" placeholder="Don Juan Tenorio character photo" style="width:100%;height:100%;"></image-slot></div>
+          <div style="padding:20px 22px 24px;"><div style="font-family:'Varela Round',sans-serif;font-size:11.5px;letter-spacing:1.5px;color:#15cad2;margin-bottom:6px;">LEGEND</div><div style="font-weight:800;font-size:18px;margin-bottom:8px;">Don Juan Tenorio</div><p style="font-weight:300;font-size:14.5px;line-height:1.6;color:#3d4a50;margin:0;">The charming seducer of Seville legend tries to lead teams astray with a false clue. Who will see through him?</p></div>
+        </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Workshops" style="max-width:1200px;margin:0 auto;padding:88px 32px 0;">
+    <div style="background:#0d3d40;color:#ffffff;border-radius:6px;padding:44px 40px;display:flex;flex-wrap:wrap;gap:28px 56px;align-items:center;">
+      <div style="flex:1 1 360px;">
+        <div style="font-family:'Varela Round',sans-serif;font-size:12px;letter-spacing:1.5px;color:#15cad2;margin-bottom:10px;">ADD A WORKSHOP STOP</div>
+        <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,30px);line-height:1.2;margin:0 0 14px;">Hands-on missions along the route</h2>
+        <p style="font-weight:300;font-size:16px;line-height:1.7;color:#cfe3e4;margin:0;">Turn one or more stops into a short workshop with a local expert. Teams earn points, and bring home something they made together.</p>
+      </div>
+      <div style="flex:1 1 420px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(180px,100%),1fr));gap:10px;">
+        <a href="/flamenco-experiences-seville/" style="border:1px solid rgba(255,255,255,0.3);border-radius:4px;padding:16px 18px;color:#ffffff;font-weight:600;font-size:15px;" style-hover="border-color:#15cad2;color:#ffffff;">Flamenco class →</a>
+        <a href="/painting-team-building-in-seville/" style="border:1px solid rgba(255,255,255,0.3);border-radius:4px;padding:16px 18px;color:#ffffff;font-weight:600;font-size:15px;" style-hover="border-color:#15cad2;color:#ffffff;">Painting session →</a>
+        <a href="/ceramic-workshop-in-seville/" style="border:1px solid rgba(255,255,255,0.3);border-radius:4px;padding:16px 18px;color:#ffffff;font-weight:600;font-size:15px;" style-hover="border-color:#15cad2;color:#ffffff;">Ceramic tile painting →</a>
+        <div style="border:1px solid rgba(255,255,255,0.3);border-radius:4px;padding:16px 18px;font-weight:600;font-size:15px;">Fan painting</div>
+        <div style="border:1px solid rgba(255,255,255,0.3);border-radius:4px;padding:16px 18px;font-weight:600;font-size:15px;">Guitar &amp; palmas</div>
+        <div style="border:1px solid rgba(255,255,255,0.3);border-radius:4px;padding:16px 18px;font-weight:600;font-size:15px;">Tapas or orange marmalade cooking</div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Gallery" style="max-width:1200px;margin:0 auto;padding:88px 32px 0;">
+    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:220px;gap:14px;">
+      <div style="grid-column:span 2;grid-row:span 2;border-radius:4px;overflow:hidden;"><image-slot id="activity-treasure-gallery-1" shape="rect" src="/uploads/treasure-hunt-sevilla-map.webp" alt="Team studying the treasure hunt map" placeholder="Treasure map photo" style="width:100%;height:100%;"></image-slot></div>
+      <div style="grid-column:span 2;border-radius:4px;overflow:hidden;"><image-slot id="activity-treasure-gallery-2" shape="rect" src="/uploads/treasure-hunt-sevilla-courtyard.webp" alt="Historic courtyard on the treasure hunt route" placeholder="Santa Cruz courtyard photo" style="width:100%;height:100%;"></image-slot></div>
+      <div style="border-radius:4px;overflow:hidden;"><image-slot id="activity-treasure-gallery-3" shape="rect" src="/uploads/treasure-hunt-sevilla-team-phone.webp" alt="Team checking a clue on the phone" placeholder="Riddle at a monument photo" style="width:100%;height:100%;"></image-slot></div>
+      <div style="border-radius:4px;overflow:hidden;"><image-slot id="activity-treasure-gallery-4" shape="rect" src="/uploads/treasure-hunt-sevilla-team-hats.webp" alt="Treasure hunt team with paper hats" placeholder="Winning team photo" style="width:100%;height:100%;"></image-slot></div>
+    </div>
+  </section>
+
+  <section data-screen-label="Closing" style="max-width:820px;margin:0 auto;padding:88px 32px;text-align:center;">
+    <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,30px);margin:0 0 18px;color:#15cad2;">We Handle Everything</h2>
+    <p style="font-weight:300;font-size:17px;line-height:1.8;color:#3d4a50;margin:0;">Let us handle the logistics—from planning and facilitation to materials and support on the day. All you need to bring is your team and a sense of adventure.</p>
+  </section>
+
+  <section data-screen-label="Combine" style="background:#f6f4ef;padding:80px 32px;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;">COMBINE IT WITH</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,30px);margin:0 0 32px;">Build it into a complete programme</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:18px;">
+        <a href="/trip/team-building-seville/" style="display:flex;justify-content:space-between;align-items:center;gap:16px;background:#ffffff;border:1px solid #e6e1d6;border-radius:4px;padding:24px;color:#1f2d33;" style-hover="border-color:#ff5d1a;color:#1f2d33;">
+          <span><span style="display:block;font-weight:700;font-size:17px;margin-bottom:4px;">Team Building</span><span style="font-weight:300;font-size:14px;color:#3d4a50;">More ways to bring your team together</span></span><span style="color:#ff5d1a;font-size:20px;">→</span>
+        </a>
+        <a href="/trip/gala-dinner-seville/" style="display:flex;justify-content:space-between;align-items:center;gap:16px;background:#ffffff;border:1px solid #e6e1d6;border-radius:4px;padding:24px;color:#1f2d33;" style-hover="border-color:#ff5d1a;color:#1f2d33;">
+          <span><span style="display:block;font-weight:700;font-size:17px;margin-bottom:4px;">Gala Dinners</span><span style="font-weight:300;font-size:14px;color:#3d4a50;">Celebrate the winners at dinner</span></span><span style="color:#ff5d1a;font-size:20px;">→</span>
+        </a>
+        <a href="/trip/corporate-incentive-trip-seville/" style="display:flex;justify-content:space-between;align-items:center;gap:16px;background:#ffffff;border:1px solid #e6e1d6;border-radius:4px;padding:24px;color:#1f2d33;" style-hover="border-color:#ff5d1a;color:#1f2d33;">
+          <span><span style="display:block;font-weight:700;font-size:17px;margin-bottom:4px;">Incentive Trips</span><span style="font-weight:300;font-size:14px;color:#3d4a50;">An active start to your programme</span></span><span style="color:#ff5d1a;font-size:20px;">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Expert" style="background:#eaf6f6;padding:60px 32px 50px;">
+    <div style="max-width:820px;margin:0 auto;display:flex;align-items:center;gap:40px;flex-wrap:wrap;justify-content:center;">
+      <div style="width:150px;height:150px;border-radius:50%;overflow:hidden;flex:none;"><image-slot id="activity-treasure-contact-photo" shape="circle" src="/uploads/gunvor-guttormsen-macarena-church-seville.webp" alt="Gunvor Guttormsen in front of Macarena church, Seville" placeholder="Team photo" style="width:100%;height:100%;"></image-slot></div>
+      <div style="flex:1;min-width:240px;">
+        <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(20px,2.6vw,26px);margin:0 0 12px;">Ready for the Hunt?</h2>
+        <p style="font-weight:300;font-size:15.5px;line-height:1.7;color:#3d4a50;margin:0 0 24px;">Contact DMC Seville Event to turn your next corporate event in Seville into an unforgettable journey through teamwork, discovery, and laughter.</p>
+        <a href="/contact/" style="background:#ff5d1a;color:#ffffff;font-family:'Varela Round',sans-serif;font-weight:600;padding:14px 32px;border-radius:2px;font-size:15px;display:inline-block;" style-hover="background:#0d3d40;color:#ffffff;">Contact DMC Seville Event</a>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="FAQ" style="max-width:1000px;margin:0 auto;padding:80px 32px 56px;">
+    <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:13px;letter-spacing:1.5px;margin-bottom:10px;text-align:center;">FAQ</div>
+    <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,30px);margin:0 0 36px;text-align:center;">Treasure hunts in Seville: common questions</h2>
+    <div style="display:flex;flex-direction:column;border-top:1px solid #e3ecec;">
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+        <details style="border-bottom:1px solid #e3ecec;padding:22px 4px;">
+          <summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:baseline;font-weight:700;font-size:17px;line-height:1.4;">{{ f.q }}<span class="plus" style="color:#ff5d1a;font-size:24px;line-height:1;transition:transform .2s ease;flex:none;">+</span></summary>
+          <p style="margin:14px 0 0;font-weight:300;font-size:15.5px;line-height:1.75;color:#3d4a50;">{{ f.a }}</p>
+        </details>
+      </sc-for>
+    </div>
+    <div style="display:flex;gap:18px;align-items:center;margin-top:48px;padding:24px;border:1px solid #ece7dc;border-radius:6px;background:#ffffff;">
+      <div style="width:56px;height:56px;border-radius:50%;overflow:hidden;flex:none;"><image-slot id="activity-treasure-author-photo" shape="circle" src="/uploads/gunvor-guttormsen-avatar.webp" alt="Gunvor Guttormsen" placeholder="Author photo" style="width:100%;height:100%;"></image-slot></div>
+      <p style="font-weight:300;font-size:14.5px;line-height:1.65;color:#3d4a50;margin:0;">This text is written by <strong style="font-weight:700;color:#1f2d33;">Gunvor Guttormsen</strong>. She is the owner of DMC Seville and has worked in tourism in Seville since 1999. She is a true Seville lover and wants to share her passion and love for Seville with you.<span style="display:block;margin-top:6px;font-size:13px;color:#5b6a70;">Last updated: 18 October 2026</span></p>
+    </div>
+  </section>
+
+  <section data-screen-label="More inspiration" style="max-width:1200px;margin:0 auto;padding:32px 32px 88px;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;padding-bottom:20px;border-bottom:1px solid #e3ecec;margin-bottom:32px;">
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,30px);margin:0;">More inspiration</h2>
+      <a href="/inspiration/" style="font-family:'Varela Round',sans-serif;font-size:14px;font-weight:600;">Return to Seville inspiration →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:24px;">
+      <a href="/movie-making-in-seville/" style="display:flex;flex-direction:column;color:#1f2d33;border-radius:4px;overflow:hidden;background:#ffffff;border:1px solid #ece7dc;" style-hover="border-color:#15cad2;color:#1f2d33;">
+        <div style="height:190px;"><image-slot id="activity-treasure-more-1" shape="rect" src="/uploads/movie-clips-shooting-team-building-spain.webp" alt="Movie making team building" placeholder="Related activity photo" style="width:100%;height:100%;"></image-slot></div>
+        <div style="padding:20px 22px 24px;"><div style="font-family:'Varela Round',sans-serif;font-size:11.5px;letter-spacing:1.5px;color:#15cad2;margin-bottom:8px;">TEAM BUILDING</div><div style="font-weight:700;font-size:17px;line-height:1.35;">Movie Making in Seville</div></div>
+      </a>
+      <a href="/painting-team-building-in-seville/" style="display:flex;flex-direction:column;color:#1f2d33;border-radius:4px;overflow:hidden;background:#ffffff;border:1px solid #ece7dc;" style-hover="border-color:#15cad2;color:#1f2d33;">
+        <div style="height:190px;"><image-slot id="activity-treasure-more-2" shape="rect" src="/uploads/painting-team-building-spain.webp" alt="Painting team building" placeholder="Related activity photo" style="width:100%;height:100%;"></image-slot></div>
+        <div style="padding:20px 22px 24px;"><div style="font-family:'Varela Round',sans-serif;font-size:11.5px;letter-spacing:1.5px;color:#15cad2;margin-bottom:8px;">TEAM BUILDING</div><div style="font-weight:700;font-size:17px;line-height:1.35;">Painting Team Building in Seville</div></div>
+      </a>
+      <a href="/15-best-tapas-bars-in-seville/" style="display:flex;flex-direction:column;color:#1f2d33;border-radius:4px;overflow:hidden;background:#ffffff;border:1px solid #ece7dc;" style-hover="border-color:#15cad2;color:#1f2d33;">
+        <div style="height:190px;"><image-slot id="activity-treasure-more-3" shape="rect" src="/uploads/tapas-tour-seville-22.webp" alt="Tapas in Seville" placeholder="Related activity photo" style="width:100%;height:100%;"></image-slot></div>
+        <div style="padding:20px 22px 24px;"><div style="font-family:'Varela Round',sans-serif;font-size:11.5px;letter-spacing:1.5px;color:#15cad2;margin-bottom:8px;">FOOD &amp; WINE</div><div style="font-weight:700;font-size:17px;line-height:1.35;">15 Best Tapas Bars in Seville</div></div>
+      </a>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,300"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sel: 0, guests: 24, slot: null };
+  formats = [
+    { name: 'Classic Old Town Hunt', img: '/uploads/historical-team-building-seville.webp', tag: 'MOST BOOKED', forLabel: 'PERFECT FOR', for: ['Corporate and incentive groups', 'First-time visitors', 'Mixed fitness levels'], text: 'Clues and riddles lead teams through the Cathedral quarter, Santa Cruz and hidden plazas, finishing with the treasure and a drink together.', duration: '2 – 3 h', capacity: '10 – 300 guests' },
+    { name: 'Digital Treasure Hunt', img: '/fotos/treasure-hunt/treasure-hunt-seville-team-solving-clue.webp', tag: 'TECH', forLabel: 'INCLUDES', for: ['App or tablet per team', 'Live leaderboard', 'Photo and video missions'], text: 'Teams play on a tablet or app with GPS-triggered questions, augmented clues and a live ranking the organiser can follow in real time.', duration: '2 – 3 h', capacity: '20 – 300 guests' },
+    { name: 'Tapas Treasure Hunt', img: '/fotos/treasure-hunt/treasure-hunt-seville-group-street.webp', tag: 'FOOD & FUN', forLabel: 'IDEAL FOR', for: ['Relaxed groups', 'Lunch or dinner programmes', 'Food lovers'], text: 'Each solved clue leads to a tapas bar, where the next riddle is served with a tapa and a drink.', duration: '3 h', capacity: '10 – 60 guests' },
+    { name: 'Hacienda Treasure Hunt', img: '/fotos/treasure-hunt/treasure-hunt-seville-bullfighting-challenge.webp', tag: 'COUNTRYSIDE', forLabel: 'TEAM CHALLENGES', for: ['Bullfighting', 'Ceramic painting', 'Cooking class', 'Flamenco'], text: 'A treasure hunt on an Andalusian hacienda, with team building challenges inspired by life on the finca: bullfighting, ceramic painting, a cooking class and flamenco.', duration: '3 – 4 h', capacity: '10 – 150 guests' },
+    { name: 'Characters Hunt', img: '/uploads/treasure-hunt-sevilla-costumed-characters.webp', tag: 'NEW', forLabel: 'INCLUDES', for: ['Actors in historical costume', 'Challenges set by each character', 'Great photo moments'], text: 'Teams meet Carmen, Cervantes, Velázquez, San Fernando III and other famous Sevillanos along the route, each with a challenge to complete for the next clue.', duration: '2.5 – 3 h', capacity: '10 – 200 guests' },
+    { name: 'Branded Company Hunt', img: '/fotos/treasure-hunt/treasure-hunt-seville-clue-easel.webp', tag: 'CUSTOM', forLabel: 'INCLUDES', for: ['Clues based on your values', 'Company branding', 'Link to your conference theme'], text: 'A fully personalised hunt where the missions, questions and final treasure are built around your company, milestone or event theme.', duration: 'On request', capacity: '20 – 300 guests' }
+  ];
+  slots = ['Morning', 'Afternoon', 'Evening', 'With dinner'];
+  faqs = [
+    { q: 'How many people can take part?', a: 'Treasure hunts work for groups from around 10 people up to 300. Large groups are split into teams of 5 to 8, each with its own route so the old town never gets crowded.' },
+    { q: 'How long does a treasure hunt take?', a: 'Most hunts last between 2 and 3 hours, including the briefing and the finale. The duration can be adapted to fit your programme.' },
+    { q: 'Is it suitable for all fitness levels?', a: 'Yes. The routes are on foot through the flat historic centre, and the distance can be adapted for your group.' },
+    { q: 'In which languages can it be run?', a: 'The clues, materials and facilitators can be provided in English, Spanish and other languages on request.' },
+    { q: 'Can the treasure hunt have a theme?', a: 'Yes. Popular themes include oranges, flamenco, painting, San Fernando III, Aníbal González and the operas set in Seville, such as Carmen. We can also create a theme around your company.' },
+    { q: 'Can we meet historical characters on the way?', a: 'Yes. Professional actors in costume can play characters such as Carmen, Cervantes, Velázquez or San Fernando III, each setting the teams a challenge before giving them the next clue.' },
+    { q: 'What happens if it rains?', a: 'Rain is rare in Seville, but we always have a plan B, with more indoor stops or a shorter route ending in a covered venue.' }
+  ];
+  componentDidMount() {
+    const s = document.createElement('script');
+    s.type = 'application/ld+json';
+    s.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: this.faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) });
+    document.head.appendChild(s);
+  }
+  renderVals() {
+    const { sel, guests, slot } = this.state;
+    const formatItems = this.formats.map((f, i) => {
+      const on = i === sel;
+      return {
+        ...f,
+        slotId: 'activity-treasure-format-' + (i + 1),
+        pick: () => this.setState({ sel: i }),
+        cardStyle: 'all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;background:#ffffff;border-radius:6px;overflow:hidden;text-align:left;font-family:Montserrat,sans-serif;border:2px solid ' + (on ? '#ff5d1a' : 'transparent') + ';box-shadow:' + (on ? '0 10px 28px rgba(255,93,26,0.18)' : '0 2px 10px rgba(13,61,64,0.06)') + ';transition:border-color .2s,box-shadow .2s;',
+        selStyle: 'font-family:Varela Round,sans-serif;font-size:13px;font-weight:600;margin-top:6px;color:' + (on ? '#ff5d1a' : '#0d3d40'),
+        selLabel: on ? '✓ Added to your request' : '+ Select this hunt'
+      };
+    });
+    const slotItems = this.slots.map(l => ({
+      label: l,
+      pick: () => this.setState({ slot: slot === l ? null : l }),
+      style: 'cursor:pointer;padding:10px 6px;border-radius:2px;font-family:Montserrat,sans-serif;font-size:12.5px;font-weight:500;line-height:1.3;border:1px solid ' + (slot === l ? '#15cad2' : 'rgba(255,255,255,0.3)') + ';background:' + (slot === l ? '#15cad2' : 'transparent') + ';color:' + (slot === l ? '#0d3d40' : '#ffffff')
+    }));
+    const q = new URLSearchParams({ activity: this.formats[sel].name, guests: String(guests), ...(slot ? { moment: slot } : {}) });
+    return {
+      formatItems, slotItems, guests, faqs: this.faqs,
+      selectedName: this.formats[sel].name,
+      dec: () => this.setState(s => ({ guests: Math.max(6, s.guests - (s.guests > 50 ? 10 : 2)) })),
+      inc: () => this.setState(s => ({ guests: Math.min(200, s.guests + (s.guests >= 50 ? 10 : 2)) })),
+      enquiryHref: '/contact/?' + q.toString()
+    };
+  }
+}
+</script></template>
+<div id="dmc-consent" hidden style="position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:560px;margin:0 auto;background:#0d3d40;color:#fff;font-family:Montserrat,sans-serif;font-size:14px;line-height:1.5;padding:16px 18px;border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.25)">
+We use Google Analytics cookies to see how visitors use our website. Do you accept statistics cookies? <a href="/privacy-policy/" style="color:#15cad2;text-decoration:underline">More info</a>
+<div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap"><button type="button" data-v="yes" style="cursor:pointer;border:0;background:#15cad2;color:#0d3d40;font-weight:600;padding:8px 16px;border-radius:3px;font-family:inherit">Accept</button><button type="button" data-v="no" style="cursor:pointer;border:1px solid #fff;background:transparent;color:#fff;padding:8px 16px;border-radius:3px;font-family:inherit">Decline</button></div></div>
+<script>
+(function(){var b=document.getElementById('dmc-consent'),v=null;try{v=localStorage.getItem('dmc-consent');}catch(e){}
+if(!v)b.hidden=false;
+b.addEventListener('click',function(e){var x=e.target.getAttribute('data-v');if(!x)return;try{localStorage.setItem('dmc-consent',x);}catch(e){}
+if(x==='yes')gtag('consent','update',{analytics_storage:'granted'});b.hidden=true;});
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-cookie-settings]');if(!a)return;e.preventDefault();
+try{localStorage.removeItem('dmc-consent');}catch(x){}gtag('consent','update',{analytics_storage:'denied'});
+document.cookie.split(';').forEach(function(c){var n=c.split('=')[0].trim();if(n.indexOf('_ga')===0)document.cookie=n+'=;Max-Age=0;path=/;domain=.dmcsevilleevent.com';});b.hidden=false;});})();
+</script>
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest&&e.target.closest('[data-nav-toggle]');
+  if(b){document.documentElement.classList.toggle('nav-open');return;}
+  if(e.target.closest&&e.target.closest('nav[data-nav="menu"] a'))document.documentElement.classList.remove('nav-open');
+});
+</script>
+<script>
+(function(){
+  var t=document.getElementById('dc-src'), s=document.getElementById('dc-static');
+  if(!t||!s) return;
+  function load(src,cb){var e=document.createElement('script');e.src=src;e.onload=cb;document.body.appendChild(e);}
+  function dedupe(){var seen={};document.querySelectorAll('script[type="application/ld+json"]').forEach(function(e){var k=e.textContent.trim();if(seen[k])e.remove();else seen[k]=1;});}
+  function go(){
+    s.parentNode.insertBefore(document.importNode(t.content,true), s.nextSibling);
+    var obs=new MutationObserver(function(){var r=document.getElementById('dc-root');
+      if(r&&r.firstElementChild){obs.disconnect();setTimeout(function(){s.remove();dedupe();setTimeout(dedupe,1500);},60);}});
+    obs.observe(document.body,{childList:true,subtree:true});
+    load('/image-slot.js',function(){load('/support.js');});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go();
+})();
+</script>
+
+</body></html>

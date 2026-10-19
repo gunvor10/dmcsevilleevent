@@ -72,6 +72,31 @@ gtag('js',new Date());gtag('config','G-EN4YBPBV42');
   nav[data-nav="menu"]>div>div{position:static!important;box-shadow:none!important;min-width:0!important;
     grid-template-columns:1fr!important;padding:6px 0 0 8px!important}
 }
+/* Phones: Design's fixed side-by-side layouts (text + photo, numbered lists) stack in one column,
+   4-photo galleries become 2 x 2, wide card grids become one card per row. */
+@media (max-width:760px){
+  [style*="minmax(0px, 1fr) minmax(0px, 0.8fr)"],[style*="minmax(0px, 0.8fr) minmax(0px, 1fr)"],
+  [style*="minmax(0px, 1.3fr) minmax(0px, 0.9fr)"],[style*="minmax(0px, 0.8fr) minmax(0px, 1.2fr)"],
+  [style*="minmax(0px, 1fr) minmax(0px, 1fr)"],[style*="minmax(0px, 1fr) 320px"],
+  [style*="minmax(0,1fr) minmax(0,0.8fr)"],[style*="minmax(0,0.8fr) minmax(0,1fr)"],
+  [style*="minmax(0,1.3fr) minmax(0,0.9fr)"],[style*="minmax(0,0.8fr) minmax(0,1.2fr)"],
+  [style*="minmax(0,1fr) minmax(0,1fr)"],[style*="minmax(0,1fr) 320px"],
+  [style*="grid-template-columns: 1fr 1fr"],[style*="grid-template-columns:1fr 1fr"],
+  [style*="repeat(2, minmax(0px, 1fr))"],[style*="repeat(2,minmax(0,1fr))"],
+  [style*="minmax(340px"],[style*="minmax(280px"],[style*="minmax(260px"]{
+    grid-template-columns:minmax(0,1fr)!important;gap:28px!important}
+  [style*="repeat(4, minmax(0px, 1fr))"],[style*="repeat(4,minmax(0,1fr))"],
+  [style*="repeat(4, 1fr)"],[style*="repeat(4,1fr)"],[style*="repeat(3, 1fr)"],[style*="repeat(3,1fr)"]{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  section[style*="padding"]{padding-left:20px!important;padding-right:20px!important}
+  /* destination pages: day-by-day programme (photo beside text) */
+  div:has(> div[style*="height: 160px"][style*="flex: 0 0 auto"]),div:has(> div[style*="height:160px"][style*="flex:none"]){flex-direction:column!important;gap:16px!important}
+  div[style*="height: 160px"][style*="flex: 0 0 auto"],div[style*="height:160px"][style*="flex:none"]{width:100%!important;height:190px!important}
+  div[style*="padding: 30px 34px"]{padding:22px 18px!important}
+  /* groups page: service cards (photo beside text) */
+  :has(> [style*="width: 38%"]),:has(> [style*="width:38%"]){flex-direction:column!important}
+  [style*="width: 38%"],[style*="width:38%"]{width:100%!important;height:200px!important}
+}
 </style></head>
 <body>
 <div id="dc-static"><div class="sc-host" data-sc-name="Guide-Spring"><div data-dc-tpl="16" style="font-family: Montserrat, sans-serif; color: rgb(31, 45, 51); background: rgb(255, 253, 251);">
@@ -83,8 +108,8 @@ gtag('js',new Date());gtag('config','G-EN4YBPBV42');
 <span data-dc-tpl="9">events@dmcsevilleevent.com</span>
 </div>
 <div data-dc-tpl="10" style="display: flex; gap: 14px;">
-<a data-dc-tpl="11" href="https://www.facebook.com/Sevillaprivateguidegunvor/" style="color: rgb(255, 255, 255);">Facebook</a>
-<a data-dc-tpl="12" href="https://www.instagram.com/sevillaprivateguide_gunvor/" style="color: rgb(255, 255, 255);">Instagram</a>
+<a data-dc-tpl="11" href="https://www.facebook.com/dmcsevilleevent/" style="color: rgb(255, 255, 255);">Facebook</a>
+<a data-dc-tpl="12" href="https://www.instagram.com/dmcsevilleevent/" style="color: rgb(255, 255, 255);">Instagram</a>
 <a data-dc-tpl="13" href="https://www.linkedin.com/in/gunvor-guttormsen-ba05a728/" style="color: rgb(255, 255, 255);">LinkedIn</a>
 </div>
 </div>
