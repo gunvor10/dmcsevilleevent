@@ -32,6 +32,10 @@ for url in URLS.values():
 # contact form handler
 shutil.copy2(os.path.join(REPO, "tools", "extra", "send.php"), os.path.join(REPO, "contact", "send.php"))
 
+# client presentation (not in Design, noindex, not in the sitemap)
+os.makedirs(os.path.join(REPO, "presentation"), exist_ok=True)
+shutil.copy2(os.path.join(REPO, "tools", "extra", "presentation", "index.html"), os.path.join(REPO, "presentation", "index.html"))
+
 # runtime + components + search files
 for f in ["support.js", "image-slot.js", ".image-slots.state.json", "SiteHeader.dc.html", "SiteFooter.dc.html",
           "ServicePage.dc.html", "DestinationPage.dc.html", "robots.txt", "sitemap.xml", "llms.txt"]:
