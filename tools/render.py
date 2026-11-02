@@ -47,7 +47,7 @@ gtag('js',new Date());gtag('config','G-EN4YBPBV42');
 # (Google Analytics only counts the ones who accept). Token from Cloudflare dashboard ->
 # Web Analytics -> dmcsevilleevent.com. Empty = not added. tools/add_cloudflare.py adds the
 # same tag to the pages already in the repo.
-CF_TOKEN = ""
+CF_TOKEN = "9a569f750e5349bbbea9328c6cfa4fbc"
 CF_MARK = "<!-- cloudflare-web-analytics -->"
 if CF_TOKEN:
     HEAD_EXTRA += ("\n" + CF_MARK + "\n<script defer src=\"https://static.cloudflareinsights.com/beacon.min.js\" "
