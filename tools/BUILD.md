@@ -6,4 +6,5 @@
 4. Serve SRC: `cd SRC && python3 -m http.server 8766 --bind 127.0.0.1`
 5. `venv/bin/python -I tools/render.py SRC SITE 8766` – headless Chrome renders every page to SITE/<slug>/index.html (adds GA4 + consent banner + Search Console tag).
 6. `venv/bin/python -I tools/assemble.py SRC SITE <this repo> tools/htaccess.txt` – copies pages + used photos into the repo, writes .htaccess (tools/ is kept).
-7. Check, commit, push. Plesk (Loading) deploys automatically from GitHub.
+7. Cloudflare Web Analytics (cookieless, counts every visitor) is added by render.py from `CF_TOKEN`. To set or change the token: `python3 -I tools/add_cloudflare.py TOKEN` (updates the pages and render.py).
+8. Check, commit, push. Plesk (Loading) deploys automatically from GitHub.
