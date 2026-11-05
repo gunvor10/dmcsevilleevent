@@ -43,6 +43,16 @@ gtag('js',new Date());gtag('config','G-EN4YBPBV42');
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EN4YBPBV42"></script>"""
 
+# Cloudflare Web Analytics: no cookies, no consent needed, so it counts every visitor
+# (Google Analytics only counts the ones who accept). Token from Cloudflare dashboard ->
+# Web Analytics -> dmcsevilleevent.com. Empty = not added. tools/add_cloudflare.py adds the
+# same tag to the pages already in the repo.
+CF_TOKEN = "9a569f750e5349bbbea9328c6cfa4fbc"
+CF_MARK = "<!-- cloudflare-web-analytics -->"
+if CF_TOKEN:
+    HEAD_EXTRA += ("\n" + CF_MARK + "\n<script defer src=\"https://static.cloudflareinsights.com/beacon.min.js\" "
+                   "data-cf-beacon='{\"token\": \"" + CF_TOKEN + "\"}'></script>")
+
 CONSENT = """<div id="dmc-consent" hidden style="position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:560px;margin:0 auto;background:#0d3d40;color:#fff;font-family:Montserrat,sans-serif;font-size:14px;line-height:1.5;padding:16px 18px;border-radius:6px;box-shadow:0 6px 24px rgba(0,0,0,.25)">
 We use Google Analytics cookies to see how visitors use our website. Do you accept statistics cookies? <a href="/privacy-policy/" style="color:#15cad2;text-decoration:underline">More info</a>
 <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap"><button type="button" data-v="yes" style="cursor:pointer;border:0;background:#15cad2;color:#0d3d40;font-weight:600;padding:8px 16px;border-radius:3px;font-family:inherit">Accept</button><button type="button" data-v="no" style="cursor:pointer;border:1px solid #fff;background:transparent;color:#fff;padding:8px 16px;border-radius:3px;font-family:inherit">Decline</button></div></div>
