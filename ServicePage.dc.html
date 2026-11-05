@@ -17,7 +17,7 @@
 <div ref="{{ rootRef }}" class="{{ rootClass }}" style="font-family:'Montserrat',sans-serif;color:#1f2d33;background:#fffdfb;">
   <dc-import name="SiteHeader" hint-size="100%,120"></dc-import>
   <section class="{{ heroClass }}" style="position:relative;overflow:hidden;">
-    <image-slot id="service-hero-{{ slug }}" shape="rect" src="{{ heroSrc }}" placeholder="{{ title }} — hero image" alt="{{ title }} — hero image" style="position:absolute;inset:0;width:100%;height:100%;"></image-slot>
+    <image-slot id="service-hero-{{ slug }}" shape="rect" src="{{ heroSrc }}" placeholder="{{ title }} — hero image" alt="{{ altHero }}" style="position:absolute;inset:0;width:100%;height:100%;"></image-slot>
     <sc-for list="{{ heroSlideStyles }}" as="hs" hint-placeholder-count="0">
       <img src="{{ hs.src }}" alt="{{ title }}" style="{{ hs.style }}">
     </sc-for>
@@ -33,7 +33,7 @@
   </sc-if>
   <section style="max-width:1200px;margin:0 auto;padding:80px 32px 0;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,0.9fr);gap:52px;align-items:start;">
     <p style="font-weight:300;font-size:16.5px;line-height:1.85;color:#3d4a50;margin:0;white-space:pre-wrap;">{{ description }}</p>
-    <div class="fade-el" style="width:100%;height:460px;border-radius:4px;overflow:hidden;"><image-slot id="service-vertical-1-{{ slug }}" shape="rounded" radius="4" src="{{ vertical1Src }}" placeholder="{{ title }} — vertical photo" alt="{{ title }} — vertical photo" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
+    <div class="fade-el" style="width:100%;height:460px;border-radius:4px;overflow:hidden;"><image-slot id="service-vertical-1-{{ slug }}" shape="rounded" radius="4" src="{{ vertical1Src }}" placeholder="{{ title }} — vertical photo" alt="{{ altVertical1 }}" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
   </section>
   <div class="{{ tintClass }}" style="padding:80px 0 88px;margin-top:64px;">
     <section style="max-width:1200px;margin:0 auto;padding:0 32px;">
@@ -43,7 +43,7 @@
       </sc-if>
     </section>
     <section style="max-width:1200px;margin:0 auto;padding:24px 32px 0;display:grid;grid-template-columns:minmax(0,0.8fr) minmax(0,1fr);gap:24px;">
-      <div class="fade-el" style="width:100%;height:420px;border-radius:4px;overflow:hidden;"><image-slot id="service-vertical-2-{{ slug }}" shape="rounded" radius="4" src="{{ vertical2Src }}" placeholder="{{ title }} — vertical photo" alt="{{ title }} — vertical photo" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
+      <div class="fade-el" style="width:100%;height:420px;border-radius:4px;overflow:hidden;"><image-slot id="service-vertical-2-{{ slug }}" shape="rounded" radius="4" src="{{ vertical2Src }}" placeholder="{{ title }} — vertical photo" alt="{{ altVertical2 }}" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
       <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-content:start;">
         <sc-for list="{{ highlightItems }}" as="h" hint-placeholder-count="4">
           <div style="display:flex;gap:12px;align-items:flex-start;background:#ffffff;border-radius:6px;padding:18px;">
@@ -58,6 +58,24 @@
     <section style="max-width:900px;margin:0 auto;padding:110px 32px;text-align:center;">
       <div style="font-family:Georgia,serif;color:#ff5d1a;font-size:48px;line-height:1;margin-bottom:8px;">&#8220;</div>
       <p style="font-family:'Montserrat',sans-serif;font-weight:500;font-style:italic;font-size:clamp(19px,2.4vw,24px);line-height:1.5;color:#ff5d1a;margin:0;">{{ quote }}</p>
+    </section>
+  </sc-if>
+  <sc-if value="{{ hasOptions }}" hint-placeholder-val="{{ false }}">
+    <section style="max-width:1200px;margin:0 auto;padding:96px 32px 0;">
+      <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,28px);color:#1f2d33;margin:0 0 10px;text-align:center;">{{ optionsHeading }}</h2>
+      <p style="font-weight:300;font-size:15.5px;line-height:1.7;color:#3d4a50;margin:0 auto 40px;max-width:640px;text-align:center;text-wrap:pretty;">{{ optionsIntro }}</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;">
+        <sc-for list="{{ optionItems }}" as="o" hint-placeholder-count="4">
+          <div style="display:flex;flex-direction:column;background:#ffffff;border:1px solid #ece7e0;border-radius:6px;overflow:hidden;">
+            <div style="width:100%;height:190px;overflow:hidden;"><image-slot id="{{ o.slotId }}" shape="rect" src="{{ o.img }}" placeholder="{{ o.title }} photo" alt="{{ o.alt }}" style="width:100%;height:100%;"></image-slot></div>
+            <div style="padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px;">
+              <div style="font-family:'Varela Round',sans-serif;color:#ff5d1a;font-size:12px;letter-spacing:1.5px;">{{ o.tag }}</div>
+              <h3 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;line-height:1.3;color:#1f2d33;margin:0;">{{ o.title }}</h3>
+              <p style="font-weight:300;font-size:14.5px;line-height:1.65;color:#3d4a50;margin:0;text-wrap:pretty;">{{ o.text }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
     </section>
   </sc-if>
   <sc-if value="{{ programsHeading }}" hint-placeholder-val="{{ false }}">
@@ -77,12 +95,12 @@
           <p style="font-weight:300;font-size:15px;line-height:1.7;color:#3d4a50;margin:16px 0 0;">{{ programsOutro }}</p>
         </sc-if>
       </div>
-      <div style="width:100%;height:380px;border-radius:4px;overflow:hidden;"><image-slot id="service-programs-{{ slug }}" shape="rounded" radius="4" src="{{ programsSrc }}" placeholder="{{ title }} — programs photo" alt="{{ title }} — programs photo" style="width:100%;height:100%;"></image-slot></div>
+      <div style="width:100%;height:380px;border-radius:4px;overflow:hidden;"><image-slot id="service-programs-{{ slug }}" shape="rounded" radius="4" src="{{ programsSrc }}" placeholder="{{ title }} — programs photo" alt="{{ altPrograms }}" style="width:100%;height:100%;"></image-slot></div>
     </section>
   </sc-if>
   <sc-if value="{{ whyDestinationHeading }}" hint-placeholder-val="{{ false }}">
     <section style="max-width:1200px;margin:0 auto;padding:96px 32px 0;display:grid;grid-template-columns:minmax(0,0.8fr) minmax(0,1fr);gap:48px;align-items:center;">
-      <div style="width:100%;height:380px;border-radius:4px;overflow:hidden;"><image-slot id="service-why-dest-{{ slug }}" shape="rounded" radius="4" src="{{ whyDestinationSrc }}" placeholder="{{ title }} — destination photo" alt="{{ title }} — destination photo" style="width:100%;height:100%;"></image-slot></div>
+      <div style="width:100%;height:380px;border-radius:4px;overflow:hidden;"><image-slot id="service-why-dest-{{ slug }}" shape="rounded" radius="4" src="{{ whyDestinationSrc }}" placeholder="{{ title }} — destination photo" alt="{{ altWhyDest }}" style="width:100%;height:100%;"></image-slot></div>
       <div>
         <h2 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(22px,2.8vw,28px);color:#1f2d33;margin:0 0 14px;">{{ whyDestinationHeading }}</h2>
         <p style="font-weight:300;font-size:15.5px;line-height:1.75;color:#3d4a50;margin:0 0 8px;white-space:pre-wrap;">{{ whyDestinationIntro }}</p>
@@ -105,43 +123,43 @@
           </sc-for>
         </ul>
       </div>
-      <div style="width:100%;height:380px;border-radius:4px;overflow:hidden;"><image-slot id="service-why-us-{{ slug }}" shape="rounded" radius="4" src="{{ whyUsSrc }}" placeholder="{{ title }} — team photo" alt="{{ title }} — team photo" style="width:100%;height:100%;"></image-slot></div>
+      <div style="width:100%;height:380px;border-radius:4px;overflow:hidden;"><image-slot id="service-why-us-{{ slug }}" shape="rounded" radius="4" src="{{ whyUsSrc }}" placeholder="{{ title }} — team photo" alt="{{ altWhyUs }}" style="width:100%;height:100%;"></image-slot></div>
     </section>
   </sc-if>
   <section style="max-width:1200px;margin:0 auto;padding:96px 32px 90px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
     <div>
-      <div class="fade-el" style="width:100%;height:280px;border-radius:4px;overflow:hidden;"><image-slot id="service-strip-1-{{ slug }}" shape="rounded" radius="4" src="{{ strip1Src }}" placeholder="{{ title }} photo" alt="{{ title }} photo" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
+      <div class="fade-el" style="width:100%;height:280px;border-radius:4px;overflow:hidden;"><image-slot id="service-strip-1-{{ slug }}" shape="rounded" radius="4" src="{{ strip1Src }}" placeholder="{{ title }} photo" alt="{{ altStrip1 }}" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
       <sc-if value="{{ strip1Caption }}" hint-placeholder-val="{{ false }}"><p style="font-weight:400;font-size:13.5px;color:#5a6b70;margin:8px 0 0;text-align:center;">{{ strip1Caption }}</p></sc-if>
     </div>
     <div>
-      <div class="fade-el" style="width:100%;height:280px;border-radius:4px;overflow:hidden;"><image-slot id="service-strip-2-{{ slug }}" shape="rounded" radius="4" src="{{ strip2Src }}" placeholder="{{ title }} photo" alt="{{ title }} photo" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
+      <div class="fade-el" style="width:100%;height:280px;border-radius:4px;overflow:hidden;"><image-slot id="service-strip-2-{{ slug }}" shape="rounded" radius="4" src="{{ strip2Src }}" placeholder="{{ title }} photo" alt="{{ altStrip2 }}" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
       <sc-if value="{{ strip2Caption }}" hint-placeholder-val="{{ false }}"><p style="font-weight:400;font-size:13.5px;color:#5a6b70;margin:8px 0 0;text-align:center;">{{ strip2Caption }}</p></sc-if>
     </div>
     <div>
-      <div class="fade-el" style="width:100%;height:280px;border-radius:4px;overflow:hidden;"><image-slot id="service-strip-3-{{ slug }}" shape="rounded" radius="4" src="{{ strip3Src }}" placeholder="{{ title }} photo" alt="{{ title }} photo" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
+      <div class="fade-el" style="width:100%;height:280px;border-radius:4px;overflow:hidden;"><image-slot id="service-strip-3-{{ slug }}" shape="rounded" radius="4" src="{{ strip3Src }}" placeholder="{{ title }} photo" alt="{{ altStrip3 }}" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
       <sc-if value="{{ strip3Caption }}" hint-placeholder-val="{{ false }}"><p style="font-weight:400;font-size:13.5px;color:#5a6b70;margin:8px 0 0;text-align:center;">{{ strip3Caption }}</p></sc-if>
     </div>
     <sc-if value="{{ strip4Src }}" hint-placeholder-val="{{ false }}">
       <div>
-        <div class="fade-el" style="width:100%;height:280px;border-radius:4px;overflow:hidden;"><image-slot id="service-strip-4-{{ slug }}" shape="rounded" radius="4" src="{{ strip4Src }}" placeholder="{{ title }} photo" alt="{{ title }} photo" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
+        <div class="fade-el" style="width:100%;height:280px;border-radius:4px;overflow:hidden;"><image-slot id="service-strip-4-{{ slug }}" shape="rounded" radius="4" src="{{ strip4Src }}" placeholder="{{ title }} photo" alt="{{ altStrip4 }}" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
         <sc-if value="{{ strip4Caption }}" hint-placeholder-val="{{ false }}"><p style="font-weight:400;font-size:13.5px;color:#5a6b70;margin:8px 0 0;text-align:center;">{{ strip4Caption }}</p></sc-if>
       </div>
     </sc-if>
     <sc-if value="{{ strip5Src }}" hint-placeholder-val="{{ false }}">
       <div>
-        <div class="fade-el" style="width:100%;height:280px;border-radius:4px;overflow:hidden;"><image-slot id="service-strip-5-{{ slug }}" shape="rounded" radius="4" src="{{ strip5Src }}" placeholder="{{ title }} photo" alt="{{ title }} photo" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
+        <div class="fade-el" style="width:100%;height:280px;border-radius:4px;overflow:hidden;"><image-slot id="service-strip-5-{{ slug }}" shape="rounded" radius="4" src="{{ strip5Src }}" placeholder="{{ title }} photo" alt="{{ altStrip5 }}" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
         <sc-if value="{{ strip5Caption }}" hint-placeholder-val="{{ false }}"><p style="font-weight:400;font-size:13.5px;color:#5a6b70;margin:8px 0 0;text-align:center;">{{ strip5Caption }}</p></sc-if>
       </div>
     </sc-if>
     <sc-if value="{{ strip6Src }}" hint-placeholder-val="{{ false }}">
       <div>
-        <div class="fade-el" style="width:100%;height:280px;border-radius:4px;overflow:hidden;"><image-slot id="service-strip-6-{{ slug }}" shape="rounded" radius="4" src="{{ strip6Src }}" placeholder="{{ title }} photo" alt="{{ title }} photo" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
+        <div class="fade-el" style="width:100%;height:280px;border-radius:4px;overflow:hidden;"><image-slot id="service-strip-6-{{ slug }}" shape="rounded" radius="4" src="{{ strip6Src }}" placeholder="{{ title }} photo" alt="{{ altStrip6 }}" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
         <sc-if value="{{ strip6Caption }}" hint-placeholder-val="{{ false }}"><p style="font-weight:400;font-size:13.5px;color:#5a6b70;margin:8px 0 0;text-align:center;">{{ strip6Caption }}</p></sc-if>
       </div>
     </sc-if>
     <sc-if value="{{ strip7Src }}" hint-placeholder-val="{{ false }}">
       <div>
-        <div class="fade-el" style="width:100%;height:280px;border-radius:4px;overflow:hidden;"><image-slot id="service-strip-7-{{ slug }}" shape="rounded" radius="4" src="{{ strip7Src }}" placeholder="{{ title }} photo" alt="{{ title }} photo" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
+        <div class="fade-el" style="width:100%;height:280px;border-radius:4px;overflow:hidden;"><image-slot id="service-strip-7-{{ slug }}" shape="rounded" radius="4" src="{{ strip7Src }}" placeholder="{{ title }} photo" alt="{{ altStrip7 }}" style="width:100%;height:100%;transition:transform 0.5s;" style-hover="transform:scale(1.06);"></image-slot></div>
         <sc-if value="{{ strip7Caption }}" hint-placeholder-val="{{ false }}"><p style="font-weight:400;font-size:13.5px;color:#5a6b70;margin:8px 0 0;text-align:center;">{{ strip7Caption }}</p></sc-if>
       </div>
     </sc-if>
@@ -232,7 +250,13 @@
     const heroClass = this.props.heroFull ? 'hero-h-full' : this.props.heroCompact ? 'hero-h-260' : 'hero-h-360';
     const tintClass = this.props.highlightsTint === false ? '' : 'tint-band';
     const faqGridClass = this.props.faqColumns === '1' ? 'faq-cols-1' : 'faq-cols-2';
-    return { heroSlideStyles, slug, highlightItems, h1, hasRelated, rootRef: this.rootRef, rootClass, heroClass, tintClass, faqGridClass };
+    const optionItems = (this.props.options || []).map((o, i) => ({ ...o, img: o.img || '', alt: o.alt || (o.title + ' in Seville'), slotId: 'service-option-' + slug + '-' + i }));
+    const hasOptions = optionItems.length > 0;
+    const P = this.props, T = P.title || '';
+    const cap = k => P['strip' + k + 'Caption'] ? P['strip' + k + 'Caption'] + ', ' + T : T;
+    const alts = { altHero: P.heroAlt || T, altVertical1: P.vertical1Alt || T, altVertical2: P.vertical2Alt || T, altPrograms: P.programsAlt || T, altWhyDest: P.whyDestinationAlt || T, altWhyUs: P.whyUsAlt || T };
+    for (let k = 1; k <= 7; k++) alts['altStrip' + k] = P['strip' + k + 'Alt'] || cap(k);
+    return { ...alts, optionItems, hasOptions, heroSlideStyles, slug, highlightItems, h1, hasRelated, rootRef: this.rootRef, rootClass, heroClass, tintClass, faqGridClass };
   }
 }</script>
 </body>
